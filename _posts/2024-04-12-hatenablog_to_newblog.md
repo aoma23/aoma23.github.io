@@ -56,3 +56,22 @@ tags: [はてなブログ,ブログ移転,javascript]
 かんたんですね！
 
 新ブログでも頑張っていきましょう！
+
+
+## おまけ
+
+トップページやアーカイブページは新ブログに即リダイレクトするようにした。  
+これは  
+`設定→詳細設定→<head>要素にメタデータを追加`  
+に下記スクリプトを入れればOK！
+
+```
+<script type="text/javascript">
+if( location.href == 'https://aoma23.hatenablog.jp/'){
+  location.href='https://aoma23.github.io/';
+}
+if( location.href == 'https://aoma23.hatenablog.jp/archive'){
+  location.href='https://aoma23.github.io/';
+}
+</script>
+```
