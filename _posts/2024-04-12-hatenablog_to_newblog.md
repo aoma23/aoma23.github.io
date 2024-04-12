@@ -1,7 +1,6 @@
 ---
 title: "はてなブログの全記事に新サイトへの該当記事へのリダイレクトを埋め込む方法"
 date: 2024-04-12
-slug: "qumalidepart"
 category: blog
 tags: [はてなブログ,ブログ移転,javascript]
 ---
