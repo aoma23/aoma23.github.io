@@ -120,3 +120,6 @@ analytics:
   google:
     tracking_id: "GTM-MF9338WT"
     anonymize_ip: false # default
+
+head_scripts:
+  - /assets/js/ad.js
