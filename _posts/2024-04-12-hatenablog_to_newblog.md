@@ -75,3 +75,11 @@ if( location.href == 'https://aoma23.hatenablog.jp/archive'){
 }
 </script>
 ```
+
+## 追記 4/30
+
+結局記事ページも即リダイレクトするようにしました。
+
+`setTimeout("redirect()", 0);`
+
+Googleはjsリダイレクトも移転として扱ってくれるようになったぽい。ページ評価引き継いでくれると嬉しいなぁ。
