@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Stripe Merger</title>
+</head>
+<body>
+    <h1>Image Stripe Merger</h1>
+    <input type="file" id="imageA" accept="image/*">
+    <input type="file" id="imageB" accept="image/*">
+    <input type="number" id="stripeWidth" placeholder="Stripe Width" value="50">
+    <select id="direction">
+        <option value="vertical">Vertical</option>
+        <option value="horizontal">Horizontal</option>
+        <option value="diagonal">Diagonal</option>
+    </select>
+    <button onclick="mergeImages()">Merge Images</button>
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
