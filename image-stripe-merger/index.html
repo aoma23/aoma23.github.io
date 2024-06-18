@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,6 +64,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Image Stripe Merger</h1>
     <div class="image-container">
@@ -81,12 +83,13 @@
     <select id="direction">
         <option value="vertical">Vertical</option>
         <option value="horizontal">Horizontal</option>
-        <option value="right-diagonal">Right Diagonal</option>
-        <option value="left-diagonal">Left Diagonal</option>
+        <option value="diagonal">Diagonal</option>
     </select>
+    <input type="number" id="angle" placeholder="Angle (-90 to 90)" value="45" style="display: none;">
     <br>
     <canvas id="canvas" width="800" height="400"></canvas>
     <br>
     <script src="script.js"></script>
 </body>
+
 </html>

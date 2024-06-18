@@ -1,10 +1,12 @@
-window.onload = function () {
+window.onload = function() {
     const dropZoneA = document.getElementById('dropZoneA');
     const dropZoneB = document.getElementById('dropZoneB');
     const imagePreviewA = document.getElementById('imagePreviewA');
     const imagePreviewB = document.getElementById('imagePreviewB');
     const inputFileA = document.getElementById('inputFileA');
     const inputFileB = document.getElementById('inputFileB');
+    const angleInput = document.getElementById('angle');
+    const directionSelect = document.getElementById('direction');
 
     setupDropZone(dropZoneA, imagePreviewA, inputFileA, 'A');
     setupDropZone(dropZoneB, imagePreviewB, inputFileB, 'B');
@@ -18,8 +20,17 @@ window.onload = function () {
         }
     }
 
+    directionSelect.addEventListener('change', function() {
+        if (directionSelect.value === 'diagonal') {
+            angleInput.style.display = 'inline';
+        } else {
+            angleInput.style.display = 'none';
+        }
+        updatePreview();
+    });
+
     document.getElementById('stripeCount').addEventListener('input', updatePreview);
-    document.getElementById('direction').addEventListener('change', updatePreview);
+    angleInput.addEventListener('input', updatePreview);
 }
 
 function setupDropZone(dropZone, imagePreview, inputFile, type) {
@@ -85,13 +96,14 @@ let imgB = new Image();
 function updatePreview() {
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
     const direction = document.getElementById('direction').value;
+    const angle = parseFloat(document.getElementById('angle').value);
 
     if (!isNaN(stripeCount)) {
-        processImages(imgA, imgB, stripeCount, direction);
+        processImages(imgA, imgB, stripeCount, direction, angle);
     }
 }
 
-function processImages(imgA, imgB, stripeCount, direction) {
+function processImages(imgA, imgB, stripeCount, direction, angle) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -102,19 +114,11 @@ function processImages(imgA, imgB, stripeCount, direction) {
     canvas.height = height;
 
     const totalStripes = stripeCount + 1;
-    let stripeWidth, remainingPixels;
-
-    if (direction === 'vertical' || direction === 'diagonal') {
-        stripeWidth = Math.floor(width / totalStripes);
-        remainingPixels = width % totalStripes;
-    } else {
-        stripeWidth = Math.floor(height / totalStripes);
-        remainingPixels = height % totalStripes;
-    }
-
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (direction === 'vertical') {
+        const stripeWidth = Math.floor(width / totalStripes);
+        const remainingPixels = width % totalStripes;
         for (let i = 0; i < totalStripes; i++) {
             const x = i * stripeWidth + Math.min(i, remainingPixels);
             const currentStripeWidth = stripeWidth + (i < remainingPixels ? 1 : 0);
@@ -122,6 +126,8 @@ function processImages(imgA, imgB, stripeCount, direction) {
             ctx.drawImage(img, x, 0, currentStripeWidth, height, x, 0, currentStripeWidth, height);
         }
     } else if (direction === 'horizontal') {
+        const stripeWidth = Math.floor(height / totalStripes);
+        const remainingPixels = height % totalStripes;
         for (let i = 0; i < totalStripes; i++) {
             const y = i * stripeWidth + Math.min(i, remainingPixels);
             const currentStripeWidth = stripeWidth + (i < remainingPixels ? 1 : 0);
@@ -129,16 +135,34 @@ function processImages(imgA, imgB, stripeCount, direction) {
             ctx.drawImage(img, 0, y, width, currentStripeWidth, 0, y, width, currentStripeWidth);
         }
     } else if (direction === 'diagonal') {
+        const radians = angle * Math.PI / 180;
+        const tanAngle = Math.tan(radians);
+        const stripeWidth = width / totalStripes;
+
         for (let i = 0; i < totalStripes; i++) {
             const img = i % 2 === 0 ? imgA : imgB;
-            for (let x = 0; x < width; x += stripeWidth * 2) {
-                const y = x * (height / width);
-                const currentStripeWidth = stripeWidth + (i < remainingPixels ? 1 : 0);
-                ctx.drawImage(img, x, y, currentStripeWidth, currentStripeWidth, x, y, currentStripeWidth, currentStripeWidth);
-                if (x + currentStripeWidth < width && y + currentStripeWidth < height) {
-                    ctx.drawImage(img, x + currentStripeWidth, y + currentStripeWidth, currentStripeWidth, currentStripeWidth, x + currentStripeWidth, y + currentStripeWidth, currentStripeWidth, currentStripeWidth);
-                }
+            ctx.save();
+            ctx.beginPath();
+            if (angle > 0) {
+                ctx.moveTo(0, stripeWidth * i * tanAngle);
+                ctx.lineTo(stripeWidth * i, 0);
+                ctx.lineTo(stripeWidth * (i + 1), 0);
+                ctx.lineTo(0, stripeWidth * (i + 1) * tanAngle);
+            } else {
+                ctx.moveTo(width, stripeWidth * i * tanAngle);
+                ctx.lineTo(width - stripeWidth * i, 0);
+                ctx.lineTo(width - stripeWidth * (i + 1), 0);
+                ctx.lineTo(width, stripeWidth * (i + 1) * tanAngle);
             }
+            ctx.closePath();
+            ctx.clip();
+
+            if (angle > 0) {
+                ctx.drawImage(img, 0, 0, width, height);
+            } else {
+                ctx.drawImage(img, width - stripeWidth * (i + 1), 0, width, height);
+            }
+            ctx.restore();
         }
     }
 }
