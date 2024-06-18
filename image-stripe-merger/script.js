@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     const dropZoneA = document.getElementById('dropZoneA');
     const dropZoneB = document.getElementById('dropZoneB');
     const imagePreviewA = document.getElementById('imagePreviewA');
@@ -20,7 +20,7 @@ window.onload = function() {
         }
     }
 
-    directionSelect.addEventListener('change', function() {
+    directionSelect.addEventListener('change', function () {
         if (directionSelect.value === 'diagonal') {
             angleInput.style.display = 'inline';
         } else {
@@ -135,33 +135,33 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
             ctx.drawImage(img, 0, y, width, currentStripeWidth, 0, y, width, currentStripeWidth);
         }
     } else if (direction === 'diagonal') {
+        const stripeWidth = Math.sqrt(width * width + height * height) / totalStripes;
         const radians = angle * Math.PI / 180;
-        const tanAngle = Math.tan(radians);
-        const stripeWidth = width / totalStripes;
 
         for (let i = 0; i < totalStripes; i++) {
             const img = i % 2 === 0 ? imgA : imgB;
             ctx.save();
             ctx.beginPath();
-            if (angle > 0) {
-                ctx.moveTo(0, stripeWidth * i * tanAngle);
-                ctx.lineTo(stripeWidth * i, 0);
-                ctx.lineTo(stripeWidth * (i + 1), 0);
-                ctx.lineTo(0, stripeWidth * (i + 1) * tanAngle);
-            } else {
-                ctx.moveTo(width, stripeWidth * i * tanAngle);
-                ctx.lineTo(width - stripeWidth * i, 0);
-                ctx.lineTo(width - stripeWidth * (i + 1), 0);
-                ctx.lineTo(width, stripeWidth * (i + 1) * tanAngle);
-            }
+
+            // Calculate the four corners of the stripe
+            const x1 = i * stripeWidth * Math.cos(radians);
+            const y1 = i * stripeWidth * Math.sin(radians);
+            const x2 = x1 + stripeWidth * Math.cos(radians);
+            const y2 = y1 + stripeWidth * Math.sin(radians);
+            const x3 = x2 - height * Math.sin(radians);
+            const y3 = y2 + height * Math.cos(radians);
+            const x4 = x1 - height * Math.sin(radians);
+            const y4 = y1 + height * Math.cos(radians);
+
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.lineTo(x3, y3);
+            ctx.lineTo(x4, y4);
+
             ctx.closePath();
             ctx.clip();
 
-            if (angle > 0) {
-                ctx.drawImage(img, 0, 0, width, height);
-            } else {
-                ctx.drawImage(img, width - stripeWidth * (i + 1), 0, width, height);
-            }
+            ctx.drawImage(img, 0, 0, width, height);
             ctx.restore();
         }
     }
