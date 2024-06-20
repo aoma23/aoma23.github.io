@@ -113,45 +113,28 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
     canvas.width = width;
     canvas.height = height;
 
-    const totalStripes = stripeCount + 1;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (direction === 'vertical') {
-        const stripeWidth = Math.floor(width / totalStripes);
-        const remainingPixels = width % totalStripes;
-        for (let i = 0; i < totalStripes; i++) {
-            const x = i * stripeWidth + Math.min(i, remainingPixels);
-            const currentStripeWidth = stripeWidth + (i < remainingPixels ? 1 : 0);
-            const img = i % 2 === 0 ? imgA : imgB;
-            ctx.drawImage(img, x, 0, currentStripeWidth, height, x, 0, currentStripeWidth, height);
-        }
-    } else if (direction === 'horizontal') {
-        const stripeWidth = Math.floor(height / totalStripes);
-        const remainingPixels = height % totalStripes;
-        for (let i = 0; i < totalStripes; i++) {
-            const y = i * stripeWidth + Math.min(i, remainingPixels);
-            const currentStripeWidth = stripeWidth + (i < remainingPixels ? 1 : 0);
-            const img = i % 2 === 0 ? imgA : imgB;
-            ctx.drawImage(img, 0, y, width, currentStripeWidth, 0, y, width, currentStripeWidth);
-        }
-    } else if (direction === 'diagonal') {
-        const stripeWidth = Math.sqrt(width * width + height * height) / totalStripes;
+    if (direction === 'diagonal') {
         const radians = angle * Math.PI / 180;
 
-        for (let i = 0; i < totalStripes; i++) {
+        for (let i = 0; i <= stripeCount; i++) {
             const img = i % 2 === 0 ? imgA : imgB;
             ctx.save();
             ctx.beginPath();
 
-            // Calculate the four corners of the stripe
-            const x1 = i * stripeWidth * Math.cos(radians);
-            const y1 = i * stripeWidth * Math.sin(radians);
-            const x2 = x1 + stripeWidth * Math.cos(radians);
-            const y2 = y1 + stripeWidth * Math.sin(radians);
-            const x3 = x2 - height * Math.sin(radians);
-            const y3 = y2 + height * Math.cos(radians);
-            const x4 = x1 - height * Math.sin(radians);
-            const y4 = y1 + height * Math.cos(radians);
+            let x1, y1, x2, y2, x3, y3, x4, y4;
+
+            const stripeWidth = (width + height * Math.tan(radians)) / (stripeCount + 1);
+
+            x1 = i * stripeWidth;
+            y1 = 0;
+            x2 = (i + 1) * stripeWidth;
+            y2 = 0;
+            x3 = x2 - height * Math.tan(radians);
+            y3 = height;
+            x4 = x1 - height * Math.tan(radians);
+            y4 = height;
 
             ctx.moveTo(x1, y1);
             ctx.lineTo(x2, y2);
