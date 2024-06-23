@@ -37,7 +37,7 @@ window.onload = function () {
     copyButton.addEventListener('click', copyToClipboard);
     downloadButton.addEventListener('click', downloadImage);
 
-    enableCanvasDragging();
+    enableCanvasDraggingAndScaling();
 }
 
 function setupDropZone(dropZone, imagePreview, inputFile, type) {
@@ -100,6 +100,7 @@ function setupDropZone(dropZone, imagePreview, inputFile, type) {
 let imgA = new Image();
 let imgB = new Image();
 let offsets = [];
+let scales = [];
 
 function updatePreview() {
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
@@ -134,6 +135,7 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
         for (let i = 0; i <= stripeCount; i++) {
             let img = i % 2 === 0 ? imgA : imgB;
             let offset = offsets[i] || { x: 0, y: 0 };
+            let scale = scales[i] || 1;
             ctx.save();
             ctx.beginPath();
 
@@ -203,13 +205,13 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
             ctx.closePath();
             ctx.clip();
 
-            ctx.drawImage(img, offset.x, offset.y, width, height);
+            ctx.drawImage(img, offset.x, offset.y, width * scale, height * scale);
             ctx.restore();
         }
     }
 }
 
-function enableCanvasDragging() {
+function enableCanvasDraggingAndScaling() {
     const canvas = document.getElementById('canvas');
     let isDragging = false;
     let startX, startY, initialX, initialY, stripeIndex;
@@ -237,6 +239,16 @@ function enableCanvasDragging() {
 
     document.addEventListener('mouseup', () => {
         isDragging = false;
+    });
+
+    canvas.addEventListener('wheel', (event) => {
+        stripeIndex = getStripeIndex(event.clientX, event.clientY);
+        if (stripeIndex !== null) {
+            const scale = scales[stripeIndex] || 1;
+            const newScale = event.deltaY > 0 ? scale * 0.9 : scale * 1.1;
+            scales[stripeIndex] = newScale;
+            updatePreview();
+        }
     });
 }
 
