@@ -112,29 +112,77 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
 
     canvas.width = width;
     canvas.height = height;
+    angle = angle % 360;
+    if (angle > 180) {
+        angle = angle - 360;
+    }else if(angle < -180) {
+        angle = angle + 360;
+    }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     if (direction === 'diagonal') {
-        const radians = angle * Math.PI / 180;
 
         for (let i = 0; i <= stripeCount; i++) {
-            const img = i % 2 === 0 ? imgA : imgB;
+            let img = i % 2 === 0 ? imgA : imgB;
             ctx.save();
             ctx.beginPath();
 
-            let x1, y1, x2, y2, x3, y3, x4, y4;
+            let stripeWidth, radians, x1, y1, x2, y2, x3, y3, x4, y4;
 
-            const stripeWidth = (width + height * Math.tan(radians)) / (stripeCount + 1);
+            if (angle >= 0 && angle <= 90) {
+                radians = angle * Math.PI / 180;
+                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-            x1 = i * stripeWidth;
-            y1 = 0;
-            x2 = (i + 1) * stripeWidth;
-            y2 = 0;
-            x3 = x2 - height * Math.tan(radians);
-            y3 = height;
-            x4 = x1 - height * Math.tan(radians);
-            y4 = height;
+                x1 = i * stripeWidth;
+                y1 = 0;
+                x2 = (i + 1) * stripeWidth;
+                y2 = 0;
+                x3 = x2 - height * Math.tan(radians);
+                y3 = height;
+                x4 = x1 - height * Math.tan(radians);
+                y4 = height;
+            } else if (angle < 0 && angle >= -90) {
+                img = i % 2 === 1 ? imgA : imgB;
+                radians = angle * Math.PI / 180;
+                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
+                x1 = width - (i * stripeWidth);
+                y1 = 0;
+                x2 = width - ((i + 1) * stripeWidth);
+                y2 = 0;
+                x3 = x2 + height * Math.tan(Math.abs(radians));
+                y3 = height;
+                x4 = x1 + height * Math.tan(Math.abs(radians));
+                y4 = height;
+            } else if (angle < -90 && angle >= -180) {
+                let new_angle = 180 + angle;
+                img = i % 2 === 1 ? imgA : imgB;
+                radians = new_angle * Math.PI / 180;
+                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
+                x1 = i * stripeWidth;
+                y1 = 0;
+                x2 = (i + 1) * stripeWidth;
+                y2 = 0;
+                x3 = x2 - height * Math.tan(radians);
+                y3 = height;
+                x4 = x1 - height * Math.tan(radians);
+                y4 = height;
+            } else if (angle > 90 && angle <= 180) {
+                let new_angle = -180 + angle;
+                radians = new_angle * Math.PI / 180;
+                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
+                x1 = width - (i * stripeWidth);
+                y1 = 0;
+                x2 = width - ((i + 1) * stripeWidth);
+                y2 = 0;
+                x3 = x2 + height * Math.tan(Math.abs(radians));
+                y3 = height;
+                x4 = x1 + height * Math.tan(Math.abs(radians));
+                y4 = height;
+            }
 
             ctx.moveTo(x1, y1);
             ctx.lineTo(x2, y2);
