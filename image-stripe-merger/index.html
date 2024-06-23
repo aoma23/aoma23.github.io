@@ -12,9 +12,16 @@
             margin: 20px;
         }
 
+        .canvas-container {
+            display: flex;
+            justify-content: center;
+        }
+
         canvas {
             border: 1px solid black;
             margin: 20px auto;
+            width: 90%;
+            height: auto;
         }
 
         .image-container {
@@ -80,13 +87,14 @@
         </div>
     </div>
     <input type="number" id="stripeCount" placeholder="Stripe Count" value="3">
+    <input type="number" id="angle" placeholder="Angle" value="45">
     <button id="verticalButton">Vertical</button>
     <button id="horizontalButton">Horizontal</button>
     <button id="diagonalButton">Diagonal</button>
-    <input type="number" id="angle" placeholder="Angle" value="45">
     <br>
-    <canvas id="canvas" width="800" height="400"></canvas>
-    <br>
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
     <button id="copyButton">Copy to Clipboard</button>
     <button id="downloadButton">Download Image</button>
     <script src="script.js"></script>

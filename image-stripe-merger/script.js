@@ -203,7 +203,9 @@ function enableCanvasDraggingAndScaling() {
         isDragging = true;
         startX = event.clientX;
         startY = event.clientY;
-        stripeIndex = getStripeIndex(event.clientX, event.clientY);
+        const rect = canvas.getBoundingClientRect();
+        const scaleFactor = canvas.width / rect.width;
+        stripeIndex = getStripeIndex((event.clientX - rect.left) * scaleFactor, (event.clientY - rect.top) * scaleFactor);
         if (stripeIndex !== null) {
             initialX = offsets[stripeIndex]?.x || 0;
             initialY = offsets[stripeIndex]?.y || 0;
@@ -225,7 +227,9 @@ function enableCanvasDraggingAndScaling() {
     });
 
     canvas.addEventListener('wheel', (event) => {
-        stripeIndex = getStripeIndex(event.clientX, event.clientY);
+        const rect = canvas.getBoundingClientRect();
+        const scaleFactor = canvas.width / rect.width;
+        stripeIndex = getStripeIndex((event.clientX - rect.left) * scaleFactor, (event.clientY - rect.top) * scaleFactor);
         if (stripeIndex !== null) {
             const scale = scales[stripeIndex] || 1;
             const newScale = event.deltaY > 0 ? scale * 0.97 : scale * 1.03;  // スケール変更を緩やかにするための調整
@@ -236,20 +240,15 @@ function enableCanvasDraggingAndScaling() {
 }
 
 function getStripeIndex(x, y) {
-    const canvas = document.getElementById('canvas');
-    const rect = canvas.getBoundingClientRect();
-    const canvasX = x - rect.left;
-    const canvasY = y - rect.top;
-
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
     const angle = parseFloat(document.getElementById('angle').value);
 
     const radians = angle * Math.PI / 180;
-    const stripeWidth = (canvas.width + canvas.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+    const stripeWidth = (imgA.width + imgA.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
     for (let i = 0; i <= stripeCount; i++) {
-        const { x1, y1, x2, y2, x3, y3, x4, y4 } = calculateStripeCoordinates(i, stripeCount, canvas.width, canvas.height, angle);
-        if (isPointInPolygon([x1, y1, x2, y2, x3, y3, x4, y4], canvasX, canvasY)) {
+        const { x1, y1, x2, y2, x3, y3, x4, y4 } = calculateStripeCoordinates(i, stripeCount, imgA.width, imgA.height, angle);
+        if (isPointInPolygon([x1, y1, x2, y2, x3, y3, x4, y4], x, y)) {
             return i;
         }
     }
@@ -279,8 +278,22 @@ function copyToClipboard() {
 
 function downloadImage() {
     const canvas = document.getElementById('canvas');
+    const originalWidth = imgA.width;
+    const originalHeight = imgA.height;
+
+    const tempCanvas = document.createElement('canvas');
+    const tempCtx = tempCanvas.getContext('2d');
+
+    tempCanvas.width = originalWidth;
+    tempCanvas.height = originalHeight;
+
+    const stripeCount = parseInt(document.getElementById('stripeCount').value);
+    const angle = parseFloat(document.getElementById('angle').value);
+
+    processImages(imgA, imgB, stripeCount, angle, tempCtx);
+
     const link = document.createElement('a');
     link.download = 'merged_image.png';
-    link.href = canvas.toDataURL('image/png');
+    link.href = tempCanvas.toDataURL('image/png');
     link.click();
 }
