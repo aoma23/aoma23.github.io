@@ -49,6 +49,8 @@
             max-width: 100%;
             max-height: 100%;
             display: block;
+            position: absolute;
+            cursor: move;
         }
 
         .drop-zone input[type="file"] {
@@ -89,6 +91,8 @@
     <br>
     <canvas id="canvas" width="800" height="400"></canvas>
     <br>
+    <button id="copyButton">Copy to Clipboard</button>
+    <button id="downloadButton">Download Image</button>
     <script src="script.js"></script>
 </body>
 
