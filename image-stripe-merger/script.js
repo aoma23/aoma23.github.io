@@ -98,18 +98,20 @@ function updatePreview() {
     }
 }
 
-function processImages(imgA, imgB, stripeCount, angle) {
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
+function processImages(imgA, imgB, stripeCount, angle, ctx = null) {
+    if (!ctx) {
+        const canvas = document.getElementById('canvas');
+        ctx = canvas.getContext('2d');
+    }
 
     const width = imgA.width;
     const height = imgA.height;
 
-    canvas.width = width;
-    canvas.height = height;
+    ctx.canvas.width = width;
+    ctx.canvas.height = height;
     const adjustedAngle = adjustAngle(angle);
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     for (let i = 0; i <= stripeCount; i++) {
         let img = i % 2 === 0 ? imgA : imgB;
@@ -270,7 +272,17 @@ function isPointInPolygon(points, x, y) {
 
 function copyToClipboard() {
     const canvas = document.getElementById('canvas');
-    canvas.toBlob(blob => {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = imgA.width;
+    tempCanvas.height = imgA.height;
+    const tempCtx = tempCanvas.getContext('2d');
+
+    const stripeCount = parseInt(document.getElementById('stripeCount').value);
+    const angle = parseFloat(document.getElementById('angle').value);
+
+    processImages(imgA, imgB, stripeCount, angle, tempCtx);
+
+    tempCanvas.toBlob(blob => {
         const item = new ClipboardItem({ 'image/png': blob });
         navigator.clipboard.write([item]);
     });
