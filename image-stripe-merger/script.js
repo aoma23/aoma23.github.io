@@ -6,7 +6,9 @@ window.onload = function () {
     const inputFileA = document.getElementById('inputFileA');
     const inputFileB = document.getElementById('inputFileB');
     const angleInput = document.getElementById('angle');
-    const directionSelect = document.getElementById('direction');
+    const verticalButton = document.getElementById('verticalButton');
+    const horizontalButton = document.getElementById('horizontalButton');
+    const diagonalButton = document.getElementById('diagonalButton');
     const copyButton = document.getElementById('copyButton');
     const downloadButton = document.getElementById('downloadButton');
 
@@ -22,12 +24,18 @@ window.onload = function () {
         }
     }
 
-    directionSelect.addEventListener('change', function () {
-        if (directionSelect.value === 'diagonal') {
-            angleInput.style.display = 'inline';
-        } else {
-            angleInput.style.display = 'none';
-        }
+    verticalButton.addEventListener('click', function () {
+        angleInput.value = 0;
+        updatePreview();
+    });
+
+    horizontalButton.addEventListener('click', function () {
+        angleInput.value = 90;
+        updatePreview();
+    });
+
+    diagonalButton.addEventListener('click', function () {
+        angleInput.value = 45;
         updatePreview();
     });
 
@@ -104,15 +112,14 @@ let scales = [];
 
 function updatePreview() {
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
-    const direction = document.getElementById('direction').value;
     const angle = parseFloat(document.getElementById('angle').value);
 
     if (!isNaN(stripeCount)) {
-        processImages(imgA, imgB, stripeCount, direction, angle);
+        processImages(imgA, imgB, stripeCount, angle);
     }
 }
 
-function processImages(imgA, imgB, stripeCount, direction, angle) {
+function processImages(imgA, imgB, stripeCount, angle) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -130,84 +137,79 @@ function processImages(imgA, imgB, stripeCount, direction, angle) {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    if (direction === 'diagonal') {
+    for (let i = 0; i <= stripeCount; i++) {
+        let img = i % 2 === 0 ? imgA : imgB;
+        let offset = offsets[i] || { x: 0, y: 0 };
+        let scale = scales[i] || 1;
+        ctx.save();
+        ctx.beginPath();
 
-        for (let i = 0; i <= stripeCount; i++) {
-            let img = i % 2 === 0 ? imgA : imgB;
-            let offset = offsets[i] || { x: 0, y: 0 };
-            let scale = scales[i] || 1;
-            ctx.save();
-            ctx.beginPath();
+        let stripeWidth, radians, x1, y1, x2, y2, x3, y3, x4, y4;
 
-            let stripeWidth, radians, x1, y1, x2, y2, x3, y3, x4, y4;
+        if (angle >= 0 && angle <= 90) {
+            radians = angle * Math.PI / 180;
+            stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-            if (angle >= 0 && angle <= 90) {
-                radians = angle * Math.PI / 180;
-                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+            x1 = i * stripeWidth;
+            y1 = 0;
+            x2 = (i + 1) * stripeWidth;
+            y2 = 0;
+            x3 = x2 - height * Math.tan(radians);
+            y3 = height;
+            x4 = x1 - height * Math.tan(radians);
+            y4 = height;
+        } else if (angle < 0 && angle >= -90) {
+            img = i % 2 === 1 ? imgA : imgB;
+            radians = angle * Math.PI / 180;
+            stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-                x1 = i * stripeWidth;
-                y1 = 0;
-                x2 = (i + 1) * stripeWidth;
-                y2 = 0;
-                x3 = x2 - height * Math.tan(radians);
-                y3 = height;
-                x4 = x1 - height * Math.tan(radians);
-                y4 = height;
-            } else if (angle < 0 && angle >= -90) {
-                img = i % 2 === 1 ? imgA : imgB;
-                offset = offsets[i] || { x: 0, y: 0 };
-                radians = angle * Math.PI / 180;
-                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+            x1 = width - (i * stripeWidth);
+            y1 = 0;
+            x2 = width - ((i + 1) * stripeWidth);
+            y2 = 0;
+            x3 = x2 + height * Math.tan(Math.abs(radians));
+            y3 = height;
+            x4 = x1 + height * Math.tan(Math.abs(radians));
+            y4 = height;
+        } else if (angle < -90 && angle >= -180) {
+            let new_angle = 180 + angle;
+            img = i % 2 === 1 ? imgA : imgB;
+            radians = new_angle * Math.PI / 180;
+            stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-                x1 = width - (i * stripeWidth);
-                y1 = 0;
-                x2 = width - ((i + 1) * stripeWidth);
-                y2 = 0;
-                x3 = x2 + height * Math.tan(Math.abs(radians));
-                y3 = height;
-                x4 = x1 + height * Math.tan(Math.abs(radians));
-                y4 = height;
-            } else if (angle < -90 && angle >= -180) {
-                let new_angle = 180 + angle;
-                img = i % 2 === 1 ? imgA : imgB;
-                offset = offsets[i] || { x: 0, y: 0 };
-                radians = new_angle * Math.PI / 180;
-                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+            x1 = i * stripeWidth;
+            y1 = 0;
+            x2 = (i + 1) * stripeWidth;
+            y2 = 0;
+            x3 = x2 - height * Math.tan(radians);
+            y3 = height;
+            x4 = x1 - height * Math.tan(radians);
+            y4 = height;
+        } else if (angle > 90 && angle <= 180) {
+            let new_angle = -180 + angle;
+            radians = new_angle * Math.PI / 180;
+            stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-                x1 = i * stripeWidth;
-                y1 = 0;
-                x2 = (i + 1) * stripeWidth;
-                y2 = 0;
-                x3 = x2 - height * Math.tan(radians);
-                y3 = height;
-                x4 = x1 - height * Math.tan(radians);
-                y4 = height;
-            } else if (angle > 90 && angle <= 180) {
-                let new_angle = -180 + angle;
-                radians = new_angle * Math.PI / 180;
-                stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
-
-                x1 = width - (i * stripeWidth);
-                y1 = 0;
-                x2 = width - ((i + 1) * stripeWidth);
-                y2 = 0;
-                x3 = x2 + height * Math.tan(Math.abs(radians));
-                y3 = height;
-                x4 = x1 + height * Math.tan(Math.abs(radians));
-                y4 = height;
-            }
-
-            ctx.moveTo(x1, y1);
-            ctx.lineTo(x2, y2);
-            ctx.lineTo(x3, y3);
-            ctx.lineTo(x4, y4);
-
-            ctx.closePath();
-            ctx.clip();
-
-            ctx.drawImage(img, offset.x, offset.y, width * scale, height * scale);
-            ctx.restore();
+            x1 = width - (i * stripeWidth);
+            y1 = 0;
+            x2 = width - ((i + 1) * stripeWidth);
+            y2 = 0;
+            x3 = x2 + height * Math.tan(Math.abs(radians));
+            y3 = height;
+            x4 = x1 + height * Math.tan(Math.abs(radians));
+            y4 = height;
         }
+
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineTo(x3, y3);
+        ctx.lineTo(x4, y4);
+
+        ctx.closePath();
+        ctx.clip();
+
+        ctx.drawImage(img, offset.x, offset.y, width * scale, height * scale);
+        ctx.restore();
     }
 }
 
@@ -259,61 +261,58 @@ function getStripeIndex(x, y) {
     const canvasY = y - rect.top;
 
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
-    const direction = document.getElementById('direction').value;
     const angle = parseFloat(document.getElementById('angle').value);
 
-    if (direction === 'diagonal') {
-        const radians = angle * Math.PI / 180;
-        const stripeWidth = (canvas.width + canvas.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+    const radians = angle * Math.PI / 180;
+    const stripeWidth = (canvas.width + canvas.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
-        for (let i = 0; i <= stripeCount; i++) {
-            let x1, y1, x2, y2, x3, y3, x4, y4;
+    for (let i = 0; i <= stripeCount; i++) {
+        let x1, y1, x2, y2, x3, y3, x4, y4;
 
-            if (angle >= 0 && angle <= 90) {
-                x1 = i * stripeWidth;
-                y1 = 0;
-                x2 = (i + 1) * stripeWidth;
-                y2 = 0;
-                x3 = x2 - canvas.height * Math.tan(radians);
-                y3 = canvas.height;
-                x4 = x1 - canvas.height * Math.tan(radians);
-                y4 = canvas.height;
-            } else if (angle < 0 && angle >= -90) {
-                x1 = canvas.width - (i * stripeWidth);
-                y1 = 0;
-                x2 = canvas.width - ((i + 1) * stripeWidth);
-                y2 = 0;
-                x3 = x2 + canvas.height * Math.tan(Math.abs(radians));
-                y3 = canvas.height;
-                x4 = x1 + canvas.height * Math.tan(Math.abs(radians));
-                y4 = canvas.height;
-            } else if (angle < -90 && angle >= -180) {
-                let new_angle = 180 + angle;
-                const new_radians = new_angle * Math.PI / 180;
-                x1 = i * stripeWidth;
-                y1 = 0;
-                x2 = (i + 1) * stripeWidth;
-                y2 = 0;
-                x3 = x2 - canvas.height * Math.tan(new_radians);
-                y3 = canvas.height;
-                x4 = x1 - canvas.height * Math.tan(new_radians);
-                y4 = canvas.height;
-            } else if (angle > 90 && angle <= 180) {
-                let new_angle = -180 + angle;
-                const new_radians = new_angle * Math.PI / 180;
-                x1 = canvas.width - (i * stripeWidth);
-                y1 = 0;
-                x2 = canvas.width - ((i + 1) * stripeWidth);
-                y2 = 0;
-                x3 = x2 + canvas.height * Math.tan(Math.abs(new_radians));
-                y3 = canvas.height;
-                x4 = x1 + canvas.height * Math.tan(Math.abs(new_radians));
-                y4 = canvas.height;
-            }
+        if (angle >= 0 && angle <= 90) {
+            x1 = i * stripeWidth;
+            y1 = 0;
+            x2 = (i + 1) * stripeWidth;
+            y2 = 0;
+            x3 = x2 - canvas.height * Math.tan(radians);
+            y3 = canvas.height;
+            x4 = x1 - canvas.height * Math.tan(radians);
+            y4 = canvas.height;
+        } else if (angle < 0 && angle >= -90) {
+            x1 = canvas.width - (i * stripeWidth);
+            y1 = 0;
+            x2 = canvas.width - ((i + 1) * stripeWidth);
+            y2 = 0;
+            x3 = x2 + canvas.height * Math.tan(Math.abs(radians));
+            y3 = canvas.height;
+            x4 = x1 + canvas.height * Math.tan(Math.abs(radians));
+            y4 = canvas.height;
+        } else if (angle < -90 && angle >= -180) {
+            let new_angle = 180 + angle;
+            const new_radians = new_angle * Math.PI / 180;
+            x1 = i * stripeWidth;
+            y1 = 0;
+            x2 = (i + 1) * stripeWidth;
+            y2 = 0;
+            x3 = x2 - canvas.height * Math.tan(new_radians);
+            y3 = canvas.height;
+            x4 = x1 - canvas.height * Math.tan(new_radians);
+            y4 = canvas.height;
+        } else if (angle > 90 && angle <= 180) {
+            let new_angle = -180 + angle;
+            const new_radians = new_angle * Math.PI / 180;
+            x1 = canvas.width - (i * stripeWidth);
+            y1 = 0;
+            x2 = canvas.width - ((i + 1) * stripeWidth);
+            y2 = 0;
+            x3 = x2 + canvas.height * Math.tan(Math.abs(new_radians));
+            y3 = canvas.height;
+            x4 = x1 + canvas.height * Math.tan(Math.abs(new_radians));
+            y4 = canvas.height;
+        }
 
-            if (isPointInPolygon([x1, y1, x2, y2, x3, y3, x4, y4], canvasX, canvasY)) {
-                return i;
-            }
+        if (isPointInPolygon([x1, y1, x2, y2, x3, y3, x4, y4], canvasX, canvasY)) {
+            return i;
         }
     }
 
