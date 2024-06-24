@@ -1,35 +1,32 @@
+let imageCount = 2;
+let images = [
+    { src: 'sample_a.webp', element: new Image() },
+    { src: 'sample_b.webp', element: new Image() }
+];
+let offsets = [];
+let scales = [];
+
 window.onload = function () {
-    const dropZoneA = document.getElementById('dropZoneA');
-    const dropZoneB = document.getElementById('dropZoneB');
-    const imagePreviewA = document.getElementById('imagePreviewA');
-    const imagePreviewB = document.getElementById('imagePreviewB');
-    const inputFileA = document.getElementById('inputFileA');
-    const inputFileB = document.getElementById('inputFileB');
-    const angleInput = document.getElementById('angle');
     const verticalButton = document.getElementById('verticalButton');
     const horizontalButton = document.getElementById('horizontalButton');
     const diagonalButton = document.getElementById('diagonalButton');
     const copyButton = document.getElementById('copyButton');
     const downloadButton = document.getElementById('downloadButton');
 
-    setupDropZone(dropZoneA, imagePreviewA, inputFileA, 'A');
-    setupDropZone(dropZoneB, imagePreviewB, inputFileB, 'B');
-
-    imgA.src = imagePreviewA.src;
-    imgB.src = imagePreviewB.src;
-
-    imgA.onload = function () {
-        imgB.onload = function () {
-            updatePreview();
+    images.forEach((img, index) => {
+        img.element.src = img.src;
+        img.element.onload = function () {
+            if (index === images.length - 1) updatePreview();
         }
-    }
+        setupDropZone(index);
+    });
 
     verticalButton.addEventListener('click', () => setAngleAndUpdatePreview(0));
     horizontalButton.addEventListener('click', () => setAngleAndUpdatePreview(90));
     diagonalButton.addEventListener('click', () => setAngleAndUpdatePreview(45));
 
     document.getElementById('stripeCount').addEventListener('input', updatePreview);
-    angleInput.addEventListener('input', updatePreview);
+    document.getElementById('angle').addEventListener('input', updatePreview);
 
     copyButton.addEventListener('click', copyToClipboard);
     downloadButton.addEventListener('click', downloadImage);
@@ -37,7 +34,11 @@ window.onload = function () {
     enableCanvasDraggingAndScaling();
 }
 
-function setupDropZone(dropZone, imagePreview, inputFile, type) {
+function setupDropZone(index) {
+    const dropZone = document.getElementById(`dropZone${index}`);
+    const imagePreview = document.getElementById(`imagePreview${index}`);
+    const inputFile = document.getElementById(`inputFile${index}`);
+
     dropZone.addEventListener('dragover', (event) => {
         event.preventDefault();
         dropZone.classList.add('dragover');
@@ -50,7 +51,7 @@ function setupDropZone(dropZone, imagePreview, inputFile, type) {
     dropZone.addEventListener('drop', (event) => {
         event.preventDefault();
         dropZone.classList.remove('dragover');
-        handleFile(event.dataTransfer.files[0], imagePreview, type);
+        handleFile(event.dataTransfer.files[0], imagePreview, index);
     });
 
     dropZone.addEventListener('click', () => {
@@ -58,24 +59,59 @@ function setupDropZone(dropZone, imagePreview, inputFile, type) {
     });
 
     inputFile.addEventListener('change', (event) => {
-        handleFile(event.target.files[0], imagePreview, type);
+        handleFile(event.target.files[0], imagePreview, index);
     });
 }
 
-function handleFile(file, imagePreview, type) {
+function handleFile(file, imagePreview, index) {
     if (file) {
         const reader = new FileReader();
         reader.onload = (e) => {
             imagePreview.src = e.target.result;
-            document.querySelector(`#${type === 'A' ? 'dropZoneA' : 'dropZoneB'} span`).style.display = 'none';
-            if (type === 'A') {
-                imgA.src = e.target.result;
-            } else {
-                imgB.src = e.target.result;
-            }
-            imgA.onload = imgB.onload = updatePreview;
+            images[index].element.src = e.target.result;
+            images[index].element.onload = updatePreview;
         };
         reader.readAsDataURL(file);
+    }
+}
+
+function addImage() {
+    const imageContainer = document.getElementById('imageContainer');
+    const newIndex = imageCount;
+    const newImagePreviewContainer = document.createElement('div');
+    newImagePreviewContainer.classList.add('image-preview-container');
+    newImagePreviewContainer.id = `imagePreviewContainer${newIndex}`;
+
+    const newDropZone = document.createElement('div');
+    newDropZone.classList.add('drop-zone');
+    newDropZone.id = `dropZone${newIndex}`;
+    newDropZone.innerHTML = `
+        <span>Click or Drop Image Here</span>
+        <img id="imagePreview${newIndex}" src="" alt="Image ${newIndex}">
+        <input type="file" id="inputFile${newIndex}" accept="image/*">
+    `;
+
+    const removeButton = document.createElement('button');
+    removeButton.textContent = 'Remove';
+    removeButton.onclick = () => removeImage(newIndex);
+
+    newImagePreviewContainer.appendChild(newDropZone);
+    newImagePreviewContainer.appendChild(removeButton);
+    imageContainer.appendChild(newImagePreviewContainer);
+
+    images.push({ src: '', element: new Image() });
+    setupDropZone(newIndex);
+
+    imageCount++;
+}
+
+function removeImage(index) {
+    const imagePreviewContainer = document.getElementById(`imagePreviewContainer${index}`);
+    if (imagePreviewContainer) {
+        imagePreviewContainer.remove();
+        images[index] = null;
+        images = images.filter(image => image !== null);
+        updatePreview();
     }
 }
 
@@ -84,28 +120,24 @@ function setAngleAndUpdatePreview(angle) {
     updatePreview();
 }
 
-let imgA = new Image();
-let imgB = new Image();
-let offsets = [];
-let scales = [];
-
 function updatePreview() {
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
     const angle = parseFloat(document.getElementById('angle').value);
 
     if (!isNaN(stripeCount)) {
-        processImages(imgA, imgB, stripeCount, angle);
+        const activeImages = images.filter(image => image.element.src);
+        processImages(activeImages, stripeCount, angle);
     }
 }
 
-function processImages(imgA, imgB, stripeCount, angle, ctx = null) {
+function processImages(activeImages, stripeCount, angle, ctx = null) {
     if (!ctx) {
         const canvas = document.getElementById('canvas');
         ctx = canvas.getContext('2d');
     }
 
-    const width = imgA.width;
-    const height = imgA.height;
+    const width = activeImages[0].element.width;
+    const height = activeImages[0].element.height;
 
     ctx.canvas.width = width;
     ctx.canvas.height = height;
@@ -114,7 +146,7 @@ function processImages(imgA, imgB, stripeCount, angle, ctx = null) {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     for (let i = 0; i <= stripeCount; i++) {
-        let img = i % 2 === 0 ? imgA : imgB;
+        let img = activeImages[i % activeImages.length].element;
         let offset = offsets[i] || { x: 0, y: 0 };
         let scale = scales[i] || 1;
 
@@ -147,11 +179,13 @@ function adjustAngle(angle) {
 }
 
 function calculateStripeCoordinates(i, stripeCount, width, height, angle) {
-    const radians = angle * Math.PI / 180;
-    const stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
-    let x1, y1, x2, y2, x3, y3, x4, y4;
+
+    let stripeWidth, radians, x1, y1, x2, y2, x3, y3, x4, y4;
 
     if (angle >= 0 && angle <= 90) {
+        radians = angle * Math.PI / 180;
+        stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
         x1 = i * stripeWidth;
         y1 = 0;
         x2 = (i + 1) * stripeWidth;
@@ -161,6 +195,9 @@ function calculateStripeCoordinates(i, stripeCount, width, height, angle) {
         x4 = x1 - height * Math.tan(radians);
         y4 = height;
     } else if (angle < 0 && angle >= -90) {
+        radians = angle * Math.PI / 180;
+        stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+        
         x1 = width - (i * stripeWidth);
         y1 = 0;
         x2 = width - ((i + 1) * stripeWidth);
@@ -170,26 +207,30 @@ function calculateStripeCoordinates(i, stripeCount, width, height, angle) {
         x4 = x1 + height * Math.tan(Math.abs(radians));
         y4 = height;
     } else if (angle < -90 && angle >= -180) {
-        const newAngle = 180 + angle;
-        const newRadians = newAngle * Math.PI / 180;
+        angle = 180 + angle;
+        radians = angle * Math.PI / 180;
+        stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
         x1 = i * stripeWidth;
         y1 = 0;
         x2 = (i + 1) * stripeWidth;
         y2 = 0;
-        x3 = x2 - height * Math.tan(newRadians);
+        x3 = x2 - height * Math.tan(radians);
         y3 = height;
-        x4 = x1 - height * Math.tan(newRadians);
+        x4 = x1 - height * Math.tan(radians);
         y4 = height;
     } else if (angle > 90 && angle <= 180) {
-        const newAngle = -180 + angle;
-        const newRadians = newAngle * Math.PI / 180;
+        angle = -180 + angle;
+        radians = angle * Math.PI / 180;
+        stripeWidth = (width + height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+
         x1 = width - (i * stripeWidth);
         y1 = 0;
         x2 = width - ((i + 1) * stripeWidth);
         y2 = 0;
-        x3 = x2 + height * Math.tan(Math.abs(newRadians));
+        x3 = x2 + height * Math.tan(Math.abs(radians));
         y3 = height;
-        x4 = x1 + height * Math.tan(Math.abs(newRadians));
+        x4 = x1 + height * Math.tan(Math.abs(radians));
         y4 = height;
     }
 
@@ -234,7 +275,7 @@ function enableCanvasDraggingAndScaling() {
         stripeIndex = getStripeIndex((event.clientX - rect.left) * scaleFactor, (event.clientY - rect.top) * scaleFactor);
         if (stripeIndex !== null) {
             const scale = scales[stripeIndex] || 1;
-            const newScale = event.deltaY > 0 ? scale * 0.97 : scale * 1.03;  // スケール変更を緩やかにするための調整
+            const newScale = event.deltaY > 0 ? scale * 0.97 : scale * 1.03; // スケール変更を緩やかにするための調整
             scales[stripeIndex] = newScale;
             updatePreview();
         }
@@ -246,10 +287,10 @@ function getStripeIndex(x, y) {
     const angle = parseFloat(document.getElementById('angle').value);
 
     const radians = angle * Math.PI / 180;
-    const stripeWidth = (imgA.width + imgA.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
+    const stripeWidth = (images[0].element.width + images[0].element.height * Math.tan(Math.abs(radians))) / (stripeCount + 1);
 
     for (let i = 0; i <= stripeCount; i++) {
-        const { x1, y1, x2, y2, x3, y3, x4, y4 } = calculateStripeCoordinates(i, stripeCount, imgA.width, imgA.height, angle);
+        const { x1, y1, x2, y2, x3, y3, x4, y4 } = calculateStripeCoordinates(i, stripeCount, images[0].element.width, images[0].element.height, angle);
         if (isPointInPolygon([x1, y1, x2, y2, x3, y3, x4, y4], x, y)) {
             return i;
         }
@@ -273,14 +314,15 @@ function isPointInPolygon(points, x, y) {
 function copyToClipboard() {
     const canvas = document.getElementById('canvas');
     const tempCanvas = document.createElement('canvas');
-    tempCanvas.width = imgA.width;
-    tempCanvas.height = imgA.height;
+    tempCanvas.width = images[0].element.width;
+    tempCanvas.height = images[0].element.height;
     const tempCtx = tempCanvas.getContext('2d');
 
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
     const angle = parseFloat(document.getElementById('angle').value);
 
-    processImages(imgA, imgB, stripeCount, angle, tempCtx);
+    const activeImages = images.filter(image => image.element.src);
+    processImages(activeImages, stripeCount, angle, tempCtx);
 
     tempCanvas.toBlob(blob => {
         const item = new ClipboardItem({ 'image/png': blob });
@@ -290,8 +332,8 @@ function copyToClipboard() {
 
 function downloadImage() {
     const canvas = document.getElementById('canvas');
-    const originalWidth = imgA.width;
-    const originalHeight = imgA.height;
+    const originalWidth = images[0].element.width;
+    const originalHeight = images[0].element.height;
 
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
@@ -302,7 +344,8 @@ function downloadImage() {
     const stripeCount = parseInt(document.getElementById('stripeCount').value);
     const angle = parseFloat(document.getElementById('angle').value);
 
-    processImages(imgA, imgB, stripeCount, angle, tempCtx);
+    const activeImages = images.filter(image => image.element.src);
+    processImages(activeImages, stripeCount, angle, tempCtx);
 
     const link = document.createElement('a');
     link.download = 'merged_image.png';
