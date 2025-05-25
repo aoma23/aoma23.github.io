@@ -48,7 +48,7 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 <p>再送信したいメールを開いて、画面右の「RESEND (CREATE DRAFT)」を押すだけ！<br/>
 下書きメールが作成されるのであとはよしなに編集して送信してください。</p>
 
-<p><a href="https://aoma23.github.io/resend_for_gmail/demo.gif" class="http-image" target="_blank"><img src="https://aoma23.github.io/resend_for_gmail/demo.gif" class="http-image" alt="https://aoma23.github.io/resend_for_gmail/demo.gif"></a></p>
+<p><a href="https://aoma23.com/resend_for_gmail/demo.gif" class="http-image" target="_blank"><img src="https://aoma23.com/resend_for_gmail/demo.gif" class="http-image" alt="https://aoma23.com/resend_for_gmail/demo.gif"></a></p>
 
 <h2>インストール方法</h2>
 

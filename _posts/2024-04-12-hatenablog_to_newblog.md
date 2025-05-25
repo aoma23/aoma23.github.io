@@ -18,7 +18,7 @@ tags: [はてなブログ,ブログ移転,javascript]
 
 旧）`https://aoma23.hatenablog.jp/entry/my_first_firebase_6_send_gmail`
 
-新）`https://aoma23.github.io/my_first_firebase_6_send_gmail`
+新）`https://aoma23.com/my_first_firebase_6_send_gmail`
 
 スクリプトは `https://aoma23.hatenablog.jp/entry` 部分を新ドメインに切り替えてリダイレクトします。
 
@@ -33,10 +33,10 @@ tags: [はてなブログ,ブログ移転,javascript]
 
 ```
 <font size="5" color="red">この記事は移転しました。約5秒後に新記事へ移動します。</font><br>
-移動しない場合は<a href="https://aoma23.github.io/">ココ</a>をクリックして新サイトをお楽しみください。
+移動しない場合は<a href="https://aoma23.com/">ココ</a>をクリックして新サイトをお楽しみください。
 
 <script type="text/javascript" language="javascript">
-  var new_url = "https://aoma23.github.io/";
+  var new_url = "https://aoma23.com/";
   var url = new URL(window.location.href);
   var href = url.href;
   var new_post_url = href.replace(url.protocol + '//' + url.hostname + '/entry/', new_url);
@@ -68,10 +68,10 @@ tags: [はてなブログ,ブログ移転,javascript]
 ```
 <script type="text/javascript">
 if( location.href == 'https://aoma23.hatenablog.jp/'){
-  location.href='https://aoma23.github.io/';
+  location.href='https://aoma23.com/';
 }
 if( location.href == 'https://aoma23.hatenablog.jp/archive'){
-  location.href='https://aoma23.github.io/';
+  location.href='https://aoma23.com/';
 }
 </script>
 ```
