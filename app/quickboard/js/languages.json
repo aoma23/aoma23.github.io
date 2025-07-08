@@ -1,44 +1,4 @@
 {
-  "ja": {
-    "title": "QuickBoard",
-    "buttons": {
-      "share": "共有",
-      "preset": "プリセット",
-      "rotate": "回転",
-      "help": "ヘルプ",
-      "language": "言語",
-      "delete": "削除",
-      "save": "保存",
-      "send_url": "URLを送信",
-      "copy_url": "URLをコピー",
-      "share_twitter": "𝕏",
-      "share_facebook": "Facebook",
-      "share_line": "LINE"
-    },
-    "inputs": {
-      "number": "No",
-      "name": "名前"
-    },
-    "footer": {
-      "terms": "利用規約",
-      "privacy": "プライバシーポリシー",
-      "contact": "お問い合わせ"
-    },
-    "presets": {
-      "clear": "クリア",
-      "teammate11": "11人のみ",
-      "full": "11 vs 11",
-      "teammate8": "8人のみ",
-      "full8": "8 vs 8",
-      "teammate5": "5人のみ",
-      "full5": "5 vs 5"
-    },
-    "help": "余白をダブルクリックで選手を追加。<br>選手はドラッグで移動、ダブルクリックで編集できます。<br>作成したボードはURLで共有できます。",
-    "toast": {
-      "copied": "コピーしました",
-      "shared": "共有しました"
-    }
-  },
   "en": {
     "title": "QuickBoard",
     "buttons": {
@@ -65,18 +25,66 @@
       "contact": "Contact"
     },
     "presets": {
+      "sections": {
+        "team_only": "Team Only",
+        "vs_format": "Versus Format"
+      },
       "clear": "Clear",
-      "teammate11": "11",
-      "full": "11 vs 11",
-      "teammate8": "8",
-      "full8": "8 vs 8",
-      "teammate5": "5",
-      "full5": "5 vs 5"
+      "teammate11": "11 (Full)",
+      "full": "11 vs 11 (Full)",
+      "teammate8": "8 (Junior)",
+      "full8": "8 vs 8 (Junior)",
+      "teammate5": "5 (Futsal)",
+      "full5": "5 vs 5 (Futsal)"
     },
     "help": "Double-click on the blank area to add a player.<br>Drag players to move them, double-click to edit.<br>Share your board with URL.",
     "toast": {
       "copied": "Copied",
       "shared": "Shared"
+    }
+  },
+  "ja": {
+    "title": "QuickBoard",
+    "buttons": {
+      "share": "共有",
+      "preset": "プリセット",
+      "rotate": "回転",
+      "help": "ヘルプ",
+      "language": "言語",
+      "delete": "削除",
+      "save": "保存",
+      "send_url": "URLを送信",
+      "copy_url": "URLをコピー",
+      "share_twitter": "𝕏",
+      "share_facebook": "Facebook",
+      "share_line": "LINE"
+    },
+    "inputs": {
+      "number": "No",
+      "name": "名前"
+    },
+    "footer": {
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "contact": "お問い合わせ"
+    },
+    "presets": {
+      "sections": {
+        "team_only": "自チームのみ",
+        "vs_format": "両チーム（対戦形式）"
+      },
+      "clear": "クリア",
+      "teammate11": "11人（フル）",
+      "full": "11 vs 11（フル）",
+      "teammate8": "8人（ジュニア）",
+      "full8": "8 vs 8（ジュニア）",
+      "teammate5": "5人（フットサル）",
+      "full5": "5 vs 5（フットサル）"
+    },
+    "help": "余白をダブルクリックで選手を追加。<br>選手はドラッグで移動、ダブルクリックで編集できます。<br>作成したボードはURLで共有できます。",
+    "toast": {
+      "copied": "コピーしました",
+      "shared": "共有しました"
     }
   },
   "zh": {
@@ -102,13 +110,17 @@
       "contact": "联系我们"
     },
     "presets": {
+      "sections": {
+        "team_only": "仅自队",
+        "vs_format": "对战格式"
+      },
       "clear": "清空",
-      "teammate11": "仅11人",
-      "full": "11 vs 11",
-      "teammate8": "仅8人",
-      "full8": "8 vs 8",
-      "teammate5": "仅5人",
-      "full5": "5 vs 5"
+      "teammate11": "11人（全场）",
+      "full": "11 vs 11（全场）",
+      "teammate8": "8人（青少年）",
+      "full8": "8 vs 8（青少年）",
+      "teammate5": "5人（五人制）",
+      "full5": "5 vs 5（五人制）"
     },
     "help": "双击空白区域添加球员。<br>拖动球员移动位置，双击编辑球员信息。<br>通过URL分享您的战术板。",
     "toast": {
@@ -139,18 +151,63 @@
       "contact": "Contacto"
     },
     "presets": {
+      "sections": {
+        "team_only": "Solo Equipo",
+        "vs_format": "Formato de Combate"
+      },
       "clear": "Limpiar",
-      "teammate11": "Solo 11",
-      "full": "11 vs 11",
-      "teammate8": "Solo 8",
-      "full8": "8 vs 8",
-      "teammate5": "Solo 5",
-      "full5": "5 vs 5"
+      "teammate11": "11 (Completo)",
+      "full": "11 vs 11 (Completo)",
+      "teammate8": "8 (Junior)",
+      "full8": "8 vs 8 (Junior)",
+      "teammate5": "5 (Fútsal)",
+      "full5": "5 vs 5 (Fútsal)"
     },
     "help": "Haga doble clic en el área en blanco para añadir un jugador.<br>Arrastre los jugadores para moverlos, haga doble clic para editar.<br>Comparta su tablero con URL.",
     "toast": {
       "copied": "Copiado",
       "shared": "Compartido"
+    }
+  },
+  "de": {
+    "title": "QuickBoard",
+    "buttons": {
+      "share": "Teilen",
+      "preset": "Vorlage",
+      "rotate": "Drehen",
+      "help": "Hilfe",
+      "language": "Sprache",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "send_url": "URL senden",
+      "copy_url": "URL kopieren"
+    },
+    "inputs": {
+      "number": "Nummer",
+      "name": "Name"
+    },
+    "footer": {
+      "terms": "Nutzungsbedingungen",
+      "privacy": "Datenschutzrichtlinie",
+      "contact": "Kontakt"
+    },
+    "presets": {
+      "sections": {
+        "team_only": "Nur Team",
+        "vs_format": "Kampfformat"
+      },
+      "clear": "Löschen",
+      "teammate11": "11 (Vollständig)",
+      "full": "11 vs 11 (Vollständig)",
+      "teammate8": "8 (Junior)",
+      "full8": "8 vs 8 (Junior)",
+      "teammate5": "5 (Futsal)",
+      "full5": "5 vs 5 (Futsal)"
+    },
+    "help": "Doppelklicken Sie auf den leeren Bereich, um einen Spieler hinzuzufügen.<br>Ziehen Sie die Spieler, um sie zu bewegen, Doppelklick zum Bearbeiten.<br>Teilen Sie Ihre Taktiktafel mit URL.",
+    "toast": {
+      "copied": "Kopiert",
+      "shared": "Geteilt"
     }
   },
   "it": {
@@ -176,13 +233,17 @@
       "contact": "Contatto"
     },
     "presets": {
+      "sections": {
+        "team_only": "Solo Squadra",
+        "vs_format": "Formato Sfida"
+      },
       "clear": "Cancella",
-      "teammate11": "Solo 11",
-      "full": "11 vs 11",
-      "teammate8": "Solo 8",
-      "full8": "8 vs 8",
-      "teammate5": "Solo 5",
-      "full5": "5 vs 5"
+      "teammate11": "11 (Completo)",
+      "full": "11 vs 11 (Completo)",
+      "teammate8": "8 (Junior)",
+      "full8": "8 vs 8 (Junior)",
+      "teammate5": "5 (Futsal)",
+      "full5": "5 vs 5 (Futsal)"
     },
     "help": "Fai doppio clic sull'area vuota per aggiungere un giocatore.<br>Trascina i giocatori per spostarli, doppio clic per modificare.<br>Condividi il tuo tabellone con URL.",
     "toast": {
@@ -213,55 +274,22 @@
       "contact": "Contato"
     },
     "presets": {
+      "sections": {
+        "team_only": "Apenas Equipe",
+        "vs_format": "Formato de Confronto"
+      },
       "clear": "Limpar",
-      "teammate11": "Apenas 11",
-      "full": "11 vs 11",
-      "teammate8": "Apenas 8",
-      "full8": "8 vs 8",
-      "teammate5": "Apenas 5",
-      "full5": "5 vs 5"
+      "teammate11": "11 (Completo)",
+      "full": "11 vs 11 (Completo)",
+      "teammate8": "8 (Junior)",
+      "full8": "8 vs 8 (Junior)",
+      "teammate5": "5 (Futsal)",
+      "full5": "5 vs 5 (Futsal)"
     },
     "help": "Clique duas vezes na área em branco para adicionar um jogador.<br>Arraste os jogadores para movê-los, clique duas vezes para editar.<br>Compartilhe seu quadro tático via URL.",
     "toast": {
       "copied": "Copiado",
       "shared": "Compartilhado"
-    }
-  },
-  "de": {
-    "title": "QuickBoard",
-    "buttons": {
-      "share": "Teilen",
-      "preset": "Vorlage",
-      "rotate": "Drehen",
-      "help": "Hilfe",
-      "language": "Sprache",
-      "delete": "Löschen",
-      "save": "Speichern",
-      "send_url": "URL senden",
-      "copy_url": "URL kopieren"
-    },
-    "inputs": {
-      "number": "Nummer",
-      "name": "Name"
-    },
-    "footer": {
-      "terms": "Nutzungsbedingungen",
-      "privacy": "Datenschutzrichtlinie",
-      "contact": "Kontakt"
-    },
-    "presets": {
-      "clear": "Löschen",
-      "teammate11": "Nur 11",
-      "full": "11 vs 11",
-      "teammate8": "Nur 8",
-      "full8": "8 vs 8",
-      "teammate5": "Nur 5",
-      "full5": "5 vs 5"
-    },
-    "help": "Doppelklicken Sie auf den leeren Bereich, um einen Spieler hinzuzufügen.<br>Ziehen Sie die Spieler, um sie zu bewegen, Doppelklick zum Bearbeiten.<br>Teilen Sie Ihre Taktiktafel mit URL.",
-    "toast": {
-      "copied": "Kopiert",
-      "shared": "Geteilt"
     }
   }
 }
