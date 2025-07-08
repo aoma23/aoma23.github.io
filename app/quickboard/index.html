@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="robots" content="max-image-preview:large">
+<title>QuickBoard</title>
+<meta name="description" content="Interactive tactics board for creating and sharing soccer formations">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/quickboard.png">
+
+<!-- OGP Tags for SNS Sharing -->
+<meta property="og:title" content="QuickBoard - Soccer Tactics Board">
+<meta property="og:description" content="Interactive tactics board for creating and sharing soccer formations">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aoma23.com/app/quickboard/">
+<meta property="og:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250704">
+<meta property="og:site_name" content="QuickBoard">
+<!-- Twitter/X Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@aoma23">
+<meta name="twitter:creator" content="@aoma23">
+<meta name="twitter:title" content="QuickBoard - Soccer Tactics Board">
+<meta name="twitter:description" content="Interactive tactics board for creating and sharing soccer formations">
+<meta name="twitter:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250704">
+<meta name="twitter:image:alt" content="QuickBoard Soccer Tactics Board Screenshot">
+
+<style>
+html,body{height:100%;margin:0;overflow-x:hidden;overflow-y:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;touch-action:manipulation}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#222;color:#eee;display:flex;flex-direction:column;align-items:center;height:auto;overflow-y:auto}
+.app-container{display:flex;flex-direction:column;width:100%;max-width:900px;padding:0;box-sizing:border-box;align-items:center;justify-content:flex-start}
+#board{width:100%;display:flex;justify-content:center;align-items:center;position:relative;padding:20px;box-sizing:border-box;min-height:auto;overflow:visible;margin:0;touch-action:manipulation}
+#field{position:relative;background:#060;aspect-ratio:105/68;width:calc(100% - 20px);max-width:900px;margin:0 auto;border:4px solid #fff;box-sizing:border-box;overflow:visible;min-height:100px;touch-action:manipulation}
+#field.vertical{aspect-ratio:68/105;max-width:600px}
+#field svg{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.piece{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;touch-action:none;user-select:none;cursor:move;z-index:10}
+.player{width:32px;height:32px;border-radius:50%;color:#fff;font-weight:bold;display:flex;justify-content:center;align-items:center;font-size:12px;z-index:5}
+.player.red{background:#e44}
+.player.blue{background:#36f}
+.player.yellow{background:#fc3;color:#000}
+.player.green{background:#3b3}
+.player.ball{
+  background:transparent url('images/soccer-ball.svg') no-repeat center center;
+  background-size:contain;
+  color:transparent
+}
+.player .name{font-size:10px;margin-top:2px;white-space:nowrap}
+#modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);display:flex;justify-content:center;align-items:center;backdrop-filter:blur(3px);z-index:1000;box-sizing:border-box}
+#modal.hidden{display:none}
+#modal .box{background:#333;padding:24px;border-radius:12px;display:flex;flex-direction:column;gap:12px;width:320px;min-width:240px;box-shadow:0 8px 24px rgba(0,0,0,0.4);position:relative;box-sizing:border-box}
+#player-form{display:flex;flex-direction:column;gap:12px;}
+#modal .close-btn,#help-modal .close-btn,#share-modal .close-btn,#preset-modal .close-btn,#lang-modal .close-btn{
+  position:absolute;top:-14px;right:-14px;width:28px;height:28px;background:#444;border:none;
+  color:#fff;font-size:16px;cursor:pointer;display:flex;justify-content:center;align-items:center;
+  border-radius:50%;transition:background 0.2s;box-shadow:0 2px 4px rgba(0,0,0,0.3);
+  padding:0;line-height:1;z-index:10;
+}
+#modal .close-btn:hover,#help-modal .close-btn:hover,#share-modal .close-btn:hover,#preset-modal .close-btn:hover,#lang-modal .close-btn:hover{background:#666}
+#modal .colors{display:flex;gap:12px;justify-content:center;padding:8px 0}
+#modal .color-option{width:28px;height:28px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform 0.2s, border-color 0.2s}
+#modal .color-option:hover{transform:scale(1.1)}
+#modal .color-option.selected{border-color:#fff;transform:scale(1.1)}
+#modal .color-option.player.ball{
+  background:transparent url('images/soccer-ball.svg') no-repeat center center;
+  background-size:contain;
+  color:transparent
+}
+#modal input{background:#444;border:none;padding:10px 12px;border-radius:6px;color:#fff;font-size:16px;outline:none;transition:box-shadow 0.2s;width:100%;box-sizing:border-box}
+#modal input:focus{box-shadow:0 0 0 2px rgba(255,255,255,0.3)}
+#modal button{padding:10px 16px;border:none;border-radius:6px;font-weight:bold;cursor:pointer;transition:all 0.2s;font-size:14px;text-transform:uppercase}
+#modal .btn-group{display:flex;gap:12px;justify-content:space-between;margin-top:8px;flex-wrap:wrap}
+#modal #save-btn{background:#4CAF50;color:white;margin-left:auto;}
+#modal #save-btn:hover{background:#45a049;box-shadow:0 4px 8px rgba(76, 175, 80, 0.3)}
+#modal #cancel-btn{background:#555;color:white;}
+#modal #cancel-btn:hover{background:#666;box-shadow:0 4px 8px rgba(0, 0, 0, 0.2)}
+  #modal #delete-btn{background:#f44336;color:white;}
+  #modal #delete-btn:hover{background:#d32f2f;box-shadow:0 4px 8px rgba(244, 67, 54, 0.3)}
+  #help-modal,#share-modal,#preset-modal,#lang-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);display:flex;justify-content:center;align-items:center;backdrop-filter:blur(3px);z-index:1000;box-sizing:border-box}
+  #help-modal.hidden,#share-modal.hidden,#preset-modal.hidden,#lang-modal.hidden{display:none}
+  #help-modal .box,#share-modal .box,#preset-modal .box,#lang-modal .box{background:#333;padding:24px;border-radius:12px;width:320px;max-width:320px;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,0.4);line-height:1.4;display:flex;flex-direction:column;gap:12px;position:relative;box-sizing:border-box}
+  #help-modal button,#share-modal button,#preset-modal button,#lang-modal button{padding:8px 12px;border:none;border-radius:6px;background:#555;color:#fff;font-weight:bold;cursor:pointer}
+  
+  /* Share button styles */
+  .share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto 4px auto;
+    border-radius: 6px;
+  }
+  
+  .share-btn:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .twitter-btn {
+    background: #1da1f2;
+  }
+  
+  .twitter-btn:before {
+    display: none;
+  }
+  
+  .twitter-btn:hover {
+    background: #0c85d0;
+  }
+  
+  .facebook-btn {
+    background: #4267b2;
+  }
+  
+  .facebook-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>');
+  }
+  
+  .facebook-btn:hover {
+    background: #3b5998;
+  }
+  
+  .line-btn {
+    background: #06c755;
+  }
+  
+  .line-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.817 4.269 8.857 10.035 9.622.391.084.923.258 1.058.592.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975 1.724-1.897 2.548-3.821 2.548-5.984z"></path></svg>');
+  }
+  
+  .line-btn:hover {
+    background: #05b04b;
+  }
+  
+  /* URLコピー・送信ボタン用スタイル */
+  .share-btn:not(.twitter-btn):not(.facebook-btn):not(.line-btn):before {
+    display: none;
+  }
+  
+  .share-btn:not(.twitter-btn):not(.facebook-btn):not(.line-btn):before {
+    display: none;
+  }
+  
+  @media (max-width:600px){
+    #modal .box,#help-modal .box,#share-modal .box,#preset-modal .box,#lang-modal .box{
+      width:85%;
+      min-width:unset;
+      max-width:320px;
+      padding:20px 16px;
+      margin:0 auto;
+    }
+    #modal .close-btn,#help-modal .close-btn,#share-modal .close-btn,#preset-modal .close-btn,#lang-modal .close-btn{
+      top:-12px;
+      right:-12px;
+    }
+  }
+  /* Toast notification style */
+  #toast{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(0,0,0,0.8);
+    color:white;
+    padding:10px 20px;
+    border-radius:4px;
+    font-size:14px;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.3s, visibility 0.3s;
+    z-index:1000;
+  }
+  #toast.show{
+    opacity:1;
+    visibility:visible;
+  }
+  
+  /* Header styles */
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #222;
+    padding: 12px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Footer styles */
+  .app-footer {
+    width: 100%;
+    background: #222;
+    padding: 10px 20px;
+    margin-top: auto;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+  
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-logo-img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .footer-copyright {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .header-logo {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .header-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .header-menu {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .header-menu button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #555;
+    color: #fff;
+    transition: all 0.2s;
+    position: relative;
+  }
+  
+  .header-menu button:hover {
+    background: #666;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ボタンのアイコン */
+  #share-btn:before, #preset-btn:before, #rotate-btn:before, #help-btn:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+  }
+  
+  .header-menu button span {
+    position: relative;
+    top: 1px;
+  }
+  
+  #share-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92 0-1.61-1.31-2.92-2.92-2.92z"></path></svg>');
+  }
+  
+  #preset-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"></path></svg>');
+  }
+  
+  #rotate-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M7.11 8.53L5.7 7.11C4.8 8.27 4.24 9.61 4.07 11h2.02c.14-.87.49-1.72 1.02-2.47zM6.09 13H4.07c.17 1.39.72 2.73 1.62 3.89l1.41-1.42c-.52-.75-.87-1.59-1.01-2.47zm1.01 5.32c1.16.9 2.51 1.44 3.9 1.61V17.9c-.87-.15-1.71-.49-2.46-1.03L7.1 18.32zM13 4.07V1L8.45 5.55 13 10V6.09c2.84.48 5 2.94 5 5.91s-2.16 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93s-3.05-7.44-7-7.93z"></path></svg>');
+  }
+  
+  #help-btn:before {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>');
+  }
+  
+  @media (max-width: 600px) {
+    .app-header {
+      flex-direction: row;
+      gap: 8px;
+      padding: 12px;
+      justify-content: space-between;
+    }
+    
+    .header-menu {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    
+    .header-menu button {
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    
+    .header-menu button:before {
+      margin-right: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+    }
+    
+    .header-menu button span {
+      display: none !important;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  
+  /* Footer styles */
+.app-footer {
+  width: 100%;
+  background: #222;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.footer-copyright a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-copyright a:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  color: #888;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-btn:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.footer-copyright-text {
+  color: #888;
+  font-size: 14px;
+}
+
+.footer-copyright-btn {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-copyright-btn:hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .footer-copyright {
+    text-align: center;
+  }
+}
+
+/* スマホ用フィールド調整 */
+@media (max-width: 600px) {
+  #board {
+    padding: 10px;
+    min-height: auto;
+    margin-bottom: 0;
+  }
+  #field {
+    min-height: auto;
+  }
+  .app-footer {
+    padding: 8px 20px;
+  }
+}
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MF9338WT');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF9338WT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="app-container">
+<header class="app-header">
+  <div class="header-left">
+    <img src="images/quickboard.png" alt="QuickBoard Logo" class="header-logo">
+    <h1 class="header-title">QuickBoard</h1>
+  </div>
+  <div class="header-menu">
+    <button id="share-btn" data-i18n="buttons.share_icon"><span data-i18n="buttons.share">Share</span></button>
+    <button id="preset-btn" data-i18n="buttons.preset_icon"><span data-i18n="buttons.preset">Preset</span></button>
+    <button id="rotate-btn" data-i18n="buttons.rotate_icon"><span data-i18n="buttons.rotate">Rotate</span></button>
+    <button id="help-btn" data-i18n="buttons.help_icon"><span data-i18n="buttons.help">Help</span></button>
+  </div>
+</header>
+
+<div id="board">
+  <div id="field">
+    <svg class="horizontal-field" viewBox="0 0 105 68" xmlns="http://www.w3.org/2000/svg">
+      <!-- Horizontal field (default) -->
+      <!-- Main field (center area) -->
+      <rect x="5" y="5" width="95" height="58" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Center line -->
+      <line x1="52.5" y1="5" x2="52.5" y2="63" stroke="#fff" stroke-width="0.5"/>
+      <!-- Center circle -->
+      <circle cx="52.5" cy="34" r="9.15" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty area (left) -->
+      <rect x="5" y="18.84" width="16.5" height="30.32" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty area (right) -->
+      <rect x="83.5" y="18.84" width="16.5" height="30.32" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal area (left) -->
+      <rect x="5" y="24.1" width="5.5" height="19.8" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal area (right) -->
+      <rect x="94.5" y="24.1" width="5.5" height="19.8" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty mark (left) -->
+      <circle cx="16" cy="34" r="0.5" fill="#fff"/>
+      <!-- Penalty mark (right) -->
+      <circle cx="89" cy="34" r="0.5" fill="#fff"/>
+      <!-- Goal (left) -->
+      <line x1="1" y1="27" x2="5" y2="27" stroke="#fff" stroke-width="0.5"/>
+      <line x1="1" y1="41" x2="5" y2="41" stroke="#fff" stroke-width="0.5"/>
+      <line x1="1" y1="27" x2="1" y2="41" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal (right) -->
+      <line x1="100" y1="27" x2="104" y2="27" stroke="#fff" stroke-width="0.5"/>
+      <line x1="100" y1="41" x2="104" y2="41" stroke="#fff" stroke-width="0.5"/>
+      <line x1="104" y1="27" x2="104" y2="41" stroke="#fff" stroke-width="0.5"/>
+    </svg>
+    
+    <svg class="vertical-field" viewBox="0 0 68 105" xmlns="http://www.w3.org/2000/svg" style="display:none">
+      <!-- Vertical field -->
+      <!-- Main field (center area) -->
+      <rect x="5" y="5" width="58" height="95" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Center line -->
+      <line x1="5" y1="52.5" x2="63" y2="52.5" stroke="#fff" stroke-width="0.5"/>
+      <!-- Center circle -->
+      <circle cx="34" cy="52.5" r="9.15" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty area (top) -->
+      <rect x="18.84" y="5" width="30.32" height="16.5" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty area (bottom) -->
+      <rect x="18.84" y="83.5" width="30.32" height="16.5" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal area (top) -->
+      <rect x="24.1" y="5" width="19.8" height="5.5" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal area (bottom) -->
+      <rect x="24.1" y="94.5" width="19.8" height="5.5" fill="none" stroke="#fff" stroke-width="0.5"/>
+      <!-- Penalty mark (top) -->
+      <circle cx="34" cy="16" r="0.5" fill="#fff"/>
+      <!-- Penalty mark (bottom) -->
+      <circle cx="34" cy="89" r="0.5" fill="#fff"/>
+      <!-- Goal (top) -->
+      <line x1="27" y1="1" x2="27" y2="5" stroke="#fff" stroke-width="0.5"/>
+      <line x1="41" y1="1" x2="41" y2="5" stroke="#fff" stroke-width="0.5"/>
+      <line x1="27" y1="1" x2="41" y2="1" stroke="#fff" stroke-width="0.5"/>
+      <!-- Goal (bottom) -->
+      <line x1="27" y1="100" x2="27" y2="104" stroke="#fff" stroke-width="0.5"/>
+      <line x1="41" y1="100" x2="41" y2="104" stroke="#fff" stroke-width="0.5"/>
+      <line x1="27" y1="104" x2="41" y2="104" stroke="#fff" stroke-width="0.5"/>
+    </svg>
+  </div>
+</div>
+
+<div id="modal" class="hidden">
+  <div class="box">
+    <button class="close-btn">✕</button>
+    <form id="player-form">
+      <div class="colors">
+        <div class="color-option player blue" data-color="blue"></div>
+        <div class="color-option player red" data-color="red"></div>
+        <div class="color-option player yellow" data-color="yellow"></div>
+        <div class="color-option player green" data-color="green"></div>
+        <div class="color-option player ball" data-color="ball"></div>
+      </div>
+      <input id="m-number" type="number" placeholder="No" data-i18n-placeholder="inputs.number" max="999" min="0">
+      <input id="m-name" type="text" placeholder="Name" data-i18n-placeholder="inputs.name">
+      <div class="btn-group">
+        <button id="delete-btn" type="button" data-i18n="buttons.delete">Delete</button>
+        <button id="save-btn" type="submit" data-i18n="buttons.save">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="share-modal" class="hidden">
+  <div class="box">
+    <button class="close-btn">✕</button>
+    <button id="share-twitter" class="share-btn twitter-btn" data-i18n="buttons.share_twitter">𝕏</button>
+    <button id="share-facebook" class="share-btn facebook-btn" data-i18n="buttons.share_facebook">Facebook</button>
+    <button id="share-line" class="share-btn line-btn" data-i18n="buttons.share_line">LINE</button>
+    <button id="share-native" class="share-btn" data-i18n="buttons.send_url">URLを送信</button>
+    <button id="share-copy" class="share-btn" data-i18n="buttons.copy_url">Copy URL</button>
+  </div>
+</div>
+
+<div id="preset-modal" class="hidden">
+  <div class="box">
+    <button class="close-btn">✕</button>
+    <button data-preset="clear" data-i18n="presets.clear">Clear</button>
+    <button data-preset="teammate11" data-i18n="presets.teammate11">11</button>
+    <button data-preset="full" data-i18n="presets.full">11 vs 11</button>
+    <button data-preset="teammate8" data-i18n="presets.teammate8">8</button>
+    <button data-preset="full8" data-i18n="presets.full8">8 vs 8</button>
+    <button data-preset="teammate5" data-i18n="presets.teammate5">5</button>
+    <button data-preset="full5" data-i18n="presets.full5">5 vs 5</button>
+  </div>
+</div>
+
+<div id="help-modal" class="hidden">
+  <div class="box">
+    <button class="close-btn">✕</button>
+    <p data-i18n="help">Double-click on the blank area to add a player.<br>
+    Drag players to move them, double-click to edit.<br>
+    Share your board with URL.</p>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<div id="lang-modal" class="hidden">
+  <div class="box">
+    <button class="close-btn">✕</button>
+    <button data-lang="en">English</button>
+    <button data-lang="ja">日本語</button>
+    <button data-lang="zh">中文</button>
+    <button data-lang="es">Español</button>
+    <button data-lang="it">Italiano</button>
+    <button data-lang="pt">Português</button>
+    <button data-lang="de">Deutsch</button>
+  </div>
+</div>
+
+<footer class="app-footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <button onclick="window.location.href='privacy.html'" class="footer-btn" data-i18n="footer.privacy">Privacy Policy</button>
+      <button onclick="window.location.href='terms.html'" class="footer-btn" data-i18n="footer.terms">Terms of Service</button>
+      <button onclick="window.open('https://x.com/aoma23', '_blank', 'noopener')" class="footer-btn" data-i18n="footer.contact">Contact</button>
+      <button id="lang-btn" class="footer-btn" data-i18n="buttons.language">Language</button>
+    </div>
+    <div class="footer-copyright">
+      <span class="footer-copyright-text">© aoma23</span>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 20px; width: 100%;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3060761187027942"
+      crossorigin="anonymous"></script>
+    <!-- quickboard -->
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3060761187027942" data-ad-slot="1608140229"
+      data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+  
+</footer>
+
+<script src="js/lz-string.min.js?v=20250702"></script>
+<script src="js/board_x.js?v=20250708"></script>
+</div><!-- .app-container -->
+</body>
+</html>
