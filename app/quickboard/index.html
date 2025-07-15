@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -7,8 +7,8 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="robots" content="max-image-preview:large">
-<title>QuickBoard</title>
-<meta name="description" content="Interactive tactics board for creating and sharing soccer formations">
+<title>QuickBoard - サッカー戦術・作戦ボード | Soccer Tactics Board</title>
+<meta name="description" content="サッカー・ジュニアサッカー・フットサルのフォーメーションを簡単に作成・共有できる戦術・作戦ボード。まるで本物の戦術ボードを動かしているような操作感。コーチの戦術説明やチーム内での共有に最適。ログイン不要でURLだけで誰とでも共有可能。 | Soccer tactics board for creating and sharing formations with realistic manipulation feeling. Perfect for coaches to explain strategies and team sharing. No login required, share with anyone via URL.">
 
 <!-- Favicon -->
 <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -16,8 +16,8 @@
 <link rel="apple-touch-icon" href="images/quickboard.png">
 
 <!-- OGP Tags for SNS Sharing -->
-<meta property="og:title" content="QuickBoard - Soccer Tactics Board">
-<meta property="og:description" content="Interactive tactics board for creating and sharing soccer formations">
+<meta property="og:title" content="QuickBoard - サッカー戦術・作戦ボード | Soccer Tactics Board">
+<meta property="og:description" content="サッカー・ジュニアサッカー・フットサルのフォーメーションを簡単に作成・共有できる戦術・作戦ボード。まるで本物の戦術ボードを動かしているような操作感。コーチの戦術説明やチーム内での共有に最適。ログイン不要でURLだけで誰とでも共有可能。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://aoma23.com/app/quickboard/">
 <meta property="og:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250704">
@@ -26,10 +26,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@aoma23">
 <meta name="twitter:creator" content="@aoma23">
-<meta name="twitter:title" content="QuickBoard - Soccer Tactics Board">
-<meta name="twitter:description" content="Interactive tactics board for creating and sharing soccer formations">
+<meta name="twitter:title" content="QuickBoard - サッカー戦術・作戦ボード | Soccer Tactics Board">
+<meta name="twitter:description" content="サッカー・ジュニアサッカー・フットサルのフォーメーションを簡単に作成・共有できる戦術・作戦ボード。まるで本物の戦術ボードを動かしているような操作感。コーチの戦術説明やチーム内での共有に最適。ログイン不要でURLだけで誰とでも共有可能。">
 <meta name="twitter:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250704">
-<meta name="twitter:image:alt" content="QuickBoard Soccer Tactics Board Screenshot">
+<meta name="twitter:image:alt" content="QuickBoard">
+
+<!-- 多言語対応のための代替言語リンク（JavaScriptベースのため、すべて同じURL） -->
+<link rel="alternate" hreflang="x-default" href="https://aoma23.com/app/quickboard/">
 
 <style>
 html,body{height:100%;margin:0;overflow-x:hidden;overflow-y:auto;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;touch-action:manipulation}
@@ -504,14 +507,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="app-container">
 <header class="app-header">
   <div class="header-left">
-    <img src="images/quickboard.png" alt="QuickBoard Logo" class="header-logo">
+    <img src="images/quickboard.png" alt="QuickBoard サッカー戦術・作戦ボード" class="header-logo">
     <h1 class="header-title">QuickBoard</h1>
   </div>
   <div class="header-menu">
-    <button id="share-btn" data-i18n="buttons.share_icon"><span data-i18n="buttons.share">Share</span></button>
-    <button id="preset-btn" data-i18n="buttons.preset_icon"><span data-i18n="buttons.preset">Preset</span></button>
-    <button id="rotate-btn" data-i18n="buttons.rotate_icon"><span data-i18n="buttons.rotate">Rotate</span></button>
-    <button id="help-btn" data-i18n="buttons.help_icon"><span data-i18n="buttons.help">Help</span></button>
+    <button id="share-btn" data-i18n="buttons.share_icon"><span data-i18n="buttons.share">共有</span></button>
+    <button id="preset-btn" data-i18n="buttons.preset_icon"><span data-i18n="buttons.preset">プリセット</span></button>
+    <button id="rotate-btn" data-i18n="buttons.rotate_icon"><span data-i18n="buttons.rotate">回転</span></button>
+    <button id="help-btn" data-i18n="buttons.help_icon"><span data-i18n="buttons.help">ヘルプ</span></button>
   </div>
 </header>
 
@@ -591,10 +594,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="color-option player ball" data-color="ball"></div>
       </div>
       <input id="m-number" type="number" placeholder="No" data-i18n-placeholder="inputs.number" max="999" min="0">
-      <input id="m-name" type="text" placeholder="Name" data-i18n-placeholder="inputs.name">
+      <input id="m-name" type="text" placeholder="名前" data-i18n-placeholder="inputs.name">
       <div class="btn-group">
-        <button id="delete-btn" type="button" data-i18n="buttons.delete">Delete</button>
-        <button id="save-btn" type="submit" data-i18n="buttons.save">Save</button>
+        <button id="delete-btn" type="button" data-i18n="buttons.delete">削除</button>
+        <button id="save-btn" type="submit" data-i18n="buttons.save">保存</button>
       </div>
     </form>
   </div>
@@ -607,7 +610,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button id="share-facebook" class="share-btn facebook-btn" data-i18n="buttons.share_facebook">Facebook</button>
     <button id="share-line" class="share-btn line-btn" data-i18n="buttons.share_line">LINE</button>
     <button id="share-native" class="share-btn" data-i18n="buttons.send_url">URLを送信</button>
-    <button id="share-copy" class="share-btn" data-i18n="buttons.copy_url">Copy URL</button>
+    <button id="share-copy" class="share-btn" data-i18n="buttons.copy_url">URLをコピー</button>
   </div>
 </div>
 
@@ -616,21 +619,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <button class="close-btn">✕</button>
     
     <div class="preset-section">
-      <div class="preset-section-title" data-i18n="presets.sections.team_only">Team Only</div>
-      <button data-preset="teammate11" data-i18n="presets.teammate11">11 (Full)</button>
-      <button data-preset="teammate8" data-i18n="presets.teammate8">8 (Junior)</button>
-      <button data-preset="teammate5" data-i18n="presets.teammate5">5 (Futsal)</button>
+      <div class="preset-section-title" data-i18n="presets.sections.team_only">自チームのみ</div>
+      <button data-preset="teammate11" data-i18n="presets.teammate11">11人（フル）</button>
+      <button data-preset="teammate8" data-i18n="presets.teammate8">8人（ジュニア）</button>
+      <button data-preset="teammate5" data-i18n="presets.teammate5">5人（フットサル）</button>
     </div>
 
     <div class="preset-section">
-      <div class="preset-section-title" data-i18n="presets.sections.vs_format">Versus Format</div>
-      <button data-preset="full" data-i18n="presets.full">11 vs 11 (Full)</button>
-      <button data-preset="full8" data-i18n="presets.full8">8 vs 8 (Junior)</button>
-      <button data-preset="full5" data-i18n="presets.full5">5 vs 5 (Futsal)</button>
+      <div class="preset-section-title" data-i18n="presets.sections.vs_format">両チーム（対戦形式）</div>
+      <button data-preset="full" data-i18n="presets.full">11 vs 11（フル）</button>
+      <button data-preset="full8" data-i18n="presets.full8">8 vs 8（ジュニア）</button>
+      <button data-preset="full5" data-i18n="presets.full5">5 vs 5（フットサル）</button>
     </div>
 
     <div class="preset-section">
-      <button class="preset-danger" data-preset="clear" data-i18n="presets.clear">Clear</button>
+      <button class="preset-danger" data-preset="clear" data-i18n="presets.clear">クリア</button>
     </div>
   </div>
 </div>
@@ -638,9 +641,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="help-modal" class="hidden">
   <div class="box">
     <button class="close-btn">✕</button>
-    <p data-i18n="help">Double-click on the blank area to add a player.<br>
-    Drag players to move them, double-click to edit.<br>
-    Share your board with URL.</p>
+    <p data-i18n="help">余白をダブルクリックで選手を追加。<br>
+    選手はドラッグで移動、ダブルクリックで編集できます。<br>
+    作成したボードはURLで誰とでも共有できます。</p>
   </div>
 </div>
 
@@ -662,10 +665,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="app-footer">
   <div class="footer-content">
     <div class="footer-links">
-      <button onclick="window.location.href='privacy.html'" class="footer-btn" data-i18n="footer.privacy">Privacy Policy</button>
-      <button onclick="window.location.href='terms.html'" class="footer-btn" data-i18n="footer.terms">Terms of Service</button>
-      <button onclick="window.open('https://x.com/aoma23', '_blank', 'noopener')" class="footer-btn" data-i18n="footer.contact">Contact</button>
-      <button id="lang-btn" class="footer-btn" data-i18n="buttons.language">Language</button>
+      <button onclick="window.location.href='privacy.html'" class="footer-btn" data-i18n="footer.privacy">プライバシーポリシー</button>
+      <button onclick="window.location.href='terms.html'" class="footer-btn" data-i18n="footer.terms">利用規約</button>
+      <button onclick="window.open('https://x.com/aoma23', '_blank', 'noopener')" class="footer-btn" data-i18n="footer.contact">お問い合わせ</button>
+      <button id="lang-btn" class="footer-btn" data-i18n="buttons.language">言語</button>
     </div>
     <div class="footer-copyright">
       <span class="footer-copyright-text">© aoma23</span>
