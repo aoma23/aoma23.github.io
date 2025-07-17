@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="max-image-preview:large">
+  <title>QuickBoard - Pizarra Táctica de Fútbol | Herramienta Simple de Creación de Formaciones</title>
+  <meta name="description" content="QuickBoard es una pizarra táctica de fútbol que se puede usar inmediatamente en teléfonos inteligentes y PC. Crea y comparte formaciones fácilmente. ¡Perfecto para reuniones de equipo y explicaciones tácticas!">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="../../images/quickboard.png">
+
+  <!-- OGP Tags for SNS Sharing -->
+  <meta property="og:title" content="QuickBoard - Pizarra Táctica de Fútbol">
+  <meta property="og:description" content="Una pizarra táctica de fútbol que se puede usar inmediatamente en teléfonos inteligentes y PC. Crea y comparte formaciones fácilmente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aoma23.com/app/quickboard/lp/es/">
+  <meta property="og:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250709">
+  <meta property="og:site_name" content="QuickBoard">
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aoma23">
+  <meta name="twitter:creator" content="@aoma23">
+  <meta name="twitter:title" content="QuickBoard - Pizarra Táctica de Fútbol">
+  <meta name="twitter:description" content="Una pizarra táctica de fútbol que se puede usar inmediatamente en teléfonos inteligentes y PC. Crea y comparte formaciones fácilmente.">
+  <meta name="twitter:image" content="https://aoma23.com/app/quickboard/images/quickboard-og.png?v=20250709">
+  <meta name="twitter:image:alt" content="Captura de pantalla de QuickBoard Pizarra Táctica de Fútbol">
+
+  <!-- Etiquetas SEO -->
+  <link rel="canonical" href="https://aoma23.com/app/quickboard/lp/es/">
+  <link rel="alternate" hreflang="ja" href="https://aoma23.com/app/quickboard/lp/ja/">
+  <link rel="alternate" hreflang="en" href="https://aoma23.com/app/quickboard/lp/en/">
+  <link rel="alternate" hreflang="zh" href="https://aoma23.com/app/quickboard/lp/zh/">
+  <link rel="alternate" hreflang="es" href="https://aoma23.com/app/quickboard/lp/es/">
+  <link rel="alternate" hreflang="de" href="https://aoma23.com/app/quickboard/lp/de/">
+  <link rel="alternate" hreflang="it" href="https://aoma23.com/app/quickboard/lp/it/">
+  <link rel="alternate" hreflang="pt" href="https://aoma23.com/app/quickboard/lp/pt/">
+  <link rel="alternate" hreflang="x-default" href="https://aoma23.com/app/quickboard/lp/">
+
+  <style>
+    /* Estilos base */
+    :root {
+      --primary-color: #36f;      /* Azul */
+      --secondary-color: #e44;    /* Rojo */
+      --accent-color: #fc3;       /* Amarillo */
+      --green-color: #060;        /* Verde del campo */
+      --highlight-color: #3b3;    /* Verde destacado */
+      --dark-color: #222;         /* Fondo oscuro */
+      --light-color: #fff;        /* Blanco */
+      --text-color: #eee;         /* Texto claro */
+      --text-dark: #333;          /* Texto oscuro */
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      background-color: var(--dark-color);
+    }
+    
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    a:hover {
+      opacity: 0.8;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      font-weight: bold;
+      border-radius: 50px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      opacity: 1;
+    }
+    
+    .btn-secondary {
+      background-color: var(--secondary-color);
+    }
+    
+    .btn-large {
+      padding: 16px 32px;
+      font-size: 18px;
+    }
+    
+    section {
+      padding: 80px 0;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    
+    /* Encabezado */
+    header {
+      padding: 20px 0;
+      background-color: rgba(34, 34, 34, 0.95);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--light-color);
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo span {
+      color: var(--light-color);
+    }
+    
+    .header-logo {
+      width: 36px;
+      height: 36px;
+      margin-right: 8px;
+    }
+    
+    /* Sección hero */
+    .hero {
+      padding: 160px 0 80px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+    }
+    
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    
+    .hero-text {
+      flex: 1;
+    }
+    
+    .hero-image {
+      flex: 1;
+      position: relative;
+    }
+    
+    .hero-image a {
+      display: block;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .hero-image a:hover {
+      transform: scale(1.02);
+      opacity: 1;
+    }
+    
+    .hero-image img {
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border: 4px solid white;
+    }
+    
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+    
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    
+    /* Sección características */
+    .features {
+      background-color: var(--dark-color);
+      color: var(--text-color);
+    }
+    
+    .section-title {
+      margin-bottom: 60px;
+    }
+    
+    .section-title h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+      color: var(--light-color);
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-title p {
+      color: #aaa;
+      font-size: 18px;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .feature-card {
+      background-color: #333;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      color: var(--text-color);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .feature-icon {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 28px;
+    }
+    
+    .feature-card h3 {
+      display: inline-block;
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    
+    /* Sección ejemplos */
+    .examples {
+      background-color: #333;
+      color: var(--text-color);
+    }
+    
+    .examples .section-title h2,
+    .examples .section-title p {
+      color: var(--light-color);
+    }
+    
+    .examples .section-title p {
+      color: #aaa;
+    }
+    
+    .examples-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .example-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .example-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .example-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .example-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .example-item:hover .example-overlay {
+      transform: translateY(0);
+    }
+    
+    /* Sección cómo usar */
+    .how-to-use {
+      background-color: var(--dark-color);
+      color: var(--text-color);
+    }
+    
+    .how-to-use .section-title h2,
+    .how-to-use .section-title p {
+      color: var(--light-color);
+    }
+    
+    .how-to-use .section-title p {
+      color: #aaa;
+    }
+    
+    .steps {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .step {
+      display: flex;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .step:last-child {
+      margin-bottom: 0;
+    }
+    
+    .step-number {
+      background-color: var(--primary-color);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    
+    .step-content h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      left: 20px;
+      bottom: -40px;
+      width: 2px;
+      background-color: #444;
+    }
+    
+    .step:last-child::after {
+      display: none;
+    }
+    
+    /* Sección CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1a56ff 100%);
+      color: var(--light-color);
+      text-align: center;
+    }
+    
+    .cta h2 {
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    
+    .cta p {
+      margin-bottom: 30px;
+      font-size: 18px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .btn-cta {
+      background-color: var(--light-color);
+      color: var(--primary-color);
+      font-size: 18px;
+      padding: 15px 40px;
+    }
+    
+    /* Pie de página */
+    footer {
+      background-color: var(--dark-color);
+      color: var(--text-light);
+      padding: 40px 0 30px;
+    }
+    
+    .footer-links {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--light-color);
+    }
+    
+    .footer-links span {
+      color: #666;
+      margin: 0 5px;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      font-size: 14px;
+      color: #888;
+    }
+    
+    /* Estilos responsivos */
+    @media (max-width: 992px) {
+      .hero {
+        padding: 140px 0 60px;
+      }
+      
+      .hero-content {
+        flex-direction: column;
+      }
+      
+      .hero-text {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      
+      .section-title h2 {
+        font-size: 32px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      section {
+        padding: 60px 0;
+      }
+      
+      .hero h1 {
+        font-size: 32px;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .examples-showcase {
+        grid-template-columns: 1fr;
+      }
+      
+      .step {
+        flex-direction: row;
+      }
+      
+      .step-content {
+        flex: 1;
+      }
+      
+      .step-number {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+      
+      .step::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <a href="../../" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+          <img src="../../images/quickboard.png" alt="QuickBoard Logo" class="header-logo">
+          <span>Quick</span>Board
+        </a>
+      </div>
+      <a href="../../" class="btn">Abrir App</a>
+    </div>
+  </header>
+
+  <!-- Sección Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Tácticas de Fútbol<br>Más Simples</h1>
+        <p>QuickBoard es una pizarra táctica de fútbol fácil de usar para todos.<br>Sin instalación, funciona en teléfonos inteligentes y ordenadores.</p>
+        <a href="../../" class="btn btn-large">Pruébalo Ahora</a>
+      </div>
+      <div class="hero-image">
+        <a href="../../" title="Abrir QuickBoard">
+          <img src="../images/hero.png" alt="Captura de pantalla de QuickBoard">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Características -->
+  <section class="features">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Características de QuickBoard</h2>
+        <p>Simple pero con todas las funciones que necesitas</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3><span class="feature-icon">👆</span>Operación Simple</h3>
+          <p>Cualquiera puede crear fácilmente pizarras tácticas con operación intuitiva. Se siente como mover una pizarra táctica real.</p>
+        </div>
+        <div class="feature-card">
+          <h3><span class="feature-icon">🔗</span>Compartir Fácil</h3>
+          <p>Las pizarras tácticas creadas se pueden compartir fácilmente por URL. Comparte información instantáneamente con compañeros de equipo y entrenadores.</p>
+        </div>
+        <div class="feature-card">
+          <h3><span class="feature-icon">👕</span>Personalización</h3>
+          <p>Personaliza números y nombres de jugadores, cambia entre modos vertical y horizontal. Adaptable a varias situaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Ejemplos -->
+  <section class="examples">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Perfecto para Estas Situaciones</h2>
+        <p>Útil para entrenadores y jugadores en varios escenarios</p>
+      </div>
+      <div class="examples-showcase">
+        <div class="example-item">
+          <img src="../images/lp1.png" alt="Ejemplo de explicación de táctica de equipo">
+          <div class="example-overlay">
+            <h3>Explicación Táctica en Reuniones de Equipo</h3>
+            <p>Comunica tácticas efectivamente en reuniones previas al juego</p>
+          </div>
+        </div>
+        <div class="example-item">
+          <img src="../images/lp2.png" alt="Ejemplo de entrenamiento individual">
+          <div class="example-overlay">
+            <h3>Situaciones de Entrenamiento Individual</h3>
+            <p>Proporciona orientación específica sobre posicionamiento de jugadores</p>
+          </div>
+        </div>
+        <div class="example-item">
+          <img src="../images/lp3.png" alt="Ejemplo de análisis de juego">
+          <div class="example-overlay">
+            <h3>Análisis de Juego y Revisión</h3>
+            <p>Útil para revisiones post-juego y organizar puntos clave</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Cómo Usar -->
+  <section class="how-to-use">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Cómo Usar QuickBoard</h2>
+        <p>Fácil de empezar incluso para usuarios primerizos</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Abrir la Pizarra Táctica</h3>
+            <p>Simplemente accede a QuickBoard en tu navegador. No se requiere instalación.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Colocar Jugadores</h3>
+            <p>Haz doble clic (toca) en el área en blanco del campo para agregar jugadores. Arrástralos para moverlos a las posiciones deseadas.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Personalizar Jugadores</h3>
+            <p>Haz doble clic (toca) en los jugadores para establecer sus números, nombres y colores.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Compartir</h3>
+            <p>Comparte tu pizarra táctica completada con compañeros de equipo por URL. Fácil de compartir en redes sociales también.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>¿Listo para Probar QuickBoard?</h2>
+      <p>Sin instalación, sin registro requerido. Solo accede desde tu teléfono inteligente o navegador de ordenador y comienza a crear pizarras tácticas inmediatamente.</p>
+      <a href="../../" class="btn btn-cta">Prueba QuickBoard</a>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="../../terms/">Términos de servicio</a>
+        <span>|</span>
+        <a href="../../privacy/">Política de privacidad</a>
+        <span>|</span>
+        <a href="https://forms.gle/ZHpm5Hm71tJLhERd6" target="_blank">Contacto</a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 QuickBoard by <a href="https://x.com/aoma23" target="_blank" style="color: inherit; text-decoration: none;">aoma23</a>. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
