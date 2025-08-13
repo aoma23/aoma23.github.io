@@ -1,11 +1,12 @@
 name = "aoma23-github-io"
 compatibility_date = "2024-01-01"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "app/quickboard"
 
 [build]
-command = "npm run build"
+command = "cd app/quickboard && npm run build"
 cwd = "."
-watch_dir = "."
+watch_dir = "app/quickboard"
 
 [env.production.vars]
 NODE_ENV = "production"

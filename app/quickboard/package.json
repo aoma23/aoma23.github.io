@@ -1,0 +1,17 @@
+{
+  "name": "quickboard-obfuscation",
+  "version": "1.0.0",
+  "description": "QuickBoard JavaScript obfuscation build tools",
+  "private": true,
+  "scripts": {
+    "obfuscate": "javascript-obfuscator js/board_original.js --output js/board.js --config obfuscation-config.json",
+    "obfuscate-og": "javascript-obfuscator functions/api/quickboard-og_original.js --output functions/api/quickboard-og.js --config obfuscation-config.json",
+    "build": "npm run obfuscate && npm run obfuscate-og",
+    "dev": "echo 'Use *_original.js files for development'"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.0"
+  },
+  "keywords": ["javascript", "obfuscation", "quickboard", "soccer"],
+  "author": "aoma"
+}
