@@ -1,0 +1,157 @@
+name: Auto Tweet New Blog Posts
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '_posts/*.md'
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2  # 前のコミットと比較するため
+
+    - name: Get changed files
+      id: changed-files
+      run: |
+        # 新しく追加された記事ファイルを取得
+        NEW_POSTS=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep '^_posts/.*\.md$' || true)
+        if [ -n "$NEW_POSTS" ]; then
+          echo "新しい記事が見つかりました:"
+          echo "$NEW_POSTS"
+          echo "new_posts<<EOF" >> $GITHUB_OUTPUT
+          echo "$NEW_POSTS" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+        else
+          echo "新しい記事はありません"
+          echo "new_posts=" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Extract post metadata
+      id: metadata
+      if: steps.changed-files.outputs.new_posts != ''
+      run: |
+        # 最初の新しい記事のメタデータを抽出
+        POST_FILE=$(echo "${{ steps.changed-files.outputs.new_posts }}" | head -n1)
+        echo "記事ファイル: $POST_FILE"
+        
+        # タイトルを抽出
+        TITLE=$(grep '^title:' "$POST_FILE" | sed 's/title: *["'"'"']*\(.*\)["'"'"']*$/\1/' | sed 's/^"//;s/"$//')
+        echo "タイトル: $TITLE"
+        
+        # 日付を抽出
+        DATE=$(grep '^date:' "$POST_FILE" | sed 's/date: *//')
+        echo "日付: $DATE"
+        
+        # タグを抽出
+        TAGS=$(awk '/^tags:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        echo "タグ: $TAGS"
+        
+        # カテゴリを抽出
+        CATEGORIES=$(awk '/^categories:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        echo "カテゴリ: $CATEGORIES"
+        
+        # ファイル名からURLを生成
+        FILENAME=$(basename "$POST_FILE" .md)
+        URL_SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+        BLOG_URL="https://aoma23.com/${URL_SLUG}/"
+        echo "URL: $BLOG_URL"
+        
+        # 出力設定
+        echo "title=$TITLE" >> $GITHUB_OUTPUT
+        echo "date=$DATE" >> $GITHUB_OUTPUT
+        echo "tags=$TAGS" >> $GITHUB_OUTPUT
+        echo "categories=$CATEGORIES" >> $GITHUB_OUTPUT
+        echo "url=$BLOG_URL" >> $GITHUB_OUTPUT
+        echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+    - name: Generate tweet content
+      id: tweet
+      if: steps.metadata.outputs.title != ''
+      run: |
+        # ツイート文を生成
+        TITLE="${{ steps.metadata.outputs.title }}"
+        URL="${{ steps.metadata.outputs.url }}"
+        TAGS="${{ steps.metadata.outputs.tags }}"
+        CATEGORIES="${{ steps.metadata.outputs.categories }}"
+        
+        # ハッシュタグを生成（スペースを除去してHashtagに変換）
+        HASHTAGS=""
+        for tag in $TAGS $CATEGORIES; do
+          # 日本語タグはそのまま、英語タグは#付き
+          if echo "$tag" | grep -q '[ぁ-ゟ]'; then
+            continue  # 日本語タグはスキップ（Twitterで検索されにくいため）
+          else
+            HASHTAGS="$HASHTAGS #$(echo "$tag" | sed 's/ //g')"
+          fi
+        done
+        
+        # ツイート文を構築
+        INTRO="新しいブログ記事を公開しました📝"
+        TITLE_PART="「${TITLE}」"
+        
+        # 基本的なツイート文を作成
+        TWEET_TEXT="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'"${HASHTAGS}"$'\n'"${URL}"
+        
+        # 文字数チェック（Twitter制限280文字）
+        CHAR_COUNT=$(echo -n "$TWEET_TEXT" | wc -c)
+        echo "文字数: $CHAR_COUNT"
+        
+        if [ $CHAR_COUNT -gt 280 ]; then
+          # 文字数オーバーの場合はタイトルを短縮
+          MAX_TITLE_LENGTH=$((200 - ${#INTRO} - ${#HASHTAGS} - ${#URL}))
+          if [ $MAX_TITLE_LENGTH -lt 10 ]; then
+            MAX_TITLE_LENGTH=10
+          fi
+          SHORT_TITLE=$(echo "$TITLE" | cut -c1-$MAX_TITLE_LENGTH)
+          TITLE_PART="「${SHORT_TITLE}...」"
+          TWEET_TEXT="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'"${HASHTAGS}"$'\n'"${URL}"
+        fi
+        
+        echo "ツイート内容:"
+        echo "$TWEET_TEXT"
+        
+        # GitHubの出力形式に合わせて設定
+        echo "content<<EOF" >> $GITHUB_OUTPUT
+        echo "$TWEET_TEXT" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+
+    - name: Post to Twitter
+      if: steps.tweet.outputs.content != ''
+      uses: ethomson/send-tweet-action@v1
+      with:
+        status: ${{ steps.tweet.outputs.content }}
+        consumer-key: ${{ secrets.TWITTER_API_KEY }}
+        consumer-secret: ${{ secrets.TWITTER_API_SECRET }}
+        access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 🐦 自動ツイート結果" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.changed-files.outputs.new_posts }}" != "" ]; then
+          echo "### 📝 対象記事" >> $GITHUB_STEP_SUMMARY
+          echo "- **タイトル**: ${{ steps.metadata.outputs.title }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL**: ${{ steps.metadata.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **ファイル**: ${{ steps.changed-files.outputs.new_posts }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ "${{ job.status }}" = "success" ]; then
+            echo "### ✅ ツイート成功" >> $GITHUB_STEP_SUMMARY
+            echo "記事が正常にTwitterに投稿されました。" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ ツイート失敗" >> $GITHUB_STEP_SUMMARY
+            echo "ツイートの投稿に失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "### ℹ️ 新しい記事なし" >> $GITHUB_STEP_SUMMARY
+          echo "今回のコミットには新しいブログ記事が含まれていませんでした。" >> $GITHUB_STEP_SUMMARY
+        fi
