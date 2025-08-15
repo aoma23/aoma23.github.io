@@ -1,8 +1,8 @@
-name: Scheduled Build for Future Posts
+name: Daily Site Rebuild
 
 on:
   schedule:
-    # 毎日午前9時（JST）にビルド実行
+    # 毎日午前9時（JST）にサイト更新
     - cron: '0 0 * * *'
   workflow_dispatch:
     # 手動実行も可能
@@ -10,6 +10,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
     - name: Checkout repository
@@ -29,7 +32,7 @@ jobs:
       
     - name: Build Jekyll site
       run: |
-        # 未来日付の投稿も含めてビルド（その日になったもののみ表示される）
+        # Jekyllサイトをビルド
         bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
       env:
         JEKYLL_ENV: production
@@ -52,7 +55,7 @@ jobs:
         
         if [ "${{ job.status }}" = "success" ]; then
           echo "### ✅ ビルド成功" >> $GITHUB_STEP_SUMMARY
-          echo "サイトが正常に更新されました。未来日付の投稿がある場合、公開日になったものが表示されます。" >> $GITHUB_STEP_SUMMARY
+          echo "サイトが正常に更新されました。新しいコンテンツがある場合は公開されます。" >> $GITHUB_STEP_SUMMARY
         else
           echo "### ❌ ビルド失敗" >> $GITHUB_STEP_SUMMARY
           echo "ビルドに失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
