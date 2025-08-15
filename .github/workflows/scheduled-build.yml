@@ -1,0 +1,70 @@
+name: Scheduled Build for Future Posts
+
+on:
+  schedule:
+    # 毎日午前9時（JST）にビルド実行
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # 手動実行も可能
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 全履歴を取得
+        
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v4
+      
+    - name: Build Jekyll site
+      run: |
+        # 未来日付の投稿も含めてビルド（その日になったもののみ表示される）
+        bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      env:
+        JEKYLL_ENV: production
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 📅 定期ビルド結果" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ビルド時刻" >> $GITHUB_STEP_SUMMARY
+        echo "$(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ job.status }}" = "success" ]; then
+          echo "### ✅ ビルド成功" >> $GITHUB_STEP_SUMMARY
+          echo "サイトが正常に更新されました。未来日付の投稿がある場合、公開日になったものが表示されます。" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### ❌ ビルド失敗" >> $GITHUB_STEP_SUMMARY
+          echo "ビルドに失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
+        fi
+
+# GitHub Pagesへのデプロイ権限設定
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 並行実行の制御
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
