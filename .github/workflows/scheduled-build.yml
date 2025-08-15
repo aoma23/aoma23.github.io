@@ -44,6 +44,32 @@ jobs:
       id: deployment
       uses: actions/deploy-pages@v4
       
+    - name: Check and tweet today's posts
+      if: steps.deployment.outcome == 'success'
+      run: |
+        echo "🔍 今日公開される記事をチェックします..."
+        CURRENT_DATE=$(date '+%Y-%m-%d')
+        echo "現在の日付: $CURRENT_DATE"
+        
+        # 今日の日付の記事をチェック
+        for post_file in _posts/*.md; do
+          if [ -f "$post_file" ]; then
+            POST_DATE=$(grep '^date:' "$post_file" | sed 's/date: *//' | head -1)
+            if [ "$POST_DATE" = "$CURRENT_DATE" ]; then
+              echo "📝 今日公開される記事を発見: $post_file"
+              
+              # Auto Tweetワークフローを呼び出し
+              gh workflow run auto-tweet.yml \
+                --field post_file="$post_file" \
+                --repo ${{ github.repository }}
+              
+              echo "✅ 自動ツイートをトリガーしました: $post_file"
+            fi
+          fi
+        done
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
     - name: Create summary
       if: always()
       run: |

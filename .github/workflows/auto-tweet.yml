@@ -69,9 +69,30 @@ jobs:
         echo "url=$BLOG_URL" >> $GITHUB_OUTPUT
         echo "filename=$FILENAME" >> $GITHUB_OUTPUT
 
+    - name: Check post date
+      id: date-check
+      if: steps.metadata.outputs.title != ''
+      run: |
+        POST_DATE="${{ steps.metadata.outputs.date }}"
+        CURRENT_DATE=$(date '+%Y-%m-%d')
+        
+        echo "記事の日付: $POST_DATE"
+        echo "現在の日付: $CURRENT_DATE"
+        
+        # 記事の日付が今日以降かチェック
+        if [[ "$POST_DATE" > "$CURRENT_DATE" ]]; then
+          echo "⏰ 未来日付の記事です。ツイートを延期します。"
+          echo "should_tweet=false" >> $GITHUB_OUTPUT
+          echo "reason=future_date" >> $GITHUB_OUTPUT
+        else
+          echo "✅ 公開可能な日付です。ツイートを実行します。"
+          echo "should_tweet=true" >> $GITHUB_OUTPUT
+          echo "reason=ready_to_tweet" >> $GITHUB_OUTPUT
+        fi
+
     - name: Generate tweet content
       id: tweet-content
-      if: steps.metadata.outputs.title != ''
+      if: steps.date-check.outputs.should_tweet == 'true'
       run: |
         # ツイート文を生成
         TITLE="${{ steps.metadata.outputs.title }}"
@@ -142,14 +163,22 @@ jobs:
           echo "- **タイトル**: ${{ steps.metadata.outputs.title }}" >> $GITHUB_STEP_SUMMARY
           echo "- **URL**: ${{ steps.metadata.outputs.url }}" >> $GITHUB_STEP_SUMMARY
           echo "- **ファイル**: ${{ steps.changed-files.outputs.files }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **記事の日付**: ${{ steps.metadata.outputs.date }}" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           
-          if [ "${{ job.status }}" = "success" ]; then
+          # 日付チェック結果に基づいてメッセージを変更
+          if [ "${{ steps.date-check.outputs.reason }}" = "future_date" ]; then
+            echo "### ⏰ ツイート延期" >> $GITHUB_STEP_SUMMARY
+            echo "未来日付の記事のため、ツイートを延期しました。Daily Site Rebuildで公開時に自動ツイートされます。" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.date-check.outputs.should_tweet }}" = "true" ] && [ "${{ job.status }}" = "success" ]; then
             echo "### ✅ ツイート成功" >> $GITHUB_STEP_SUMMARY
             echo "記事が正常にTwitterに投稿されました。" >> $GITHUB_STEP_SUMMARY
-          else
+          elif [ "${{ steps.date-check.outputs.should_tweet }}" = "true" ]; then
             echo "### ❌ ツイート失敗" >> $GITHUB_STEP_SUMMARY
             echo "ツイートの投稿に失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ℹ️ 処理完了" >> $GITHUB_STEP_SUMMARY
+            echo "記事を検出しましたが、ツイート条件を満たしていません。" >> $GITHUB_STEP_SUMMARY
           fi
         else
           echo "### ℹ️ 新しい記事なし" >> $GITHUB_STEP_SUMMARY
