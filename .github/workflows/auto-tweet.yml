@@ -136,8 +136,30 @@ jobs:
         echo "ツイート内容:"
         echo "$TWEET_TEXT"
         
-        # URL encode for safe transmission
-        ENCODED_TWEET=$(echo "$TWEET_TEXT" | python3 -c "import sys,urllib.parse;print(urllib.parse.quote(sys.stdin.read()))")
+        # URL encode for safe transmission with proper Unicode handling
+        ENCODED_TWEET=$(echo "$TWEET_TEXT" | LANG=C.UTF-8 python3 -c "
+import sys
+import urllib.parse
+import io
+
+# Set stdout encoding to UTF-8
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+try:
+    # Read input with proper encoding
+    content = sys.stdin.read()
+    # Clean any potential surrogate characters
+    content = content.encode('utf-8', errors='ignore').decode('utf-8')
+    # URL encode the content
+    encoded = urllib.parse.quote(content, safe='')
+    print(encoded)
+except UnicodeError as e:
+    # Fallback: replace problematic characters
+    content = sys.stdin.read()
+    content = content.encode('utf-8', errors='replace').decode('utf-8')
+    encoded = urllib.parse.quote(content, safe='')
+    print(encoded)
+")
         echo "content=$ENCODED_TWEET" >> $GITHUB_OUTPUT
 
     - name: Post to Twitter (OAuth 1.0a)

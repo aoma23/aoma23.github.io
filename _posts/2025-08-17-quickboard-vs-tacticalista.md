@@ -1,6 +1,6 @@
 ---
 title: "QuickBoard vs TACTICALista どちらがおすすめ？サッカー戦術ボードアプリ徹底比較"
-date: 2025-08-15
+date: 2025-08-17
 categories:
   - サッカー
   - アプリ比較

@@ -51,19 +51,37 @@ jobs:
         CURRENT_DATE=$(date '+%Y-%m-%d')
         echo "現在の日付: $CURRENT_DATE"
         
-        # 今日の日付の記事をチェック
+        # 今日の日付の記事をチェック（未来日付は除外）
         for post_file in _posts/*.md; do
           if [ -f "$post_file" ]; then
             POST_DATE=$(grep '^date:' "$post_file" | sed 's/date: *//' | head -1)
+            echo "記事: $post_file, 日付: $POST_DATE"
+            
+            # 日付比較：記事の日付が今日以前かつ今日以降の場合のみツイート
             if [ "$POST_DATE" = "$CURRENT_DATE" ]; then
-              echo "📝 今日公開される記事を発見: $post_file"
+              # ファイル名からも日付を抽出して二重チェック
+              FILENAME=$(basename "$post_file" .md)
+              FILE_DATE=$(echo "$FILENAME" | grep -o '^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}')
               
-              # Auto Tweetワークフローを呼び出し
-              gh workflow run auto-tweet.yml \
-                --field post_file="$post_file" \
-                --repo ${{ github.repository }}
+              echo "ファイル日付: $FILE_DATE, 記事日付: $POST_DATE"
               
-              echo "✅ 自動ツイートをトリガーしました: $post_file"
+              # ファイル名の日付が未来でないことを確認
+              if [[ "$FILE_DATE" <= "$CURRENT_DATE" ]]; then
+                echo "📝 今日公開される記事を発見: $post_file"
+                
+                # Auto Tweetワークフローを呼び出し
+                gh workflow run auto-tweet.yml \
+                  --field post_file="$post_file" \
+                  --repo ${{ github.repository }}
+                
+                echo "✅ 自動ツイートをトリガーしました: $post_file"
+              else
+                echo "⏰ ファイル名が未来日付のためスキップ: $post_file"
+              fi
+            elif [[ "$POST_DATE" < "$CURRENT_DATE" ]]; then
+              echo "📅 過去の記事のためスキップ: $post_file"
+            else
+              echo "⏰ 未来の記事のためスキップ: $post_file"
             fi
           fi
         done
