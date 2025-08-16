@@ -92,6 +92,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 # 並行実行の制御
 concurrency:
