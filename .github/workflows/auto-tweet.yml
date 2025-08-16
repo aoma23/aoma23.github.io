@@ -100,66 +100,77 @@ jobs:
         TAGS="${{ steps.metadata.outputs.tags }}"
         CATEGORIES="${{ steps.metadata.outputs.categories }}"
         
-        # ハッシュタグを生成（スペースを除去してHashtagに変換）
-        HASHTAGS=""
-        for tag in $TAGS $CATEGORIES; do
-          # 日本語タグはそのまま、英語タグは#付き
-          if echo "$tag" | grep -q '[ぁ-ゟ]'; then
-            continue  # 日本語タグはスキップ（Twitterで検索されにくいため）
-          else
-            HASHTAGS="$HASHTAGS #$(echo "$tag" | sed 's/ //g')"
-          fi
-        done
-        
-        # ツイート文を構築
+        # ツイート文の基本要素を定義
         INTRO="新しいブログ記事を公開しました📝"
         TITLE_PART="「${TITLE}」"
         
-        # 基本的なツイート文を作成
-        TWEET_TEXT="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'"${HASHTAGS}"$'\n'"${URL}"
+        # ハッシュタグを配列に収集（優先順位付き）
+        PRIORITY_TAGS=""
+        NORMAL_TAGS=""
         
-        # 文字数チェック（Twitter制限280文字）
-        CHAR_COUNT=$(echo -n "$TWEET_TEXT" | wc -c)
-        echo "文字数: $CHAR_COUNT"
-        
-        if [ $CHAR_COUNT -gt 280 ]; then
-          # 文字数オーバーの場合はタイトルを短縮
-          MAX_TITLE_LENGTH=$((200 - ${#INTRO} - ${#HASHTAGS} - ${#URL}))
-          if [ $MAX_TITLE_LENGTH -lt 10 ]; then
-            MAX_TITLE_LENGTH=10
+        for tag in $TAGS $CATEGORIES; do
+          # 日本語タグはスキップ（Twitterで検索されにくいため）
+          if echo "$tag" | grep -q '[ぁ-ゟ]'; then
+            continue
+          else
+            tag_formatted="#$(echo "$tag" | sed 's/ //g')"
+            # 重要なタグを優先
+            case "$tag" in
+              "QuickBoard"|"TACTICALista"|"戦術ボード"|"サッカー")
+                PRIORITY_TAGS="$PRIORITY_TAGS $tag_formatted"
+                ;;
+              *)
+                NORMAL_TAGS="$NORMAL_TAGS $tag_formatted"
+                ;;
+            esac
           fi
-          SHORT_TITLE=$(echo "$TITLE" | cut -c1-$MAX_TITLE_LENGTH)
-          TITLE_PART="「${SHORT_TITLE}...」"
-          TWEET_TEXT="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'"${HASHTAGS}"$'\n'"${URL}"
-        fi
+        done
+        
+        # 基本ツイート文（ハッシュタグなし）
+        BASE_TWEET="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'
+        BASE_LENGTH=$(echo -n "${BASE_TWEET}${URL}" | wc -c)
+        
+        echo "基本文字数（タイトル+URL）: $BASE_LENGTH"
+        
+        # 使用可能なハッシュタグ領域を計算
+        AVAILABLE_SPACE=$((280 - BASE_LENGTH - 1))  # 改行分で-1
+        
+        # ハッシュタグを段階的に追加
+        HASHTAGS=""
+        
+        # 1. 優先タグを追加
+        for tag in $PRIORITY_TAGS; do
+          test_hashtags="$HASHTAGS $tag"
+          if [ $(echo -n "$test_hashtags" | wc -c) -le $AVAILABLE_SPACE ]; then
+            HASHTAGS="$test_hashtags"
+          else
+            break
+          fi
+        done
+        
+        # 2. 通常タグを追加（スペースが許す限り）
+        for tag in $NORMAL_TAGS; do
+          test_hashtags="$HASHTAGS $tag"
+          if [ $(echo -n "$test_hashtags" | wc -c) -le $AVAILABLE_SPACE ]; then
+            HASHTAGS="$test_hashtags"
+          else
+            break
+          fi
+        done
+        
+        # 最終ツイート文を構築
+        TWEET_TEXT="${BASE_TWEET}${HASHTAGS}"$'\n'"${URL}"
+        
+        # 最終文字数チェック
+        FINAL_CHAR_COUNT=$(echo -n "$TWEET_TEXT" | wc -c)
+        echo "最終文字数: $FINAL_CHAR_COUNT"
+        echo "使用ハッシュタグ:$HASHTAGS"
         
         echo "ツイート内容:"
         echo "$TWEET_TEXT"
         
-        # URL encode for safe transmission with proper Unicode handling
-        ENCODED_TWEET=$(echo "$TWEET_TEXT" | LANG=C.UTF-8 python3 -c "
-import sys
-import urllib.parse
-import io
-
-# Set stdout encoding to UTF-8
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
-try:
-    # Read input with proper encoding
-    content = sys.stdin.read()
-    # Clean any potential surrogate characters
-    content = content.encode('utf-8', errors='ignore').decode('utf-8')
-    # URL encode the content
-    encoded = urllib.parse.quote(content, safe='')
-    print(encoded)
-except UnicodeError as e:
-    # Fallback: replace problematic characters
-    content = sys.stdin.read()
-    content = content.encode('utf-8', errors='replace').decode('utf-8')
-    encoded = urllib.parse.quote(content, safe='')
-    print(encoded)
-")
+        # URL encode for safe transmission
+        ENCODED_TWEET=$(echo "$TWEET_TEXT" | python3 -c "import sys,urllib.parse;print(urllib.parse.quote(sys.stdin.read()))")
         echo "content=$ENCODED_TWEET" >> $GITHUB_OUTPUT
 
     - name: Post to Twitter (OAuth 1.0a)
