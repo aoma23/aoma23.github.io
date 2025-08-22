@@ -1,0 +1,11 @@
+[build]
+  command = "npm install"
+  functions = "functions"
+  publish = "."
+
+[functions]
+  node_bundler = "esbuild"
+
+# 環境変数（必要に応じて追加）
+[context.production.environment]
+  NODE_ENV = "production"
