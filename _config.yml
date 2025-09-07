@@ -21,6 +21,7 @@ twitter_username: aoma23
 github_username: aoma23
 minimal_mistakes_skin: air
 search: true
+url: https://aoma23.com
 
 # Build settings
 markdown: kramdown
@@ -57,6 +58,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-seo-tag
 
 author:
   name   : "aoma"
@@ -124,3 +126,7 @@ analytics:
 
 head_scripts:
   - /assets/js/ad.js
+
+# SEO/Open Graph defaults
+# jekyll-seo-tag で og:image の既定値として使用されます
+logo: "/assets/images/aoma-og-1200x630.png"
