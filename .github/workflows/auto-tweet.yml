@@ -47,12 +47,33 @@ jobs:
         DATE=$(grep '^date:' "$POST_FILE" | sed 's/date: *//')
         echo "日付: $DATE"
         
-        # タグを抽出
-        TAGS=$(awk '/^tags:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        # タグを抽出（インライン/複数行の両方に対応）
+        TAGS=""
+        if grep -qE '^tags:[[:space:]]*\[' "$POST_FILE"; then
+          # インライン配列: tags: [a, b, c]
+          TAGS=$(grep -m1 '^tags:' "$POST_FILE" | sed -E 's/^tags:[[:space:]]*\[(.*)\][[:space:]]*$/\1/' | tr ',' '\n' | sed -E 's/^ *| *$//g' | tr '\n' ' ')
+        elif grep -qE '^tags:[[:space:]]*$' "$POST_FILE"; then
+          # 複数行配列:
+          # tags:\n  # - a\n  # - b
+          TAGS=$(awk 'found && /^[[:space:]]*-/ { sub(/^[[:space:]]*-[[:space:]]*/,"",$0); gsub(/[\r\n]+/,"",$0); print; next } found && NF==0 { next } found { exit } /^tags:[[:space:]]*$/ { found=1 }' "$POST_FILE" | tr '\n' ' ')
+        fi
+        # 余分なスペースを整形
+        TAGS=$(echo "$TAGS" | xargs || true)
         echo "タグ: $TAGS"
-        
-        # カテゴリを抽出
-        CATEGORIES=$(awk '/^categories:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+
+        # カテゴリを抽出（categories: 配列 or category: 単体 の両対応）
+        CATEGORIES=""
+        if grep -qE '^categories:[[:space:]]*\[' "$POST_FILE"; then
+          CATEGORIES=$(grep -m1 '^categories:' "$POST_FILE" | sed -E 's/^categories:[[:space:]]*\[(.*)\][[:space:]]*$/\1/' | tr ',' '\n' | sed -E 's/^ *| *$//g' | tr '\n' ' ')
+        elif grep -qE '^categories:[[:space:]]*$' "$POST_FILE"; then
+          CATEGORIES=$(awk 'found && /^[[:space:]]*-/ { sub(/^[[:space:]]*-[[:space:]]*/,"",$0); gsub(/[\r\n]+/,"",$0); print; next } found && NF==0 { next } found { exit } /^categories:[[:space:]]*$/ { found=1 }' "$POST_FILE" | tr '\n' ' ')
+        fi
+        # 単数カテゴリ（category: foo）にも対応
+        CAT_SINGLE=$(grep -m1 '^category:' "$POST_FILE" | sed -E 's/^category:[[:space:]]*//; s/["\'"\']//g')
+        if [ -n "$CAT_SINGLE" ]; then
+          CATEGORIES="${CATEGORIES} ${CAT_SINGLE}"
+        fi
+        CATEGORIES=$(echo "$CATEGORIES" | xargs || true)
         echo "カテゴリ: $CATEGORIES"
         
         # ファイル名からURLを生成
