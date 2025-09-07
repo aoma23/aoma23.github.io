@@ -47,8 +47,34 @@ jobs:
         DATE=$(grep '^date:' "$POST_FILE" | sed 's/date: *//')
         echo "日付: $DATE"
         
-        # タグを抽出
-        TAGS=$(awk '/^tags:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        # タグを抽出（インライン配列/複数行配列 両対応）
+        TAGS=""
+        if grep -qE '^tags:[[:space:]]*\[' "$POST_FILE"; then
+          # 例) tags: [foo, bar, "baz qux"]
+          TAGS=$(grep -m1 '^tags:' "$POST_FILE" \
+            | sed -E 's/^tags:[[:space:]]*\[(.*)\][[:space:]]*$/\1/' \
+            | tr ',' '\n' \
+            | sed -E 's/^ *| *$//g' \
+            | tr -d '"' \
+            | tr '\n' ' ')
+        elif grep -qE '^tags:[[:space:]]*$' "$POST_FILE"; then
+          # 例)
+          # tags:\n#   - foo\n#   - "baz qux"
+          TAGS=$(awk '
+            found && /^[[:space:]]*-/ {
+              sub(/^[[:space:]]*-[[:space:]]*/,"",$0);
+              gsub(/[\r\n]+/,"",$0);
+              print; next
+            }
+            found && NF==0 { next }
+            found && !/^[[:space:]]*-/ { exit }
+            /^tags:[[:space:]]*$/ { found=1 }
+          ' "$POST_FILE" \
+          | sed -E 's/^ *| *$//g' \
+          | tr -d '"' \
+          | tr '\n' ' ')
+        fi
+        TAGS=$(echo "$TAGS" | xargs || true)
         echo "タグ: $TAGS"
         
         # カテゴリを抽出
