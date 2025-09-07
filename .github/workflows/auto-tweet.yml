@@ -39,8 +39,9 @@ jobs:
         POST_FILE="${{ steps.changed-files.outputs.files }}"
         echo "記事ファイル: $POST_FILE"
         
-        # タイトルを抽出
-        TITLE=$(grep '^title:' "$POST_FILE" | sed 's/title: *["'"'"']*\(.*\)["'"'"']*$/\1/' | sed 's/^"//;s/"$//')
+        # タイトルを抽出（前後のシングル/ダブルクォートを除去）
+        TITLE_LINE=$(grep -m1 '^title:' "$POST_FILE" | sed 's/^title:[[:space:]]*//')
+        TITLE=${TITLE_LINE#"}; TITLE=${TITLE%"}; TITLE=${TITLE#\'}; TITLE=${TITLE%\'}
         echo "タイトル: $TITLE"
         
         # 日付を抽出
@@ -69,8 +70,9 @@ jobs:
           CATEGORIES=$(awk 'found && /^[[:space:]]*-/ { sub(/^[[:space:]]*-[[:space:]]*/,"",$0); gsub(/[\r\n]+/,"",$0); print; next } found && NF==0 { next } found { exit } /^categories:[[:space:]]*$/ { found=1 }' "$POST_FILE" | tr '\n' ' ')
         fi
         # 単数カテゴリ（category: foo）にも対応
-        CAT_SINGLE=$(grep -m1 '^category:' "$POST_FILE" | sed -E 's/^category:[[:space:]]*//; s/["\'"\']//g')
-        if [ -n "$CAT_SINGLE" ]; then
+        CAT_SINGLE_LINE=$(grep -m1 '^category:' "$POST_FILE" | sed -E 's/^category:[[:space:]]*//') || true
+        if [ -n "$CAT_SINGLE_LINE" ]; then
+          CAT_SINGLE=${CAT_SINGLE_LINE#"}; CAT_SINGLE=${CAT_SINGLE%"}; CAT_SINGLE=${CAT_SINGLE#\'}; CAT_SINGLE=${CAT_SINGLE%\'}
           CATEGORIES="${CATEGORIES} ${CAT_SINGLE}"
         fi
         CATEGORIES=$(echo "$CATEGORIES" | xargs || true)
