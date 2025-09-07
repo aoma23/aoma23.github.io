@@ -103,6 +103,9 @@ defaults:
       share: true
       related: true
       classes: wide #記事の表示幅を広げる
+      og_image: /assets/images/aoma-og-1200x630.png
+      twitter:
+        card: summary_large_image
   # _pages
   - scope:
       path: "_pages"
@@ -126,7 +129,3 @@ analytics:
 
 head_scripts:
   - /assets/js/ad.js
-
-# SEO/Open Graph defaults
-# jekyll-seo-tag で og:image の既定値として使用されます
-logo: "/assets/images/aoma-og-1200x630.png"
