@@ -22,6 +22,11 @@ github_username: aoma23
 minimal_mistakes_skin: air
 search: true
 url: https://aoma23.com
+lang: ja
+locale: ja_JP
+og_image: "/assets/images/aoma-og-1200x630.png"
+twitter:
+  username: naoqoo2
 
 # Build settings
 markdown: kramdown
@@ -103,9 +108,9 @@ defaults:
       share: true
       related: true
       classes: wide #記事の表示幅を広げる
-      og_image: /assets/images/aoma-og-1200x630.png
-      twitter:
-        card: summary_large_image
+      image: "/assets/images/aoma-og-1200x630.png"
+      og_image: "/assets/images/aoma-og-1200x630.png"
+
   # _pages
   - scope:
       path: "_pages"
@@ -113,6 +118,8 @@ defaults:
     values:
       layout: single
       author_profile: true
+      image: "/assets/images/aoma-og-1200x630.png"
+      og_image: "/assets/images/aoma-og-1200x630.png"
 
 # category_archive:
 #   type: liquid
