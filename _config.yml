@@ -64,15 +64,19 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 author:
   name   : "aoma"
   avatar : "/assets/images/aoma.png"
   bio    : "aomaです。エンジニアしてます。"
   links:
-    - label: "Website"
+    - label: "作ったアプリ"
       icon: "fas fa-fw fa-link"
-      url: "https://aoma23.com/"
+      url: "/apps/"
+    - label: "記事一覧"
+      icon: "fas fa-fw fa-link"
+      url: "/posts/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/aoma23"
