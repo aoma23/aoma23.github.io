@@ -11,16 +11,24 @@ on:
         description: 'Post file path (e.g., _posts/2025-08-14-example.md)'
         required: true
         type: string
+      ref_branch:
+        description: 'Branch to checkout (default: main)'
+        required: false
+        type: string
 
 jobs:
   tweet:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Tokyo
     
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
         fetch-depth: 2  # 前のコミットと比較するため
+        # 手動実行時は指定ブランチを優先（未指定なら main）
+        ref: ${{ github.event_name == 'workflow_dispatch' && (github.event.inputs.ref_branch || 'refs/heads/main') || github.ref }}
 
     - name: Get changed files
       id: changed-files
@@ -38,29 +46,39 @@ jobs:
       run: |
         POST_FILE="${{ steps.changed-files.outputs.files }}"
         echo "記事ファイル: $POST_FILE"
+
+        # ファイル存在チェック（手動入力ミスを検出）
+        if [ ! -f "$POST_FILE" ]; then
+          echo "指定ファイルが現在のブランチに存在しません: $POST_FILE" >&2
+          exit 1
+        fi
         
-        # タイトルを抽出
-        TITLE=$(grep '^title:' "$POST_FILE" | sed 's/title: *["'"'"']*\(.*\)["'"'"']*$/\1/' | sed 's/^"//;s/"$//')
+        # フロントマター範囲のみを対象
+        FRONTMATTER=$(awk 'BEGIN{in=0} /^---[[:space:]]*$/ {c++; if(c==1){in=1; next} if(c==2){in=0; exit}} in{print}' "$POST_FILE")
+
+        # タイトルを抽出（最初の title 行）
+        TITLE=$(printf "%s\n" "$FRONTMATTER" | awk -F': *' '/^title:/ {sub(/^title:[[:space:]]*/,"",$0); print; exit}' | sed 's/^"//;s/"$//')
         echo "タイトル: $TITLE"
         
-        # 日付を抽出
-        DATE=$(grep '^date:' "$POST_FILE" | sed 's/date: *//')
+        # 日付を抽出（時刻が付いていても先頭10桁に正規化）
+        DATE_RAW=$(printf "%s\n" "$FRONTMATTER" | awk -F': *' '/^date:/ {sub(/^date:[[:space:]]*/,"",$0); print; exit}')
+        DATE=$(printf "%s" "$DATE_RAW" | sed -E 's/^([0-9]{4}-[0-9]{2}-[0-9]{2}).*$/\1/')
         echo "日付: $DATE"
         
         # タグを抽出（インライン配列/複数行配列 両対応）
         TAGS=""
-        if grep -qE '^tags:[[:space:]]*\[' "$POST_FILE"; then
+        if printf "%s\n" "$FRONTMATTER" | grep -qE '^tags:[[:space:]]*\['; then
           # 例) tags: [foo, bar, "baz qux"]
-          TAGS=$(grep -m1 '^tags:' "$POST_FILE" \
+          TAGS=$(printf "%s\n" "$FRONTMATTER" | grep -m1 '^tags:' \
             | sed -E 's/^tags:[[:space:]]*\[(.*)\][[:space:]]*$/\1/' \
             | tr ',' '\n' \
             | sed -E 's/^ *| *$//g' \
             | tr -d '"' \
             | tr '\n' ' ')
-        elif grep -qE '^tags:[[:space:]]*$' "$POST_FILE"; then
+        elif printf "%s\n" "$FRONTMATTER" | grep -qE '^tags:[[:space:]]*$'; then
           # 例)
           # tags:\n#   - foo\n#   - "baz qux"
-          TAGS=$(awk '
+          TAGS=$(printf "%s\n" "$FRONTMATTER" | awk '
             found && /^[[:space:]]*-/ {
               sub(/^[[:space:]]*-[[:space:]]*/,"",$0);
               gsub(/[\r\n]+/,"",$0);
@@ -69,7 +87,7 @@ jobs:
             found && NF==0 { next }
             found && !/^[[:space:]]*-/ { exit }
             /^tags:[[:space:]]*$/ { found=1 }
-          ' "$POST_FILE" \
+          ' \
           | sed -E 's/^ *| *$//g' \
           | tr -d '"' \
           | tr '\n' ' ')
@@ -78,7 +96,7 @@ jobs:
         echo "タグ: $TAGS"
         
         # カテゴリを抽出
-        CATEGORIES=$(awk '/^categories:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        CATEGORIES=$(printf "%s\n" "$FRONTMATTER" | awk '/^categories:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' | tr '\n' ' ')
         echo "カテゴリ: $CATEGORIES"
         
         # ファイル名からURLを生成
@@ -86,6 +104,13 @@ jobs:
         URL_SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
         BLOG_URL="https://aoma23.com/${URL_SLUG}/"
         echo "URL: $BLOG_URL"
+
+        # DATEが空ならファイル名から補完（YYYY-MM-DD）
+        if [ -z "$DATE" ]; then
+          DATE_FROM_NAME=$(echo "$FILENAME" | awk -F'-' '{printf "%s-%s-%s",$1,$2,$3}')
+          echo "date が未記載のためファイル名から補完: $DATE_FROM_NAME"
+          DATE="$DATE_FROM_NAME"
+        fi
         
         # 出力設定
         echo "title=$TITLE" >> $GITHUB_OUTPUT
