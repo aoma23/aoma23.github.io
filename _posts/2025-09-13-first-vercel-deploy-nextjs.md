@@ -4,8 +4,7 @@ description: "Vercelのアカウント作成から、GitHubリポジトリ作成
 tags: [Vercel, Next.js, GitHub, デプロイ]
 toc: true
 toc_sticky: true
-date: 2025-09-13 00:00:00 +0900
-last_modified_at: 2025-09-13 00:00:00 +0900
+date: 2025-09-13
 ---
 
 この記事では、Vercel（ヴァーセル）を使って Next.js アプリを「ゼロからGitHub経由で本番公開」するまでの手順を、迷わないように一つずつ解説します。アカウント作成→リポジトリ作成→Next.js構築→Vercel連携→デプロイの順で進めます。
