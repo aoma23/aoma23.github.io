@@ -28,8 +28,6 @@ classes: wide
 }
 </style>
 
-以下の自作アプリを公開しています。
-
 <div class="entries-grid">
 
   <article class="archive__item">
