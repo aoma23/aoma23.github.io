@@ -1,5 +1,5 @@
 ---
-title: "Vercelで独自ドメイン（サブドメイン）設定：quickboard.aoma23.com 完全手順"
+title: "Vercelで独自ドメイン（サブドメイン）を設定する手順まとめ"
 description: "Vercelのプロジェクトに quickboard.aoma23.com を割り当てるまでの流れを、Vercel側の設定とDNS（旧Google Domains→Squarespace）のレコード追加、検証、運用の注意点まで漏れなく解説。"
 date: 2025-09-16
 tags: [Vercel, 独自ドメイン, DNS, Next.js]
