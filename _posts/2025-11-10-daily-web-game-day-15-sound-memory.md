@@ -350,4 +350,4 @@ tags:
 - スタート時にプレイ記録を更新し、連続ラウンドの更新があればハイスコアとして保存します。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
-<p class="game-link"><a href="http://localhost:4000/tags/#aomagame">ゲーム一覧へ</a></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

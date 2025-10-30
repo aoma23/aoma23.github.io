@@ -529,4 +529,4 @@ tags:
 - 同じループ内で残り時間のカウントダウンも行い、60秒経過で自動的にゲームを終了してログを表示します。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
-<p class="game-link"><a href="http://localhost:4000/tags/#aomagame">ゲーム一覧へ</a></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

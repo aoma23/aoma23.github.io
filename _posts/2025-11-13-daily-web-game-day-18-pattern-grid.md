@@ -356,4 +356,4 @@ tags:
 - タップしたマスが正しいかを即判定し、ミス時はラウンドをリセットして再挑戦できます。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
-<p class="game-link"><a href="http://localhost:4000/tags/#aomagame">ゲーム一覧へ</a></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

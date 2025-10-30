@@ -396,4 +396,4 @@ tags:
 - ベストスコア更新時に共有ボタンを有効化し、チャレンジが手軽に発信できるようにしています。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
-<p class="game-link"><a href="http://localhost:4000/tags/#aomagame">ゲーム一覧へ</a></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

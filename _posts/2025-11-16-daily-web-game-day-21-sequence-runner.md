@@ -453,4 +453,4 @@ tags:
 - `requestAnimationFrame`で60秒タイマーを更新し、残り時間表示とタイムアップ処理を一元管理しています。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
-<p class="game-link"><a href="http://localhost:4000/tags/#aomagame">ゲーム一覧へ</a></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>
