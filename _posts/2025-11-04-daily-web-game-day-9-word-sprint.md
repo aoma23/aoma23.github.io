@@ -35,6 +35,10 @@ tags:
   margin: 20px 0;
   word-break: break-word;
 }
+#word-sprint-game .scramble .hint-letter {
+  color: #fef3c7;
+  text-shadow: 0 0 18px rgba(251, 191, 36, 0.6);
+}
 #word-sprint-game form {
   display: flex;
   gap: 12px;
@@ -248,10 +252,34 @@ tags:
     return scrambledWord === word ? shuffle(word) : scrambledWord;
   };
 
+  const escapeHtml = (text) => text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  const formatScramble = (word, scrambledWord) => {
+    if (!word) {
+      return escapeHtml(scrambledWord);
+    }
+    const hintLetter = word[0];
+    let highlighted = false;
+    return scrambledWord
+      .split('')
+      .map((char) => {
+        const safeChar = escapeHtml(char);
+        if (!highlighted && char === hintLetter) {
+          highlighted = true;
+          return `<span class="hint-letter">${safeChar}</span>`;
+        }
+        return safeChar;
+      })
+      .join('');
+  };
+
   const nextWord = () => {
     currentWord = words[Math.floor(Math.random() * words.length)];
     scrambled = shuffle(currentWord);
-    scrambleEl.textContent = scrambled;
+    scrambleEl.innerHTML = formatScramble(currentWord, scrambled);
     inputEl.value = '';
     inputEl.focus();
   };
