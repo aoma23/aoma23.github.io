@@ -10,15 +10,17 @@ tags:
 
 <style>
 #number-chase-game {
+  width: min(520px, 100%);
   max-width: 520px;
   margin: 24px auto;
-  padding: 28px;
+  padding: clamp(16px, 5vw, 28px);
   border-radius: 18px;
   background: linear-gradient(145deg, #0ea5e9, #2563eb);
   color: #fff;
   box-shadow: 0 28px 48px rgba(14, 165, 233, 0.35);
   text-align: center;
   font-family: "Inter", "Hiragino Kaku Gothic ProN", sans-serif;
+  box-sizing: border-box;
 }
 #number-chase-game .hud {
   display: flex;
@@ -31,8 +33,9 @@ tags:
 }
 #number-chase-game .grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(80px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-rows: minmax(56px, 1fr);
+  gap: 10px;
   margin: 0 auto 18px;
 }
 #number-chase-game button.tile {
@@ -44,11 +47,12 @@ tags:
   font-size: 1.3rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
+  font-variant-numeric: tabular-nums;
 }
-#number-chase-game button.tile:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 22px rgba(15, 23, 42, 0.18);
+#number-chase-game button.tile:active:not(.disabled) {
+  transform: scale(0.97);
 }
 #number-chase-game button.tile.correct {
   background: #22c55e;
@@ -61,6 +65,17 @@ tags:
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+}
+#number-chase-game button.tile.shake {
+  animation: number-chase-shake 0.24s ease;
+}
+@keyframes number-chase-shake {
+  10% { transform: translateX(-4px); }
+  30% { transform: translateX(4px); }
+  50% { transform: translateX(-3px); }
+  70% { transform: translateX(3px); }
+  90% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
 }
 #number-chase-game .start {
   width: 100%;
@@ -154,6 +169,45 @@ tags:
   let bestTime = null;
   let running = false;
   let storageAvailable = false;
+  let audioCtx = null;
+  const soundMap = {
+    start: { frequency: 540, duration: 0.18, gain: 0.22 },
+    tap: { frequency: 760, duration: 0.08, gain: 0.2 },
+    miss: { frequency: 280, duration: 0.16, gain: 0.24 },
+    complete: { frequency: 920, duration: 0.2, gain: 0.24 }
+  };
+
+  const ensureAudio = () => {
+    const Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) {
+      return null;
+    }
+    if (!audioCtx) {
+      audioCtx = new Context();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume().catch(() => {});
+    }
+    return audioCtx;
+  };
+
+  const playTone = (type) => {
+    const ctx = ensureAudio();
+    if (!ctx) {
+      return;
+    }
+    const { frequency, duration, gain } = soundMap[type] ?? soundMap.tap;
+    const now = ctx.currentTime;
+    const oscillator = ctx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(frequency, now);
+    const envelope = ctx.createGain();
+    envelope.gain.setValueAtTime(gain, now);
+    envelope.gain.exponentialRampToValueAtTime(0.001, now + duration);
+    oscillator.connect(envelope).connect(ctx.destination);
+    oscillator.start(now);
+    oscillator.stop(now + duration + 0.05);
+  };
 
   const updatePlayCount = () => {
     const counterEl = getPlayCountEl();
@@ -275,9 +329,10 @@ tags:
     markPlayed();
     expected = 1;
     renderGrid();
+    playTone('start');
     Array.from(gridEl.children).forEach((tile) => {
       tile.classList.remove('disabled', 'correct');
-      tile.addEventListener('click', tileHandler);
+      tile.addEventListener('pointerdown', tileHandler, { passive: false });
     });
     startButton.disabled = true;
     shareButton.disabled = bestTime === null;
@@ -293,7 +348,7 @@ tags:
     startButton.disabled = false;
     startButton.textContent = 'もう一度';
     Array.from(gridEl.children).forEach((tile) => {
-      tile.removeEventListener('click', tileHandler);
+      tile.removeEventListener('pointerdown', tileHandler);
     });
     if (bestTime === null || elapsed < bestTime) {
       bestTime = elapsed;
@@ -301,8 +356,10 @@ tags:
       saveBest();
       logEl.textContent = `クリア！タイムは ${elapsed.toFixed(2)} 秒。ベスト更新です！`;
       shareButton.disabled = false;
+      playTone('complete');
     } else {
       logEl.textContent = `クリア！タイムは ${elapsed.toFixed(2)} 秒。次はベスト更新を狙いましょう。`;
+      playTone('complete');
     }
   };
 
@@ -310,15 +367,18 @@ tags:
     if (!running) {
       return;
     }
+    event.preventDefault();
     const button = event.currentTarget;
     const value = Number(button.textContent);
     if (value !== expected) {
       button.classList.add('shake');
-      setTimeout(() => button.classList.remove('shake'), 200);
+      setTimeout(() => button.classList.remove('shake'), 260);
+      playTone('miss');
       return;
     }
     button.classList.add('correct');
     expected += 1;
+    playTone('tap');
     if (expected > 20) {
       finishGame();
     }
