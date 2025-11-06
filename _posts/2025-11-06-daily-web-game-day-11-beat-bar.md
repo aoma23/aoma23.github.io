@@ -326,7 +326,11 @@ tags:
     if (isHit()) {
       streak += 1;
       logEl.textContent = 'ナイス！連続成功を伸ばそう。';
-      speed = Math.max(0.8, speed - 0.1);
+      if (speed > 0.5) {
+        speed = Math.max(0.5, speed - 0.1);
+      } else {
+        speed = 0.5 + Math.random() * 0.3;
+      }
       if (streak > best) {
         best = streak;
         saveBest();
