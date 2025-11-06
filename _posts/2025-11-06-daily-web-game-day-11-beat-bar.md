@@ -67,6 +67,7 @@ tags:
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #beat-bar-game .tap {
   background: #38bdf8;
