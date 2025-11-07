@@ -65,6 +65,7 @@ tags:
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #clock-align-game .start {
   background: #38bdf8;
@@ -109,6 +110,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 18px 36px rgba(244, 114, 182, 0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #clock-align-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

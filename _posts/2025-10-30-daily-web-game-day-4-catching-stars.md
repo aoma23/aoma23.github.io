@@ -47,6 +47,7 @@ tags:
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  touch-action: manipulation;
 }
 #catch-stars-game button:hover {
   transform: translateY(-2px);
@@ -79,6 +80,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 16px 34px rgba(251, 191, 36, 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: manipulation;
 }
 #catch-stars-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

@@ -63,6 +63,7 @@ tags:
   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
   transition: transform 0.18s ease, box-shadow 0.18s ease, outline 0.18s ease;
   background: transparent;
+  touch-action: manipulation;
 }
 #color-match-game .option:hover,
 #color-match-game .option:focus-visible {
@@ -122,6 +123,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(29, 155, 240, 0.25);
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: manipulation;
 }
 #color-match-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

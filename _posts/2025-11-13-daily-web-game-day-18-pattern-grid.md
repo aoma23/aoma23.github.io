@@ -43,6 +43,7 @@ tags:
   background: rgba(15, 23, 42, 0.12);
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
   cursor: pointer;
+  touch-action: manipulation;
 }
 #pattern-grid-game button.cell.active {
   background: rgba(248, 250, 252, 0.9);
@@ -65,6 +66,7 @@ tags:
   color: #fff;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  touch-action: manipulation;
 }
 #pattern-grid-game .start:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -95,6 +97,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 18px 36px rgba(244, 114, 182, 0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #pattern-grid-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

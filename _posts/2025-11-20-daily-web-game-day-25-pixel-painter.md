@@ -59,6 +59,7 @@ tags:
   border: 2px solid rgba(148, 163, 184, 0.25);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, border 0.12s ease, background 0.12s ease;
+  touch-action: manipulation;
 }
 #pixel-painter-game .cell::after {
   content: "";
@@ -121,6 +122,7 @@ tags:
   color: #0f172a;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #pixel-painter-game .controls button:hover:not(:disabled),
 #pixel-painter-game .start-controls button:hover:not(:disabled) {
@@ -159,6 +161,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 16px 32px rgba(249, 115, 22, 0.32);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #pixel-painter-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

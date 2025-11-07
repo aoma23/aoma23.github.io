@@ -36,6 +36,7 @@ tags:
   background: linear-gradient(135deg, rgba(148, 163, 184, 0.2), rgba(30, 41, 59, 0.2));
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+  touch-action: manipulation;
 }
 #sound-memory-game button.pad.active {
   transform: translateY(-2px);
@@ -53,6 +54,7 @@ tags:
   color: #0f172a;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  touch-action: manipulation;
 }
 #sound-memory-game .start:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -90,6 +92,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 18px 36px rgba(249, 115, 22, 0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #sound-memory-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

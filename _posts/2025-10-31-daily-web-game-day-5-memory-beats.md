@@ -36,6 +36,7 @@ tags:
   cursor: pointer;
   transition: transform 0.12s ease, filter 0.12s ease;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  touch-action: manipulation;
 }
 #memory-beats-game .pad[data-index="0"] { background: linear-gradient(145deg, #f97316, #fb923c); }
 #memory-beats-game .pad[data-index="1"] { background: linear-gradient(145deg, #10b981, #34d399); }
@@ -56,6 +57,7 @@ tags:
   background: linear-gradient(135deg, #fef08a, #fde047);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+  touch-action: manipulation;
 }
 #memory-beats-game button.start:hover {
   transform: translateY(-2px);
@@ -95,6 +97,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 14px 28px rgba(34, 197, 94, 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: manipulation;
 }
 #memory-beats-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

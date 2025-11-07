@@ -60,6 +60,7 @@ tags:
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.15s ease, background 0.15s ease;
+  touch-action: manipulation;
 }
 #math-sprint-game button:hover {
   transform: translateY(-1px);

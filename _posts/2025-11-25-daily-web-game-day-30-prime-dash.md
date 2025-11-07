@@ -57,6 +57,7 @@ tags:
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #prime-dash-game .choices button.prime {
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
@@ -91,6 +92,7 @@ tags:
   color: #0f172a;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #prime-dash-game .controls button:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -122,6 +124,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 16px 32px rgba(249, 115, 22, 0.32);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #prime-dash-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

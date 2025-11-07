@@ -57,6 +57,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #stroop-sprint-game button.choice:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -74,6 +75,7 @@ tags:
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #stroop-sprint-game .start:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -105,6 +107,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 18px 34px rgba(56, 189, 248, 0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #stroop-sprint-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

@@ -36,6 +36,7 @@ tags:
   background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(7, 11, 19, 0.95));
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2), 0 26px 48px rgba(15, 23, 42, 0.35);
   overflow: hidden;
+  touch-action: manipulation;
 }
 #quick-stack-game .ground {
   position: absolute;
@@ -87,6 +88,7 @@ tags:
   color: #0f172a;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #quick-stack-game .controls button:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -118,6 +120,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 16px 32px rgba(249, 115, 22, 0.32);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #quick-stack-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

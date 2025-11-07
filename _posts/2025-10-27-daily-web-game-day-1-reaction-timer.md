@@ -39,6 +39,7 @@ tags:
   font-size: 1rem;
   cursor: pointer;
   transition: opacity 0.2s ease, transform 0.2s ease;
+  touch-action: manipulation;
 }
 #reaction-timer-game .game-button:hover {
   opacity: 0.9;
@@ -72,6 +73,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 10px 18px rgba(249, 115, 22, 0.28);
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: manipulation;
 }
 #reaction-timer-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);

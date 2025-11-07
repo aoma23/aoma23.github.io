@@ -42,6 +42,7 @@ tags:
   box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+  touch-action: manipulation;
 }
 #emoji-match-game .card.revealed,
 #emoji-match-game .card.matched {
@@ -71,6 +72,7 @@ tags:
   color: #fff;
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #emoji-match-game .start:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -102,6 +104,7 @@ tags:
   cursor: pointer;
   box-shadow: 0 18px 34px rgba(56, 189, 248, 0.35);
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  touch-action: manipulation;
 }
 #emoji-match-game .share-button:hover:not(:disabled) {
   transform: translateY(-1px);
