@@ -72,6 +72,7 @@ tags:
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
   margin-bottom: 16px;
+  touch-action: manipulation;
 }
 #maze-dash-game .start-button:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -99,6 +100,7 @@ tags:
   color: #f8fafc;
   cursor: pointer;
   transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+  touch-action: manipulation;
 }
 #maze-dash-game .control:active {
   transform: translateY(1px);
