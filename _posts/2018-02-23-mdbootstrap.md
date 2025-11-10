@@ -12,7 +12,7 @@ tags: [IT,bootstrap4,MDB]
 
 <p>でもbootstrapデフォルトだとそういうのなかったんです。</p>
 
-<p>仕方ないから<a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>とかでやるかなーと思ってたら見つけてしまいました。<a class="keyword" href="http://d.hatena.ne.jp/keyword/MDB">MDB</a>を。</p>
+<p>仕方ないからjQueryとかでやるかなーと思ってたら見つけてしまいました。MDBを。</p>
 
 <p>Material Design for Bootstrap 4</p>
 
@@ -27,7 +27,7 @@ tags: [IT,bootstrap4,MDB]
 
 <p>他にもいろいろすごそう。</p>
 
-<p>これからはbootstrapデフォやめて<a class="keyword" href="http://d.hatena.ne.jp/keyword/MDB">MDB</a>使おうかなと思います。</p>
+<p>これからはbootstrapデフォやめてMDB使おうかなと思います。</p>
 
 <p>便利な機能見つけたら紹介していきますね。では！</p>
 

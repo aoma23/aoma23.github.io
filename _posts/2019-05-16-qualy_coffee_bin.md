@@ -10,9 +10,9 @@ tags: [おもしろ雑貨,日常,ゴミ箱]
 <p>昨日雑貨屋さんに行ったのですが、そこでかわいいゴミ箱を2つも見つけたので紹介します！
 どちらもQUALY（クオリー）というブランドのものでした。</p>
 
-<h3>スタバや<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C9%A5%C8%A1%BC%A5%EB">ドトール</a>好きにオススメ！</h3>
+<h3>スタバやドトール好きにオススメ！</h3>
 
-<p>コーヒー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AB%A5%C3%A5%D7">カップ</a>型のゴミ箱です！</p>
+<p>コーヒーカップ型のゴミ箱です！</p>
 
 <p>サイズは大中小と３つありました。</p>
 
@@ -20,7 +20,7 @@ tags: [おもしろ雑貨,日常,ゴミ箱]
 
 <p><a href="http://www.qualydesign.com/product/detail.php?i=425">Coffee bin - Mini Coffee bin</a></p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AB%A5%C3%A5%D7">カップ</a>にオリジナルの紙を巻いてカスタマイズするのもいいかもしれませんね！</p>
+<p>カップにオリジナルの紙を巻いてカスタマイズするのもいいかもしれませんね！</p>
 
 <h3>自販機好き！？にオススメ！</h3>
 
@@ -38,5 +38,5 @@ tags: [おもしろ雑貨,日常,ゴミ箱]
 
 <p>職場のデスクに置いたら皆から注目されること間違いなし！とってもオススメです。</p>
 
-<p><a href="https://www.google.com/search?q=QUALY+%E3%82%B4%E3%83%9F%E7%AE%B1">『QUALY ゴミ箱』でググったら</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/%B3%DA%C5%B7%BB%D4%BE%EC">楽天市場</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/amazon">amazon</a>でいっぱい売ってましたので、探して購入ください。それでは！</p>
+<p><a href="https://www.google.com/search?q=QUALY+%E3%82%B4%E3%83%9F%E7%AE%B1">『QUALY ゴミ箱』でググったら</a> 楽天市場やamazonでいっぱい売ってましたので、探して購入ください。それでは！</p>
 

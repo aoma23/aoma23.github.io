@@ -20,7 +20,7 @@ tags: [IT,MySQL,View]
 
 <h2>解決策</h2>
 
-<p>まず適当な<a class="keyword" href="http://d.hatena.ne.jp/keyword/SQL">SQL</a>で壊れていない状態に作り直す！</p>
+<p>まず適当なSQLで壊れていない状態に作り直す！</p>
 
 <pre class="code" data-lang="" data-unlink>CREATE OR REPLACE VIEW view_test AS SELECT now();</pre>
 

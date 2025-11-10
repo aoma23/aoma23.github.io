@@ -22,23 +22,23 @@ tags: [Twitter,日常,フォロバ,ブログ]
 
 <p>ということでプロフィール欄を見て、PHPerを中心にエンジニアと思われる人を、数日数週間かけてひたすらフォローさせていただきました。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/PHP">PHP</a>とか<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%B8%A5%E3%A5%A4%A5%EB">アジャイル</a>とかで検索して手動で。今回は前回と違い自動化などはせず。いろんな人がいて<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C4%A5%A4%A5%C3%A5%BF%A1%BC">ツイッター</a>面白い。</p>
+<p>PHPとかアジャイルとかで検索して手動で。今回は前回と違い自動化などはせず。いろんな人がいてツイッター面白い。</p>
 
 <h2>そして1000人をフォローした</h2>
 
 <p>結果発表ーーー！！</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C4%A5%A4%A5%C3%A5%BF%A1%BC">ツイッター</a>で1000人をフォローしたところ、、、なんと350人近くがフォロバしてくれました！すみません、正確な数字は記録忘れてました(^^;;</p>
+<p>ツイッターで1000人をフォローしたところ、、、なんと350人近くがフォロバしてくれました！すみません、正確な数字は記録忘れてました(^^;;</p>
 
 <p>ありがとうございます！これからaomaをよろしくお願いします。</p>
 
 <p>かなり嬉しい結果なのですが、検証中にこの記事<a href="https://aoma23.hatenablog.jp/entry/portal_tag">Google&#x306E;&#x65B0;&#x6280;&#x8853;&lt;portal&gt;&#x30BF;&#x30B0;&#x3092;&#x8A66;&#x3057;&#x3066;&#x307F;&#x305F; - aoma blog</a>でちょいバズを経験したので、面白い人かなと思ってフォローしてくれた人が多かったのかもしれません。</p>
 
-<p>ということで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C4%A5%A4%A5%C3%A5%BF%A1%BC">ツイッター</a>はフォローすると35%がフォロバしてくれる！という結果になりましたー！</p>
+<p>ということでツイッターはフォローすると35%がフォロバしてくれる！という結果になりましたー！</p>
 
 <h2>結論</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Twitter">Twitter</a>では気軽に繋がってもいいって考えの人が多いのかな？？</p>
+<p>Twitterでは気軽に繋がってもいいって考えの人が多いのかな？？</p>
 
-<p>いろんな人と出会えて楽しいよ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C4%A5%A4%A5%C3%A5%BF%A1%BC">ツイッター</a>！</p>
+<p>いろんな人と出会えて楽しいよツイッター！</p>
 

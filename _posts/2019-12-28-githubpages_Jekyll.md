@@ -23,7 +23,7 @@ tags: [IT,GitHubPages,Jekyll,ヘルプページ]
 
 <p>でJekyllにいきますよね。
 当然お目当てのピンポイントなページには到達せつ、その中で探すことになります。
-するとまず<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>で環境構築せいと。
+するとまずRubyで環境構築せいと。
 いやいや、GitHubPagesと連携してるんで、環境構築とかしたくないからこれ採用しようとしてるんだと。
 で読み込みますよね。</p>
 
@@ -42,5 +42,5 @@ tags: [IT,GitHubPages,Jekyll,ヘルプページ]
 <p>GitHubPagesとJekyllに丸投げしてるのがよくない。
 Jekyllもしっかり連携しろと。
 お互いが協力してわかりやすいヘルプページ作ってください。いやマジでお願いします。
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Ruby">Ruby</a>で環境構築とか抜きにした、GitHubPagesで選べるテーマだけに特化したヘルプページを。</p>
+Rubyで環境構築とか抜きにした、GitHubPagesで選べるテーマだけに特化したヘルプページを。</p>
 

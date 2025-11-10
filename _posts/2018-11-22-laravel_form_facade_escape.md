@@ -12,7 +12,7 @@ tags: [IT,Laravel,セキュリティ]
 
 <p>んん！？昔は<code>{!! !!}</code>で囲まないといけなかったはず！</p>
 
-<p>疑問に思ったのは{{ }}はタグを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>ケープするのに、Form<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%A1%A5%B5%A1%BC%A5%C9">ファサード</a>は無視するんだなーということ。</p>
+<p>疑問に思ったのは{{ }}はタグをエスケープするのに、Formファサードは無視するんだなーということ。</p>
 
 <h2>で、検証してみました。</h2>
 
@@ -30,7 +30,7 @@ tags: [IT,Laravel,セキュリティ]
 &lt;b&gt;text&lt;/b&gt;</pre>
 
 
-<p>もしかして<a class="keyword" href="http://d.hatena.ne.jp/keyword/value">value</a>値を<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>ケープするようになった？なんて妄想してみたが違った。</p>
+<p>もしかしてvalue値をエスケープするようになった？なんて妄想してみたが違った。</p>
 
 <pre class="code" data-lang="" data-unlink>{{ Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) }}
 {!! Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) !!}</pre>
@@ -57,6 +57,6 @@ tags: [IT,Laravel,セキュリティ]
 }</pre>
 
 
-<p>ということで今後Form<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D5%A5%A1%A5%B5%A1%BC%A5%C9">ファサード</a>は<code>{{ }}</code>で囲もうと思います。<br/>
-（<code>{!! !!}</code> の出現頻度が減るので<a class="keyword" href="http://d.hatena.ne.jp/keyword/grep">grep</a>が捗りますね！）</p>
+<p>ということで今後Formファサードは<code>{{ }}</code>で囲もうと思います。<br/>
+（<code>{!! !!}</code> の出現頻度が減るのでgrepが捗りますね！）</p>
 

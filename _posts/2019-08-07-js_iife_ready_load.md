@@ -5,9 +5,9 @@ slug: "js_iife_ready_load"
 category: blog
 tags: [JavaScript,IT,ready,load,即時関数]
 ---
-<p>たまに新規にJS書くとき、グロー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D0%A5%EB%A5%B9">バルス</a>コープを汚染したくないので即時関数で囲ってやることが多いんですが、毎回書き方どうだっけ？ってなるのでメモ。</p>
+<p>たまに新規にJS書くとき、グローバルスコープを汚染したくないので即時関数で囲ってやることが多いんですが、毎回書き方どうだっけ？ってなるのでメモ。</p>
 
-<p>ついでにonready（<a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>での呼び名）とonloadについても。</p>
+<p>ついでにonready（jQueryでの呼び名）とonloadについても。</p>
 
 <h3>実行タイミング</h3>
 
@@ -72,12 +72,12 @@ tags: [JavaScript,IT,ready,load,即時関数]
 }</pre>
 
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>による記述方法</h3>
+<h3>jQueryによる記述方法</h3>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>を使用した書き方もよく見かける。とてもわかりやすいQiitaがあったのでこちらを参照！
+<p>jQueryを使用した書き方もよく見かける。とてもわかりやすいQiitaがあったのでこちらを参照！
 <a href="https://qiita.com/mimoe/items/74cb3a01a30162759fdd">https://qiita.com/mimoe/items/74cb3a01a30162759fdd</a></p>
 
-<p>ちなみに<a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>を使用した即時関数はない。下記のような記述は引数に<a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>を渡しているだけ。</p>
+<p>ちなみにjQueryを使用した即時関数はない。下記のような記述は引数にjQueryを渡しているだけ。</p>
 
 <pre class="code" data-lang="" data-unlink>(function($){
     

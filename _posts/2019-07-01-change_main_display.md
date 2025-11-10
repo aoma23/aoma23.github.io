@@ -5,7 +5,7 @@ slug: "change_main_display"
 category: blog
 tags: [IT,デュアルディスプレイ]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%E5%A5%A2%A5%EB%A5%C7%A5%A3%A5%B9%A5%D7%A5%EC%A5%A4">デュアルディスプレイ</a>にした際、ディスプレイの識別がいつもと逆になってしまうことがあります。
+<p>デュアルディスプレイにした際、ディスプレイの識別がいつもと逆になってしまうことがあります。
 いつもと操作感がことなって全く仕事になりませんよね。
 そんなときに設定を元に戻す方法を記載します。</p>
 

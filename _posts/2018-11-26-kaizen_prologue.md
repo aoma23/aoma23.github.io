@@ -5,7 +5,7 @@ slug: "kaizen_prologue"
 category: blog
 tags: [カイゼンジャーニー,IT,読書]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AB%A5%A4%A5%BC%A5%F3">カイゼン</a>ジャーニーを読み始めました。</p>
+<p>カイゼンジャーニーを読み始めました。</p>
 
 <p>いつも内容忘れるので章ごとに細かくアウトプットしていこうと思います。</p>
 

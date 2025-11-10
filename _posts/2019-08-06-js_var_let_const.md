@@ -7,13 +7,13 @@ tags: [JavaScript,var,let,const,scope,IT]
 ---
 <h2>はじめに</h2>
 
-<p>以前まで<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>には<code>var</code>しかなく<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%ED%A5%C3%A5%AF%A5%B9">ブロックス</a>コープはありませんでした。<br/>
-最近は<code>let</code>と<code>const</code>が現れ、こちらは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%ED%A5%C3%A5%AF%A5%B9">ブロックス</a>コープになります。<br/>
-※<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B0%A5%B0%A4%EB">ググる</a>と『<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>に<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%ED%A5%C3%A5%AF%A5%B9">ブロックス</a>コープはない』ってのがヒットしますが古い情報なので注意してね。</p>
+<p>以前までJavaScriptには<code>var</code>しかなくブロックスコープはありませんでした。<br/>
+最近は<code>let</code>と<code>const</code>が現れ、こちらはブロックスコープになります。<br/>
+※ググると『JavaScriptにブロックスコープはない』ってのがヒットしますが古い情報なので注意してね。</p>
 
 <h2>検証コード</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%ED%A5%C3%A5%AF%A5%B9">ブロックス</a>コープの挙動については下記<code>console.log</code>の結果に注目しながらご確認ください。<br/>
+<p>ブロックスコープの挙動については下記<code>console.log</code>の結果に注目しながらご確認ください。<br/>
 ちなみに<code>const</code>は上書き禁止の宣言ですが、スコープが異なれば当然別物になりますのでそのあたりも気にしながら！
 ついでに変数巻き上げについても見ていきます！</p>
 

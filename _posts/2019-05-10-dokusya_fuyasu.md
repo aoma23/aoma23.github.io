@@ -43,7 +43,7 @@ tags: [日常,ブログ,PV]
 <p>例えば毎日お昼休憩の時間にブログを楽しんでくれているファンがいたとして、その日の投稿が夜だったらガッカリさせてしまいますよね？</p>
 
 <p>ファンの生活の一部になるのです。
-目指せ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B5%A5%B6%A5%A8%A4%B5%A4%F3">サザエさん</a>。</p>
+目指せサザエさん。</p>
 
 <p>あのヒカキンもHikakinTVを同じ時間に投稿してたことで今があります。（ブロガーじゃないですが）</p>
 
@@ -55,9 +55,9 @@ tags: [日常,ブログ,PV]
 
 <p>まずは続編もの。この記事も<a href="https://aoma23.hatenablog.jp/entry/how_to_buzz">昨日から</a>の続きとなりますが、続編にすることで読書にワクワク、楽しみを与えやすいかなと。</p>
 
-<p>テーマ的な意味でも考えていて、例えば月曜はプログラミングTips系、火曜は話題の<a class="keyword" href="http://d.hatena.ne.jp/keyword/Web%A5%B5%A1%BC%A5%D3%A5%B9">Webサービス</a>、水曜はポエムなど、曜日毎にテーマに沿った記事を書くのもありかなと。</p>
+<p>テーマ的な意味でも考えていて、例えば月曜はプログラミングTips系、火曜は話題のWebサービス、水曜はポエムなど、曜日毎にテーマに沿った記事を書くのもありかなと。</p>
 
-<p>あとはコーナーもの。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B5%A5%B6%A5%A8%A4%B5%A4%F3">サザエさん</a>のエンディングじゃんけんのような毎日楽しめる企画があってもいいかなと。</p>
+<p>あとはコーナーもの。サザエさんのエンディングじゃんけんのような毎日楽しめる企画があってもいいかなと。</p>
 
 <p>ヒカキンもじゃんけんしてますしね。</p>
 
@@ -72,7 +72,7 @@ tags: [日常,ブログ,PV]
 
 <p>ぼくはここにいるよ！って伝えなければいけません。</p>
 
-<p>ということで<a class="keyword" href="http://d.hatena.ne.jp/keyword/Twitter">Twitter</a>での発言やフォローをしたり、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%B9%A5%BF%A1%BC">はてなスター</a>や<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A5%D6">はてブ</a>をするなど、積極的にぼくの存在を<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B8%AB%A4%A8%A4%EB%B2%BD">見える化</a>したいと思います！</p>
+<p>ということでTwitterでの発言やフォローをしたり、はてなスターやはてブをするなど、積極的にぼくの存在を見える化したいと思います！</p>
 
 <p>要は相互フォローを増やしたいということです。<br/>
 人という字は支え合って人です。助け合っていきましょう！</p>

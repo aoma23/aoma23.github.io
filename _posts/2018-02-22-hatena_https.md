@@ -5,7 +5,7 @@ slug: "hatena_https"
 category: blog
 tags: [IT,はてなブログ]
 ---
-<p>ついに来ました！<a class="keyword" href="http://d.hatena.ne.jp/keyword/SSL">SSL</a>！</p>
+<p>ついに来ました！SSL！</p>
 
 <p>まだかまだかと思っていたらやっと！本日から！</p>
 
@@ -14,7 +14,7 @@ tags: [IT,はてなブログ]
 <p>新規に開設する方は最初から。<br/>
 既存ブログは順次対応だそうです。</p>
 
-<p>ということで我がブログも早速<a class="keyword" href="http://d.hatena.ne.jp/keyword/https">https</a>に！と思ったら順次組でしたー残念。</p>
+<p>ということで我がブログも早速httpsに！と思ったら順次組でしたー残念。</p>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20180222201319" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20180222/20180222201319.jpg' | relative_url }}" alt="f:id:aoma23:20180222201319j:image" title="f:id:aoma23:20180222201319j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 

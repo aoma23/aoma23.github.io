@@ -19,7 +19,7 @@ tags: [IT,日常,調整さん,ブックマークレット,飲み会,イベント
 これ候補日が3日くらいなら手動で変えるからいいんですが、たくさんあると直すのしんどい。
 候補日全て19:30開始にしたいんだよー！とかね。</p>
 
-<h2>デフォルト時間を変更できる<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>作りました！</h2>
+<h2>デフォルト時間を変更できるブックマークレット作りました！</h2>
 
 <p>このリンクをブックマークバーにドラッグ＆ドロップで追加できます。<br/>
 <a href="javascript:(function(){if('https://chouseisan.com'!=location.origin)location.href='https://chouseisan.com';else{var b=prompt('\u30c7\u30d5\u30a9\u30eb\u30c8\u958b\u59cb\u6642\u9593\u3092\u8a2d\u5b9a\u3057\u307e\u3059','19:30\uff5e');$('#datepicker').datepicker('option','onSelect',function(c,d){var a=$('#kouho').val();''!==a&&(a+='\n');$('#kouho').val(a+c+' '+b)})}})();" onclick="return false">調整さんの開始時間変更</a></p>
@@ -44,7 +44,7 @@ tags: [IT,日常,調整さん,ブックマークレット,飲み会,イベント
 
 <h3>まごころ機能</h3>
 
-<p>別ページにいる時に<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>をクリックすると調整さんにリダイレクトするようになってます。やさしさ！</p>
+<p>別ページにいる時にブックマークレットをクリックすると調整さんにリダイレクトするようになってます。やさしさ！</p>
 
 <h2>さいごに</h2>
 

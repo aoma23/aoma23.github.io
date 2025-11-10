@@ -8,11 +8,11 @@ tags: [PHP,Laravel]
 <h2>勘違いしてました。</h2>
 
 <p>LaravelのBladeの<code>{{ }}</code>ってhtmlentitiesだったんですね。<br/>
-HTMLの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B5%A5%CB%A5%BF%A5%A4%A5%BA">サニタイズ</a>はhtmlspecialcharsで十分なので、<code>{{ }}</code>もそうだろうと思い込んでました。</p>
+HTMLのサニタイズはhtmlspecialcharsで十分なので、<code>{{ }}</code>もそうだろうと思い込んでました。</p>
 
 <h2>htmlspecialcharsとhtmlentitiesはどう違うの？</h2>
 
-<p>htmlspecialcharsがHTMLにおける<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C6%C3%BC%EC%CA%B8%BB%FA">特殊文字</a>をHTMLエンティティに変換するのに対して、<br/>
+<p>htmlspecialcharsがHTMLにおける特殊文字をHTMLエンティティに変換するのに対して、<br/>
 htmlentitiesは適用可能な文字を<strong><span style="color: #ff0000">全て</span></strong> HTML エンティティに変換します。</p>
 
 <p><a href="http://php.net/manual/ja/function.htmlspecialchars.php">PHP: htmlspecialchars - Manual</a><br/>

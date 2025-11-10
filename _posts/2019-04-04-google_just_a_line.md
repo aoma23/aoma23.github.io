@@ -7,7 +7,7 @@ tags: [google,IT,日常,just_a_line]
 ---
 <p>ご存知ですか？</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>製の落書きアプリ、その名もJust a Line！</p>
+<p>google製の落書きアプリ、その名もJust a Line！</p>
 
 <p>なんと空中に落書きできちゃうんです！</p>
 
@@ -16,7 +16,7 @@ tags: [google,IT,日常,just_a_line]
 
 <p><a href="https://justaline.withgoogle.com">Just a Line - Draw anywhere, with AR</a></p>
 
-<p>リリース当時は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Android">Android</a>版しかなく羨ましがってたのですが、気づいたら<a class="keyword" href="http://d.hatena.ne.jp/keyword/iPhone%A5%A2%A5%D7%A5%EA">iPhoneアプリ</a>もリリースされてました！</p>
+<p>リリース当時はAndroid版しかなく羨ましがってたのですが、気づいたらiPhoneアプリもリリースされてました！</p>
 
 <p>レッツお絵描き！</p>
 

@@ -11,7 +11,7 @@ tags: [カンファレンス,IT,PHP,Laravel]
 
 <p>会場のLoco Partnersさん素敵なオフィスでしたー。</p>
 
-<p>Relux公式アンバサダーはなんとサッカーの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B9%E1%C0%EE%BF%BF%BB%CA">香川真司</a>選手！うらやましす。</p>
+<p>Relux公式アンバサダーはなんとサッカーの香川真司選手！うらやましす。</p>
 
 <h2>所感</h2>
 
@@ -38,11 +38,11 @@ tags: [カンファレンス,IT,PHP,Laravel]
 <p>AMP対応の話</p>
 
 <p>AMP用に別ページ作るの大変だよね
-→<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DF%A5%C9%A5%EB%A5%A6%A5%A7%A5%A2">ミドルウェア</a>を活用</p>
+→ミドルウェアを活用</p>
 
 <p>$responce->setContent($content);でレスポンス（HTML）を書き換えられる</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%B5%B5%AC%C9%BD%B8%BD">正規表現</a>等を使ってAMPに書き換えちゃえばいいよ</p>
+<p>正規表現等を使ってAMPに書き換えちゃえばいいよ</p>
 
 <h2>人気の無いAuthorization〜 [happy_ryo]</h2>
 
@@ -67,7 +67,7 @@ tags: [カンファレンス,IT,PHP,Laravel]
 Directive＝if()とか
 独自に作れるよ</p></li>
 <li><p>View::sgareを使う
-サービスプロバイダーや<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DF%A5%C9%A5%EB%A5%A6%A5%A7%A5%A2">ミドルウェア</a>でやっちゃってもOK</p></li>
+サービスプロバイダーやミドルウェアでやっちゃってもOK</p></li>
 <li><p>view::composerを使う
 サービスプロバイダー</p></li>
 </ol>
@@ -75,7 +75,7 @@ Directive＝if()とか
 
 <p>特定のbladeテンプレートが呼び出されたときに起動する</p>
 
-<h2><a class="keyword" href="http://d.hatena.ne.jp/keyword/CRUD">CRUD</a>アプリから一歩踏み出す３つのアプローチ [kurikazu]</h2>
+<h2>CRUDアプリから一歩踏み出す３つのアプローチ [kurikazu]</h2>
 
 <ol>
 <li><p>どこでもFacadeを疑う
@@ -83,7 +83,7 @@ Directive＝if()とか
 <li><p>Model=Eloquentを疑う
 テーブル設計がFWに引っ張られる</p></li>
 <li><p>FWのコアに触れる
-とりあえずindex.<a class="keyword" href="http://d.hatena.ne.jp/keyword/php">php</a>読んでみるといいかも</p></li>
+とりあえずindex.php読んでみるといいかも</p></li>
 </ol>
 
 
@@ -91,7 +91,7 @@ Directive＝if()とか
 
 <h2>5.5直前！Container振り返り〜 [ytake]</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A4%A5%F3%A5%B9%A5%BF%A5%F3%A5%B9">インスタンス</a>の方法いろいろ</p>
+<p>インスタンスの方法いろいろ</p>
 
 <h2>さいごに</h2>
 

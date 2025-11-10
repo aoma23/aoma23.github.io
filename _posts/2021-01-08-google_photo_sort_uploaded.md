@@ -5,7 +5,7 @@ slug: "google_photo_sort_uploaded"
 category: blog
 tags: [googleフォト,日常,表示順]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>フォトはデフォルト表示順が撮影日時となっています。</p>
+<p>Googleフォトはデフォルト表示順が撮影日時となっています。</p>
 
 <p>過去の写真や動画を整理しててアップロードしたときに、
 「あれ？いま追加したやつどこにいっちゃった？？」

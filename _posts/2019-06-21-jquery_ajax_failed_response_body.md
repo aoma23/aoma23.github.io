@@ -5,7 +5,7 @@ slug: "jquery_ajax_failed_response_body"
 category: blog
 tags: [jQuery,ajax,IT]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a>による<a class="keyword" href="http://d.hatena.ne.jp/keyword/ajax">ajax</a>時のレスポンスボディ取得方法について調べました。</p>
+<p>jQueryによるajax時のレスポンスボディ取得方法について調べました。</p>
 
 <p>成功時（done）は引数が用意されていてdataで取れますが、エラー時（fail）はなぜか用意されていない。。なぜ？使う機会が少ないからなの？？</p>
 
@@ -26,7 +26,7 @@ tags: [jQuery,ajax,IT]
 });</pre>
 
 
-<p>ちなみにjqXHRとは <a class="keyword" href="http://d.hatena.ne.jp/keyword/jQuery">jQuery</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/XMLHttpRequest">XMLHttpRequest</a>の略。</p>
+<p>ちなみにjqXHRとは jQuery XMLHttpRequestの略。</p>
 
 <p>成功時もあるので、<code>data</code>は<code>jqXHR.responseJSON</code>でもOKです。</p>
 

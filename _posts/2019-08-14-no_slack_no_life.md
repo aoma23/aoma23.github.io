@@ -11,7 +11,7 @@ tags: [slack,IT]
 
 <p>Slackが他のチャットアプリと比べて優れている点！おそらく特にないです。きっと世の中の流行りと使い慣れてしまったことがSlack信者にさせているのだと思う。</p>
 
-<p>そう、まるで<a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>のように。昔は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E1%A1%BC%A5%E9%A1%BC">メーラー</a>も山ほどあったのに今は<a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>の圧勝である。そして<a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>以外を使うなんて考えられない。</p>
+<p>そう、まるでGmailのように。昔はメーラーも山ほどあったのに今はGmailの圧勝である。そしてGmail以外を使うなんて考えられない。</p>
 
 <p>Slackも同じレベルにまで到達しようとしてきている。</p>
 

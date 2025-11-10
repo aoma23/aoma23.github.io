@@ -7,7 +7,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 ---
 <p>おはこんばんちはaomaです。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>とかのIssue見てるとたまにこんなアイコンの人見かけませんか？</p>
+<p>GitHubとかのIssue見てるとたまにこんなアイコンの人見かけませんか？</p>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816182724.png' | relative_url }}" alt="f:id:aoma23:20190816182724p:plain" title="f:id:aoma23:20190816182724p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
@@ -15,11 +15,11 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 
 <p>外人のつよつよエンジニアはみんなこのアイコンにしてる！気がする。</p>
 
-<p>ぼくもこの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%D0%A5%BF%A1%BC">アバター</a>にすればつよつよエンジニアになれる！気がする！きっとそうだ！</p>
+<p>ぼくもこのアバターにすればつよつよエンジニアになれる！気がする！きっとそうだ！</p>
 
 <h2>イケてる外人エンジニアに人気のアイコン？</h2>
 
-<p>国内にもいろんな<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%D0%A5%BF%A1%BC">アバター</a>作成サービスがありますが、これは見たことないなー。。</p>
+<p>国内にもいろんなアバター作成サービスがありますが、これは見たことないなー。。</p>
 
 <p>ググっても画像検索してもなかなかヒットせず。。。</p>
 
@@ -27,7 +27,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 
 <p>そこで思い切ってこのアイコンを設定してる人に直接聞いてみることにしました！</p>
 
-<p>画像検索でヒットした<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C4%A5%A4%A5%C3%A5%BF%A1%BC">ツイッター</a>民にアタック！</p>
+<p>画像検索でヒットしたツイッター民にアタック！</p>
 
 <h2>まずはジョンに聞いてみる</h2>
 
@@ -50,7 +50,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 <p>キターーー！<br/>
 無言でURLだけ貼り付けて教えてくれました！ありがとうマイケル！！</p>
 
-<p>ということで、下記から<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%D0%A5%BF%A1%BC">アバター</a>作れます！「FAMILY GUY YOURSELF」カッコいい！</p>
+<p>ということで、下記からアバター作れます！「FAMILY GUY YOURSELF」カッコいい！</p>
 
 <p><iframe src="https://hatenablog-parts.com/embed?url=http%3A%2F%2Fwww.familyguyyourself.com%2F" title="FAMILY GUY YOURSELF" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="http://www.familyguyyourself.com/">www.familyguyyourself.com</a></cite></p>
 

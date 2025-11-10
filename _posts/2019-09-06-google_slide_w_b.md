@@ -15,7 +15,7 @@ tags: [IT,Googleスライド,プレゼン]
 
 <p>なので1選！</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>スライドでプレゼンする方は是非試してみてください！</p>
+<p>Googleスライドでプレゼンする方は是非試してみてください！</p>
 
 <h2>オススメ1選！その技とは！！？</h2>
 

@@ -7,7 +7,7 @@ tags: [IT,sed,コマンド,置換]
 ---
 <p>シングルコーテーションやダブルコーテーション内の文字列だけ置換したいときありますよね。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/sed">sed</a>コマンドで<code>"aaa"</code>を<code>"bbb"</code>に置換したい！囲まれてない<code>aaa</code>は置換したくない！みたいな。</p>
+<p>sedコマンドで<code>"aaa"</code>を<code>"bbb"</code>に置換したい！囲まれてない<code>aaa</code>は置換したくない！みたいな。</p>
 
 <p>その場合はシングルコーテーションやダブルコーテーションで囲ってやる必要があります。</p>
 
@@ -23,7 +23,7 @@ tags: [IT,sed,コマンド,置換]
 aaa</pre>
 
 
-<p>単純に<code>aaa</code>を<a class="keyword" href="http://d.hatena.ne.jp/keyword/sed">sed</a>コマンドで置換しようとするとこんな感じ。</p>
+<p>単純に<code>aaa</code>をsedコマンドで置換しようとするとこんな感じ。</p>
 
 <pre class="code" data-lang="" data-unlink>$ sed s/aaa/bbb/ a.txt
 &#34;bbb&#34;

@@ -7,7 +7,7 @@ tags: [IT,日常,USB変換アダプタ,rampow]
 ---
 <p>おはこんばんちは！aomaです。</p>
 
-<p>USB を USB Type C に変換したくて<a class="keyword" href="http://d.hatena.ne.jp/keyword/amazon">amazon</a>で調べたら
+<p>USB を USB Type C に変換したくてamazonで調べたら
 なんと 893円という驚きのプライスで売っているじゃありませんか！<br />
 しかも2個セット！</p>
 
@@ -22,5 +22,5 @@ tags: [IT,日常,USB変換アダプタ,rampow]
 
 <p>ありがとうRampow！いい商品です！オススメ！</p>
 
-<p>（なんか<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%C6%A5%DE">ステマ</a>記事みたいになってしまったw）</p>
+<p>（なんかステマ記事みたいになってしまったw）</p>
 

@@ -7,7 +7,7 @@ tags: [IT,chrome,pdf]
 ---
 <h2>やりたいこと</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/chrome">chrome</a>でページ数を指定してPDFを開きたい。</p>
+<p>chromeでページ数を指定してPDFを開きたい。</p>
 
 <h2>方法</h2>
 

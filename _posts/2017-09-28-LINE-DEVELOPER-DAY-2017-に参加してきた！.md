@@ -5,7 +5,7 @@ slug: "LINE DEVELOPER DAY 2017 に参加してきた！"
 category: blog
 tags: [LINE,カンファレンス,IT]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%BD%C2%C3%AB%A5%D2%A5%AB%A5%EA%A5%A8">渋谷ヒカリエ</a>で開催されたLINEによる開発者向けイベントに行ってきましたー。</p>
+<p>渋谷ヒカリエで開催されたLINEによる開発者向けイベントに行ってきましたー。</p>
 
 <p><iframe src="https://hatenablog-parts.com/embed?url=http%3A%2F%2Flinedevday.linecorp.com%2Fjp%2F2017%2F" title="LINE DEVELOPER DAY 2017" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="http://linedevday.linecorp.com/jp/2017/">linedevday.linecorp.com</a></cite></p>
 
@@ -19,7 +19,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>それにしても圧倒的LINEクオリティ！！！</h3>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CE%A5%D9%A5%EB%A5%C6%A5%A3">ノベルティ</a>に加え、ランチ、カフェ解放、clova抽選50名、懇親会などなど、サービスサービスー♪</p>
+<p>ノベルティに加え、ランチ、カフェ解放、clova抽選50名、懇親会などなど、サービスサービスー♪</p>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195656" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928195656.jpg' | relative_url }}" alt="f:id:aoma23:20170928195656j:image" title="f:id:aoma23:20170928195656j:image" class="hatena-fotolife" itemprop="image"></a></span>
 <span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190038" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190038.jpg' | relative_url }}" alt="f:id:aoma23:20170928190038j:image" title="f:id:aoma23:20170928190038j:image" class="hatena-fotolife" itemprop="image"></a></span>
@@ -47,15 +47,15 @@ tags: [LINE,カンファレンス,IT]
 
 <h4>Clova</h4>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%E9%A5%A6%A5%C9">クラウド</a>AIプラットフォーム</p>
+<p>クラウドAIプラットフォーム</p>
 
 <h4>WAVE</h4>
 
 <p>Clovaの第一弾</p>
 
-<h4>LINE <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> EXPERT</h4>
+<h4>LINE API EXPERT</h4>
 
-<p>外部による<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>エキスパート</p>
+<p>外部によるAPIエキスパート</p>
 
 <h3>A-2 The Technologies in Clova</h3>
 
@@ -65,7 +65,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h4>What is Clova?</h4>
 
-<p>サッカー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%B8%A5%A2%BA%C7%BD%AA%CD%BD%C1%AA">アジア最終予選</a>日本vsオーストラリアのハーフタイムに流れたClocaのCM</p>
+<p>サッカーアジア最終予選日本vsオーストラリアのハーフタイムに流れたClocaのCM</p>
 
 <ul>
 <li>WAVE
@@ -93,26 +93,26 @@ tags: [LINE,カンファレンス,IT]
 
 <p>Clova is a Cloud-based virtual assistant.</p>
 
-<h4><a class="keyword" href="http://d.hatena.ne.jp/keyword/History">History</a></h4>
+<h4>History</h4>
 
 <p>1年で開発。</p>
 
 <p>なぜできたのか？</p>
 
-<p>SMART <a class="keyword" href="http://d.hatena.ne.jp/keyword/PORTAL">PORTAL</a>により下記のような技術知識はすでにLINEが持っていた</p>
+<p>SMART PORTALにより下記のような技術知識はすでにLINEが持っていた</p>
 
 <ul>
 <li>web search</li>
 <li>crawling</li>
 <li>big data</li>
 <li>machine learning</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a></li>
+<li>bot</li>
 </ul>
 
 
 <h4>Technology</h4>
 
-<p>Clovaは4つの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%DD%A1%BC%A5%CD%A5%F3%A5%C8">コンポーネント</a>で構成されている</p>
+<p>Clovaは4つのコンポーネントで構成されている</p>
 
 <ul>
 <li>CLIENT
@@ -143,7 +143,7 @@ tags: [LINE,カンファレンス,IT]
 <li>Platform
 
 <ul>
-<li>上記3つの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%DD%A1%BC%A5%CD%A5%F3%A5%C8">コンポーネント</a>を支える</li>
+<li>上記3つのコンポーネントを支える</li>
 <li>認証、認可</li>
 <li>ユーザーの情報を保存</li>
 </ul>
@@ -151,16 +151,16 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<p>これらは<a class="keyword" href="http://d.hatena.ne.jp/keyword/CIC">CIC</a>、CEKの2つの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%F3%A5%DD%A1%BC%A5%CD%A5%F3%A5%C8">コンポーネント</a>としても表せる</p>
+<p>これらはCIC、CEKの2つのコンポーネントとしても表せる</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/CIC">CIC</a>
+<li>CIC
 
 <ul>
 <li>Clova Interface Connect
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B2%BB%C0%BC%C7%A7%BC%B1">音声認識</a>、言語理解など</li>
+<li>音声認識、言語理解など</li>
 </ul>
 </li>
 </ul>
@@ -209,13 +209,13 @@ tags: [LINE,カンファレンス,IT]
 
 <h4>Future</h4>
 
-<p>キーワードは<a class="keyword" href="http://d.hatena.ne.jp/keyword/GROWTH">GROWTH</a></p>
+<p>キーワードはGROWTH</p>
 
 <ul>
 <li><p>CHAMP</p>
 
 <ul>
-<li>WAVEに続くデ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D0%A5%A4%A5%B9">バイス</a>第２弾</li>
+<li>WAVEに続くデバイス第２弾</li>
 <li>WAVEよりもCUTEで持ち運びやすい</li>
 </ul>
 </li>
@@ -245,7 +245,7 @@ tags: [LINE,カンファレンス,IT]
 
 <p>Gateboxの説明と構成する技術について</p>
 
-<h4><a class="keyword" href="http://d.hatena.ne.jp/keyword/AZUMA">AZUMA</a> HIKARI</h4>
+<h4>AZUMA HIKARI</h4>
 
 <p>機械やロボットと本当にコミュニケーションとりたいかな...</p>
 
@@ -258,7 +258,7 @@ tags: [LINE,カンファレンス,IT]
 <p>「キャラクターと一緒に暮らせる世界」を実現したい</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%BD%E9%B2%BB%A5%DF%A5%AF">初音ミク</a>バージョンも</li>
+<li>初音ミクバージョンも</li>
 <li>今後もさまざまなキャラクター</li>
 </ul>
 
@@ -268,7 +268,7 @@ tags: [LINE,カンファレンス,IT]
 <ul>
 <li>projection</li>
 <li>sensing</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/talk">talk</a></li>
+<li>talk</li>
 <li>network</li>
 </ul>
 
@@ -276,11 +276,11 @@ tags: [LINE,カンファレンス,IT]
 <p>gatebox inside</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/linux">linux</a></li>
+<li>linux</li>
 <li>unity</li>
 <li>nodeJS</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/C%2B%2B">C++</a></li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/SQLite">SQLite</a></li>
+<li>C++</li>
+<li>SQLite</li>
 </ul>
 
 
@@ -294,7 +294,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h4>Gatebox x Clova</h4>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/CIC">CIC</a>,CEKそれぞれの3rd Partyとして連携</p>
+<p>CIC,CEKそれぞれの3rd Partyとして連携</p>
 
 <p>ユーザー体験の部分、Gateboxはキャラクターのアクションがあるので、そこが技術的なチャレンジとなる</p>
 
@@ -308,11 +308,11 @@ tags: [LINE,カンファレンス,IT]
 
 <p>玄関に人がきたら写真をLINEに通知するIoT</p>
 
-<h3>A-5 なぜLINEではウェブト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C3%A5%AD%A5%F3%A5%B0">ラッキング</a>システムがフロントエンド開発チームによって構築されたのか</h3>
+<h3>A-5 なぜLINEではウェブトラッキングシステムがフロントエンド開発チームによって構築されたのか</h3>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190625" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190625.jpg' | relative_url }}" alt="f:id:aoma23:20170928190625j:image" title="f:id:aoma23:20170928190625j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
-<p>ログ情報のユーザー判別はLINE IDではなく<a class="keyword" href="http://d.hatena.ne.jp/keyword/cookie">cookie</a>データを使用している。</p>
+<p>ログ情報のユーザー判別はLINE IDではなくcookieデータを使用している。</p>
 
 <p>LINE IDを使用すると、個人情報の観点などで利用に制約が出てきてしまうため。</p>
 
@@ -340,13 +340,13 @@ tags: [LINE,カンファレンス,IT]
 <li><p>rooling upgradeできない</p>
 
 <ul>
-<li>バージョンで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%C8%A5%B3%A5%EB">プロトコル</a>変わったため、動かしながらのアップグレード不可能</li>
+<li>バージョンでプロトコル変わったため、動かしながらのアップグレード不可能</li>
 </ul>
 </li>
 <li><p>旧と新両方にDual-writeして</p>
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A1%BC%A5%D5%A5%C6%A5%A3%A5%CD%A5%C3%A5%C8">セーフティネット</a>貼ってサービスに影響出ないようにした</li>
+<li>セーフティネット貼ってサービスに影響出ないようにした</li>
 </ul>
 </li>
 <li>Bulk copy existing dataして
@@ -377,14 +377,14 @@ tags: [LINE,カンファレンス,IT]
 <li><p>active sessions</p>
 
 <ul>
-<li>デ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D0%A5%A4%A5%B9">バイス</a>、ブラウザごとにセッション管理、ログアウトできる</li>
+<li>デバイス、ブラウザごとにセッション管理、ログアウトできる</li>
 </ul>
 </li>
-<li><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/OpenID">OpenID</a> Connect</p></li>
+<li><p>OpenID Connect</p></li>
 <li><p>Friending with bots</p>
 
 <ul>
-<li>ログインを通じて、<a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>と友達になれる</li>
+<li>ログインを通じて、botと友達になれる</li>
 <li>最近はe-mailよりもチャットが好まれる
 
 <ul>
@@ -397,22 +397,22 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/A-10">A-10</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/BOT">BOT</a> and the new Comfortableness</h3>
+<h3>A-10 BOT and the new Comfortableness</h3>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928185517" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928185517.jpg' | relative_url }}" alt="f:id:aoma23:20170928185517j:image" title="f:id:aoma23:20170928185517j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>と<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>の新機能について</p>
+<p>botとAPIの新機能について</p>
 
-<h4>line <a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>の現在</h4>
+<h4>line botの現在</h4>
 
 <ul>
-<li>13万の<a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>が存在</li>
+<li>13万のbotが存在</li>
 <li>20億人と会話している（累計。ユニークユーザーではない）</li>
 <li>100億のメッセージ</li>
 </ul>
 
 
-<h4>line <a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a> awards</h4>
+<h4>line bot awards</h4>
 
 <ul>
 <li>グランプリ
@@ -429,12 +429,12 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<h4><a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>で使えるコミュニケーション</h4>
+<h4>botで使えるコミュニケーション</h4>
 
 <ul>
-<li>Sticker（<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%BF%A5%F3%A5%D7">スタンプ</a>）</li>
+<li>Sticker（スタンプ）</li>
 <li>画像、動画、位置情報</li>
-<li>カ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EB%A1%BC%A5%BB%A5%EB">ルーセル</a>
+<li>カルーセル
 
 <ul>
 <li>はい、いいえ</li>
@@ -451,16 +451,16 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<h4>Messaging <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> with LINE Login</h4>
+<h4>Messaging API with LINE Login</h4>
 
 <ul>
-<li><p>体重と歩数を管理する<a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a></p>
+<li><p>体重と歩数を管理するbot</p>
 
 <ul>
 <li>ログインをもとにwebと連携できるので、グラフなどのよりリッチなインターフェースを提供できる</li>
 </ul>
 </li>
-<li><p>グループ内<a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>でユーザー識別可能となった</p>
+<li><p>グループ内botでユーザー識別可能となった</p>
 
 <ul>
 <li>ゼミの教授が課題出して、生徒が提出。特定の生徒にメッセージ送信なども可能。</li>
@@ -492,7 +492,7 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<h4>Rich Menu <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a></h4>
+<h4>Rich Menu API</h4>
 
 <ul>
 <li>static</li>
@@ -500,21 +500,21 @@ tags: [LINE,カンファレンス,IT]
 </ul>
 
 
-<h4>LINE <a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a> studio</h4>
+<h4>LINE bot studio</h4>
 
 <ul>
-<li>プログラミングレスな<a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>プロトタイプ作成ツール</li>
+<li>プログラミングレスなbotプロトタイプ作成ツール</li>
 <li>開発者ではなくデザイナや企画向け</li>
 <li>PCアプリケーションとして提供予定</li>
 </ul>
 
 
-<h4>LINE <a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a> EXPERT</h4>
+<h4>LINE API EXPERT</h4>
 
 <p>なると、特典として</p>
 
 <ul>
-<li>非公開の<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>、β版を共有</li>
+<li>非公開のAPI、β版を共有</li>
 </ul>
 
 

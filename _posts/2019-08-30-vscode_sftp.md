@@ -32,15 +32,15 @@ tags: [IT,VSCode,sftp,アドオン]
 }</pre>
 
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>から<a class="keyword" href="http://d.hatena.ne.jp/keyword/Linux">Linux</a>にアップするときに改行コード変換してくれるオプションとかあるといいなと思ったのですが、最初から<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>上でLFで扱ってれば問題ないですね。</p>
+<p>WindowsからLinuxにアップするときに改行コード変換してくれるオプションとかあるといいなと思ったのですが、最初からWindows上でLFで扱ってれば問題ないですね。</p>
 
 <h2>ちなみに</h2>
 
-<p><code>.vscode/sftp.json</code> がgitの処理対象になってしまうのでignoreしたい。どうせなら全<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>でignoreしたい。ということで下記のようにglobalで除外する。</p>
+<p><code>.vscode/sftp.json</code> がgitの処理対象になってしまうのでignoreしたい。どうせなら全リポジトリでignoreしたい。ということで下記のようにglobalで除外する。</p>
 
 <h3>1. グローバル用の.gitignoreを作る</h3>
 
-<p><code>.gitignore</code>ファイルを作ってホーム<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%A3%A5%EC%A5%AF%A5%C8">ディレクト</a>リに設置。（<a class="keyword" href="http://d.hatena.ne.jp/keyword/Windows">Windows</a>ならきっと<code>C:\Users\{ユーザー名}</code>）</p>
+<p><code>.gitignore</code>ファイルを作ってホームディレクトリに設置。（Windowsならきっと<code>C:\Users\{ユーザー名}</code>）</p>
 
 <pre class="code" data-lang="" data-unlink>/.vscode</pre>
 
@@ -57,7 +57,7 @@ tags: [IT,VSCode,sftp,アドオン]
 </ul>
 
 
-<p>これで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>毎に<code>sftp.json</code>作っても全て除外してくれます。</p>
+<p>これでリポジトリ毎に<code>sftp.json</code>作っても全て除外してくれます。</p>
 
 <p>べんりー！</p>
 

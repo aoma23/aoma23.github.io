@@ -7,9 +7,9 @@ tags: [スピーチ,IT,日常,西野亮廣]
 ---
 <p>こんばんはaomaです。</p>
 
-<p>最近は寝る前に<a class="keyword" href="http://d.hatena.ne.jp/keyword/YouTube">YouTube</a>見るのが定番になってます。</p>
+<p>最近は寝る前にYouTube見るのが定番になってます。</p>
 
-<p>今日はオススメに『<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AD%A5%F3%A5%B0%A5%B3%A5%F3%A5%B0">キングコング</a>西野 伝説のスピーチ』というのが出てきました。
+<p>今日はオススメに『キングコング西野 伝説のスピーチ』というのが出てきました。
 2日前にアップされたものです。<br/>
 何事かなと思って見てみました。</p>
 

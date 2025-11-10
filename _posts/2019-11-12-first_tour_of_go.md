@@ -11,7 +11,7 @@ tags: [IT,GO,PHP,学習]
 
 <p><a href="https://go-tour-jp.appspot.com/list">A Tour of Go</a></p>
 
-<p>普段<a class="keyword" href="http://d.hatena.ne.jp/keyword/PHP">PHP</a>に慣れている中で、ムムッ！？っとなった点を目次別にメモしました。<br/>
+<p>普段PHPに慣れている中で、ムムッ！？っとなった点を目次別にメモしました。<br/>
 PHPerでこれからGoを学ぶよって人の助けになれば幸いです。</p>
 
 <h2>Packages, variables, and functions.</h2>
@@ -54,13 +54,13 @@ PHPerでこれからGoを学ぶよって人の助けになれば幸いです。<
 <li><a href="https://go-tour-jp.appspot.com/flowcontrol/1">https://go-tour-jp.appspot.com/flowcontrol/1</a></li>
 </ul>
 </li>
-<li>for の初期化と後処理<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%C6%A1%BC%A5%C8%A5%E1%A5%F3%A5%C8">ステートメント</a>の記述は任意
+<li>for の初期化と後処理ステートメントの記述は任意
 
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/flowcontrol/2">https://go-tour-jp.appspot.com/flowcontrol/2</a></li>
 </ul>
 </li>
-<li>whileはない。代わりにforを使う。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%DF">セミ</a>コロン(;)の省略が可能
+<li>whileはない。代わりにforを使う。セミコロン(;)の省略が可能
 
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/flowcontrol/3">https://go-tour-jp.appspot.com/flowcontrol/3</a></li>
@@ -72,7 +72,7 @@ PHPerでこれからGoを学ぶよって人の助けになれば幸いです。<
 </li>
 </ul>
 </li>
-<li>if は、 for のように、条件の前に、評価するための簡単な<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%C6%A1%BC%A5%C8%A5%E1%A5%F3%A5%C8">ステートメント</a>を書くことが可能
+<li>if は、 for のように、条件の前に、評価するための簡単なステートメントを書くことが可能
 
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/flowcontrol/6">https://go-tour-jp.appspot.com/flowcontrol/6</a></li>
@@ -91,7 +91,7 @@ PHPerでこれからGoを学ぶよって人の助けになれば幸いです。<
 </li>
 </ul>
 </li>
-<li>defer <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%C6%A1%BC%A5%C8%A5%E1%A5%F3%A5%C8">ステートメント</a>は、 defer へ渡した関数の実行を、呼び出し元の関数の終わり(returnする)まで遅延させる</li>
+<li>defer ステートメントは、 defer へ渡した関数の実行を、呼び出し元の関数の終わり(returnする)まで遅延させる</li>
 <li><p>defer へ渡した関数の引数は、すぐに評価される</p>
 
 <ul>
@@ -113,7 +113,7 @@ func main() {
 </code></pre></li>
 </ul>
 </li>
-<li><p>defer が複数ある場合は<a class="keyword" href="http://d.hatena.ne.jp/keyword/LIFO">LIFO</a>(last-in-first-out) で呼び出される</p>
+<li><p>defer が複数ある場合はLIFO(last-in-first-out) で呼び出される</p>
 
 <ul>
 <li><a href="https://go-tour-jp.appspot.com/flowcontrol/13">https://go-tour-jp.appspot.com/flowcontrol/13</a></li>
@@ -201,7 +201,7 @@ http://toc-dev.blogspot.com/2012/09/goslice-make.html
 </li>
 </ul>
 </li>
-<li><p>Maps（辞書的なやつ。key/<a class="keyword" href="http://d.hatena.ne.jp/keyword/value">value</a>）</p>
+<li><p>Maps（辞書的なやつ。key/value）</p>
 
 <ul>
 <li><a href="https://tour.golang.org/moretypes/19">https://tour.golang.org/moretypes/19</a></li>
@@ -214,7 +214,7 @@ http://toc-dev.blogspot.com/2012/09/goslice-make.html
 <ul>
 <li><a href="https://play.golang.org/p/kbXho4nncW7">https://play.golang.org/p/kbXho4nncW7</a></li>
 <li>Goは変数使わないと怒られる。使わないものは_にすれば逃げれる</li>
-<li>The Go Playgroundで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BD%A1%BC%A5%B9%A5%B3%A1%BC%A5%C9">ソースコード</a>シェアできる</li>
+<li>The Go Playgroundでソースコードシェアできる</li>
 </ul>
 </li>
 </ul>
@@ -227,7 +227,7 @@ http://toc-dev.blogspot.com/2012/09/goslice-make.html
 <li><a href="https://tour.golang.org/moretypes/24">https://tour.golang.org/moretypes/24</a></li>
 </ul>
 </li>
-<li><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%ED%A1%BC%A5%B8%A5%E3">クロージャ</a>ーは変数を保持する。戻り値が関数だと<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AF%A5%ED%A1%BC%A5%B8%A5%E3">クロージャ</a>ーと判断してよさそう。</p>
+<li><p>クロージャーは変数を保持する。戻り値が関数だとクロージャーと判断してよさそう。</p>
 
 <ul>
 <li><a href="https://tour.golang.org/moretypes/25">https://tour.golang.org/moretypes/25</a></li>
@@ -280,7 +280,7 @@ http://toc-dev.blogspot.com/2012/09/goslice-make.html
 
 <h2>おまけ</h2>
 
-<blockquote><p>Note: Go playground上の時間は、いつも "2009-11-10 23:00:00 <a class="keyword" href="http://d.hatena.ne.jp/keyword/UTC">UTC</a>" です。 この値の意味は、読者の楽しみのために残しておきます(^^)</p></blockquote>
+<blockquote><p>Note: Go playground上の時間は、いつも "2009-11-10 23:00:00 UTC" です。 この値の意味は、読者の楽しみのために残しておきます(^^)</p></blockquote>
 
 <p>一体どんな意味が！？と思い調べてみました。</p>
 

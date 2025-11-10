@@ -5,7 +5,7 @@ slug: "oh_my_uniqlo"
 category: blog
 tags: [日常,UNIQLO,夏服,夏,ファッション,ポエム]
 ---
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E6%A5%CB%A5%AF%A5%ED">ユニクロ</a>よ。</p>
+<p>ユニクロよ。</p>
 
 <p>キミに言いたいことがある。</p>
 
@@ -23,7 +23,7 @@ tags: [日常,UNIQLO,夏服,夏,ファッション,ポエム]
 
 <p>お店に来てる客たちを見てくれよ。みんな半袖だ。</p>
 
-<p>たしかに<a class="keyword" href="http://d.hatena.ne.jp/keyword/%CC%D4%BD%EB%C6%FC">猛暑日</a>は過ぎたけどきっと来週もずっと半袖で過ごすよ。</p>
+<p>たしかに猛暑日は過ぎたけどきっと来週もずっと半袖で過ごすよ。</p>
 
 <p>夏服を買いに来たのは僕だけじゃないはずだ。
 今日も汗だくさ。</p>
@@ -56,5 +56,5 @@ tags: [日常,UNIQLO,夏服,夏,ファッション,ポエム]
 
 <p>来年はもう少し在庫用意しといてくれよ。9月も絶対夏服売れるから。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E6%A5%CB%A5%AF%A5%ED">ユニクロ</a>さんマジで頼んます。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%ED%A5%C3%A5%B1%A5%F3%A5%ED%A1%BC%A5%EB">ロッケンロール</a>。</p>
+<p>ユニクロさんマジで頼んます。ロッケンロール。</p>
 

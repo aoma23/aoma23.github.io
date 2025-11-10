@@ -7,8 +7,8 @@ tags: [GAS,IT,環境変数]
 ---
 <h2>はじめに</h2>
 
-<p>普段GASでいろいろ作るんですが、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>ファイル横断して同じ値を使いたいときありますよね？<br/>
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>のIDとか<a class="keyword" href="http://d.hatena.ne.jp/keyword/AWS">AWS</a>のアクセスキーとかとか。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>的な。</p>
+<p>普段GASでいろいろ作るんですが、スクリプトファイル横断して同じ値を使いたいときありますよね？<br/>
+GitHubのIDとかAWSのアクセスキーとかとか。環境変数的な。</p>
 
 <p>これUserPropertiesで実現できるんですが、<a href="https://developers.google.com/apps-script/reference/properties/user-properties">現在は非推奨</a>になっていて使えません。。どうすればいいですか？</p>
 
@@ -19,12 +19,12 @@ tags: [GAS,IT,環境変数]
 
 <h2>ユーザープロパティは2種類ある！？</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>のメニューから、<br/>
+<p>スクリプトのメニューから、<br/>
 ファイル→プロジェクトのプロパティ→「ユーザープロパティ」タブ</p>
 
 <p><figure class="figure-image figure-image-fotolife" title="ユーザープロパティ"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190325/20190325180058.png' | relative_url }}" alt="f:id:aoma23:20190325180058p:plain" title="f:id:aoma23:20190325180058p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>ユーザープロパティ</figcaption></figure></p>
 
-<p>ここで<a class="keyword" href="http://d.hatena.ne.jp/keyword/hoge">hoge</a>=user_<a class="keyword" href="http://d.hatena.ne.jp/keyword/hoge">hoge</a>を設定します。</p>
+<p>ここでhoge=user_hogeを設定します。</p>
 
 <p>こちら、UserPropertiesでは取得できますが、PropertiesServiceでは利用できません。</p>
 
@@ -32,7 +32,7 @@ tags: [GAS,IT,環境変数]
   Logger.log(PropertiesService.getUserProperties().getProperty(&#39;hoge&#39;)); // null</pre>
 
 
-<p>また、UserPropertiesは別<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>でも利用できますが、PropertiesService.getUserProperties()はこの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>内のみとなっています。</p>
+<p>また、UserPropertiesは別スクリプトでも利用できますが、PropertiesService.getUserProperties()はこのスクリプト内のみとなっています。</p>
 
 <p>名前は似てるっていうか同じなのに全くの別物！！</p>
 
@@ -55,14 +55,14 @@ tags: [GAS,IT,環境変数]
 <td> できない </td>
 </tr>
 <tr>
-<td> 別<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>で参照 </td>
+<td> 別スクリプトで参照 </td>
 <td> できる </td>
 <td> できない </td>
 </tr>
 <tr>
 <td> 用途 </td>
-<td> 開発者用の<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%C4%B6%AD%CA%D1%BF%F4">環境変数</a>として </td>
-<td> <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>の実行ユーザー毎の設定値として </td>
+<td> 開発者用の環境変数として </td>
+<td> スクリプトの実行ユーザー毎の設定値として </td>
 </tr>
 <tr>
 <td> その他 </td>

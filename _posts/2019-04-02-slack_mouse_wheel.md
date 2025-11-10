@@ -9,7 +9,7 @@ tags: [slack,マウスホイール,IT]
 
 <ul>
 <li>たまにslackがマウスホイールでスクロールできなくなる。</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/mac">mac</a>ではなく<a class="keyword" href="http://d.hatena.ne.jp/keyword/windows">windows</a></li>
+<li>macではなくwindows</li>
 <li>PC再起動で直る</li>
 </ul>
 

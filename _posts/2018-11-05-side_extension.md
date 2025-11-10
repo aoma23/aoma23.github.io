@@ -9,9 +9,9 @@ tags: [IT,SeleniumIDE]
 
 <p>SeleniumIDE便利ですよね！</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/FireFox">FireFox</a>時代からお世話になってます。</p>
+<p>FireFox時代からお世話になってます。</p>
 
-<p>で、今日久々に<a class="keyword" href="http://d.hatena.ne.jp/keyword/chrome">chrome</a>のアドオン触ったんですが、ハマりましたのでメモ。</p>
+<p>で、今日久々にchromeのアドオン触ったんですが、ハマりましたのでメモ。</p>
 
 <h2>保存したプロジェクトが開けない...</h2>
 
@@ -35,5 +35,5 @@ tags: [IT,SeleniumIDE]
 
 <p>これで無事プロジェクトを開くことができました。（まさか拡張子名チェックなんてしてるとはね）</p>
 
-<p>ちなみにsideはサイドではなく<strong>S</strong>elenium<strong><a class="keyword" href="http://d.hatena.ne.jp/keyword/IDE">IDE</a></strong>の略です。たぶん。</p>
+<p>ちなみにsideはサイドではなく<strong>S</strong>elenium<strong>IDE</strong>の略です。たぶん。</p>
 

@@ -20,13 +20,13 @@ tags: [日常,Gmail,日本の祝日]
 </ul>
 
 
-<p>どうやら始まりは<a class="keyword" href="http://d.hatena.ne.jp/keyword/iPhone">iPhone</a>が関係していそう。。</p>
+<p>どうやら始まりはiPhoneが関係していそう。。</p>
 
 <h2>対策</h2>
 
 <h3>カレンダーから削除</h3>
 
-<p>まずは<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google%A5%AB%A5%EC%A5%F3%A5%C0%A1%BC">Googleカレンダー</a>に「日本の祝日」がいたので、削除しました。解決してからまた入れよう。</p>
+<p>まずはGoogleカレンダーに「日本の祝日」がいたので、削除しました。解決してからまた入れよう。</p>
 
 <p>しかし直らず！</p>
 

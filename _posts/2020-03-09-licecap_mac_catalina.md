@@ -5,19 +5,19 @@ slug: "licecap_mac_catalina"
 category: blog
 tags: [IT,LICEcap,mac,エラー]
 ---
-<p>catalinaの<a class="keyword" href="http://d.hatena.ne.jp/keyword/mac">mac</a>にLICEcap入れたら全く動きませんでした。
+<p>catalinaのmacにLICEcap入れたら全く動きませんでした。
 saveボタンを押しても一向に動いてる気配がない感じ。。</p>
 
 <p>ということでググった解決法をメモ。</p>
 
 <ol>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D1%A1%BC%A5%DF%A5%C3%A5%B7%A5%E7%A5%F3">パーミッション</a>を許可する</li>
+<li>パーミッションを許可する</li>
 </ol>
 
 
 <p><a href="https://user-images.githubusercontent.com/1505339/67440500-545ce700-f5ae-11e9-869e-94805dc38041.png" class="http-image"><img src="https://user-images.githubusercontent.com/1505339/67440500-545ce700-f5ae-11e9-869e-94805dc38041.png" class="http-image" alt="https://user-images.githubusercontent.com/1505339/67440500-545ce700-f5ae-11e9-869e-94805dc38041.png"></a></p>
 
-<p>上記キャプチャのように<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D1%A1%BC%A5%DF%A5%C3%A5%B7%A5%E7%A5%F3">パーミッション</a>を有効にしてあげる必要があるのですが、全然項目にLICEcapが出てきません。</p>
+<p>上記キャプチャのようにパーミッションを有効にしてあげる必要があるのですが、全然項目にLICEcapが出てきません。</p>
 
 <ul>
 <li><a href="https://github.com/justinfrankel/licecap/issues/71">https://github.com/justinfrankel/licecap/issues/71</a></li>

@@ -7,14 +7,14 @@ tags: [広告,日常,TikTok]
 ---
 <h2>投げキッスのこの子です！</h2>
 
-<p>みなさん一度は見たことありますよね？<a class="keyword" href="http://d.hatena.ne.jp/keyword/TikTok">TikTok</a>
+<p>みなさん一度は見たことありますよね？TikTok
 のこの広告。</p>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190304124327" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190304/20190304124327.jpg' | relative_url }}" alt="f:id:aoma23:20190304124327j:image" title="f:id:aoma23:20190304124327j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>とっても可愛いですよね！</p>
 
-<p>音声付きで観てみたい！と思って<a class="keyword" href="http://d.hatena.ne.jp/keyword/TikTok">TikTok</a>をインストールした人もいるのではないでしょうか？（私）</p>
+<p>音声付きで観てみたい！と思ってTikTokをインストールした人もいるのではないでしょうか？（私）</p>
 
 <h2>広告の子が見つからない...</h2>
 
@@ -37,5 +37,5 @@ tags: [広告,日常,TikTok]
 音付きで大画面で観れるって最高ですね！<br/>
 <a href="https://t.tiktok.com/i18n/share/video/6581290612123766018/">&#x3077;&#x3089;&#x3059; on TikTok: #&#x6295;&#x3052;&#x30AD;&#x30C3;&#x30B9;&#x904B;&#x52D5; &#x3084;&#x3063;&#x3066;&#x307F;&#x305F;&#x2661;</a></p>
 
-<p>満足したので<a class="keyword" href="http://d.hatena.ne.jp/keyword/TikTok">TikTok</a>はアンインストールしました。</p>
+<p>満足したのでTikTokはアンインストールしました。</p>
 

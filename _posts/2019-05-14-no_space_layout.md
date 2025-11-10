@@ -38,7 +38,7 @@ aaa bbb</pre>
 
 <h3>案3. white-space: pre-wrap; を使う</h3>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/css">css</a>のwhite-space プロパティを使う方法もあります。</p>
+<p>cssのwhite-space プロパティを使う方法もあります。</p>
 
 <p><a href="https://developer.mozilla.org/ja/docs/Web/CSS/white-space">white-space - CSS: &#x30AB;&#x30B9;&#x30B1;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x30B7;&#x30FC;&#x30C8; | MDN</a></p>
 
@@ -54,5 +54,5 @@ aaa bbb</pre>
 
 <h2>さいごに</h2>
 
-<p>スペースでレイアウト調整するのは平成で終わりにして、右寄せ、中央揃えなど<a class="keyword" href="http://d.hatena.ne.jp/keyword/css">css</a>で適切に対応しましょ！</p>
+<p>スペースでレイアウト調整するのは平成で終わりにして、右寄せ、中央揃えなどcssで適切に対応しましょ！</p>
 

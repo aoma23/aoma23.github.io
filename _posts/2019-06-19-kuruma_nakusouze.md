@@ -15,9 +15,9 @@ tags: [日常,ポエム]
 
 <p>エンジニアならこんな悲惨な事故が起きないよう対策を考えるだろう。</p>
 
-<p>自動運転、急発進防止、生物検知、危険予測、AI、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%B9%A5%E9%A1%BC%A5%C0">アスラーダ</a>。</p>
+<p>自動運転、急発進防止、生物検知、危険予測、AI、アスラーダ。</p>
 
-<p>ぼくはエンジニアだけど、こんな最新のテク<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CE%A5%ED">ノロ</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B8%A1%BC">ジー</a>で解決する必要は一切ないと思う。</p>
+<p>ぼくはエンジニアだけど、こんな最新のテクノロジーで解決する必要は一切ないと思う。</p>
 
 <p>命を奪う原因はスピードだ。<br/>
 車の最高時速を30kmまでしか出せないようにしてしまえば死亡事故は大きく減ると思う。<br/>

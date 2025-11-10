@@ -8,7 +8,7 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 <p>送信したメールを編集して再送信したいときってありますよね！<br/>
 昨日送った日報メールを日付だけ書き換えて送りたいとか。</p>
 
-<p>でも<a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>には再送機能がない。。。</p>
+<p>でもGmailには再送機能がない。。。</p>
 
 <h2>需要はあるのに実装されない</h2>
 
@@ -30,18 +30,18 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 </ul>
 
 
-<p>それなのになぜ実装してくれないのか<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>さん！なぜなんだぜ...</p>
+<p>それなのになぜ実装してくれないのかGoogleさん！なぜなんだぜ...</p>
 
 <h2>もう作っちゃおうと。</h2>
 
 <p>私も再送機能を待ち望んでいる一人でした。いつか実装されるだろうと待ち続けて早10年。ようやく気づきました。これは実装しないなと。。</p>
 
 <p>ということで、今回再送アドオンを作りました！<br/>
-その名も「Resend for <a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>」です！</p>
+その名も「Resend for Gmail」です！</p>
 
 <p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fgithub.com%2Faoma23%2Fresend_for_gmail" title="aoma23/resend_for_gmail" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="https://github.com/aoma23/resend_for_gmail">github.com</a></cite></p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>は「<a href="https://developers.google.com/gsuite/add-ons/gmail/">Gmail Add-ons</a>」という専用のアドオンを開発可能です。<a class="keyword" href="http://d.hatena.ne.jp/keyword/chrome">chrome</a>などのブラウザ用アドオンではないので注意。</p>
+<p>Gmailは「<a href="https://developers.google.com/gsuite/add-ons/gmail/">Gmail Add-ons</a>」という専用のアドオンを開発可能です。chromeなどのブラウザ用アドオンではないので注意。</p>
 
 <h2>使い方</h2>
 
@@ -52,8 +52,8 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 
 <h2>インストール方法</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%D9%A5%ED%A5%C3%A5%D1">デベロッパ</a>ー用アドオンとしてインストールください。<br/>
-アドオンを一般公開するには<a class="keyword" href="http://d.hatena.ne.jp/keyword/GCP">GCP</a>にアップする必要があったりと大変そうだったのでご容赦ください。m(> &lt;)m</p>
+<p>デベロッパー用アドオンとしてインストールください。<br/>
+アドオンを一般公開するにはGCPにアップする必要があったりと大変そうだったのでご容赦ください。m(> &lt;)m</p>
 
 <p>下記サイトを参考にするとわかりやすいです。<br/>
 <a href="https://news.mynavi.jp/article/gas-13/">Google Apps Script&#x3067;Gmail&#x3092;&#x81EA;&#x52D5;&#x5316;&#x3059;&#x308B;(13) Gmail&#x30A2;&#x30C9;&#x30AA;&#x30F3;&#x3092;&#x4F5C;&#x308B; (1) &#x30A2;&#x30C9;&#x30AA;&#x30F3;&#x306E;&#x4F5C;&#x6210;&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x307E;&#x3067; | &#x30DE;&#x30A4;&#x30CA;&#x30D3;&#x30CB;&#x30E5;&#x30FC;&#x30B9;</a></p>
@@ -68,7 +68,7 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 <li>下記2ファイルを<a href="https://script.google.com/home">Google App Script</a>に新規プロジェクトとして設置（中身をコピペとかでもOKです）
 
 <ul>
-<li>appsscript.<a class="keyword" href="http://d.hatena.ne.jp/keyword/json">json</a></li>
+<li>appsscript.json</li>
 <li>code.gs</li>
 </ul>
 </li>
@@ -77,7 +77,7 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 <li>Deployment IDを取得
 
 <ul>
-<li>公開→<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DE%A5%CB%A5%D5%A5%A7%A5%B9%A5%C8">マニフェスト</a>から配置を選択</li>
+<li>公開→マニフェストから配置を選択</li>
 <li>Latest Version (Head)のGet IDをクリック</li>
 <li>Deployment IDの値をコピー</li>
 </ul>
@@ -88,13 +88,13 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 <li><a href="https://mail.google.com/mail/u/0/#settings/addons">Gmail→設定→アドオンタブ</a>を開く
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%D9%A5%ED%A5%C3%A5%D1">デベロッパ</a>ー アドオンを有効にする</li>
+<li>デベロッパー アドオンを有効にする</li>
 <li>Deployment IDを入力</li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>のページをリロード</li>
+<li>Gmailのページをリロード</li>
 </ul>
 
 
@@ -110,5 +110,5 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 また、海外の困ってる方向けに英語翻訳、発信等してくれる方もいましたら是非！<br/>
 また、アドオン一般公開するの簡単だから教えてあげるよっていう方もいましたら是非！</p>
 
-<p><a href="https://twitter.com/aoma23">ツイッター</a>、読者登録、<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A5%D6">はてブ</a>もよろしくお願いします！</p>
+<p><a href="https://twitter.com/aoma23">ツイッター</a>、読者登録、はてブもよろしくお願いします！</p>
 

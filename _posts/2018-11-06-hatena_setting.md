@@ -15,13 +15,13 @@ tags: [日常,はてなブログ,IT]
 <h2>主な設定方針</h2>
 
 <ul>
-<li>無料アカウントだけど広告（<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google%A5%A2%A5%C9%A5%BB%A5%F3%A5%B9">Googleアドセンス</a>）をいい感じ（記事下とか）に出したい
+<li>無料アカウントだけど広告（Googleアドセンス）をいい感じ（記事下とか）に出したい
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>でも出したい</li>
+<li>スマホでも出したい</li>
 </ul>
 </li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>タグマネージャーで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A5%C9%A5%BB%A5%F3%A5%B9">アドセンス</a>やアナリティクスは管理する
+<li>googleタグマネージャーでアドセンスやアナリティクスは管理する
 
 <ul>
 <li>アカウント作成方法も忘れるのでメモっておきたい</li>
@@ -30,7 +30,7 @@ tags: [日常,はてなブログ,IT]
 </ul>
 
 
-<h2><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A4%CA%A5%D6%A5%ED%A5%B0">はてなブログ</a>の設定</h2>
+<h2>はてなブログの設定</h2>
 
 <ul>
 <li><p>デザイン</p>
@@ -51,7 +51,7 @@ tags: [日常,はてなブログ,IT]
 <li>モジュールを追加でHTMLを選択
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>タグマネージャーのbody内タグを追加（タイトルは『GTMbody内』にした）</li>
+<li>googleタグマネージャーのbody内タグを追加（タイトルは『GTMbody内』にした）</li>
 </ul>
 </li>
 </ul>
@@ -63,14 +63,14 @@ tags: [日常,はてなブログ,IT]
 
 <ul>
 <li>広告表示</li>
-<li>タイトルのリンクを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A1%BC%A5%AB%A5%A4%A5%D6">アーカイブ</a>に変更</li>
+<li>タイトルのリンクをアーカイブに変更</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A1%BC%A5%C8%A5%D5%A5%A9%A5%F3">スマートフォン</a></p>
+<li><p>スマートフォン</p>
 
 <ul>
 <li>詳細設定
@@ -95,8 +95,8 @@ tags: [日常,はてなブログ,IT]
 <li>※2をコピペ
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>タグマネージャーのhead内タグ</li>
-<li>トップページへのアクセスは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A2%A1%BC%A5%AB%A5%A4%A5%D6">アーカイブ</a>へリダイレクト（※現在はやめた）</li>
+<li>googleタグマネージャーのhead内タグ</li>
+<li>トップページへのアクセスはアーカイブへリダイレクト（※現在はやめた）</li>
 </ul>
 </li>
 </ul>
@@ -104,7 +104,7 @@ tags: [日常,はてなブログ,IT]
 <li>解析ツール
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google%20Search%20Console">Google Search Console</a></li>
+<li>Google Search Console</li>
 </ul>
 </li>
 </ul>
@@ -169,9 +169,9 @@ j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.
 &lt;!-- End Google Tag Manager --&gt;</pre>
 
 
-<h2><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>タグマネージャー作成</h2>
+<h2>googleタグマネージャー作成</h2>
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>タグマネージャーで新しいアカウントを作成して埋め込むタグを取得</h3>
+<h3>googleタグマネージャーで新しいアカウントを作成して埋め込むタグを取得</h3>
 
 <p>body内</p>
 
@@ -184,23 +184,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>アナリティクス</h3>
+<h3>googleアナリティクス</h3>
 
 <ul>
 <li>新しいタグ作成
 
 <ul>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>アナリティクス側でト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C3%A5%AD%A5%F3%A5%B0">ラッキング</a>IDを取得しておく</li>
+<li>googleアナリティクス側でトラッキングIDを取得しておく</li>
 </ul>
 </li>
 </ul>
 
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/google%A5%A2%A5%C9%A5%BB%A5%F3%A5%B9">googleアドセンス</a>　タグ</h3>
+<h3>googleアドセンス　タグ</h3>
 
 <p>新規作成</p>
 
-<h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>サーチコンソール</h3>
+<h3>googleサーチコンソール</h3>
 
 <p>新規プロパティ作成</p>
 

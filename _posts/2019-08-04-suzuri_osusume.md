@@ -27,7 +27,7 @@ tags: [SUZURI,日常,オリジナルグッズ,オリジナルTシャツ,ITシャ
 
 <p>それだけでオリジナルグッズが作れちゃうんです。</p>
 
-<p>しかもTシャツだけじゃなく、パーカーやマグ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%AB%A5%C3%A5%D7">カップ</a>やスタイやステッカーなどなど、様々なアイテムが作れます。</p>
+<p>しかもTシャツだけじゃなく、パーカーやマグカップやスタイやステッカーなどなど、様々なアイテムが作れます。</p>
 
 <p>作品はインターネット上に公開されて、そこから買うだけ。
 もし誰にも見られたくないよーって人はさっと公開してパッと買ってささっと削除しちゃえばいいでしょう。</p>
@@ -36,9 +36,9 @@ tags: [SUZURI,日常,オリジナルグッズ,オリジナルTシャツ,ITシャ
 
 <p>ぜひ使ってみてください。</p>
 
-<h2><a class="keyword" href="http://d.hatena.ne.jp/keyword/iPhone%A5%A2%A5%D7%A5%EA">iPhoneアプリ</a>もあるよ！</h2>
+<h2>iPhoneアプリもあるよ！</h2>
 
-<p>aomaはSUZURIを<a class="keyword" href="http://d.hatena.ne.jp/keyword/iPhone%A5%A2%A5%D7%A5%EA">iPhoneアプリ</a>から利用しています。</p>
+<p>aomaはSUZURIをiPhoneアプリから利用しています。</p>
 
 <p><a href="https://suzuri.jp/aoma">エンジニア専用ショップ「ITシャツ」</a>を運営していますので、是非来て見て<del>触って</del>購入ください！</p>
 

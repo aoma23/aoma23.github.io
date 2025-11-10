@@ -31,5 +31,5 @@ tags: [IT,スプレッドシート,重複の削除]
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190517/20190517184940.png' | relative_url }}" alt="f:id:aoma23:20190517184940p:plain" title="f:id:aoma23:20190517184940p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
-<p>とっても簡単。ありがとう<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%EC%A5%C3%A5%C9%A5%B7%A1%BC%A5%C8">スプレッドシート</a>！</p>
+<p>とっても簡単。ありがとうスプレッドシート！</p>
 

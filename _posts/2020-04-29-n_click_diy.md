@@ -7,16 +7,16 @@ tags: [日常,DIY,ニトリ,Nクリック]
 ---
 <p>おはこんばんちはaomaです。日曜大工ならぬ祝日大工しましたよー！</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%C8%A5%EA">ニトリ</a>のNクリック！ネジいらずでプラモデルのように組み立てられてカンタン時短！最高ですよね！</p>
+<p>ニトリのNクリック！ネジいらずでプラモデルのように組み立てられてカンタン時短！最高ですよね！</p>
 
-<p>今日はこのNクリックを<a class="keyword" href="http://d.hatena.ne.jp/keyword/DIY">DIY</a>でアレンジしましたー！<br />
+<p>今日はこのNクリックをDIYでアレンジしましたー！<br />
 作品がこちら！</p>
 
 <p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20200429214209" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20200429/20200429214209.jpg' | relative_url }}" alt="f:id:aoma23:20200429214209j:image" title="f:id:aoma23:20200429214209j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>お分かりいただけただろうか。。</p>
 
-<p>そう！わかったあなたは相当な<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%C8%A5%EA">ニトリ</a>マニアですね！
+<p>そう！わかったあなたは相当なニトリマニアですね！
 実はNクリックは縦置きだと棚板の位置はかなりカスタマイズ可能なんですが、横置きにすると真ん中にしか追加できないんです！</p>
 
 <p>商品ページの画像より「※横置きの場合、棚板の位置は調節できません。」</p>
@@ -27,7 +27,7 @@ tags: [日常,DIY,ニトリ,Nクリック]
 ※追加棚板の角から13.9cm、2.8cmの位置に穴をあけました。</p>
 
 <p>かなり良い出来で満足！とはいえ穴開けは失敗リスクがあって恐かったー。もう一回やれと言われても自信ないw<br />
-ということで<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CB%A5%C8%A5%EA">ニトリ</a>さん！これはデフォルトで対応して欲しいです！収納の幅が広がる！ユーザーは求めてますよ！是非お願いします！</p>
+ということでニトリさん！これはデフォルトで対応して欲しいです！収納の幅が広がる！ユーザーは求めてますよ！是非お願いします！</p>
 
 <p>※ちなみに縦置きでもNインボックスのレギュラーとハーフサイズはいい感じに入らない。。</p>
 

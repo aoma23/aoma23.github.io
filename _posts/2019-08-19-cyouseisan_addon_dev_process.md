@@ -5,7 +5,7 @@ slug: "cyouseisan_addon_dev_process"
 category: blog
 tags: [IT,開発,ブックマークレット,調整さん]
 ---
-<p>先日、調整さんのデフォルト開始時間を変更する<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>を作りました。</p>
+<p>先日、調整さんのデフォルト開始時間を変更するブックマークレットを作りました。</p>
 
 <p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Faoma23.hatenablog.jp%2Fentry%2Fcyouseisan_js" title="調整さんのデフォルト開始時間を変更するブックマークレットを作ったよ！ - aoma blog" class="embed-card embed-blogcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 190px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="https://aoma23.hatenablog.jp/entry/cyouseisan_js">aoma23.hatenablog.jp</a></cite></p>
 
@@ -30,7 +30,7 @@ tags: [IT,開発,ブックマークレット,調整さん]
 
 <p>みたいな感じです。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/chrome">chrome</a>のアドオンにするか迷いましたが、お手軽にjsの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>でいいやーと。</p>
+<p>chromeのアドオンにするか迷いましたが、お手軽にjsのブックマークレットでいいやーと。</p>
 
 <h3>調査フェーズ</h3>
 
@@ -65,7 +65,7 @@ tags: [IT,開発,ブックマークレット,調整さん]
 
 <p>なるほどなるほどdatepickerね。<code>onSelect</code>の部分を書き換えればなんとかなりそう。</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B0%A5%B0%A4%EB">ググる</a>。</p>
+<p>ググる。</p>
 
 <pre class="code" data-lang="" data-unlink>datepicker( &#39;option&#39;, &#39;onSelect&#39;, function (dateText, inst) {
 
@@ -90,7 +90,7 @@ $(&#34;#datepicker&#34;).datepicker( &#39;option&#39;, &#39;onSelect&#39;, funct
 });</pre>
 
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/chrome">chrome</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C7%A5%D9%A5%ED%A5%C3%A5%D1">デベロッパ</a>ーツールを開いてConsoleにコピペして検証してみました。</p>
+<p>chromeデベロッパーツールを開いてConsoleにコピペして検証してみました。</p>
 
 <p>こんな感じ。</p>
 
@@ -99,7 +99,7 @@ $(&#34;#datepicker&#34;).datepicker( &#39;option&#39;, &#39;onSelect&#39;, funct
 <p>すると無事書き換わったぞ！！</p>
 
 <p>あとはブラッシュアップするだけ。
-即時関数にしてグロー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D0%A5%EB%A5%B9">バルス</a>コープを汚染しないように。そして調整さんへのリダイレクトを追加してみました。</p>
+即時関数にしてグローバルスコープを汚染しないように。そして調整さんへのリダイレクトを追加してみました。</p>
 
 <pre class="code" data-lang="" data-unlink>(() =&gt; {
     const url = &#39;https://chouseisan.com&#39;;
@@ -118,19 +118,19 @@ $(&#34;#datepicker&#34;).datepicker( &#39;option&#39;, &#39;onSelect&#39;, funct
 })();</pre>
 
 
-<p>これを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EF%A5%F3%A5%E9%A5%A4%A5%CA%A1%BC">ワンライナー</a>にして先頭に<code>javascript:</code>を付与したら<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>の完成です。<br/>
-<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>の<a href="https://closure-compiler.appspot.com/home">Closure Compiler</a>を使って<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EF%A5%F3%A5%E9%A5%A4%A5%CA%A1%BC">ワンライナー</a>にすると圧縮もされて便利。</p>
+<p>これをワンライナーにして先頭に<code>javascript:</code>を付与したらブックマークレットの完成です。<br/>
+Googleの<a href="https://closure-compiler.appspot.com/home">Closure Compiler</a>を使ってワンライナーにすると圧縮もされて便利。</p>
 
 <h2>デプロイ？フェーズ</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>をブックマークするのって意外とめんどうですよね。<br/>
+<p>ブックマークレットをブックマークするのって意外とめんどうですよね。<br/>
 aタグとかにしてブックマークバーにドラッグ＆ドロップする方法が一番お手軽そうだったので今回はそれにしてみました。</p>
 
 <pre class="code" data-lang="" data-unlink>&lt;a href=&#34;｛ブックマークレット｝&#34; onclick=&#34;return false&#34;&gt;ブックマーク名&lt;/a&gt;</pre>
 
 
-<p>属性値（hrefの値）を<code>"</code>で囲む必要があり、今回<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>内でダブルコーテーションを使っていたのでシングルコーテーションに置換しました。<br/>
-※<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>内容によってはダブルコーテーションじゃないといけない可能性もあると思うので、その場合は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%B9">エス</a>ケープするなり注意してくださいね。</p>
+<p>属性値（hrefの値）を<code>"</code>で囲む必要があり、今回スクリプト内でダブルコーテーションを使っていたのでシングルコーテーションに置換しました。<br/>
+※スクリプト内容によってはダブルコーテーションじゃないといけない可能性もあると思うので、その場合はエスケープするなり注意してくださいね。</p>
 
 <pre class="code" data-lang="" data-unlink>&lt;a href=&#34;javascript:(function(){if(&#39;https://chouseisan.com&#39;!=location.origin)location.href=&#39;https://chouseisan.com&#39;;else{var b=prompt(&#39;\u30c7\u30d5\u30a9\u30eb\u30c8\u958b\u59cb\u6642\u9593\u3092\u8a2d\u5b9a\u3057\u307e\u3059&#39;,&#39;19:30\uff5e&#39;);$(&#39;#datepicker&#39;).datepicker(&#39;option&#39;,&#39;onSelect&#39;,function(c,d){var a=$(&#39;#kouho&#39;).val();&#39;&#39;!==a&amp;&amp;(a+=&#39;\n&#39;);$(&#39;#kouho&#39;).val(a+c+&#39; &#39;+b)})}})();&#34; onclick=&#34;return false&#34;&gt;調整さんの開始時間変更&lt;/a&gt;</pre>
 
@@ -147,16 +147,16 @@ aタグとかにしてブックマークバーにドラッグ＆ドロップす�
 <h2>今後やりたいこと</h2>
 
 <ul>
-<li>外部jsファイルを読み込む<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>の記述方法もあるのでそっちのほうがよさそう
+<li>外部jsファイルを読み込むブックマークレットの記述方法もあるのでそっちのほうがよさそう
 
 <ul>
 <li>今後バージョンアップとかしたときに再配布しなくてよくなる</li>
 </ul>
 </li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>メーカーみたいなものを作りたい
+<li>ブックマークレットメーカーみたいなものを作りたい
 
 <ul>
-<li>お手軽に<a class="keyword" href="http://d.hatena.ne.jp/keyword/JavaScript">JavaScript</a>を<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D6%A5%C3%A5%AF%A5%DE%A1%BC%A5%AF%A5%EC%A5%C3%A5%C8">ブックマークレット</a>にできるように</li>
+<li>お手軽にJavaScriptをブックマークレットにできるように</li>
 </ul>
 </li>
 </ul>

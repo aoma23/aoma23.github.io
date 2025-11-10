@@ -7,7 +7,7 @@ tags: [IT,MicrosoftFlow,IFTTT,Slack]
 ---
 <h2>やりたいこと</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Microsoft">Microsoft</a> FlowでSlackのチャネルではなく、ユーザーにダイレクトメッセージを送信したい。</p>
+<p>Microsoft FlowでSlackのチャネルではなく、ユーザーにダイレクトメッセージを送信したい。</p>
 
 <h2>事象</h2>
 

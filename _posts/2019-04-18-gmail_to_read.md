@@ -17,7 +17,7 @@ tags: [Gmail,IT]
 
 <h2>大量すぎてエラーになる...</h2>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>の画面からすべて既読にしようとしたところ、大量過ぎてエラーに。。</p>
+<p>Gmailの画面からすべて既読にしようとしたところ、大量過ぎてエラーに。。</p>
 
 <p><figure class="figure-image figure-image-fotolife" title="大量すぎてエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417142323.png' | relative_url }}" alt="f:id:aoma23:20190417142323p:plain" title="f:id:aoma23:20190417142323p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>大量すぎてエラーになる</figcaption></figure></p>
 
@@ -29,9 +29,9 @@ tags: [Gmail,IT]
 <h2>GASで既読にする</h2>
 
 <p>未読のまま放置したくない！（今更ｗ）どうしても既読にしたい！
-と思い悩んでいたところ、先程のページにGASでやっちゃえばいいじゃん！という回答があったので、参考に<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>を組みました。</p>
+と思い悩んでいたところ、先程のページにGASでやっちゃえばいいじゃん！という回答があったので、参考にスクリプトを組みました。</p>
 
-<p>下記を<a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a> app scriptにコピペして実行すればすべて既読にできます！（時間はかかりますが）</p>
+<p>下記をgoogle app scriptにコピペして実行すればすべて既読にできます！（時間はかかりますが）</p>
 
 <pre class="code" data-lang="" data-unlink>function toRead() {
 
@@ -65,7 +65,7 @@ tags: [Gmail,IT]
 
 <p>ただし、GmailApp.searchが<a href="https://developers.google.com/apps-script/guides/services/quotas">1日に取得できる上限</a>（契約により20000または50000）があるので、上限を超えるほど大量な場合は明日また実行してください。（cron登録しとく手もありますね）</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="1日にAPIで取得できる上限を超えるとエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417145334.png' | relative_url }}" alt="f:id:aoma23:20190417145334p:plain" title="f:id:aoma23:20190417145334p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>1日に<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>で取得できる上限を超えるとエラーになる</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="1日にAPIで取得できる上限を超えるとエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417145334.png' | relative_url }}" alt="f:id:aoma23:20190417145334p:plain" title="f:id:aoma23:20190417145334p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>1日にAPIで取得できる上限を超えるとエラーになる</figcaption></figure></p>
 
-<p>それではまた！よければ読者登録！<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A5%D6">はてブ</a>！お願いします！</p>
+<p>それではまた！よければ読者登録！はてブ！お願いします！</p>
 

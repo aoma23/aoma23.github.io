@@ -11,13 +11,13 @@ tags: [IT,Firebase,GitHub,Maday]
 プラットフォームはFirebaseです！<br />
 ただここでひとつ問題がありまして、Firebase使ったことないんですよね。。。</p>
 
-<p>この物語はそんなaomaがはじめてのFirebaseに挑む壮大なアクションアド<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D9%A5%F3%A5%C1%A5%E3%A1%BC">ベンチャー</a>である！第一話！</p>
+<p>この物語はそんなaomaがはじめてのFirebaseに挑む壮大なアクションアドベンチャーである！第一話！</p>
 
 <h2>第一話の内容</h2>
 
 <ul>
 <li>Firebaseをとりあえず構築してブラウザでアクセスできるようになる</li>
-<li>Firebaseのソースを<a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>で管理できるようになる</li>
+<li>FirebaseのソースをGitHubで管理できるようになる</li>
 <li>途中様々な困難（エラー）に出会うが、記録が残されているのでアナタの助けになるかもしれない...</li>
 </ul>
 
@@ -36,15 +36,15 @@ tags: [IT,Firebase,GitHub,Maday]
 
 <p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="eu" dir="ltr">gogo!! <a href="https://t.co/U3fh8igcPC">pic.twitter.com/U3fh8igcPC</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248973604382887942?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ふう。。（迷子）<br><br>bodyタグの中にコピペしろ言われたけど、どうすればいい？<br>サンプルおとすべき？一から作るべき？<br>とりあえず<a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>に<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>作る？どうしよかな。</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248976214359859201?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ふう。。（迷子）<br><br>bodyタグの中にコピペしろ言われたけど、どうすればいい？<br>サンプルおとすべき？一から作るべき？<br>とりあえずGitHubにリポジトリ作る？どうしよかな。</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248976214359859201?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">とりあえず無視して、<br>次のFirebase <a class="keyword" href="http://d.hatena.ne.jp/keyword/CLI">CLI</a> のインストールいってみるか <a href="https://t.co/ibfACOUXRu">pic.twitter.com/ibfACOUXRu</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248977939900710913?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">とりあえず無視して、<br>次のFirebase CLI のインストールいってみるか <a href="https://t.co/ibfACOUXRu">pic.twitter.com/ibfACOUXRu</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248977939900710913?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">プライベー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A5%EA%A5%DD%A5%B8">トリポジ</a>トリ作った。<a class="keyword" href="http://d.hatena.ne.jp/keyword/SSH">SSH</a>登録してなかったのでこちらを参考に進める。いいQiitaです。<a href="https://t.co/FtYosgZbrV">https://t.co/FtYosgZbrV</a> <a href="https://t.co/JZorO8BmHw">pic.twitter.com/JZorO8BmHw</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248979721892724736?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">プライベートリポジトリ作った。SSH登録してなかったのでこちらを参考に進める。いいQiitaです。<a href="https://t.co/FtYosgZbrV">https://t.co/FtYosgZbrV</a> <a href="https://t.co/JZorO8BmHw">pic.twitter.com/JZorO8BmHw</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248979721892724736?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">なんだかよさげ。<br><br><a class="keyword" href="http://d.hatena.ne.jp/keyword/Github">Github</a> Actionsを使ってfirebaseへデプロイする <a href="https://t.co/1qIOUxttWV">https://t.co/1qIOUxttWV</a> <a href="https://twitter.com/hashtag/Qiita?src=hash&amp;ref_src=twsrc%5Etfw">#Qiita</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248976720708825088?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">なんだかよさげ。<br><br>Github Actionsを使ってfirebaseへデプロイする <a href="https://t.co/1qIOUxttWV">https://t.co/1qIOUxttWV</a> <a href="https://twitter.com/hashtag/Qiita?src=hash&amp;ref_src=twsrc%5Etfw">#Qiita</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1248976720708825088?ref_src=twsrc%5Etfw">2020年4月11日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">一昨日からハマってたcloneできない件、ブログ書きました！ <a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash&amp;ref_src=twsrc%5Etfw">#はてなブログ</a><br>複数の<a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>アカウント運用で片方のプライベー<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%C8%A5%EA%A5%DD%A5%B8">トリポジ</a>トリをcloneできなくて困った話 - aoma blog<a href="https://t.co/JzccXI0m4f">https://t.co/JzccXI0m4f</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253288128409829377?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">一昨日からハマってたcloneできない件、ブログ書きました！ <a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%A6%E3%81%AA%E3%83%96%E3%83%AD%E3%82%B0?src=hash&amp;ref_src=twsrc%5Etfw">#はてなブログ</a><br>複数のGitHubアカウント運用で片方のプライベートリポジトリをcloneできなくて困った話 - aoma blog<a href="https://t.co/JzccXI0m4f">https://t.co/JzccXI0m4f</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253288128409829377?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
 <p>clone</p>
 
@@ -82,15 +82,15 @@ user.email=51367901+aoma23@users.noreply.github.com
 url.github_aoma23.insteadof=git@github.com</pre>
 
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">% npm install -g firebase-tools        <br><a class="keyword" href="http://d.hatena.ne.jp/keyword/zsh">zsh</a>: command not found: npm<br><br>おお、、、</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253337769893494785?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="en" dir="ltr">% npm install -g firebase-tools        <br>zsh: command not found: npm<br><br>おお、、、</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253337769893494785?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">あらためてnpmをインストールするよ！<br><br>&gt; <a class="keyword" href="http://d.hatena.ne.jp/keyword/mac">mac</a>にNode.jsのインストールを行えば、npmも一緒にインストールすることができます。<br>&gt; <a href="https://t.co/BbTSvpxFLx">https://t.co/BbTSvpxFLx</a><br><br>へえ。。nodeをインストールするよ！！</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253340097140756481?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">あらためてnpmをインストールするよ！<br><br>&gt; macにNode.jsのインストールを行えば、npmも一緒にインストールすることができます。<br>&gt; <a href="https://t.co/BbTSvpxFLx">https://t.co/BbTSvpxFLx</a><br><br>へえ。。nodeをインストールするよ！！</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253340097140756481?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
 <pre class="code" data-lang="" data-unlink>% node -v
 v12.16.2</pre>
 
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">エラー変わらんやないかーい<br>npm ERR! Error: EACCES: permission denied, <a class="keyword" href="http://d.hatena.ne.jp/keyword/access">access</a> &#39;/usr/local/lib/node_modules&#39;<br><br>これ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D1%A1%BC%A5%DF%A5%C3%A5%B7%A5%E7%A5%F3">パーミッション</a>変えていいの？っていうかみんなこの作業してるのかな？</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253344917687959555?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">エラー変わらんやないかーい<br>npm ERR! Error: EACCES: permission denied, access &#39;/usr/local/lib/node_modules&#39;<br><br>これパーミッション変えていいの？っていうかみんなこの作業してるのかな？</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253344917687959555?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
 <p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">ふむふむ<a href="https://t.co/KqflhpC6rs">https://t.co/KqflhpC6rs</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1253345651657543680?ref_src=twsrc%5Etfw">2020年4月23日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
@@ -109,7 +109,7 @@ npm WARN deprecated request@2.88.2: request has been deprecated, see https://git
 added 532 packages from 357 contributors in 23.914s</pre>
 
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>にlogin</p>
+<p>googleにlogin</p>
 
 <pre class="code" data-lang="" data-unlink>% firebase login</pre>
 
@@ -142,7 +142,7 @@ Error: Cloud resource location is not set for this project but the operation you
 
 <p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">全選択して再々挑戦！！ <a href="https://t.co/pEhtAxGjVK">pic.twitter.com/pEhtAxGjVK</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1254408148443521024?ref_src=twsrc%5Etfw">2020年4月26日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
-<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr"><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%A8%A5%DF%A5%E5%A5%EC%A1%BC%A5%BF%A1%BC">エミュレーター</a>よくわからんからとりあえずスキップするか。</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1254410757854261254?ref_src=twsrc%5Etfw">2020年4月26日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
+<p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">エミュレーターよくわからんからとりあえずスキップするか。</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1254410757854261254?ref_src=twsrc%5Etfw">2020年4月26日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 
 <p>initコマンドのメモ</p>
 
@@ -242,7 +242,7 @@ i  Writing gitignore file to .gitignore...
 </pre>
 
 
-<p>とりあえずここまでを<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>にコミット！</p>
+<p>とりあえずここまでをリポジトリにコミット！</p>
 
 <p><blockquote data-conversation="none" class="twitter-tweet" data-lang="ja"><p lang="ja" dir="ltr">これにならってfirebase serveしてみた！<br>画面出たよー！<a href="https://t.co/xXO5e6Fa4t">https://t.co/xXO5e6Fa4t</a></p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1254415263346257921?ref_src=twsrc%5Etfw">2020年4月26日</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </p>
 

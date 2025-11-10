@@ -9,5 +9,5 @@ tags: [IT,Laravel,VSCode]
 
 <p>Controllerから<code>Ctrl + クリック</code>でbladeファイルが開けるようになります！</p>
 
-<p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Visual%20Studio%20Code">Visual Studio Code</a>使いの人は是非！</p>
+<p>Visual Studio Code使いの人は是非！</p>
 

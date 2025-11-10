@@ -29,7 +29,7 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 
 <h2>コンビニで年賀状印刷は怖くない！とっても簡単！</h2>
 
-<p>私自身、毎年年賀状印刷で悩んでいたのですが、去年初めて「コンビニで年賀状2018」という<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%DE%A5%DB">スマホ</a>アプリを使ったところ、驚くほど簡単に年賀状を作ることができました！</p>
+<p>私自身、毎年年賀状印刷で悩んでいたのですが、去年初めて「コンビニで年賀状2018」というスマホアプリを使ったところ、驚くほど簡単に年賀状を作ることができました！</p>
 
 <p>今年も「コンビニで年賀状2019」が出ていたので紹介します！</p>
 
@@ -39,15 +39,15 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 
 <p><iframe src="https://hatenablog-parts.com/embed?url=https%3A%2F%2Fcvs.net-nengajo.jp" title="【2019年亥年版】コンビニで年賀状™2019‐セブンイレブンでハガキに印刷！" class="embed-card embed-webcard" scrolling="no" frameborder="0" style="display: block; width: 100%; height: 155px; max-width: 500px; margin: 10px 0px;"></iframe><cite class="hatena-citation"><a href="https://cvs.net-nengajo.jp">cvs.net-nengajo.jp</a></cite></p>
 
-<p>このアプリは<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>のマルチ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%D4%A1%BC%B5%A1">コピー機</a>専用なので、お近くの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>に行きましょう！</p>
+<p>このアプリはセブンイレブンのマルチコピー機専用なので、お近くのセブンイレブンに行きましょう！</p>
 
 <p>使い方もわかりやすく載っているのですが、おおまかに下記のような流れです。</p>
 
 <ol>
 <li>デザインを決める</li>
 <li>年賀ハガキを用意（インクジェット紙はNG）</li>
-<li><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>に行く</li>
-<li>マルチ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%D4%A1%BC%B5%A1">コピー機</a>で印刷</li>
+<li>セブンイレブンに行く</li>
+<li>マルチコピー機で印刷</li>
 </ol>
 
 
@@ -87,22 +87,22 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 
 <h3>2. 年賀はがきを用意</h3>
 
-<p>必要な枚数だけ年賀はがきを購入ください。持込可なのでどこで買ってもオッケーです。<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>でも購入可能です。</p>
+<p>必要な枚数だけ年賀はがきを購入ください。持込可なのでどこで買ってもオッケーです。セブンイレブンでも購入可能です。</p>
 
-<p>注意点としてはマルチ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%D4%A1%BC%B5%A1">コピー機</a>が普通紙のみ対応のため<strong>インクジェット紙の年賀はがきは購入しないでください。</strong></p>
+<p>注意点としてはマルチコピー機が普通紙のみ対応のため<strong>インクジェット紙の年賀はがきは購入しないでください。</strong></p>
 
 <p>デザインに写真を入れている方も多いと思いますが、普通紙でも問題なく綺麗な仕上がりになりますのでご安心を！</p>
 
-<h3>3. <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>に行く</h3>
+<h3>3. セブンイレブンに行く</h3>
 
-<p>『コンビニで年賀状』は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>専用アプリです。
-お近くの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%BB%A5%D6%A5%F3%A5%A4%A5%EC%A5%D6%A5%F3">セブンイレブン</a>へGO!</p>
+<p>『コンビニで年賀状』はセブンイレブン専用アプリです。
+お近くのセブンイレブンへGO!</p>
 
-<h3>4. マルチ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%D4%A1%BC%B5%A1">コピー機</a>で印刷</h3>
+<h3>4. マルチコピー機で印刷</h3>
 
-<p>セブンに着いたらマルチ<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B3%A5%D4%A1%BC%B5%A1">コピー機</a>へ向かいましょう！</p>
+<p>セブンに着いたらマルチコピー機へ向かいましょう！</p>
 
-<p>プリント→<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CD%A5%C3%A5%C8%A5%D7%A5%EA%A5%F3%A5%C8">ネットプリント</a>を選びます。</p>
+<p>プリント→ネットプリントを選びます。</p>
 
 <div class="images-row mceNonEditable">
 <span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222010449" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222010449.jpg' | relative_url }}" alt="f:id:aoma23:20181222010449j:image" title="f:id:aoma23:20181222010449j:image" class="hatena-fotolife" itemprop="image"></a></span>
@@ -135,7 +135,7 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 
 <p>１つのプリント予約番号で30枚までしか印刷できないという制約があるので、31枚以上必要な方は再度アプリを起動し予約し直せばOKです！</p>
 
-<p>印刷が完了したら備え付けハガキを戻すのとおつり（<a class="keyword" href="http://d.hatena.ne.jp/keyword/nanaco">nanaco</a>）をお忘れなく！</p>
+<p>印刷が完了したら備え付けハガキを戻すのとおつり（nanaco）をお忘れなく！</p>
 
 <h2>料金</h2>
 
