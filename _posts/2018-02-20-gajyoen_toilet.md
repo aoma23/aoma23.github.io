@@ -17,13 +17,13 @@ tags: [日常,トイレ]
 
 <p>まずは目黒雅叙園の中！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20180220190631" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20180220/20180220190631.jpg' | relative_url }}" alt="f:id:aoma23:20180220190631j:image" title="f:id:aoma23:20180220190631j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20180220/20180220190631.jpg' | relative_url }}" alt="f:id:aoma23:20180220190631j:image" title="f:id:aoma23:20180220190631j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><span style="font-size: 80%;"> 相変わらずがじょがじょしている... </span></p>
 
 <p>そしてこちらが男子トイレ！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20180220190809" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20180220/20180220190809.jpg' | relative_url }}" alt="f:id:aoma23:20180220190809j:image" title="f:id:aoma23:20180220190809j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20180220/20180220190809.jpg' | relative_url }}" alt="f:id:aoma23:20180220190809j:image" title="f:id:aoma23:20180220190809j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><span style="font-size: 80%;"> トイレもがじょがじょしている... </span></p>
 

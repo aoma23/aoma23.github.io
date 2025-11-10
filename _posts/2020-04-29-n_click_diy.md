@@ -12,7 +12,7 @@ tags: [日常,DIY,ニトリ,Nクリック]
 <p>今日はこのNクリックをDIYでアレンジしましたー！<br />
 作品がこちら！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20200429214209" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20200429/20200429214209.jpg' | relative_url }}" alt="f:id:aoma23:20200429214209j:image" title="f:id:aoma23:20200429214209j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200429/20200429214209.jpg' | relative_url }}" alt="f:id:aoma23:20200429214209j:image" title="f:id:aoma23:20200429214209j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>お分かりいただけただろうか。。</p>
 
@@ -21,7 +21,7 @@ tags: [日常,DIY,ニトリ,Nクリック]
 
 <p>商品ページの画像より「※横置きの場合、棚板の位置は調節できません。」</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20200429214538" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20200429/20200429214538.jpg' | relative_url }}" alt="f:id:aoma23:20200429214538j:image" title="f:id:aoma23:20200429214538j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200429/20200429214538.jpg' | relative_url }}" alt="f:id:aoma23:20200429214538j:image" title="f:id:aoma23:20200429214538j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>これは不便！ということで電動ドリルで棚ダボ用の穴を開け、Nインボックスのレギュラーとハーフサイズ（写真の白いプラスチックの箱）が横置きでいい感じに入るようにしました！<br />
 ※追加棚板の角から13.9cm、2.8cmの位置に穴をあけました。</p>

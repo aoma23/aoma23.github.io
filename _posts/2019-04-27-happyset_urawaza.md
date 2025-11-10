@@ -10,7 +10,7 @@ tags: [マクドナルド,ハッピーセット,日常,トミカ]
 <p>いまハッピーセットのおもちゃはトミカです！
 昨日から第2弾がスタートしていますね！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190427190034" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190427/20190427190034.jpg' | relative_url }}" alt="f:id:aoma23:20190427190034j:image" title="f:id:aoma23:20190427190034j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190427/20190427190034.jpg' | relative_url }}" alt="f:id:aoma23:20190427190034j:image" title="f:id:aoma23:20190427190034j:image" class="hatena-fotolife" itemprop="image"></span>
 <a href="http://www.mcdonalds.co.jp/family/happyset/detail01/">&#x4ECA;&#x56DE;&#x306E;&#x30CF;&#x30C3;&#x30D4;&#x30FC;&#x30BB;&#x30C3;&#x30C8; &#x304A;&#x3082;&#x3061;&#x3083;&#x7D39;&#x4ECB; | &#x30D5;&#x30A1;&#x30DF;&#x30EA;&#x30FC; | McDonald&#39;s Japan</a></p>
 
 <p>第2弾はシークレットも登場！
@@ -53,7 +53,7 @@ tags: [マクドナルド,ハッピーセット,日常,トミカ]
 
 <h2>ハッピーセットまとめ買い</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190427120114" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190427/20190427120114.jpg' | relative_url }}" alt="f:id:aoma23:20190427120114j:image" title="f:id:aoma23:20190427120114j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190427/20190427120114.jpg' | relative_url }}" alt="f:id:aoma23:20190427120114j:image" title="f:id:aoma23:20190427120114j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>念のため本日5個ハッピーセットを購入して再検証しました。
 やはり被ることなく第2弾全5種類をゲットすることができました！もちろんシークレットトミカも入ってます！</p>

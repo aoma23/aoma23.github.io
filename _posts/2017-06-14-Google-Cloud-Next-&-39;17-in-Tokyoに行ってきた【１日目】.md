@@ -94,7 +94,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="基調講演">基調講演</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171608" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171608.jpg' | relative_url }}" alt="f:id:aoma23:20170614171608j:image" title="f:id:aoma23:20170614171608j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171608.jpg' | relative_url }}" alt="f:id:aoma23:20170614171608j:image" title="f:id:aoma23:20170614171608j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3 id="Google-Cloud-シニア-バイス-プレジデントのダイアン-グリーンより">Google Cloud シニア バイス プレジデントのダイアン グリーンより</h3>
 
@@ -269,13 +269,13 @@ tags: [IT,Google,カンファレンス]
 
 <p>記載なかったので嬉しいサプライズ！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171920" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171920.jpg' | relative_url }}" alt="f:id:aoma23:20170614171920j:image" title="f:id:aoma23:20170614171920j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171920.jpg' | relative_url }}" alt="f:id:aoma23:20170614171920j:image" title="f:id:aoma23:20170614171920j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>google玉子焼きがいい感じ。</p>
 
 <h2 id="ハンズオンセッション速習-Google-Cloud-Platform-上で実現する機械学習とビッグデータ解析">【ハンズオンセッション】速習： Google Cloud Platform 上で実現する機械学習とビッグデータ解析</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171634" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171634.jpg' | relative_url }}" alt="f:id:aoma23:20170614171634j:image" title="f:id:aoma23:20170614171634j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171634.jpg' | relative_url }}" alt="f:id:aoma23:20170614171634j:image" title="f:id:aoma23:20170614171634j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3 id="機械学習とは">機械学習とは</h3>
 
@@ -303,7 +303,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="ここでしか聞けない-G-Suite-最新機能プロダクトロードマップをご紹介">ここでしか聞けない G Suite 最新機能！プロダクトロードマップをご紹介</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171818" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171818.jpg' | relative_url }}" alt="f:id:aoma23:20170614171818j:image" title="f:id:aoma23:20170614171818j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171818.jpg' | relative_url }}" alt="f:id:aoma23:20170614171818j:image" title="f:id:aoma23:20170614171818j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>開発中のため変更の可能性あり
 写真はSNSにあげたらやだよ</p>
@@ -426,7 +426,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="Google-のデータサイエンティストが語る現場で使える機械学習入門">Google のデータサイエンティストが語る現場で使える機械学習入門</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171831" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171831.jpg' | relative_url }}" alt="f:id:aoma23:20170614171831j:image" title="f:id:aoma23:20170614171831j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171831.jpg' | relative_url }}" alt="f:id:aoma23:20170614171831j:image" title="f:id:aoma23:20170614171831j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3 id="機械学習はこう動く">機械学習はこう動く</h3>
 
@@ -483,7 +483,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="Cloud-Spanner-入門--Google-のミッションクリティカルなリレーショナル-データベースを理解する">Cloud Spanner 入門 : Google のミッションクリティカルなリレーショナル データベースを理解する</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614220356" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614220356.jpg' | relative_url }}" alt="f:id:aoma23:20170614220356j:image" title="f:id:aoma23:20170614220356j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614220356.jpg' | relative_url }}" alt="f:id:aoma23:20170614220356j:image" title="f:id:aoma23:20170614220356j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>※写真撮り忘れたので途中ファミマに飲み物買いに行った時の一枚。</p>
 
@@ -560,7 +560,7 @@ INTERLEAVE IN Singer</pre>
 
 <h2 id="APIAI-と-Cloud-Speechチャットボットで実現する会話型ユーザー-エクスペリエンス">API.AI と Cloud Speech、チャットボットで実現する、会話型ユーザー エクスペリエンス</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171836" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171836.jpg' | relative_url }}" alt="f:id:aoma23:20170614171836j:image" title="f:id:aoma23:20170614171836j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170614/20170614171836.jpg' | relative_url }}" alt="f:id:aoma23:20170614171836j:image" title="f:id:aoma23:20170614171836j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3 id="会話エージェントプラットフォームが自然言語の会話の理解とそれに基づく行動を可能に">会話エージェントプラットフォームが自然言語の会話の理解と、それに基づく行動を可能に</h3>
 

@@ -17,7 +17,7 @@ tags: [日常,映画,アンパンマン]
 
 <p>ムビチケで前売券を購入するともらえるレインボーアイスポーチ。皆さんゲットしましたか？</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190628083739" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190628/20190628083739.jpg' | relative_url }}" alt="f:id:aoma23:20190628083739j:image" title="f:id:aoma23:20190628083739j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190628/20190628083739.jpg' | relative_url }}" alt="f:id:aoma23:20190628083739j:image" title="f:id:aoma23:20190628083739j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>私は残りわずかというところで何とかゲットできました！
 もっと事前に購入しておけば良かった。危ない。</p>

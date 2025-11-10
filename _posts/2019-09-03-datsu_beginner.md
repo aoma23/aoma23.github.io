@@ -21,7 +21,7 @@ tags: [運営報告,ブログ,日常,ブロガー]
 
 <p>ここ最近のアクセス数を載せておきます。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190903200800" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190903/20190903200800.jpg' | relative_url }}" alt="f:id:aoma23:20190903200800j:image" title="f:id:aoma23:20190903200800j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190903/20190903200800.jpg' | relative_url }}" alt="f:id:aoma23:20190903200800j:image" title="f:id:aoma23:20190903200800j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>平均100超えてる！マンモスうれCー！</p>
 

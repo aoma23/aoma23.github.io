@@ -7,7 +7,7 @@ tags: [IT,おもしろ雑貨,SUZURI,オリジナルTシャツ,日常,RUBY]
 ---
 <p>I LOVEシリーズ大好評につきRUBY版作りました！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190805090037" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190805/20190805090037.jpg' | relative_url }}" alt="f:id:aoma23:20190805090037j:image" title="f:id:aoma23:20190805090037j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190805/20190805090037.jpg' | relative_url }}" alt="f:id:aoma23:20190805090037j:image" title="f:id:aoma23:20190805090037j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>ハートがいい感じでしょ？笑</p>
 

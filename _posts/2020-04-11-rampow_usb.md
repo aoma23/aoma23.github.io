@@ -15,7 +15,7 @@ tags: [IT,日常,USB変換アダプタ,rampow]
 
 <p>ということで買ってみました！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20200410105438" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20200410/20200410105438.jpg' | relative_url }}" alt="f:id:aoma23:20200410105438j:image" title="f:id:aoma23:20200410105438j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200410/20200410105438.jpg' | relative_url }}" alt="f:id:aoma23:20200410105438j:image" title="f:id:aoma23:20200410105438j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>保証サービスの紙が可愛くていい感じ。<br />
 高級感もあるし普通に使えました！</p>

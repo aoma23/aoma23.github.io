@@ -16,7 +16,7 @@ tags: [IT,はてなブログ]
 
 <p>ということで我がブログも早速httpsに！と思ったら順次組でしたー残念。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20180222201319" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20180222/20180222201319.jpg' | relative_url }}" alt="f:id:aoma23:20180222201319j:image" title="f:id:aoma23:20180222201319j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20180222/20180222201319.jpg' | relative_url }}" alt="f:id:aoma23:20180222201319j:image" title="f:id:aoma23:20180222201319j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>まぁ焦らず待ちますよ。待ちましょう！それでは！</p>
 

@@ -16,7 +16,7 @@ tags: [日常,amazon,IT]
 <p>書籍ページには『サンプルを送信』と『欲しいものリストに入れる』ボタンしか見つからない...<br/>
 UIどないなってんねん！と。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181130085954" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181130/20181130085954.jpg' | relative_url }}" alt="f:id:aoma23:20181130085954j:image" title="f:id:aoma23:20181130085954j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20181130/20181130085954.jpg' | relative_url }}" alt="f:id:aoma23:20181130085954j:image" title="f:id:aoma23:20181130085954j:image" class="hatena-fotolife" itemprop="image"></span>
 こんな感じで購入ボタンがない...</p>
 
 <h2>iPhoneアプリからは購入できない仕様だった</h2>

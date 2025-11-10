@@ -17,13 +17,13 @@ tags: [IT,SeleniumIDE]
 
 <p>頑張って記録したプロジェクトを保存したんです。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181105190458" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181105/20181105190458.png' | relative_url }}" alt="f:id:aoma23:20181105190458p:image" title="f:id:aoma23:20181105190458p:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20181105/20181105190458.png' | relative_url }}" alt="f:id:aoma23:20181105190458p:image" title="f:id:aoma23:20181105190458p:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>デフォルトファイル名『d5575001-b608-44a0-b22f-3d1f2c1fc549.txt』となっていて、txt？と思ったのですがそのまま保存。</p>
 
 <p>で、プロジェクトを開くで保存したファイルを選択すると...</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181105185724" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181105/20181105185724.png' | relative_url }}" alt="f:id:aoma23:20181105185724p:image" title="f:id:aoma23:20181105185724p:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20181105/20181105185724.png' | relative_url }}" alt="f:id:aoma23:20181105185724p:image" title="f:id:aoma23:20181105185724p:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>まさかのエラー！どうなってるんだってばよ！</p>
 

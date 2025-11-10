@@ -81,8 +81,8 @@ tags: [IT,はてなブログ,日常]
 
 <p>rssページ分のソースを貼り付け</p>
 
-<pre class="code" data-lang="" data-unlink>http://f.hatena.ne.jp/【はてなID】/Hatena%20Blog/rss
-http://f.hatena.ne.jp/【はてなID】/Hatena%20Blog/rss?page=2</pre>
+<pre class="code" data-lang="" data-unlink>旧ブログRSSのURL例: `https://example.com/Hatena%20Blog/rss`
+旧ブログRSSページング: `https://example.com/Hatena%20Blog/rss?page=2`</pre>
 
 
 <p>２. grepして画像URL抽出</p>

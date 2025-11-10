@@ -23,7 +23,7 @@ tags: [カンファレンス,IT,PHP,Laravel]
 
 <p>皆様ありがとうございました！第２回も是非！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170728072127" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170728/20170728072127.jpg' | relative_url }}" alt="f:id:aoma23:20170728072127j:image" title="f:id:aoma23:20170728072127j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170728/20170728072127.jpg' | relative_url }}" alt="f:id:aoma23:20170728072127j:image" title="f:id:aoma23:20170728072127j:image" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>以下はタイトルもメモりきれてない勉強会メモです。(^^;;</p>
 
