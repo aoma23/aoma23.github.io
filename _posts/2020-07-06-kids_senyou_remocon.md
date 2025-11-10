@@ -43,13 +43,13 @@ tags: [日常,こどもちゃれんじ,キッズせんようリモコン]
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/PS4">PS4</a>単体では赤外線は使えません。ではどうしたか。
 中継機として赤外線リモコン変換機 IRKEY2 を購入しました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20200706/20200706195231.png" alt="f:id:aoma23:20200706195231p:plain" title="f:id:aoma23:20200706195231p:plain" class="hatena-fotolife" itemprop="image"></span>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200706/20200706195231.png' | relative_url }}" alt="f:id:aoma23:20200706195231p:plain" title="f:id:aoma23:20200706195231p:plain" class="hatena-fotolife" itemprop="image"></span>
 <a href="https://www.amazon.co.jp/%E3%80%90Amazon-co-jp-%E9%99%90%E5%AE%9A%E3%80%91%E3%82%BB%E3%83%B3%E3%83%81%E3%83%A5%E3%83%AA%E3%83%BC-%E8%B5%A4%E5%A4%96%E7%B7%9A%E3%83%AA%E3%83%A2%E3%82%B3%E3%83%B3%E5%A4%89%E6%8F%9B%E5%AD%A6%E7%BF%92%E6%A9%9F%E8%83%BD%E4%BB%98%E3%81%8D%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF-Centech-CT-IRKEY2_FP/dp/B07ZSH3K4B/">Amazon | &#x3010;Amazon.co.jp &#x9650;&#x5B9A;&#x3011;&#x30BB;&#x30F3;&#x30C1;&#x30E5;&#x30EA;&#x30FC; &#x8D64;&#x5916;&#x7DDA;&#x30EA;&#x30E2;&#x30B3;&#x30F3;&#x5909;&#x63DB;&#x5B66;&#x7FD2;&#x6A5F;&#x80FD;&#x4ED8;&#x304D;&#x30A2;&#x30C0;&#x30D7;&#x30BF; Centech CT-IRKEY2_FP | &#x30BB;&#x30F3;&#x30C1;&#x30E5;&#x30EA;&#x30FC; | &#x5909;&#x63DB;&#x30B3;&#x30CD;&#x30AF;&#x30BF; &#x901A;&#x8CA9;</a></p>
 
 <p>これを<a class="keyword" href="http://d.hatena.ne.jp/keyword/PS4">PS4</a>につなげます。
 <a class="keyword" href="http://d.hatena.ne.jp/keyword/PS4">PS4</a>はUSBキーボードで操作できるので、キッズせんようリモコンから発信される赤外線を上下左右と決定ボタンに割り当てることで操作できるというわけです！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20200706/20200706194828.png" alt="f:id:aoma23:20200706194828p:plain" title="f:id:aoma23:20200706194828p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200706/20200706194828.png' | relative_url }}" alt="f:id:aoma23:20200706194828p:plain" title="f:id:aoma23:20200706194828p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>ただし冒頭に記載した通り反応がワンテンポ遅れます。
 押してから1〜2秒かかるのでストレス溜まります。。こどもは待ってられない。。</p>

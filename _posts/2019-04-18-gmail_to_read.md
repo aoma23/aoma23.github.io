@@ -9,7 +9,7 @@ tags: [Gmail,IT]
 
 <p>自分に関係ないメールを未読スルーしてると大量にたまっていることありますよね！？</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="大量の未読メール"><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190417/20190417142250.png" alt="f:id:aoma23:20190417142250p:plain" title="f:id:aoma23:20190417142250p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>大量の未読メール</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="大量の未読メール"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417142250.png' | relative_url }}" alt="f:id:aoma23:20190417142250p:plain" title="f:id:aoma23:20190417142250p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>大量の未読メール</figcaption></figure></p>
 
 <p>その数30000件超え！</p>
 
@@ -19,7 +19,7 @@ tags: [Gmail,IT]
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/Gmail">Gmail</a>の画面からすべて既読にしようとしたところ、大量過ぎてエラーに。。</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="大量すぎてエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190417/20190417142323.png" alt="f:id:aoma23:20190417142323p:plain" title="f:id:aoma23:20190417142323p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>大量すぎてエラーになる</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="大量すぎてエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417142323.png' | relative_url }}" alt="f:id:aoma23:20190417142323p:plain" title="f:id:aoma23:20190417142323p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>大量すぎてエラーになる</figcaption></figure></p>
 
 <p>2000件程度なら大丈夫だったのですが、10000超えてくるとエラーになる感じですね。。
 ググってみると同じ事象にハマっている人がいました。。</p>
@@ -65,7 +65,7 @@ tags: [Gmail,IT]
 
 <p>ただし、GmailApp.searchが<a href="https://developers.google.com/apps-script/guides/services/quotas">1日に取得できる上限</a>（契約により20000または50000）があるので、上限を超えるほど大量な場合は明日また実行してください。（cron登録しとく手もありますね）</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="1日にAPIで取得できる上限を超えるとエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190417/20190417145334.png" alt="f:id:aoma23:20190417145334p:plain" title="f:id:aoma23:20190417145334p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>1日に<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>で取得できる上限を超えるとエラーになる</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="1日にAPIで取得できる上限を超えるとエラーになる"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190417/20190417145334.png' | relative_url }}" alt="f:id:aoma23:20190417145334p:plain" title="f:id:aoma23:20190417145334p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>1日に<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>で取得できる上限を超えるとエラーになる</figcaption></figure></p>
 
 <p>それではまた！よければ読者登録！<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A4%CF%A4%C6%A5%D6">はてブ</a>！お願いします！</p>
 

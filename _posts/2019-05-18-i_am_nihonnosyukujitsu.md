@@ -7,7 +7,7 @@ tags: [日常,Gmail,日本の祝日]
 ---
 <h2>現象</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190516/20190516134418.png" alt="f:id:aoma23:20190516134418p:plain" title="f:id:aoma23:20190516134418p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190516/20190516134418.png' | relative_url }}" alt="f:id:aoma23:20190516134418p:plain" title="f:id:aoma23:20190516134418p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>画像の通りなのですが、自分のアドレスを入力するとなぜか「日本の祝日」に。
 実は昔からなってたんですが、以前は直し方がわからず途中で挫折したんですよね。

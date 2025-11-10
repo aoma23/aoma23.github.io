@@ -19,19 +19,19 @@ tags: [IT,デュアルディスプレイ]
 
 <p>デスクトップで右クリック→ディスプレイの設定</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190628/20190628095612.png" alt="f:id:aoma23:20190628095612p:plain" title="f:id:aoma23:20190628095612p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190628/20190628095612.png' | relative_url }}" alt="f:id:aoma23:20190628095612p:plain" title="f:id:aoma23:20190628095612p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>2. メインにしたいほうを選択</h3>
 
 <p>メインディスプレイにしたい方をクリックします。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190628/20190628094614.png" alt="f:id:aoma23:20190628094614p:plain" title="f:id:aoma23:20190628094614p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190628/20190628094614.png' | relative_url }}" alt="f:id:aoma23:20190628094614p:plain" title="f:id:aoma23:20190628094614p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>3. メインディスプレイに設定する</h3>
 
 <p>そのまま画面下部にスクロールして、「これをメインディスプレイにする」にチェックしましょう。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190628/20190628094703.png" alt="f:id:aoma23:20190628094703p:plain" title="f:id:aoma23:20190628094703p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190628/20190628094703.png' | relative_url }}" alt="f:id:aoma23:20190628094703p:plain" title="f:id:aoma23:20190628094703p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>これで解決です！めでたしめでたし。</p>
 

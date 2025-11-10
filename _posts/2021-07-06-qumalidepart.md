@@ -61,7 +61,7 @@ tags: [日常,ライブ,クマリデパート]
 
 <p>頼む！受付のおねえさん！頼む！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20210706/20210706233617.jpg" alt="f:id:aoma23:20210706233617j:plain" width="1024" height="1023" loading="lazy" title="" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20210706/20210706233617.jpg' | relative_url }}" alt="f:id:aoma23:20210706233617j:plain" width="1024" height="1023" loading="lazy" title="" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>ゆう、ちゃん、、？（裏に書いてあった）</p>
 
@@ -174,5 +174,5 @@ MCも良かったし、とにかく良かった。<br />
 
 <p>おしまい。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20210706/20210706233911.jpg" alt="f:id:aoma23:20210706233911j:plain" width="1024" height="768" loading="lazy" title="" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20210706/20210706233911.jpg' | relative_url }}" alt="f:id:aoma23:20210706233911j:plain" width="1024" height="768" loading="lazy" title="" class="hatena-fotolife" itemprop="image"></span></p>
 

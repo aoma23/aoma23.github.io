@@ -5,7 +5,7 @@ slug: "Slackにスレッド機能が追加されてますますSlackが嫌いに
 category: blog
 tags: [slack,IT,日常]
 ---
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170708/20170708162732.png" alt="f:id:aoma23:20170708162732p:plain" title="f:id:aoma23:20170708162732p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170708/20170708162732.png' | relative_url }}" alt="f:id:aoma23:20170708162732p:plain" title="f:id:aoma23:20170708162732p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h2>はじめに</h2>
 
@@ -36,21 +36,21 @@ tags: [slack,IT,日常]
 
 <p>下記をみてください。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170708/20170708161353.png" alt="f:id:aoma23:20170708161353p:plain" title="f:id:aoma23:20170708161353p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170708/20170708161353.png' | relative_url }}" alt="f:id:aoma23:20170708161353p:plain" title="f:id:aoma23:20170708161353p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>なんの変哲もない会話ですね。
 Slackで何気ないコミュニケーションが取れる。Slack素晴らしい。</p>
 
 <p>次にこちら。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170708/20170708161438.png" alt="f:id:aoma23:20170708161438p:plain" title="f:id:aoma23:20170708161438p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170708/20170708161438.png' | relative_url }}" alt="f:id:aoma23:20170708161438p:plain" title="f:id:aoma23:20170708161438p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>おや、スレッドが立っていますね。
 回答を知るためにはスレッドを開く必要があります。（この時点ですでに面倒&hellip;）</p>
 
 <p>とはいえ仕方ないのでスレッドを見てみます。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170708/20170708162024.png" alt="f:id:aoma23:20170708162024p:plain" title="f:id:aoma23:20170708162024p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20170708/20170708162024.png' | relative_url }}" alt="f:id:aoma23:20170708162024p:plain" title="f:id:aoma23:20170708162024p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>「・・・」</p>
 

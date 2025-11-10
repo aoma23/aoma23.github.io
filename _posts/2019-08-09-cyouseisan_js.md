@@ -13,7 +13,7 @@ tags: [IT,日常,調整さん,ブックマークレット,飲み会,イベント
 
 <h2>デフォルト開始時間が変更できない</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190808/20190808185817.png" alt="f:id:aoma23:20190808185817p:plain" title="f:id:aoma23:20190808185817p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190808/20190808185817.png' | relative_url }}" alt="f:id:aoma23:20190808185817p:plain" title="f:id:aoma23:20190808185817p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>候補日をクリックしたときのデフォルト開始時間は<code>19:00～</code>となっています。<br/>
 これ候補日が3日くらいなら手動で変えるからいいんですが、たくさんあると直すのしんどい。
@@ -38,7 +38,7 @@ tags: [IT,日常,調整さん,ブックマークレット,飲み会,イベント
 </ol>
 
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190809/20190809154403.gif" alt="f:id:aoma23:20190809154403g:plain" title="f:id:aoma23:20190809154403g:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190809/20190809154403.gif' | relative_url }}" alt="f:id:aoma23:20190809154403g:plain" title="f:id:aoma23:20190809154403g:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>どうです？地味に便利でしょう？</p>
 

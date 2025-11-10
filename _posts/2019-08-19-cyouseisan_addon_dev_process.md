@@ -94,7 +94,7 @@ $(&#34;#datepicker&#34;).datepicker( &#39;option&#39;, &#39;onSelect&#39;, funct
 
 <p>こんな感じ。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190816/20190816102014.png" alt="f:id:aoma23:20190816102014p:plain" title="f:id:aoma23:20190816102014p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816102014.png' | relative_url }}" alt="f:id:aoma23:20190816102014p:plain" title="f:id:aoma23:20190816102014p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>すると無事書き換わったぞ！！</p>
 

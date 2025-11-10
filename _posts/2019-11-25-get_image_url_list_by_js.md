@@ -18,7 +18,7 @@ tags: [IT,JavaScript,スクレイピング]
 
 <p>こんな感じ。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20191125/20191125160708.png" alt="f:id:aoma23:20191125160708p:plain" title="f:id:aoma23:20191125160708p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20191125/20191125160708.png' | relative_url }}" alt="f:id:aoma23:20191125160708p:plain" title="f:id:aoma23:20191125160708p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>getAttributeで画像URLが取得できることを確認</h3>
 

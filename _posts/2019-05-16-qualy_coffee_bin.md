@@ -16,7 +16,7 @@ tags: [おもしろ雑貨,日常,ゴミ箱]
 
 <p>サイズは大中小と３つありました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190516/20190516104828.png" alt="f:id:aoma23:20190516104828p:plain" title="f:id:aoma23:20190516104828p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190516/20190516104828.png' | relative_url }}" alt="f:id:aoma23:20190516104828p:plain" title="f:id:aoma23:20190516104828p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><a href="http://www.qualydesign.com/product/detail.php?i=425">Coffee bin - Mini Coffee bin</a></p>
 
@@ -28,7 +28,7 @@ tags: [おもしろ雑貨,日常,ゴミ箱]
 
 <p>こちらも大中小と3サイズありました。大はかなりの大きさ！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190516/20190516105024.png" alt="f:id:aoma23:20190516105024p:plain" title="f:id:aoma23:20190516105024p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190516/20190516105024.png' | relative_url }}" alt="f:id:aoma23:20190516105024p:plain" title="f:id:aoma23:20190516105024p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><a href="http://www.qualydesign.com/product/detail.php?i=610">Cantainer</a></p>
 

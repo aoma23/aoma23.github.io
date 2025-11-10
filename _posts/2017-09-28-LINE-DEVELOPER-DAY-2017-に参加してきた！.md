@@ -21,19 +21,19 @@ tags: [LINE,カンファレンス,IT]
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CE%A5%D9%A5%EB%A5%C6%A5%A3">ノベルティ</a>に加え、ランチ、カフェ解放、clova抽選50名、懇親会などなど、サービスサービスー♪</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195656" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928195656.jpg" alt="f:id:aoma23:20170928195656j:image" title="f:id:aoma23:20170928195656j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190038" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190038.jpg" alt="f:id:aoma23:20170928190038j:image" title="f:id:aoma23:20170928190038j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190059" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190059.jpg" alt="f:id:aoma23:20170928190059j:image" title="f:id:aoma23:20170928190059j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190120" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190120.jpg" alt="f:id:aoma23:20170928190120j:image" title="f:id:aoma23:20170928190120j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190138" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190138.jpg" alt="f:id:aoma23:20170928190138j:image" title="f:id:aoma23:20170928190138j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190157" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190157.jpg" alt="f:id:aoma23:20170928190157j:image" title="f:id:aoma23:20170928190157j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190208" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190208.jpg" alt="f:id:aoma23:20170928190208j:image" title="f:id:aoma23:20170928190208j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190229" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190229.jpg" alt="f:id:aoma23:20170928190229j:image" title="f:id:aoma23:20170928190229j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190341" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190341.jpg" alt="f:id:aoma23:20170928190341j:image" title="f:id:aoma23:20170928190341j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190356" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190356.jpg" alt="f:id:aoma23:20170928190356j:image" title="f:id:aoma23:20170928190356j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195718" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928195718.jpg" alt="f:id:aoma23:20170928195718j:image" title="f:id:aoma23:20170928195718j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195731" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928195731.jpg" alt="f:id:aoma23:20170928195731j:image" title="f:id:aoma23:20170928195731j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195738" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928195738.jpg" alt="f:id:aoma23:20170928195738j:image" title="f:id:aoma23:20170928195738j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195656" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928195656.jpg' | relative_url }}" alt="f:id:aoma23:20170928195656j:image" title="f:id:aoma23:20170928195656j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190038" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190038.jpg' | relative_url }}" alt="f:id:aoma23:20170928190038j:image" title="f:id:aoma23:20170928190038j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190059" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190059.jpg' | relative_url }}" alt="f:id:aoma23:20170928190059j:image" title="f:id:aoma23:20170928190059j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190120" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190120.jpg' | relative_url }}" alt="f:id:aoma23:20170928190120j:image" title="f:id:aoma23:20170928190120j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190138" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190138.jpg' | relative_url }}" alt="f:id:aoma23:20170928190138j:image" title="f:id:aoma23:20170928190138j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190157" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190157.jpg' | relative_url }}" alt="f:id:aoma23:20170928190157j:image" title="f:id:aoma23:20170928190157j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190208" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190208.jpg' | relative_url }}" alt="f:id:aoma23:20170928190208j:image" title="f:id:aoma23:20170928190208j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190229" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190229.jpg' | relative_url }}" alt="f:id:aoma23:20170928190229j:image" title="f:id:aoma23:20170928190229j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190341" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190341.jpg' | relative_url }}" alt="f:id:aoma23:20170928190341j:image" title="f:id:aoma23:20170928190341j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190356" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190356.jpg' | relative_url }}" alt="f:id:aoma23:20170928190356j:image" title="f:id:aoma23:20170928190356j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195718" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928195718.jpg' | relative_url }}" alt="f:id:aoma23:20170928195718j:image" title="f:id:aoma23:20170928195718j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195731" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928195731.jpg' | relative_url }}" alt="f:id:aoma23:20170928195731j:image" title="f:id:aoma23:20170928195731j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928195738" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928195738.jpg' | relative_url }}" alt="f:id:aoma23:20170928195738j:image" title="f:id:aoma23:20170928195738j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h2>セッションメモ</h2>
 
@@ -41,7 +41,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-1 Opening Session</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928173937" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928173937.jpg" alt="f:id:aoma23:20170928173937j:image" title="f:id:aoma23:20170928173937j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928173937" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928173937.jpg' | relative_url }}" alt="f:id:aoma23:20170928173937j:image" title="f:id:aoma23:20170928173937j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>LINEの現在の全体的な話</p>
 
@@ -59,7 +59,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-2 The Technologies in Clova</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174003" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928174003.jpg" alt="f:id:aoma23:20170928174003j:image" title="f:id:aoma23:20170928174003j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174003" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928174003.jpg' | relative_url }}" alt="f:id:aoma23:20170928174003j:image" title="f:id:aoma23:20170928174003j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>Clovaについての説明</p>
 
@@ -241,7 +241,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-3 Gateboxのこれまでとこれから</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174046" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928174046.jpg" alt="f:id:aoma23:20170928174046j:image" title="f:id:aoma23:20170928174046j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174046" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928174046.jpg' | relative_url }}" alt="f:id:aoma23:20170928174046j:image" title="f:id:aoma23:20170928174046j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>Gateboxの説明と構成する技術について</p>
 
@@ -300,7 +300,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>LT LINEnotify x IoT</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190608" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190608.jpg" alt="f:id:aoma23:20170928190608j:image" title="f:id:aoma23:20170928190608j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190608" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190608.jpg' | relative_url }}" alt="f:id:aoma23:20170928190608j:image" title="f:id:aoma23:20170928190608j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>imageに対応した。</p>
 
@@ -310,7 +310,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-5 なぜLINEではウェブト<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%E9%A5%C3%A5%AD%A5%F3%A5%B0">ラッキング</a>システムがフロントエンド開発チームによって構築されたのか</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190625" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928190625.jpg" alt="f:id:aoma23:20170928190625j:image" title="f:id:aoma23:20170928190625j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928190625" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928190625.jpg' | relative_url }}" alt="f:id:aoma23:20170928190625j:image" title="f:id:aoma23:20170928190625j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>ログ情報のユーザー判別はLINE IDではなく<a class="keyword" href="http://d.hatena.ne.jp/keyword/cookie">cookie</a>データを使用している。</p>
 
@@ -318,7 +318,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-6 HBase at LINE 2017</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174134" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928174134.jpg" alt="f:id:aoma23:20170928174134j:image" title="f:id:aoma23:20170928174134j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174134" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928174134.jpg' | relative_url }}" alt="f:id:aoma23:20170928174134j:image" title="f:id:aoma23:20170928174134j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>HBaseの使用箇所とバージョンアップで苦労した話。</p>
 
@@ -361,7 +361,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-7 LINE Login - new features and mechanism</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174154" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928174154.jpg" alt="f:id:aoma23:20170928174154j:image" title="f:id:aoma23:20170928174154j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928174154" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928174154.jpg' | relative_url }}" alt="f:id:aoma23:20170928174154j:image" title="f:id:aoma23:20170928174154j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>LINE Loginの新機能紹介</p>
 
@@ -399,7 +399,7 @@ tags: [LINE,カンファレンス,IT]
 
 <h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/A-10">A-10</a> <a class="keyword" href="http://d.hatena.ne.jp/keyword/BOT">BOT</a> and the new Comfortableness</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928185517" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928185517.jpg" alt="f:id:aoma23:20170928185517j:image" title="f:id:aoma23:20170928185517j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928185517" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928185517.jpg' | relative_url }}" alt="f:id:aoma23:20170928185517j:image" title="f:id:aoma23:20170928185517j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/bot">bot</a>と<a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>の新機能について</p>
 
@@ -520,4 +520,4 @@ tags: [LINE,カンファレンス,IT]
 
 <h3>A-11 Closing Session</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928185433" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170928/20170928185433.jpg" alt="f:id:aoma23:20170928185433j:image" title="f:id:aoma23:20170928185433j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170928185433" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170928/20170928185433.jpg' | relative_url }}" alt="f:id:aoma23:20170928185433j:image" title="f:id:aoma23:20170928185433j:image" class="hatena-fotolife" itemprop="image"></a></span></p>

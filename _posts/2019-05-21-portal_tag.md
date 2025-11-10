@@ -31,13 +31,13 @@ tags: [IT,portalタグ]
 
 <p>記事の通り、<a class="keyword" href="http://d.hatena.ne.jp/keyword/Chrome">Chrome</a> Canaryをインストールして「Portals <a class="keyword" href="http://d.hatena.ne.jp/keyword/Chrome">Chrome</a>」フラグを有効化してデモページを開きます</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190521/20190521133216.png" alt="f:id:aoma23:20190521133216p:plain" title="f:id:aoma23:20190521133216p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190521/20190521133216.png' | relative_url }}" alt="f:id:aoma23:20190521133216p:plain" title="f:id:aoma23:20190521133216p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3><a class="keyword" href="http://d.hatena.ne.jp/keyword/portal">portal</a>タグを作成</h3>
 
 <p>みんな大好き<a class="keyword" href="http://d.hatena.ne.jp/keyword/Yahoo%21">Yahoo!</a>のURLを入れてボタンを押すと<a class="keyword" href="http://d.hatena.ne.jp/keyword/portal">portal</a>タグが作成されました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190521/20190521133427.png" alt="f:id:aoma23:20190521133427p:plain" title="f:id:aoma23:20190521133427p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190521/20190521133427.png' | relative_url }}" alt="f:id:aoma23:20190521133427p:plain" title="f:id:aoma23:20190521133427p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>キャプチャみたいな感じで画面下部に表示されてます。これが<a class="keyword" href="http://d.hatena.ne.jp/keyword/portal">portal</a>タグか。
 iframeと異なり中のリンク等はクリックできない感じで、ほんと画面キャプチャって感じです。</p>
@@ -46,7 +46,7 @@ iframeと異なり中のリンク等はクリックできない感じで、ほ�
 
 <p>gif動画でどうぞ。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190521/20190521134048.gif" alt="f:id:aoma23:20190521134048g:plain" title="f:id:aoma23:20190521134048g:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190521/20190521134048.gif' | relative_url }}" alt="f:id:aoma23:20190521134048g:plain" title="f:id:aoma23:20190521134048g:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>なるほど！これがシームレス画面遷移！</p>
 

@@ -15,7 +15,7 @@ tags: [IT,GitHub,Gitpod,共同開発]
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%EA%A5%DD%A5%B8%A5%C8%A5%EA">リポジトリ</a>の設定でCollaboratorsを選んでユーザーIDかメアドで招待するだけ！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190610/20190610180625.png" alt="f:id:aoma23:20190610180625p:plain" title="f:id:aoma23:20190610180625p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190610/20190610180625.png' | relative_url }}" alt="f:id:aoma23:20190610180625p:plain" title="f:id:aoma23:20190610180625p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>これだけで複数人で開発できちゃいます。</p>
 

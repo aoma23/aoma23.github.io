@@ -52,7 +52,7 @@ tags: [日常,HandBrake,DVD,リッピング]
 </ol>
 
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20210112/20210112103841.png" alt="f:id:aoma23:20210112103841p:plain" title="" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20210112/20210112103841.png' | relative_url }}" alt="f:id:aoma23:20210112103841p:plain" title="" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>あとは待つだけ！簡単！
 そして出来上がったファイルを<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a>フォトにドラッグ＆ドロップすればOK！</p>

@@ -11,7 +11,7 @@ tags: [ヨドバシ,マネーフォワード,日常,クレジットカード]
 
 <p>銀行やクレジットカード情報を登録することで自動で家計簿つけてくれて非常に便利なんですよね！まだ使ってないんですけど。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190112230528" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190112/20190112230528.jpg" alt="f:id:aoma23:20190112230528j:image" title="f:id:aoma23:20190112230528j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190112230528" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190112/20190112230528.jpg' | relative_url }}" alt="f:id:aoma23:20190112230528j:image" title="f:id:aoma23:20190112230528j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h2>ヨドバシゴールドポイントカードが連携できない。</h2>
 

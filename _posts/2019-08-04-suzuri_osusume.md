@@ -44,7 +44,7 @@ tags: [SUZURI,日常,オリジナルグッズ,オリジナルTシャツ,ITシャ
 
 <p>こんな感じのTシャツ売ってます。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190804/20190804001833.png" alt="f:id:aoma23:20190804001833p:plain" title="f:id:aoma23:20190804001833p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190804/20190804001833.png' | relative_url }}" alt="f:id:aoma23:20190804001833p:plain" title="f:id:aoma23:20190804001833p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>しかもなんと現在SUZURIのキャンペーン中で8/5の23:59:59までTシャツ1000円オフ！</p>
 

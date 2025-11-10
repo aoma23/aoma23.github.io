@@ -100,7 +100,7 @@ tags: [IT,日常,Gmail,再送,アドオン,resend,メール,日報]
 
 <p>するとこんな感じで画面右のアドオンにアイコンが追加されます！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190816/20190816193537.png" alt="f:id:aoma23:20190816193537p:plain" title="f:id:aoma23:20190816193537p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816193537.png' | relative_url }}" alt="f:id:aoma23:20190816193537p:plain" title="f:id:aoma23:20190816193537p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>初めて使うときはアクセス承認を聞かれるので承認してください。</p>
 

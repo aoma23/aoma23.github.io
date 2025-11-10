@@ -9,7 +9,7 @@ tags: [はてなブログ,日常,アイコン変更]
 
 <p>このたび<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D7%A5%ED%A5%D5%A5%A3%A1%BC%A5%EB%B2%E8%C1%FC">プロフィール画像</a>を変更しました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190602/20190602213227.png" alt="f:id:aoma23:20190602213227p:plain" title="f:id:aoma23:20190602213227p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190602/20190602213227.png' | relative_url }}" alt="f:id:aoma23:20190602213227p:plain" title="f:id:aoma23:20190602213227p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>今までFFの<a class="keyword" href="http://d.hatena.ne.jp/keyword/%C0%C4%CB%E2%C6%BB%BB%CE">青魔道士</a>でしたが、オリジナリティがないしパクリだしということで前々からアイコン変えたかったんですよね。</p>
 

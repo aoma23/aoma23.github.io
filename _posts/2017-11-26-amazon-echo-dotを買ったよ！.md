@@ -15,11 +15,11 @@ tags: [IT,日常,amazon,レビュー,スマートスピーカー]
 
 <p>箱はこんな感じ。想像以上に小さい。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000942" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20171126/20171126000942.jpg" alt="f:id:aoma23:20171126000942j:image" title="f:id:aoma23:20171126000942j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000942" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20171126/20171126000942.jpg' | relative_url }}" alt="f:id:aoma23:20171126000942j:image" title="f:id:aoma23:20171126000942j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>中身はこんなです。シンプルですね。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000946" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20171126/20171126000946.jpg" alt="f:id:aoma23:20171126000946j:image" title="f:id:aoma23:20171126000946j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000946" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20171126/20171126000946.jpg' | relative_url }}" alt="f:id:aoma23:20171126000946j:image" title="f:id:aoma23:20171126000946j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>で、さっそくセットアップ！</p>
 
@@ -31,7 +31,7 @@ tags: [IT,日常,amazon,レビュー,スマートスピーカー]
 
 <p>「アレクサ、なぐさめて！」って言ったあとの画像がこちらになります。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000948" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20171126/20171126000948.jpg" alt="f:id:aoma23:20171126000948j:image" title="f:id:aoma23:20171126000948j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20171126000948" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20171126/20171126000948.jpg' | relative_url }}" alt="f:id:aoma23:20171126000948j:image" title="f:id:aoma23:20171126000948j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>かわいい。かわいいよアレクサ！</p>
 

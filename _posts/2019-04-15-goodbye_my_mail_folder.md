@@ -5,7 +5,7 @@ slug: "goodbye_my_mail_folder"
 category: blog
 tags: [gmail,IT,メール,kaizen]
 ---
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190415/20190415101713.png" alt="f:id:aoma23:20190415101713p:plain" title="f:id:aoma23:20190415101713p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190415/20190415101713.png' | relative_url }}" alt="f:id:aoma23:20190415101713p:plain" title="f:id:aoma23:20190415101713p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h2>メールのフォルダ整理どうしてますか？</h2>
 

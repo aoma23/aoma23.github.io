@@ -60,16 +60,16 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 <p>試しにやってみたいと思います。</p>
 
 <div class="images-row mceNonEditable">
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095712" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181221/20181221095712.jpg" alt="f:id:aoma23:20181221095712j:image" title="f:id:aoma23:20181221095712j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095625" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181221/20181221095625.jpg" alt="f:id:aoma23:20181221095625j:image" title="f:id:aoma23:20181221095625j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095712" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181221/20181221095712.jpg' | relative_url }}" alt="f:id:aoma23:20181221095712j:image" title="f:id:aoma23:20181221095712j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095625" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181221/20181221095625.jpg' | relative_url }}" alt="f:id:aoma23:20181221095625j:image" title="f:id:aoma23:20181221095625j:image" class="hatena-fotolife" itemprop="image"></a></span>
 </div>
 
 
 <p>レイアウトを選んで、写真を埋め込みます。</p>
 
 <div class="images-row mceNonEditable">
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095806" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181221/20181221095806.jpg" alt="f:id:aoma23:20181221095806j:image" title="f:id:aoma23:20181221095806j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222020401" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222020401.jpg" alt="f:id:aoma23:20181222020401j:image" title="f:id:aoma23:20181222020401j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221095806" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181221/20181221095806.jpg' | relative_url }}" alt="f:id:aoma23:20181221095806j:image" title="f:id:aoma23:20181221095806j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222020401" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222020401.jpg' | relative_url }}" alt="f:id:aoma23:20181222020401j:image" title="f:id:aoma23:20181222020401j:image" class="hatena-fotolife" itemprop="image"></a></span>
 </div>
 
 
@@ -80,8 +80,8 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 <p>完成したら印刷予約をしてプリント予約番号をゲットしましょう！</p>
 
 <div class="images-row mceNonEditable">
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221091715" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181221/20181221091715.jpg" alt="f:id:aoma23:20181221091715j:image" title="f:id:aoma23:20181221091715j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221110255" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181221/20181221110255.jpg" alt="f:id:aoma23:20181221110255j:image" title="f:id:aoma23:20181221110255j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221091715" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181221/20181221091715.jpg' | relative_url }}" alt="f:id:aoma23:20181221091715j:image" title="f:id:aoma23:20181221091715j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181221110255" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181221/20181221110255.jpg' | relative_url }}" alt="f:id:aoma23:20181221110255j:image" title="f:id:aoma23:20181221110255j:image" class="hatena-fotolife" itemprop="image"></a></span>
 </div>
 
 
@@ -105,8 +105,8 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 <p>プリント→<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%CD%A5%C3%A5%C8%A5%D7%A5%EA%A5%F3%A5%C8">ネットプリント</a>を選びます。</p>
 
 <div class="images-row mceNonEditable">
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222010449" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222010449.jpg" alt="f:id:aoma23:20181222010449j:image" title="f:id:aoma23:20181222010449j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222010512" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222010512.jpg" alt="f:id:aoma23:20181222010512j:image" title="f:id:aoma23:20181222010512j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222010449" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222010449.jpg' | relative_url }}" alt="f:id:aoma23:20181222010449j:image" title="f:id:aoma23:20181222010449j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222010512" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222010512.jpg' | relative_url }}" alt="f:id:aoma23:20181222010512j:image" title="f:id:aoma23:20181222010512j:image" class="hatena-fotolife" itemprop="image"></a></span>
 </div>
 
 
@@ -118,16 +118,16 @@ tags: [年賀状,プリンター,コンビニ印刷,日常]
 下記のように丁寧な説明が画面に表示されます。</p>
 
 <div class="images-row mceNonEditable">
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012058" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222012058.jpg" alt="f:id:aoma23:20181222012058j:image" title="f:id:aoma23:20181222012058j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012124" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222012124.jpg" alt="f:id:aoma23:20181222012124j:image" title="f:id:aoma23:20181222012124j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012121" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222012121.jpg" alt="f:id:aoma23:20181222012121j:image" title="f:id:aoma23:20181222012121j:image" class="hatena-fotolife" itemprop="image"></a></span>
-<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012117" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222012117.jpg" alt="f:id:aoma23:20181222012117j:image" title="f:id:aoma23:20181222012117j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012058" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222012058.jpg' | relative_url }}" alt="f:id:aoma23:20181222012058j:image" title="f:id:aoma23:20181222012058j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012124" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222012124.jpg' | relative_url }}" alt="f:id:aoma23:20181222012124j:image" title="f:id:aoma23:20181222012124j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012121" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222012121.jpg' | relative_url }}" alt="f:id:aoma23:20181222012121j:image" title="f:id:aoma23:20181222012121j:image" class="hatena-fotolife" itemprop="image"></a></span>
+<span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222012117" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222012117.jpg' | relative_url }}" alt="f:id:aoma23:20181222012117j:image" title="f:id:aoma23:20181222012117j:image" class="hatena-fotolife" itemprop="image"></a></span>
 </div>
 
 
 <p>でも本当に開けていいの？と不安な方、『ガッ』と開けちゃいましょう！ガッと！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222013109" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20181222/20181222013109.jpg" alt="f:id:aoma23:20181222013109j:image" title="f:id:aoma23:20181222013109j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20181222013109" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20181222/20181222013109.jpg' | relative_url }}" alt="f:id:aoma23:20181222013109j:image" title="f:id:aoma23:20181222013109j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>備え付けのハガキを右側に退避させ、年賀はがきをセットします。</p>
 

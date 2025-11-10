@@ -9,7 +9,7 @@ tags: [IT,SEO,SSL]
 
 <p>そしたら何ページかインデックス除外されてる！？</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="リダイレクトによりインデックス除外されてる！！"><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190410/20190410101806.png" alt="f:id:aoma23:20190410101806p:plain" title="f:id:aoma23:20190410101806p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>リダイレクトによりインデックス除外されてる！！</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="リダイレクトによりインデックス除外されてる！！"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190410/20190410101806.png' | relative_url }}" alt="f:id:aoma23:20190410101806p:plain" title="f:id:aoma23:20190410101806p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>リダイレクトによりインデックス除外されてる！！</figcaption></figure></p>
 
 <p>リダイレクト処理なんて入れてないはずなのに、なぜリダイレクト！？</p>
 

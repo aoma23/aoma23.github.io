@@ -38,7 +38,7 @@ saveボタンを押しても一向に動いてる気配がない感じ。。</p>
 <p>一番の原因はこれだったような気がします。
 保存するファイル名に拡張子を指定してあげないと動かないらしく、<code>.gif</code>をつけたら動きました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20200309/20200309193339.png" alt="f:id:aoma23:20200309193339p:plain" title="f:id:aoma23:20200309193339p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200309/20200309193339.png' | relative_url }}" alt="f:id:aoma23:20200309193339p:plain" title="f:id:aoma23:20200309193339p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>動いて良かったー！</p>
 

@@ -94,7 +94,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="基調講演">基調講演</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171608" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171608.jpg" alt="f:id:aoma23:20170614171608j:image" title="f:id:aoma23:20170614171608j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171608" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171608.jpg' | relative_url }}" alt="f:id:aoma23:20170614171608j:image" title="f:id:aoma23:20170614171608j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h3 id="Google-Cloud-シニア-バイス-プレジデントのダイアン-グリーンより"><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a> Cloud シニア <a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D0%A5%A4%A5%B9">バイス</a> プレジデントのダイアン グリーンより</h3>
 
@@ -269,13 +269,13 @@ tags: [IT,Google,カンファレンス]
 
 <p>記載なかったので嬉しいサプライズ！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171920" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171920.jpg" alt="f:id:aoma23:20170614171920j:image" title="f:id:aoma23:20170614171920j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171920" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171920.jpg' | relative_url }}" alt="f:id:aoma23:20170614171920j:image" title="f:id:aoma23:20170614171920j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/google">google</a>玉子焼きがいい感じ。</p>
 
 <h2 id="ハンズオンセッション速習-Google-Cloud-Platform-上で実現する機械学習とビッグデータ解析">【ハンズオンセッション】速習： <a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a> Cloud Platform 上で実現する<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC">機械学習</a>と<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%D3%A5%C3%A5%B0%A5%C7%A1%BC%A5%BF">ビッグデータ</a>解析</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171634" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171634.jpg" alt="f:id:aoma23:20170614171634j:image" title="f:id:aoma23:20170614171634j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171634" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171634.jpg' | relative_url }}" alt="f:id:aoma23:20170614171634j:image" title="f:id:aoma23:20170614171634j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h3 id="機械学習とは"><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC">機械学習</a>とは</h3>
 
@@ -303,7 +303,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="ここでしか聞けない-G-Suite-最新機能プロダクトロードマップをご紹介">ここでしか聞けない G Suite 最新機能！プロダクトロードマップをご紹介</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171818" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171818.jpg" alt="f:id:aoma23:20170614171818j:image" title="f:id:aoma23:20170614171818j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171818" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171818.jpg' | relative_url }}" alt="f:id:aoma23:20170614171818j:image" title="f:id:aoma23:20170614171818j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>開発中のため変更の可能性あり
 写真は<a class="keyword" href="http://d.hatena.ne.jp/keyword/SNS">SNS</a>にあげたらやだよ</p>
@@ -426,7 +426,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="Google-のデータサイエンティストが語る現場で使える機械学習入門"><a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a> のデータサイエンティストが語る現場で使える<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC">機械学習</a>入門</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171831" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171831.jpg" alt="f:id:aoma23:20170614171831j:image" title="f:id:aoma23:20170614171831j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171831" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171831.jpg' | relative_url }}" alt="f:id:aoma23:20170614171831j:image" title="f:id:aoma23:20170614171831j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h3 id="機械学習はこう動く"><a class="keyword" href="http://d.hatena.ne.jp/keyword/%B5%A1%B3%A3%B3%D8%BD%AC">機械学習</a>はこう動く</h3>
 
@@ -483,7 +483,7 @@ tags: [IT,Google,カンファレンス]
 
 <h2 id="Cloud-Spanner-入門--Google-のミッションクリティカルなリレーショナル-データベースを理解する">Cloud Spanner 入門 : <a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a> のミッションクリティカルなリレーショナル データベースを理解する</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614220356" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614220356.jpg" alt="f:id:aoma23:20170614220356j:image" title="f:id:aoma23:20170614220356j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614220356" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614220356.jpg' | relative_url }}" alt="f:id:aoma23:20170614220356j:image" title="f:id:aoma23:20170614220356j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>※写真撮り忘れたので途中ファミマに飲み物買いに行った時の一枚。</p>
 
@@ -560,7 +560,7 @@ INTERLEAVE IN Singer</pre>
 
 <h2 id="APIAI-と-Cloud-Speechチャットボットで実現する会話型ユーザー-エクスペリエンス"><a class="keyword" href="http://d.hatena.ne.jp/keyword/API">API</a>.AI と Cloud Speech、チャットボットで実現する、会話型ユーザー エクス<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%DA%A5%EA%A5%A8">ペリエ</a>ンス</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171836" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/naoqoo23/20170614/20170614171836.jpg" alt="f:id:aoma23:20170614171836j:image" title="f:id:aoma23:20170614171836j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20170614171836" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20170614/20170614171836.jpg' | relative_url }}" alt="f:id:aoma23:20170614171836j:image" title="f:id:aoma23:20170614171836j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <h3 id="会話エージェントプラットフォームが自然言語の会話の理解とそれに基づく行動を可能に">会話エージェントプラットフォームが<a class="keyword" href="http://d.hatena.ne.jp/keyword/%BC%AB%C1%B3%B8%C0%B8%EC">自然言語</a>の会話の理解と、それに基づく行動を可能に</h3>
 

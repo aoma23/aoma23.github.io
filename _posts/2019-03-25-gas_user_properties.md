@@ -22,7 +22,7 @@ tags: [GAS,IT,環境変数]
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%AF%A5%EA%A5%D7%A5%C8">スクリプト</a>のメニューから、<br/>
 ファイル→プロジェクトのプロパティ→「ユーザープロパティ」タブ</p>
 
-<p><figure class="figure-image figure-image-fotolife" title="ユーザープロパティ"><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190325/20190325180058.png" alt="f:id:aoma23:20190325180058p:plain" title="f:id:aoma23:20190325180058p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>ユーザープロパティ</figcaption></figure></p>
+<p><figure class="figure-image figure-image-fotolife" title="ユーザープロパティ"><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190325/20190325180058.png' | relative_url }}" alt="f:id:aoma23:20190325180058p:plain" title="f:id:aoma23:20190325180058p:plain" class="hatena-fotolife" itemprop="image"></span><figcaption>ユーザープロパティ</figcaption></figure></p>
 
 <p>ここで<a class="keyword" href="http://d.hatena.ne.jp/keyword/hoge">hoge</a>=user_<a class="keyword" href="http://d.hatena.ne.jp/keyword/hoge">hoge</a>を設定します。</p>
 

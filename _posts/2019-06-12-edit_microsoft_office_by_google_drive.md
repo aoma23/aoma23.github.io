@@ -21,11 +21,11 @@ tags: [IT,日常,Googleドライブ,スプレッドシート,Excel]
 
 <h3>いつものように「<a class="keyword" href="http://d.hatena.ne.jp/keyword/Google">Google</a><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%EC%A5%C3%A5%C9%A5%B7%A1%BC%A5%C8">スプレッドシート</a>で開く」を選択</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190611/20190611132726.png" alt="f:id:aoma23:20190611132726p:plain" title="f:id:aoma23:20190611132726p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190611/20190611132726.png' | relative_url }}" alt="f:id:aoma23:20190611132726p:plain" title="f:id:aoma23:20190611132726p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>すると、、、待ってました！</h3>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190611/20190611132933.png" alt="f:id:aoma23:20190611132933p:plain" title="f:id:aoma23:20190611132933p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190611/20190611132933.png' | relative_url }}" alt="f:id:aoma23:20190611132933p:plain" title="f:id:aoma23:20190611132933p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>編集できるようになりました！のポップアップに<a class="keyword" href="http://d.hatena.ne.jp/keyword/%B4%BF%B4%EE">歓喜</a>！！</p>
 
@@ -40,20 +40,20 @@ tags: [IT,日常,Googleドライブ,スプレッドシート,Excel]
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%EC%A5%C3%A5%C9%A5%B7%A1%BC%A5%C8">スプレッドシート</a>かエクセルかどちらで保存されているかは拡張子が目印です。
 恐る恐る編集してみました。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190611/20190611133225.png" alt="f:id:aoma23:20190611133225p:plain" title="f:id:aoma23:20190611133225p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190611/20190611133225.png' | relative_url }}" alt="f:id:aoma23:20190611133225p:plain" title="f:id:aoma23:20190611133225p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>しっかり<a class="keyword" href="http://d.hatena.ne.jp/keyword/Excel">Excel</a>ファイルとして保存されてる！</h3>
 
 <h4>Before</h4>
 
 <p>以前は<a class="keyword" href="http://d.hatena.ne.jp/keyword/%A5%B9%A5%D7%A5%EC%A5%C3%A5%C9%A5%B7%A1%BC%A5%C8">スプレッドシート</a>として保存されファイルが複数になっていましたが、、
-<span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190611/20190611133500.png" alt="f:id:aoma23:20190611133500p:plain" title="f:id:aoma23:20190611133500p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190611/20190611133500.png' | relative_url }}" alt="f:id:aoma23:20190611133500p:plain" title="f:id:aoma23:20190611133500p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h4>After</h4>
 
 <p>ファイルは一つのまま。しっかり上書きされてます！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190611/20190611133619.png" alt="f:id:aoma23:20190611133619p:plain" title="f:id:aoma23:20190611133619p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190611/20190611133619.png' | relative_url }}" alt="f:id:aoma23:20190611133619p:plain" title="f:id:aoma23:20190611133619p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <h3>ダウンロードしても問題なし</h3>
 

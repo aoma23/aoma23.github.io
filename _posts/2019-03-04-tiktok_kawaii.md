@@ -10,7 +10,7 @@ tags: [広告,日常,TikTok]
 <p>みなさん一度は見たことありますよね？<a class="keyword" href="http://d.hatena.ne.jp/keyword/TikTok">TikTok</a>
 のこの広告。</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190304124327" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190304/20190304124327.jpg" alt="f:id:aoma23:20190304124327j:image" title="f:id:aoma23:20190304124327j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190304124327" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190304/20190304124327.jpg' | relative_url }}" alt="f:id:aoma23:20190304124327j:image" title="f:id:aoma23:20190304124327j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>とっても可愛いですよね！</p>
 
@@ -29,7 +29,7 @@ tags: [広告,日常,TikTok]
 <p>怒りと失望の中一生懸命探しました！そしたらあの子、、見つかりましたよ！
 （正確には偶然見つけた）</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190304125519" class="hatena-fotolife" itemprop="url"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190304/20190304125519.jpg" alt="f:id:aoma23:20190304125519j:image" title="f:id:aoma23:20190304125519j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><a href="http://f.hatena.ne.jp/aoma23/20190304125519" class="hatena-fotolife" itemprop="url"><img src="{{ '/assets/images/20190304/20190304125519.jpg' | relative_url }}" alt="f:id:aoma23:20190304125519j:image" title="f:id:aoma23:20190304125519j:image" class="hatena-fotolife" itemprop="image"></a></span></p>
 
 <p>可愛いあの子は『ぷらす』ちゃんというお名前でした！</p>
 

@@ -114,7 +114,7 @@ added 532 packages from 357 contributors in 23.914s</pre>
 <pre class="code" data-lang="" data-unlink>% firebase login</pre>
 
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20200424/20200424004411.png" alt="f:id:aoma23:20200424004411p:plain" title="f:id:aoma23:20200424004411p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200424/20200424004411.png' | relative_url }}" alt="f:id:aoma23:20200424004411p:plain" title="f:id:aoma23:20200424004411p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <pre class="code" data-lang="" data-unlink>% % firebase init</pre>
 

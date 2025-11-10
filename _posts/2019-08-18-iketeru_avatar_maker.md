@@ -9,7 +9,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 
 <p><a class="keyword" href="http://d.hatena.ne.jp/keyword/GitHub">GitHub</a>とかのIssue見てるとたまにこんなアイコンの人見かけませんか？</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190816/20190816182724.png" alt="f:id:aoma23:20190816182724p:plain" title="f:id:aoma23:20190816182724p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816182724.png' | relative_url }}" alt="f:id:aoma23:20190816182724p:plain" title="f:id:aoma23:20190816182724p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>結構いますよね？そうでもないですか？</p>
 
@@ -31,7 +31,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 
 <h2>まずはジョンに聞いてみる</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190816/20190816184211.png" alt="f:id:aoma23:20190816184211p:plain" title="f:id:aoma23:20190816184211p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816184211.png' | relative_url }}" alt="f:id:aoma23:20190816184211p:plain" title="f:id:aoma23:20190816184211p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><blockquote class="twitter-tweet" data-lang="HASH(0x5630855ff128)"><p lang="en" dir="ltr"><a href="https://twitter.com/johnross000?ref_src=twsrc%5Etfw">@johnross000</a> Hello!<br>That is a question, where can I generate your icon?</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1103298171491377152?ref_src=twsrc%5Etfw">March 6, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 
@@ -39,7 +39,7 @@ tags: [IT,日常,アイコン,アバター,海外,エンジニア,オススメ]
 
 <h2>諦めないぞ！マイケルスミス！</h2>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190816/20190816184250.png" alt="f:id:aoma23:20190816184250p:plain" title="f:id:aoma23:20190816184250p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190816/20190816184250.png' | relative_url }}" alt="f:id:aoma23:20190816184250p:plain" title="f:id:aoma23:20190816184250p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p><blockquote class="twitter-tweet" data-lang="HASH(0x55c43b23ae28)"><p lang="en" dir="ltr"><a href="https://twitter.com/M1ch43l_Sm1th?ref_src=twsrc%5Etfw">@M1ch43l_Sm1th</a> Hello!<br>where can I generate your icon?</p>&mdash; aoma23 (@aoma23) <a href="https://twitter.com/aoma23/status/1103825482154311680?ref_src=twsrc%5Etfw">March 8, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
 

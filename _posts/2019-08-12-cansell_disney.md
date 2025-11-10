@@ -35,7 +35,7 @@ tags: [日常,ディズニー,ホテル,Cansell,超格安,お得]
 
 <p>運が良ければ大人2名5000円というお得価格で泊まれたりするかもしれません！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/a/aoma23/20190705/20190705110431.png" alt="f:id:aoma23:20190705110431p:plain" title="f:id:aoma23:20190705110431p:plain" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20190705/20190705110431.png' | relative_url }}" alt="f:id:aoma23:20190705110431p:plain" title="f:id:aoma23:20190705110431p:plain" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>当日になればなるほどキャンセルの可能性は上がると思いますので、日帰りで遊びに行く予定だったけどとりあえずCansell調べておくかって使い方もありかと。</p>
 
