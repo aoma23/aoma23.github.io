@@ -12,7 +12,7 @@ tags: [日常,DIY,ニトリ,Nクリック]
 <p>今日はこのNクリックをDIYでアレンジしましたー！<br />
 作品がこちら！</p>
 
-<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200429/20200429214209.jpg' | relative_url }}" alt="f:id:aoma23:20200429214209j:image" title="f:id:aoma23:20200429214209j:image" class="hatena-fotolife" itemprop="image"></span></p>
+<p><span itemscope itemtype="http://schema.org/Photograph"><img src="{{ '/assets/images/20200429/n-click-yokoita-tanaita-after.jpg' | relative_url }}" alt="Nクリック 横置き 棚板 カスタマイズ後の完成写真" title="Nクリック 横置き 棚板 カスタマイズ後の完成写真" class="hatena-fotolife" itemprop="image"></span></p>
 
 <p>お分かりいただけただろうか。。</p>
 
@@ -38,4 +38,3 @@ tags: [日常,DIY,ニトリ,Nクリック]
 
 
 <p>Nクリックの購入は上記からどうぞ。ではまた！</p>
-
