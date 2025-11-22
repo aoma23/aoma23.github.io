@@ -83,6 +83,22 @@ Day 23は形の識別と素早い直感操作を組み合わせた「シェイ�
   cursor: pointer;
   transition: transform 0.12s ease, border 0.12s ease, background 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
 }
+@media (max-width: 560px) {
+  #shape-sorter-game .bins {
+    gap: 12px;
+  }
+  #shape-sorter-game .bin {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 12px;
+  }
+  #shape-sorter-game .bin .key {
+    font-size: 1.2rem;
+  }
+  #shape-sorter-game .bin .label {
+    font-size: 0.85rem;
+  }
+}
 #shape-sorter-game .bin:focus-visible {
   outline: 2px solid rgba(56, 189, 248, 0.85);
   outline-offset: 2px;

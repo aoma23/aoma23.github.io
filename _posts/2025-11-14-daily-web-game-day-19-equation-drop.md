@@ -24,6 +24,12 @@ tags:
   text-align: center;
   font-family: "Inter", "Hiragino Kaku Gothic ProN", sans-serif;
 }
+@media (max-width: 480px) {
+  #equation-drop-game {
+    padding: 18px;
+    margin: 12px auto;
+  }
+}
 #equation-drop-game .hud {
   display: flex;
   justify-content: space-between;
@@ -35,11 +41,16 @@ tags:
 #equation-drop-game .arena {
   position: relative;
   width: min(92vw, 320px);
-  height: 360px;
+  height: min(50vh, 360px);
   margin: 0 auto 16px;
   background: rgba(248, 250, 252, 0.06);
   border-radius: 16px;
   overflow: hidden;
+}
+@media (max-height: 700px) {
+  #equation-drop-game .arena {
+    height: 280px;
+  }
 }
 #equation-drop-game .equation {
   position: absolute;
@@ -65,6 +76,20 @@ tags:
   font-size: 1rem;
   text-align: center;
   color: #0f172a;
+}
+@media (max-width: 480px) {
+  #equation-drop-game form {
+    gap: 8px;
+  }
+  #equation-drop-game input[type="number"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+  }
+  #equation-drop-game .submit {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
 }
 #equation-drop-game button {
   border: none;
@@ -173,6 +198,46 @@ tags:
   let running = false;
   let storageAvailable = false;
 
+  let audioCtx = null;
+  const soundMap = {
+    start: { frequency: 520, duration: 0.18, gain: 0.22 },
+    correct: { frequency: 820, duration: 0.16, gain: 0.22 },
+    miss: { frequency: 260, duration: 0.2, gain: 0.22 },
+    gameOver: { frequency: 180, duration: 0.3, gain: 0.24 }
+  };
+
+  const ensureAudio = () => {
+    const Context = window.AudioContext || window.webkitAudioContext;
+    if (!Context) {
+      return null;
+    }
+    if (!audioCtx) {
+      audioCtx = new Context();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume().catch(() => {});
+    }
+    return audioCtx;
+  };
+
+  const playTone = (type) => {
+    const ctx = ensureAudio();
+    if (!ctx) {
+      return;
+    }
+    const { frequency, duration, gain } = soundMap[type] ?? soundMap.correct;
+    const now = ctx.currentTime;
+    const oscillator = ctx.createOscillator();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(frequency, now);
+    const envelope = ctx.createGain();
+    envelope.gain.setValueAtTime(gain, now);
+    envelope.gain.exponentialRampToValueAtTime(0.001, now + duration);
+    oscillator.connect(envelope).connect(ctx.destination);
+    oscillator.start(now);
+    oscillator.stop(now + duration + 0.05);
+  };
+
   const updatePlayCount = () => {
     const counterEl = getPlayCountEl();
     if (!counterEl) {
@@ -264,6 +329,7 @@ tags:
   const endGame = (message) => {
     running = false;
     clearTimers();
+    playTone('gameOver');
     logEl.textContent = message;
     startButton.disabled = false;
     startButton.textContent = 'もう一度';
@@ -296,6 +362,7 @@ tags:
       if (y > arenaEl.clientHeight - 40) {
         remove.push(node);
         lives -= 1;
+        playTone('miss');
         if (lives <= 0) {
           endGame('ライフがなくなりました…');
         }
@@ -313,6 +380,7 @@ tags:
 
   const startGame = () => {
     markPlayed();
+    playTone('start');
     score = 0;
     lives = 3;
     equations.splice(0, equations.length).forEach((node) => node.remove());
@@ -336,6 +404,8 @@ tags:
     }
     const value = Number(inputEl.value.trim());
     if (Number.isNaN(value)) {
+      inputEl.value = '';
+      inputEl.focus();
       return;
     }
     const match = equations.find((node) => Number(node.dataset.answer) === value);
@@ -343,6 +413,7 @@ tags:
       score += 1;
       match.remove();
       equations.splice(equations.indexOf(match), 1);
+      playTone('correct');
       if (score > bestScore) {
         bestScore = score;
         saveBest();
@@ -350,14 +421,11 @@ tags:
       }
       logEl.textContent = 'ナイス！正しい答えで消去しました。';
     } else {
-      lives -= 1;
-      logEl.textContent = '答えが違います…ライフが減りました。';
-      if (lives <= 0) {
-        endGame('ライフがなくなりました…');
-        return;
-      }
+      playTone('miss');
+      logEl.textContent = '答えが違います…もう一度確認しましょう。';
     }
     inputEl.value = '';
+    inputEl.focus();
     updateHud();
   });
 
@@ -399,6 +467,7 @@ tags:
 - 2秒ごとに式を生成し、16ms刻みで落下処理を更新して滑らかな動きを実現。
 - フォーム送信で一致する答えの式を除去し、間違いはライフを減らすシステムにしました。
 - ベストスコア更新時に共有ボタンを有効化し、チャレンジが手軽に発信できるようにしています。
+- Web Audio APIで効果音を生成し、ゲーム開始・正解・ミス・ゲームオーバー時に再生します。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
 <p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>
