@@ -3,5 +3,3 @@ ad_script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?
 ad_script.async = true;
 ad_script.crossOrigin = 'anonymous';
 document.head.appendChild(ad_script);
-
-console.log('testtesttest');
