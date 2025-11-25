@@ -60,52 +60,84 @@ tags:
   backface-visibility: hidden;
 }
 #soldier-rush-game .player .soldier-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 100%;
+  gap: 2px;
 }
 #soldier-rush-game .player .soldier-pair {
   position: relative;
   display: inline-block;
   height: 1em;
   line-height: 1;
+  width: 3em;
 }
 #soldier-rush-game .player .soldier-emoji {
   font-size: 0.85rem;
   line-height: 1;
 }
 #soldier-rush-game .player .soldier-emoji-1 {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   z-index: 5;
-  vertical-align: top;
 }
 #soldier-rush-game .player .soldier-emoji-2 {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  transform: translateX(0.25em);
-  z-index: 4;
+  transform: translateX(calc(-50% - 0.25em));
+  z-index: 6;
 }
 #soldier-rush-game .player .soldier-emoji-3 {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  transform: translateX(0.5em);
-  z-index: 3;
+  transform: translateX(calc(-50% + 0.25em));
+  z-index: 4;
 }
 #soldier-rush-game .player .soldier-emoji-4 {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  transform: translateX(0.75em);
-  z-index: 2;
+  transform: translateX(calc(-50% - 0.5em));
+  z-index: 7;
 }
 #soldier-rush-game .player .soldier-emoji-5 {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 0;
-  transform: translateX(1em);
+  transform: translateX(calc(-50% + 0.5em));
+  z-index: 3;
+}
+#soldier-rush-game .player .soldier-emoji-6 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 0.75em));
+  z-index: 8;
+}
+#soldier-rush-game .player .soldier-emoji-7 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 0.75em));
+  z-index: 2;
+}
+#soldier-rush-game .player .soldier-emoji-8 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 1em));
+  z-index: 9;
+}
+#soldier-rush-game .player .soldier-emoji-9 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 1em));
   z-index: 1;
 }
 #soldier-rush-game .player .soldier-count {
@@ -322,6 +354,7 @@ tags:
   const SERIES_KEY = 'aomagame:soldier-rush-series';
   const storageKey = 'aomagame:best:soldier-rush-1';
   const playedKey = 'aomagame:played:soldier-rush-1';
+  const nextStageKey = 'aomagame:last-soldiers:soldier-rush-1';
 
   const state = {
     running: false,
@@ -483,27 +516,26 @@ tags:
   };
 
   const getAttackPower = () => {
-    return Math.floor(state.soldiers / 10) + 1;
+    return Math.min(5, Math.floor(state.soldiers / 10) + 1);
   };
 
   const updatePlayerDisplay = () => {
-    const numGroups = Math.ceil(state.soldiers / 5);
     let html = '<div class="soldier-grid">';
 
+    const numRows = Math.ceil(state.soldiers / 9);
     let remaining = state.soldiers;
-    for (let g = 0; g < numGroups; g += 1) {
-      const soldiersInGroup = Math.min(5, remaining);
+
+    for (let row = 0; row < numRows; row += 1) {
+      const soldiersInRow = Math.min(remaining, 9);
       html += '<span class="soldier-pair">';
 
-      // 中央から増える順序: 3→2→4→1→5
-      const order = [3, 2, 4, 1, 5];
-      for (let i = 0; i < soldiersInGroup; i += 1) {
-        const emojiNum = order[i];
+      for (let i = 0; i < soldiersInRow; i += 1) {
+        const emojiNum = i + 1;
         html += `<span class="soldier-emoji soldier-emoji-${emojiNum}">🧍‍♂️</span>`;
       }
 
       html += '</span>';
-      remaining -= soldiersInGroup;
+      remaining -= soldiersInRow;
     }
 
     html += '</div>';
@@ -545,9 +577,10 @@ tags:
     }
     const bullet = document.createElement('div');
     bullet.className = 'bullet';
-    bullet.style.left = `${state.playerX}px`;
+    const bulletX = state.playerX - 4;
+    bullet.style.left = `${bulletX}px`;
     bullet.style.bottom = `${480 - 380}px`;
-    bullet.dataset.x = state.playerX.toString();
+    bullet.dataset.x = bulletX.toString();
     bullet.dataset.y = '370';
     bullet.dataset.power = getAttackPower().toString();
     gameArea.appendChild(bullet);
@@ -588,10 +621,14 @@ tags:
 
   const spawnGate = () => {
     const types = [
-      { value: 5, type: 'positive', text: '+5' },
-      { value: 10, type: 'positive', text: '+10' },
+      { value: 3, type: 'positive', text: '+3', hp: 3 },
+      { value: 5, type: 'positive', text: '+5', hp: 5 },
+      { value: 7, type: 'positive', text: '+7', hp: 7 },
+      { value: 10, type: 'positive', text: '+10', hp: 10 },
       { value: -3, type: 'negative', text: '-3', hp: 3 },
-      { value: -5, type: 'negative', text: '-5', hp: 5 }
+      { value: -5, type: 'negative', text: '-5', hp: 5 },
+      { value: -7, type: 'negative', text: '-7', hp: 7 },
+      { value: -10, type: 'negative', text: '-10', hp: 10 }
     ];
     const gateData = types[Math.floor(Math.random() * types.length)];
     const x = Math.random() * 240 + 40;
@@ -600,10 +637,8 @@ tags:
     gate.className = `gate ${gateData.type}`;
     gate.textContent = gateData.text;
 
-    if (gateData.type === 'negative') {
-      gate.dataset.hp = gateData.hp.toString();
-      gate.dataset.maxHp = gateData.hp.toString();
-    }
+    gate.dataset.hp = gateData.hp.toString();
+    gate.dataset.maxHp = gateData.hp.toString();
 
     gate.style.left = `${x}px`;
     gate.style.transform = 'translateX(-50%)';
@@ -721,8 +756,10 @@ tags:
       const bulletX = Number.parseFloat(bullet.dataset.x);
       const power = Number.parseInt(bullet.dataset.power, 10);
 
+      let bulletHit = false;
+
       state.gates.forEach((gate) => {
-        if (gate.dataset.type !== 'negative') return;
+        if (bulletHit) return;
 
         const gateX = Number.parseFloat(gate.dataset.x);
         const gateY = Number.parseFloat(gate.dataset.y);
@@ -732,12 +769,22 @@ tags:
           const newHp = Math.max(0, hp - 1);
           gate.dataset.hp = newHp.toString();
 
-          const currentValue = Number.parseInt(gate.dataset.value, 10);
-          const newValue = currentValue + 1;
-          gate.dataset.value = newValue.toString();
-          gate.textContent = `${newValue}`;
+          const gateType = gate.dataset.type;
+
+          if (gateType === 'negative') {
+            const currentValue = Number.parseInt(gate.dataset.value, 10);
+            const newValue = currentValue + 1;
+            gate.dataset.value = newValue.toString();
+            gate.textContent = `${newValue}`;
+          } else if (gateType === 'positive') {
+            const currentValue = Number.parseInt(gate.dataset.value, 10);
+            const newValue = currentValue - 1;
+            gate.dataset.value = newValue.toString();
+            gate.textContent = newValue > 0 ? `+${newValue}` : '0';
+          }
 
           bulletsToRemove.push(bullet);
+          bulletHit = true;
           playTone('hit');
 
           if (newHp <= 0) {
@@ -747,14 +794,20 @@ tags:
             }
             gate.remove();
             playTone('gateDestroy');
-            setLog('-ゲートを破壊！');
+            setLog(gateType === 'negative' ? '-ゲートを破壊！' : '+ゲートを破壊！');
           }
         }
       });
 
-      if (state.boss && state.bossPhase) {
-        const bossY = 90;
-        if (y < 140 && y > 40 && Math.abs(bulletX - state.bossX) < 50) {
+      if (!bulletHit && state.boss && state.bossPhase) {
+        const bulletTopY = y;
+        const bulletCenterX = bulletX + 4;
+        const bossTopY = 40;
+        const bossSize = 48;
+        const bossCenterY = bossTopY + bossSize / 2;
+        const bossHitRadius = 20;
+
+        if (Math.abs(bulletTopY - bossCenterY) < bossHitRadius && Math.abs(bulletCenterX - state.bossX) < bossHitRadius) {
           const bossHp = Number.parseInt(state.boss.dataset.hp, 10);
           const bossMaxHp = Number.parseInt(state.boss.dataset.maxHp, 10);
           const newHp = Math.max(0, bossHp - power);
@@ -767,6 +820,7 @@ tags:
 
           playTone('hit');
           bulletsToRemove.push(bullet);
+          bulletHit = true;
 
           if (newHp <= 0) {
             if (state.boss) {
@@ -784,7 +838,7 @@ tags:
         }
       }
 
-      if (y < -20) {
+      if (!bulletHit && y < -20) {
         bulletsToRemove.push(bullet);
       }
     });
@@ -804,7 +858,7 @@ tags:
       bullet.style.top = `${y}px`;
 
       const bulletX = Number.parseFloat(bullet.dataset.x);
-      if (y > 360 && y < 420 && Math.abs(bulletX - state.playerX) < 40) {
+      if (y > 360 && y < 420 && Math.abs(bulletX - state.playerX) < 30) {
         state.soldiers = Math.max(0, state.soldiers - 3);
         playTone('damage');
         bossBulletsToRemove.push(bullet);
@@ -850,6 +904,9 @@ tags:
     if (message.includes('勝利')) {
       if (state.best === 0 || state.elapsedTime < state.best) {
         state.best = state.elapsedTime;
+      }
+      if (state.storageAvailable) {
+        localStorage.setItem(nextStageKey, state.soldiers.toString());
       }
     }
 
