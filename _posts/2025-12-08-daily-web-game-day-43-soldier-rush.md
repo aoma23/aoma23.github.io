@@ -698,6 +698,8 @@ tags:
       return;
     }
 
+    const gameRect = gameArea.getBoundingClientRect();
+
     movePlayer();
 
     state.elapsedTime = (Date.now() - state.startTime) / 1000;
@@ -800,14 +802,28 @@ tags:
       });
 
       if (!bulletHit && state.boss && state.bossPhase) {
-        const bulletTopY = y;
-        const bulletCenterX = bulletX + 4;
-        const bossTopY = 40;
-        const bossSize = 48;
-        const bossCenterY = bossTopY + bossSize / 2;
-        const bossHitRadius = 20;
+        const bossRect = state.boss.getBoundingClientRect();
+        const bossHitBox = {
+          left: bossRect.left - gameRect.left + 6,
+          right: bossRect.right - gameRect.left - 6,
+          top: bossRect.top - gameRect.top + 6,
+          bottom: bossRect.bottom - gameRect.top - 6
+        };
 
-        if (Math.abs(bulletTopY - bossCenterY) < bossHitRadius && Math.abs(bulletCenterX - state.bossX) < bossHitRadius) {
+        const bulletRect = bullet.getBoundingClientRect();
+        const bulletBox = {
+          left: bulletRect.left - gameRect.left,
+          right: bulletRect.right - gameRect.left,
+          top: bulletRect.top - gameRect.top,
+          bottom: bulletRect.bottom - gameRect.top
+        };
+
+        if (
+          bulletBox.right > bossHitBox.left &&
+          bulletBox.left < bossHitBox.right &&
+          bulletBox.bottom > bossHitBox.top &&
+          bulletBox.top < bossHitBox.bottom
+        ) {
           const bossHp = Number.parseInt(state.boss.dataset.hp, 10);
           const bossMaxHp = Number.parseInt(state.boss.dataset.maxHp, 10);
           const newHp = Math.max(0, bossHp - power);
