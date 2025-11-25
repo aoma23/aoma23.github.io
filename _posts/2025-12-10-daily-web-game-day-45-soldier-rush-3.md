@@ -10,8 +10,9 @@ tags:
 おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！
 昨日のゲーム：<a href="{{ '/daily-web-game-day-44-soldier-rush-2/' | relative_url }}">ソルジャーラッシュ2</a>
 
-45日目は連射アイテムが登場。拾えば一時的に手数が爆発し、軍勢が一気に押し込む第3章。
+45日目は兵士を集めて敵を倒す「ソルジャーラッシュ3」。
 雨弾の中を縫い、連射で爽快に駆け抜けよう。
+
 <link rel="stylesheet" href="{{ '/assets/css/soldier-rush.css' | relative_url }}">
 
 

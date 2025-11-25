@@ -10,8 +10,9 @@ tags:
 おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！  
 昨日のゲーム：<a href="{{ '/daily-web-game-day-43-soldier-rush/' | relative_url }}">ソルジャーラッシュ</a>
 
-44日目は×/÷ゲートが解禁。増やすか割るかの読み合いで兵士を大きく育てる第2章。
+44日目は兵士を集めて敵を倒す「ソルジャーラッシュ2」。
 小さな雨弾が降る中、数字操作の楽しさとスピード感を味わおう。
+
 <link rel="stylesheet" href="{{ '/assets/css/soldier-rush.css' | relative_url }}">
 
 

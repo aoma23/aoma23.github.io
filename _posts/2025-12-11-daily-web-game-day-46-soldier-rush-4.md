@@ -10,8 +10,9 @@ tags:
 おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！
 昨日のゲーム：<a href="{{ '/daily-web-game-day-45-soldier-rush-3/' | relative_url }}">ソルジャーラッシュ3</a>
 
-46日目はシールドが解禁。短時間バリアで強引に切り抜ける第4章。
+46日目は兵士を集めて敵を倒す「ソルジャーラッシュ4」。
 攻めと守りを切り替えながら進むスリリングな防衛戦。
+
 <link rel="stylesheet" href="{{ '/assets/css/soldier-rush.css' | relative_url }}">
 
 

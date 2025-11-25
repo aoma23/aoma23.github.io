@@ -10,8 +10,9 @@ tags:
 おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！
 昨日のゲーム：<a href="{{ '/daily-web-game-day-46-soldier-rush-4/' | relative_url }}">ソルジャーラッシュ4</a>
 
-47日目は連射とシールドが同時に舞う攻守ブースト回。
+47日目は兵士を集めて敵を倒す「ソルジャーラッシュ5」。
 バフを回し続ける忙しさと、噛み合った瞬間の爆発力が気持ちいい。
+
 <link rel="stylesheet" href="{{ '/assets/css/soldier-rush.css' | relative_url }}">
 
 
