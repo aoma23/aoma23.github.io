@@ -64,14 +64,20 @@ tags:
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  gap: 2px;
+  padding-top: 0.2em;
 }
 #soldier-rush-game .player .soldier-pair {
   position: relative;
   display: inline-block;
-  height: 1em;
+  height: 1.4em;
   line-height: 1;
   width: 3em;
+}
+#soldier-rush-game .player .soldier-grid .soldier-pair {
+  margin-top: -0.3em;
+}
+#soldier-rush-game .player .soldier-grid .soldier-pair:first-child {
+  margin-top: 0;
 }
 #soldier-rush-game .player .soldier-emoji {
   font-size: 0.85rem;
@@ -82,63 +88,63 @@ tags:
   left: 50%;
   top: 0;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 10;
 }
 #soldier-rush-game .player .soldier-emoji-2 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% - 0.25em));
-  z-index: 6;
+  transform: translateX(calc(-50% - 0.25em)) translateY(0.1em);
+  z-index: 8;
 }
 #soldier-rush-game .player .soldier-emoji-3 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% + 0.25em));
-  z-index: 4;
+  transform: translateX(calc(-50% + 0.25em)) translateY(0.1em);
+  z-index: 8;
 }
 #soldier-rush-game .player .soldier-emoji-4 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% - 0.5em));
+  transform: translateX(calc(-50% - 0.5em)) translateY(0.25em);
   z-index: 7;
 }
 #soldier-rush-game .player .soldier-emoji-5 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% + 0.5em));
-  z-index: 3;
+  transform: translateX(calc(-50% + 0.5em)) translateY(0.25em);
+  z-index: 7;
 }
 #soldier-rush-game .player .soldier-emoji-6 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% - 0.75em));
-  z-index: 8;
+  transform: translateX(calc(-50% - 0.75em)) translateY(0.4em);
+  z-index: 6;
 }
 #soldier-rush-game .player .soldier-emoji-7 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% + 0.75em));
-  z-index: 2;
+  transform: translateX(calc(-50% + 0.75em)) translateY(0.4em);
+  z-index: 6;
 }
 #soldier-rush-game .player .soldier-emoji-8 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% - 1em));
-  z-index: 9;
+  transform: translateX(calc(-50% - 1em)) translateY(0.55em);
+  z-index: 5;
 }
 #soldier-rush-game .player .soldier-emoji-9 {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-50% + 1em));
-  z-index: 1;
+  transform: translateX(calc(-50% + 1em)) translateY(0.55em);
+  z-index: 5;
 }
 #soldier-rush-game .player .soldier-count {
   font-size: 0.7rem;
