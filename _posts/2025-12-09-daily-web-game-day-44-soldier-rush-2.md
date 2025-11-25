@@ -1,5 +1,5 @@
 ---
-title: "毎日ゲームチャレンジ Day 43: ソルジャーラッシュ"
+title: "毎日ゲームチャレンジ Day 44: ソルジャーラッシュ2"
 categories:
   - game
 tags:
@@ -8,10 +8,10 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！  
-昨日のゲーム：<a href="{{ '/daily-web-game-day-42-merge-slide/' | relative_url }}">マージスライド</a>
+昨日のゲーム：<a href="{{ '/daily-web-game-day-43-soldier-rush/' | relative_url }}">ソルジャーラッシュ</a>
 
-43日目は兵士を集めて敵を倒す「ソルジャーラッシュ」。左右に移動しながらゲートを通過して兵士を増やし、オート射撃でボスを倒しましょう！7日間続く連続ストーリーの第1章です。
-シンプルな±ゲートで肩慣らし。まずは兵士を育ててボスに挑もう。
+44日目は×/÷ゲートが解禁。増やすか割るかの読み合いで兵士を大きく育てる第2章。
+小さな雨弾が降る中、数字操作の楽しさとスピード感を味わおう。
 <link rel="stylesheet" href="{{ '/assets/css/soldier-rush.css' | relative_url }}">
 
 
@@ -29,12 +29,14 @@ tags:
     <button type="button" class="arrow-left" disabled>← 左</button>
     <button type="button" class="arrow-right" disabled>→ 右</button>
   </div>
-  <div class="controls">
-    <button type="button" class="start">スタート</button>
+  <div class="mode-selection">
+    <button type="button" class="mode-fresh">スタート</button>
+    <button type="button" class="mode-continue">引き継いでスタート</button>
   </div>
-  <p class="log">左右移動でゲートを通過！兵士を増やしてボスを倒そう（オート射撃）</p>
+  
+  <p class="log">ボタンを押してスタート！</p>
   <div class="progress-info">
-    <div>シリーズ進行: Day 1/7 - 基礎編</div>
+    <div>シリーズ進行: Day 2/7</div>
     <div>累計プレイ: <span class="total-plays">0</span>回</div>
   </div>
   <div class="share">
@@ -46,11 +48,14 @@ tags:
 <script>
 initSoldierRushGame({
   rootId: 'soldier-rush-game',
-  storageKey: 'aomagame:best:soldier-rush-1',
-  playedKey: 'aomagame:played:soldier-rush-1',
-  nextStageKey: 'aomagame:last-soldiers:soldier-rush-1',
-  shareLabel: 'ソルジャーラッシュ',
+  storageKey: 'aomagame:best:soldier-rush-2',
+  playedKey: 'aomagame:played:soldier-rush-2',
+  prevStageKey: 'aomagame:last-soldiers:soldier-rush-1',
+  nextStageKey: 'aomagame:last-soldiers:soldier-rush-2',
+  shareLabel: 'ソルジャーラッシュ2',
   renderer: 'hill',
+  allowContinue: true,
+  startWithModeButtons: true,
   collectRequiresBreak: false,
   gateTypes: [
     { value: 3, type: 'positive', text: '+3', hp: 3 },
@@ -60,9 +65,11 @@ initSoldierRushGame({
     { value: -3, type: 'negative', text: '-3', hp: 3 },
     { value: -5, type: 'negative', text: '-5', hp: 5 },
     { value: -7, type: 'negative', text: '-7', hp: 7 },
-    { value: -10, type: 'negative', text: '-10', hp: 10 }
+    { value: -10, type: 'negative', text: '-10', hp: 10 },
+    { value: 2, type: 'multiply', text: '×2', operation: 'multiply' },
+    { value: 2, type: 'divide', text: '÷2', operation: 'divide' }
   ],
-  boss: { hp: 50, moveSpeed: 2, attacks: [ { damage: 3, interval: 1500, speed: 4, type: 'direct' } ] },
+  boss: { hp: 50, moveSpeed: 2, attacks: [ { damage: 3, interval: 1500, speed: 4, type: 'direct' }, { damage: 1, interval: 2000, speed: 5, type: 'rain' } ], emoji: '😈' },
   gateSpawnInterval: 1200,
   playerBulletInterval: 400,
   bossSpawnTime: 20
@@ -70,17 +77,17 @@ initSoldierRushGame({
 </script>
 
 ## 遊び方
-1. 「スタート」でゲーム開始。
+1. 「スタート」または「引き継いでスタート」でゲーム開始。
 2. 左右ボタン/←→/スワイプで移動。
 3. オート射撃でゲートとボスを狙おう。
 4. +ゲートで増加、-ゲートで減少。0になるとゲームオーバー。
 5. ボス出現後は攻撃を避けつつ撃破を目指す。
-- 特徴: ±ゲートのみの基本戦。
+- 特徴: ×2/÷2ゲートで調整、雨の小ダメージ弾が降下。
 
 ## 実装メモ
-- シリーズDay1/7の基礎回。
-- 攻撃パターンはシンプルに直射のみ。
-- まずは動きとゲート選びに慣れる回。
+- Day2/7。数字ギミックが追加。
+- 雨弾で位置取りが重要。
+- 増やしすぎ/減らしすぎのリスク管理が鍵。
 
 <p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
 <p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

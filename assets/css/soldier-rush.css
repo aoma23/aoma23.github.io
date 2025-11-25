@@ -1,0 +1,409 @@
+#soldier-rush-game {
+  max-width: 520px;
+  margin: 24px auto;
+  padding: 28px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  font-family: "Inter", "Hiragino Kaku Gothic ProN", sans-serif;
+  text-align: center;
+  box-shadow: 0 28px 52px rgba(15, 23, 42, 0.38);
+}
+#soldier-rush-game .hud {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+#soldier-rush-game .game-area {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  height: 480px;
+  margin: 0 auto 16px;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+#soldier-rush-game .player {
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 10;
+  transition: none;
+  max-height: 100px;
+  overflow: hidden;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+#soldier-rush-game .player .buff-icons {
+  position: absolute;
+  width: 110%;
+  top: 0px;
+  left: -5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+#soldier-rush-game .player .buff-icon {
+  font-size: 0.8rem;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+#soldier-rush-game .player .buff-icon.blink {
+  animation: buff-blink 0.35s steps(1, end) infinite;
+}
+@keyframes buff-blink {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.15; transform: scale(1.15); }
+  100% { opacity: 1; transform: scale(1); }
+}
+#soldier-rush-game .player .soldier-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding-top: 0.2em;
+}
+#soldier-rush-game .player .soldier-pair {
+  position: relative;
+  display: inline-block;
+  height: 1.4em;
+  line-height: 1;
+  width: 3em;
+}
+#soldier-rush-game .player .soldier-grid .soldier-pair {
+  margin-top: -0.3em;
+}
+#soldier-rush-game .player .soldier-grid .soldier-pair:first-child {
+  margin-top: 0;
+}
+#soldier-rush-game .player .soldier-emoji {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+#soldier-rush-game .player .soldier-emoji-1 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(0.25em);
+  z-index: 10;
+}
+#soldier-rush-game .player .soldier-emoji-2 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 0.25em)) translateY(0.4em);
+  z-index: 8;
+}
+#soldier-rush-game .player .soldier-emoji-3 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 0.25em)) translateY(0.4em);
+  z-index: 8;
+}
+#soldier-rush-game .player .soldier-emoji-4 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 0.5em)) translateY(0.55em);
+  z-index: 7;
+}
+#soldier-rush-game .player .soldier-emoji-5 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 0.5em)) translateY(0.55em);
+  z-index: 7;
+}
+#soldier-rush-game .player .soldier-emoji-6 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 0.75em)) translateY(0.4em);
+  z-index: 6;
+}
+#soldier-rush-game .player .soldier-emoji-7 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 0.75em)) translateY(0.4em);
+  z-index: 6;
+}
+#soldier-rush-game .player .soldier-emoji-8 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% - 1em)) translateY(0.55em);
+  z-index: 5;
+}
+#soldier-rush-game .player .soldier-emoji-9 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-50% + 1em)) translateY(0.55em);
+  z-index: 5;
+}
+#soldier-rush-game .player .soldier-count {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #38bdf8;
+  margin-top: 2px;
+}
+#soldier-rush-game .gate {
+  position: absolute;
+  width: 80px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: top 0.05s linear;
+}
+#soldier-rush-game .gate.positive {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #fff;
+}
+#soldier-rush-game .gate.negative {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+}
+#soldier-rush-game .gate.multiply {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #fff;
+}
+#soldier-rush-game .gate.divide {
+  background: linear-gradient(135deg, #a855f7, #9333ea);
+  color: #fff;
+}
+#soldier-rush-game .gate.rapidfire {
+  background: transparent;
+  color: #0f172a;
+  font-size: 1.5rem;
+  box-shadow: none;
+}
+#soldier-rush-game .gate.rapidfire-strong {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: #0f172a;
+  font-size: 1.5rem;
+}
+#soldier-rush-game .gate.shield-strong {
+  background: linear-gradient(135deg, #06b6d4, #0ea5e9);
+  color: #fff;
+  font-size: 1.5rem;
+}
+#soldier-rush-game .gate.rapidfire-strong,
+#soldier-rush-game .gate.shield-strong {
+  border: 2px solid rgba(250, 204, 21, 0.8);
+  box-shadow: 0 0 12px rgba(250, 204, 21, 0.55);
+}
+#soldier-rush-game .gate.gate-core {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+#soldier-rush-game .gate.shield {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: #fff;
+  font-size: 1.5rem;
+}
+#soldier-rush-game .bullet {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background: #fbbf24;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(251, 191, 36, 0.6);
+}
+#soldier-rush-game .boss-bullet {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ef4444;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.7);
+}
+#soldier-rush-game .boss-bullet.dmg-1 {
+  width: 10px;
+  height: 10px;
+  background: #ef4444;
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.7);
+}
+#soldier-rush-game .boss-bullet.dmg-3 {
+  width: 12px;
+  height: 12px;
+  background: #ef4444;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.7);
+}
+#soldier-rush-game .boss-bullet.dmg-5 {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  box-shadow: 0 0 14px rgba(234, 88, 12, 0.8);
+}
+#soldier-rush-game .boss-bullet.dmg-10 {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #eab308, #facc15);
+  box-shadow: 0 0 16px rgba(250, 204, 21, 0.9);
+  border: 2px solid rgba(250, 204, 21, 0.7);
+}
+#soldier-rush-game .boss {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  transition: top 0.3s ease, left 0.5s ease-in-out;
+  filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.6));
+}
+#soldier-rush-game .boss-hp-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 7px;
+  overflow: hidden;
+  border: 2px solid rgba(248, 250, 252, 0.2);
+  z-index: 5;
+}
+#soldier-rush-game .boss-hp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  transition: width 0.2s ease;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+}
+#soldier-rush-game .controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+#soldier-rush-game .controls button {
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+#soldier-rush-game .controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+#soldier-rush-game .controls button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(14, 165, 233, 0.35);
+}
+#soldier-rush-game .arrow-controls {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin: 12px auto;
+}
+#soldier-rush-game .arrow-controls button {
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.18);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+#soldier-rush-game .arrow-controls button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+#soldier-rush-game .arrow-controls button:active:not(:disabled) {
+  transform: scale(0.95);
+  background: rgba(56, 189, 248, 0.3);
+}
+#soldier-rush-game .mode-selection {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+#soldier-rush-game .mode-selection button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: rgba(56, 189, 248, 0.18);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+#soldier-rush-game .mode-selection button:hover {
+  background: rgba(56, 189, 248, 0.3);
+  transform: translateY(-1px);
+}
+#soldier-rush-game .mode-selection button.selected {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #0f172a;
+}
+#soldier-rush-game .log {
+  min-height: 24px;
+  color: #f8fafc;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+#soldier-rush-game .share {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+#soldier-rush-game .share button {
+  border: none;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(135deg, #facc15, #f97316);
+  cursor: pointer;
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.32);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+#soldier-rush-game .share button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+#soldier-rush-game .progress-info {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
