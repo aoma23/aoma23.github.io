@@ -61,11 +61,12 @@ tags:
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
   touch-action: manipulation;
+  white-space: nowrap;
 }
 #weight-balancer-game .weights button {
-  background: rgba(56, 189, 248, 0.18);
-  color: #0f172a;
-  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.22);
+  background: rgba(56, 189, 248, 0.25);
+  color: #f8fafc;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.35);
 }
 #weight-balancer-game .weights button:hover:not(:disabled),
 #weight-balancer-game .weights button:active {
@@ -80,9 +81,13 @@ tags:
 }
 #weight-balancer-game .actions {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 12px;
   margin-bottom: 16px;
+}
+#weight-balancer-game .actions button {
+  font-size: 0.9rem;
+  padding: 12px 8px;
 }
 #weight-balancer-game .actions button.primary {
   background: linear-gradient(135deg, #facc15, #f97316);
