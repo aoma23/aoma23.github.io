@@ -18,6 +18,18 @@ Replace sample content with your own and [configure as necessary](https://mmista
 
 ---
 
+## ローカル開発
+
+### 未来の日付の投稿も含めて確認する
+
+```bash
+bundle exec jekyll serve --future
+```
+
+`http://localhost:4000` でアクセス可能。
+
+---
+
 ## Troubleshooting
 
 If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
