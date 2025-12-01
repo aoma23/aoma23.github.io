@@ -103,7 +103,7 @@ tags:
   margin-bottom: 14px;
 }
 #letter-sweep-game .tile {
-  border: none;
+  border: 2px solid rgba(56, 189, 248, 0.4);
   border-radius: 12px;
   padding: 0;
   aspect-ratio: 1;
@@ -112,20 +112,33 @@ tags:
   justify-content: center;
   font-size: clamp(1.2rem, 4vw, 1.6rem);
   font-weight: 700;
-  color: #0f172a;
-  background: rgba(56, 189, 248, 0.18);
+  color: #f8fafc;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.35), rgba(14, 165, 233, 0.3));
   cursor: pointer;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease, background 0.1s ease;
   touch-action: manipulation;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+}
+#letter-sweep-game .tile:hover:not(:disabled) {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.5), rgba(14, 165, 233, 0.45));
+  border-color: rgba(56, 189, 248, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+#letter-sweep-game .tile:active:not(:disabled) {
+  transform: scale(0.98);
 }
 #letter-sweep-game .tile.correct {
   background: linear-gradient(135deg, #22c55e, #16a34a);
-  color: #0f172a;
-  box-shadow: 0 16px 30px rgba(34, 197, 94, 0.32);
+  color: #fff;
+  border-color: #22c55e;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
 }
 #letter-sweep-game .tile.wrong {
-  background: rgba(248, 113, 113, 0.28);
-  color: #f8fafc;
+  background: linear-gradient(135deg, rgba(248, 113, 113, 0.5), rgba(239, 68, 68, 0.45));
+  color: #fff;
+  border-color: rgba(248, 113, 113, 0.7);
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
 }
 #letter-sweep-game .tile:disabled {
   opacity: 0.35;
