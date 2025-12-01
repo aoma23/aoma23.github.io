@@ -98,15 +98,19 @@ tags:
 }
 #letter-sweep-game .board {
   display: grid;
-  grid-template-columns: repeat(5, minmax(64px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
   margin-bottom: 14px;
 }
 #letter-sweep-game .tile {
   border: none;
-  border-radius: 16px;
-  padding: 18px 0;
-  font-size: 1.6rem;
+  border-radius: 12px;
+  padding: 0;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
   font-weight: 700;
   color: #0f172a;
   background: rgba(56, 189, 248, 0.18);
