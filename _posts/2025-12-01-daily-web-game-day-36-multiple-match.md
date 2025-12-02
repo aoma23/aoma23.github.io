@@ -26,7 +26,7 @@ tags:
 }
 #multiple-match-game .hud {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
   margin-bottom: 12px;
   font-weight: 700;
@@ -65,7 +65,7 @@ tags:
 }
 #multiple-match-game .number-card {
   margin-bottom: 18px;
-  padding: 22px;
+  padding: 16px;
   border-radius: 18px;
   background: rgba(30, 41, 59, 0.6);
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
@@ -74,10 +74,11 @@ tags:
   font-size: 3.2rem;
   font-weight: 800;
   letter-spacing: 0.05em;
+  margin: 0;
 }
 #multiple-match-game .choices {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-bottom: 12px;
 }
@@ -94,9 +95,7 @@ tags:
   touch-action: manipulation;
 }
 #multiple-match-game .choices button[data-type="none"] {
-  grid-column: 1 / -1;
-  padding: 14px 12px;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 #multiple-match-game .choices button.correct {
   background: linear-gradient(135deg, #22c55e, #16a34a);
@@ -156,7 +155,7 @@ tags:
     <button type="button" data-type="3">3の倍数</button>
     <button type="button" data-type="5">5の倍数</button>
     <button type="button" data-type="7">7の倍数</button>
-    <button type="button" data-type="none">どれにも当てはまらない</button>
+    <button type="button" data-type="none">どれでもない</button>
   </div>
   <p class="log">スタートで数字が表示されます。該当する倍数をタップしてください。</p>
   <div class="share">

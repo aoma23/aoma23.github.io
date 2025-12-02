@@ -26,7 +26,7 @@ tags:
 }
 #color-clash-game .hud {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 6px;
   margin-bottom: 12px;
   font-weight: 700;
