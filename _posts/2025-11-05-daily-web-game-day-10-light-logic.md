@@ -28,10 +28,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #light-logic-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #light-logic-game .board {
   display: grid;
@@ -111,8 +118,8 @@ tags:
 
 <div id="light-logic-game">
   <div class="hud">
-    <span class="moves">手数: 0</span>
-    <span class="best">最少手数: --</span>
+    <span class="moves">手数:0</span>
+    <span class="best">最少手数:--</span>
   </div>
   <div class="board"></div>
   <button type="button" class="start">リセット</button>
@@ -205,7 +212,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value > 0) {
       bestMoves = value;
-      bestEl.textContent = `最少手数: ${bestMoves}`;
+      bestEl.textContent = `最少手数:${bestMoves}`;
       shareButton.disabled = false;
     }
   };
@@ -229,8 +236,8 @@ tags:
   };
 
   const updateHud = () => {
-    movesEl.textContent = `手数: ${moves}`;
-    bestEl.textContent = `最少手数: ${bestMoves === null ? '--' : bestMoves}`;
+    movesEl.textContent = `手数:${moves}`;
+    bestEl.textContent = `最少手数:${bestMoves === null ? '--' : bestMoves}`;
     shareButton.disabled = bestMoves === null;
   };
 

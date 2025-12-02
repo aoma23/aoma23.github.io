@@ -27,9 +27,16 @@ tags:
 #swap-sorter-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #swap-sorter-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #swap-sorter-game .start-controls {
   display: flex;
@@ -126,10 +133,10 @@ tags:
 <div id="swap-sorter-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="streak">連続クリア: 0</span>
-    <span class="moves">今回の手数: 0</span>
+    <span class="moves">今回の手数:0</span>
   </div>
   <div class="start-controls">
     <button type="button" class="start">スタート</button>
@@ -253,7 +260,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
       enableShare();
     }
   };
@@ -307,10 +314,10 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    scoreEl.textContent = `スコア:${state.score}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     streakEl.textContent = `連続クリア: ${state.streak}`;
-    movesEl.textContent = `今回の手数: ${state.moves}`;
+    movesEl.textContent = `今回の手数:${state.moves}`;
   };
 
   const enableTiles = (enabled) => {
@@ -452,7 +459,7 @@ tags:
       handleSorted();
       return;
     }
-    setLog(`入れ替え完了。現在の手数: ${state.moves}`);
+    setLog(`入れ替え完了。現在の手数:${state.moves}`);
   };
 
   tiles.forEach((tile, index) => {

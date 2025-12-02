@@ -27,9 +27,16 @@ tags:
 #multiple-match-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #multiple-match-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #multiple-match-game .start-controls {
   display: flex;
@@ -134,8 +141,8 @@ tags:
 <div id="multiple-match-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="streak">連続正解: 0</span>
     <span class="accuracy">正答率: 100%</span>
   </div>
@@ -263,7 +270,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
       enableShare();
     }
   };
@@ -317,8 +324,8 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    scoreEl.textContent = `スコア:${state.score}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     streakEl.textContent = `連続正解: ${state.streak}`;
     const accuracy = state.attempts === 0 ? 100 : Math.round((state.hits / state.attempts) * 100);
     accuracyEl.textContent = `正答率: ${accuracy}%`;

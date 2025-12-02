@@ -28,7 +28,15 @@ tags:
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  gap: 6px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #click-burst-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #click-burst-game .tap-button {
   width: 100%;
@@ -112,8 +120,8 @@ tags:
 
 <div id="click-burst-game">
   <div class="hud">
-    <span class="timer">残り 5.0 秒</span>
-    <span class="score">スコア: 0</span>
+    <span class="timer">残り5.0秒</span>
+    <span class="score">得点:0</span>
   </div>
   <button type="button" class="tap-button" disabled>CLICK!</button>
   <button type="button" class="start">スタート</button>
@@ -189,11 +197,11 @@ tags:
 
 
   const updateTimer = () => {
-    timerEl.textContent = `残り ${timeLeft.toFixed(1)} 秒`;
+    timerEl.textContent = `残り${timeLeft.toFixed(1)}秒`;
   };
 
   const updateScore = () => {
-    scoreEl.textContent = `スコア: ${score}`;
+    scoreEl.textContent = `得点:${score}`;
   };
 
   const updateBestDisplay = () => {

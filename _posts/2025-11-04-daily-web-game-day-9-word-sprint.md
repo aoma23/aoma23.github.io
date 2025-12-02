@@ -27,10 +27,17 @@ tags:
 #word-sprint-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #word-sprint-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #word-sprint-game .scramble {
   font-size: 2rem;
@@ -121,9 +128,9 @@ tags:
 
 <div id="word-sprint-game">
   <div class="hud">
-    <span class="timer">残り 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="timer">残り60.0秒</span>
+    <span class="score">得点:0</span>
+    <span class="best">最高:0</span>
   </div>
   <p class="scramble">READY</p>
   <form autocomplete="off">
@@ -234,7 +241,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value > 0) {
       bestScore = value;
-      bestEl.textContent = `ベスト: ${bestScore}`;
+      bestEl.textContent = `最高:${bestScore}`;
       shareButton.disabled = false;
     }
   };
@@ -289,9 +296,9 @@ tags:
   };
 
   const updateHud = () => {
-    timerEl.textContent = `残り ${timeLeft.toFixed(1)} 秒`;
-    scoreEl.textContent = `スコア: ${score}`;
-    bestEl.textContent = `ベスト: ${bestScore}`;
+    timerEl.textContent = `残り${timeLeft.toFixed(1)}秒`;
+    scoreEl.textContent = `得点:${score}`;
+    bestEl.textContent = `最高:${bestScore}`;
     shareButton.disabled = bestScore <= 0;
   };
 

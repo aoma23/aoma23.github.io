@@ -94,10 +94,17 @@ tags:
 #color-balance-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
   margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #color-balance-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #color-balance-game .log {
   margin-top: 16px;
@@ -133,8 +140,8 @@ tags:
 
 <div id="color-balance-game">
   <div class="hud">
-    <span class="score">今回の誤差: --</span>
-    <span class="best">ベスト誤差: --</span>
+    <span class="score">今回の誤差:--</span>
+    <span class="best">ベスト誤差:--</span>
   </div>
   <div class="swatches">
     <div class="swatch target"><span>ターゲット</span></div>
@@ -253,8 +260,8 @@ tags:
   const rgbToCss = ({ r, g, b }) => `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
 
   const updateHud = (currentDiff) => {
-    scoreEl.textContent = `今回の誤差: ${currentDiff}`;
-    bestEl.textContent = `ベスト誤差: ${bestDiff === null ? '--' : bestDiff.toFixed(1)}°`;
+    scoreEl.textContent = `今回の誤差:${currentDiff}`;
+    bestEl.textContent = `ベスト誤差:${bestDiff === null ? '--' : bestDiff.toFixed(1)}°`;
     shareButton.disabled = bestDiff === null;
   };
 

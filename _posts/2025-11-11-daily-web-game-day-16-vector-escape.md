@@ -161,10 +161,10 @@ tags:
 
 <div id="nebula-shooter">
   <div class="hud">
-    <span class="time">残り: 30.0 秒</span>
+    <span class="time">残り:30.0 秒</span>
     <span class="score">撃破: 0</span>
     <span class="misses">突破: 0</span>
-    <span class="best">ベスト: --</span>
+    <span class="best">ベスト:--</span>
   </div>
   <div class="arena">
     <div class="turret"></div>
@@ -295,10 +295,10 @@ tags:
   };
 
   const updateHud = () => {
-    timeEl.textContent = `残り: ${remaining.toFixed(1)} 秒`;
+    timeEl.textContent = `残り:${remaining.toFixed(1)} 秒`;
     scoreEl.textContent = `撃破: ${score}`;
     missesEl.textContent = `突破: ${misses}/${maxMiss}`;
-    bestEl.textContent = `ベスト: ${bestScore === null ? '--' : bestScore}`;
+    bestEl.textContent = `ベスト:${bestScore === null ? '--' : bestScore}`;
     shareButton.disabled = bestScore === null;
   };
 

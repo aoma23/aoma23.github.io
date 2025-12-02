@@ -27,9 +27,16 @@ tags:
 #prime-dash-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #prime-dash-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #prime-dash-game .number-card {
   position: relative;
@@ -144,8 +151,8 @@ tags:
 <div id="prime-dash-game">
   <div class="hud">
     <span class="time">残り: 30.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="combo">連続正解: 0</span>
     <span class="accuracy">正答率: 100%</span>
   </div>
@@ -263,7 +270,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
     }
   };
 
@@ -316,8 +323,8 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    scoreEl.textContent = `スコア:${state.score}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     comboEl.textContent = `連続正解: ${state.combo}`;
     const accuracy =
       state.attempts === 0 ? 100 : Math.round((state.correct / state.attempts) * 100);

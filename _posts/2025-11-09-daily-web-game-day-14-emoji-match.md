@@ -27,10 +27,17 @@ tags:
 #emoji-match-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #emoji-match-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #emoji-match-game .board {
   display: grid;
@@ -123,9 +130,9 @@ tags:
 
 <div id="emoji-match-game">
   <div class="hud">
-    <span class="moves">手数: 0</span>
-    <span class="time">タイム: 0.0 秒</span>
-    <span class="best">ベスト: -- 秒</span>
+    <span class="moves">手数:0</span>
+    <span class="time">タイム:0.0 秒</span>
+    <span class="best">ベスト:-- 秒</span>
   </div>
   <div class="board"></div>
   <button type="button" class="start">スタート</button>
@@ -226,7 +233,7 @@ tags:
     const value = Number.parseFloat(stored);
     if (!Number.isNaN(value) && value > 0) {
       bestTime = value;
-      bestEl.textContent = `ベスト: ${bestTime.toFixed(1)} 秒`;
+      bestEl.textContent = `ベスト:${bestTime.toFixed(1)} 秒`;
       shareButton.disabled = false;
     }
   };
@@ -247,9 +254,9 @@ tags:
   };
 
   const updateHud = () => {
-    movesEl.textContent = `手数: ${moves}`;
-    timeEl.textContent = `タイム: ${elapsed.toFixed(1)} 秒`;
-    bestEl.textContent = `ベスト: ${bestTime === null ? '--' : bestTime.toFixed(1)} 秒`;
+    movesEl.textContent = `手数:${moves}`;
+    timeEl.textContent = `タイム:${elapsed.toFixed(1)} 秒`;
+    bestEl.textContent = `ベスト:${bestTime === null ? '--' : bestTime.toFixed(1)} 秒`;
     shareButton.disabled = bestTime === null;
   };
 

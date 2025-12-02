@@ -27,10 +27,17 @@ tags:
 #pattern-grid-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #pattern-grid-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #pattern-grid-game .grid {
   display: grid;
@@ -116,8 +123,8 @@ tags:
 
 <div id="pattern-grid-game">
   <div class="hud">
-    <span class="round">ラウンド: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="round">ラウンド:0</span>
+    <span class="best">ベスト:0</span>
   </div>
   <div class="grid"></div>
   <button type="button" class="start">スタート</button>
@@ -224,8 +231,8 @@ tags:
   };
 
   const updateHud = () => {
-    roundEl.textContent = `ラウンド: ${currentRound}`;
-    bestEl.textContent = `ベスト: ${bestRound}`;
+    roundEl.textContent = `ラウンド:${currentRound}`;
+    bestEl.textContent = `ベスト:${bestRound}`;
     shareButton.disabled = bestRound <= 0;
   };
 

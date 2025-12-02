@@ -28,10 +28,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #stroop-sprint-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #stroop-sprint-game .target-label {
   font-size: 1rem;
@@ -126,9 +133,9 @@ tags:
 
 <div id="stroop-sprint-game">
   <div class="hud">
-    <span class="timer">残り 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="timer">残り60.0 秒</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
   </div>
   <p class="target-label">ターゲット: RED</p>
   <p class="problem">READY</p>
@@ -242,7 +249,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value > 0) {
       best = value;
-      bestEl.textContent = `ベスト: ${best}`;
+      bestEl.textContent = `ベスト:${best}`;
       shareButton.disabled = false;
     }
   };
@@ -255,9 +262,9 @@ tags:
   };
 
   const updateHud = () => {
-    timerEl.textContent = `残り ${timeLeft.toFixed(1)} 秒`;
-    scoreEl.textContent = `スコア: ${score}`;
-    bestEl.textContent = `ベスト: ${best}`;
+    timerEl.textContent = `残り${timeLeft.toFixed(1)} 秒`;
+    scoreEl.textContent = `スコア:${score}`;
+    bestEl.textContent = `ベスト:${best}`;
     shareButton.disabled = best <= 0;
   };
 

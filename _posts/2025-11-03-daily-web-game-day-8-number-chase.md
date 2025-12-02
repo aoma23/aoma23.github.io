@@ -30,10 +30,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #number-chase-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #number-chase-game .grid {
   display: grid;
@@ -136,8 +143,8 @@ tags:
 
 <div id="number-chase-game">
   <div class="hud">
-    <span class="timer">タイム: 0.00 秒</span>
-    <span class="best">ベスト: -- 秒</span>
+    <span class="timer">タイム:0.00秒</span>
+    <span class="best">最高:--秒</span>
   </div>
   <div class="grid"></div>
   <button type="button" class="start">スタート</button>
@@ -263,18 +270,18 @@ tags:
 
   const loadBest = () => {
     if (!storageAvailable) {
-      bestEl.textContent = 'ベスト: -- 秒';
+      bestEl.textContent = '最高:--秒';
       return;
     }
     const stored = localStorage.getItem(storageKey);
     if (!stored) {
-      bestEl.textContent = 'ベスト: -- 秒';
+      bestEl.textContent = '最高:--秒';
       return;
     }
     const value = Number.parseFloat(stored);
     if (!Number.isNaN(value) && value > 0) {
       bestTime = value;
-      bestEl.textContent = `ベスト: ${bestTime.toFixed(2)} 秒`;
+      bestEl.textContent = `最高:${bestTime.toFixed(2)}秒`;
       shareButton.disabled = false;
     }
   };
@@ -291,7 +298,7 @@ tags:
       return;
     }
     elapsed = (performance.now() - startTime) / 1000;
-    timerEl.textContent = `タイム: ${elapsed.toFixed(2)} 秒`;
+    timerEl.textContent = `タイム:${elapsed.toFixed(2)}秒`;
   };
 
   const stopTimer = () => {
@@ -342,7 +349,7 @@ tags:
     shareButton.disabled = bestTime === null;
     running = true;
     startTime = performance.now();
-    timerEl.textContent = 'タイム: 0.00 秒';
+    timerEl.textContent = 'タイム:0.00秒';
     logEl.textContent = '数字を1から順番にタップ！';
     loop();
   };
@@ -356,7 +363,7 @@ tags:
     });
     if (bestTime === null || elapsed < bestTime) {
       bestTime = elapsed;
-      bestEl.textContent = `ベスト: ${bestTime.toFixed(2)} 秒`;
+      bestEl.textContent = `最高:${bestTime.toFixed(2)}秒`;
       saveBest();
       logEl.textContent = `クリア！タイムは ${elapsed.toFixed(2)} 秒。ベスト更新です！`;
       shareButton.disabled = false;

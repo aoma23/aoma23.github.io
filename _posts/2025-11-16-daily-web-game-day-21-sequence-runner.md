@@ -148,9 +148,9 @@ tags:
 <div id="sequence-runner-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
-    <span class="streak">連続成功: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
+    <span class="streak">連続成功:0</span>
   </div>
   <div class="track"></div>
   <div class="controls">
@@ -287,9 +287,9 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${score}`;
-    bestEl.textContent = `ベスト: ${bestScore}`;
-    streakEl.textContent = `連続成功: ${streak}`;
+    scoreEl.textContent = `スコア:${score}`;
+    bestEl.textContent = `ベスト:${bestScore}`;
+    streakEl.textContent = `連続成功:${streak}`;
     timeEl.textContent = `残り: ${remaining.toFixed(1)} 秒`;
     shareButton.disabled = bestScore <= 0;
   };

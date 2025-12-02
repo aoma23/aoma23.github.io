@@ -27,9 +27,16 @@ tags:
 #pixel-painter-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #pixel-painter-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #pixel-painter-game .boards {
   display: grid;
@@ -181,7 +188,7 @@ tags:
 <div id="pixel-painter-game">
   <div class="hud">
     <span class="stage">ステージ: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="best">ベスト:0</span>
     <span class="perfect">パーフェクト: 0</span>
     <span class="accuracy">正答率: 100%</span>
   </div>
@@ -311,7 +318,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.bestStage = value;
-      bestEl.textContent = `ベスト: ${state.bestStage}`;
+      bestEl.textContent = `ベスト:${state.bestStage}`;
     }
   };
 
@@ -365,7 +372,7 @@ tags:
 
   const updateHud = () => {
     stageEl.textContent = `ステージ: ${state.stage}`;
-    bestEl.textContent = `ベスト: ${state.bestStage}`;
+    bestEl.textContent = `ベスト:${state.bestStage}`;
     perfectEl.textContent = `パーフェクト: ${state.perfectCount}`;
     accuracyEl.textContent = `正答率: ${state.lastAccuracy}%`;
   };

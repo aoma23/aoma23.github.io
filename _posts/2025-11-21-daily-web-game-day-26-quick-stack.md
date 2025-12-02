@@ -27,9 +27,16 @@ tags:
 #quick-stack-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #quick-stack-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #quick-stack-game .tower {
   position: relative;
@@ -140,9 +147,9 @@ tags:
 <div id="quick-stack-game">
   <div class="hud">
     <span class="height">高さ: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="best">ベスト:0</span>
     <span class="width">最小幅: 100%</span>
-    <span class="speed">スピード: x1.0</span>
+    <span class="speed">スピード:x1.0</span>
   </div>
   <div class="tower">
     <div class="ground"></div>
@@ -254,7 +261,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
     }
   };
 
@@ -308,10 +315,10 @@ tags:
 
   const updateHud = () => {
     heightEl.textContent = `高さ: ${state.height}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     const widthRatio = Math.max(1, Math.round((state.minWidth / baseWidth) * 100));
     widthEl.textContent = `最小幅: ${widthRatio}%`;
-    speedEl.textContent = `スピード: x${(state.speed / 120).toFixed(1)}`;
+    speedEl.textContent = `スピード:x${(state.speed / 120).toFixed(1)}`;
   };
 
   const enableShare = () => {

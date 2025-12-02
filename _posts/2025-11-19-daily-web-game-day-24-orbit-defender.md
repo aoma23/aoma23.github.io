@@ -27,9 +27,16 @@ tags:
 #orbit-defender-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #orbit-defender-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #orbit-defender-game .arena {
   position: relative;
@@ -205,7 +212,7 @@ tags:
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
     <span class="score">ヒット: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="best">ベスト:0</span>
     <span class="combo">コンボ: 0</span>
     <span class="accuracy">命中率: 100%</span>
   </div>
@@ -385,7 +392,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
     }
   };
 
@@ -453,7 +460,7 @@ tags:
   const updateHud = () => {
     scoreEl.textContent = `ヒット: ${state.score}`;
     comboEl.textContent = `コンボ: ${state.combo}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     const accuracy =
       state.shots === 0 ? 100 : Math.round((state.hits / state.shots) * 100);
     accuracyEl.textContent = `命中率: ${accuracy}%`;

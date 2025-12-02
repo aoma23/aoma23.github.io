@@ -72,9 +72,17 @@ tags:
 #sound-memory-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #sound-memory-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #sound-memory-game .log {
   margin-top: 16px;
@@ -111,8 +119,8 @@ tags:
 
 <div id="sound-memory-game">
   <div class="hud">
-    <span class="round">ラウンド: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="round">ラウンド:0</span>
+    <span class="best">ベスト:0</span>
   </div>
   <div class="board">
     <button type="button" class="pad" data-index="0">A</button>
@@ -215,7 +223,7 @@ tags:
       best = value;
       shareButton.disabled = false;
     }
-    bestEl.textContent = `ベスト: ${best}`;
+    bestEl.textContent = `ベスト:${best}`;
   };
 
   const saveBest = () => {
@@ -255,8 +263,8 @@ tags:
   };
 
   const updateHud = () => {
-    roundEl.textContent = `ラウンド: ${sequence.length}`;
-    bestEl.textContent = `ベスト: ${best}`;
+    roundEl.textContent = `ラウンド:${sequence.length}`;
+    bestEl.textContent = `ベスト:${best}`;
     shareButton.disabled = best <= 0;
   };
 
@@ -295,7 +303,7 @@ tags:
           best = Math.max(best, sequence.length);
           saveBest();
           shareButton.disabled = false;
-          bestEl.textContent = `ベスト: ${best}`;
+          bestEl.textContent = `ベスト:${best}`;
           accepting = false;
           logEl.textContent = '成功！次のラウンドを再生します。';
           await new Promise((resolve) => setTimeout(resolve, 600));

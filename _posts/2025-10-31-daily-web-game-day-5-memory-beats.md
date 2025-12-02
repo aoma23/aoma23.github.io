@@ -124,8 +124,8 @@ tags:
   </div>
   <p class="status">順番を覚えてタップしてください。</p>
   <div class="footer">
-    <span class="round">ラウンド: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="round">ラウンド:0</span>
+    <span class="best">ベスト:0</span>
   </div>
   <div class="actions">
     <button type="button" class="share-button" disabled>ベスト記録をXで共有</button>
@@ -197,7 +197,7 @@ tags:
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const updateBestDisplay = () => {
-    bestEl.textContent = `ベスト: ${best}`;
+    bestEl.textContent = `ベスト:${best}`;
     if (shareButton) {
       shareButton.disabled = best <= 0;
     }
@@ -275,7 +275,7 @@ tags:
   };
 
   const updateRoundInfo = () => {
-    roundEl.textContent = `ラウンド: ${sequence.length}`;
+    roundEl.textContent = `ラウンド:${sequence.length}`;
     updateBestDisplay();
   };
 

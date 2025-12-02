@@ -29,8 +29,15 @@ tags:
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 6px;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #letter-sweep-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #letter-sweep-game .hud span {
   white-space: nowrap;
@@ -176,7 +183,7 @@ tags:
 <div id="letter-sweep-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
+    <span class="score">スコア:0</span>
     <span class="accuracy">成功率: 100%</span>
   </div>
   <div class="start-controls">
@@ -354,7 +361,7 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
+    scoreEl.textContent = `スコア:${state.score}`;
     const accuracy = state.attempts === 0 ? 100 : Math.round((state.hits / state.attempts) * 100);
     accuracyEl.textContent = `成功率: ${accuracy}%`;
   };

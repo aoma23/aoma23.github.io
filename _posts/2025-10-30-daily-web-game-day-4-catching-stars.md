@@ -33,10 +33,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 12px;
   font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #catch-stars-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #catch-stars-game .best {
   font-weight: 700;
@@ -99,9 +106,9 @@ tags:
 
 <div id="catch-stars-game">
   <div class="hud">
-    <span class="timer">残り 30.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="timer">残り30.0秒</span>
+    <span class="score">得点:0</span>
+    <span class="best">最高:0</span>
   </div>
   <canvas width="360" height="240"></canvas>
   <button type="button" class="start">スタート</button>
@@ -184,16 +191,16 @@ tags:
   };
 
   const updateTimerText = () => {
-    timerEl.textContent = `残り ${state.timeLeft.toFixed(1)} 秒`;
+    timerEl.textContent = `残り${state.timeLeft.toFixed(1)}秒`;
   };
 
   const updateScoreText = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
+    scoreEl.textContent = `得点:${state.score}`;
   };
 
   const updateBestDisplay = () => {
     if (bestEl) {
-      bestEl.textContent = `ベスト: ${bestScore}`;
+      bestEl.textContent = `最高:${bestScore}`;
     }
     if (shareButton) {
       shareButton.disabled = bestScore <= 0;

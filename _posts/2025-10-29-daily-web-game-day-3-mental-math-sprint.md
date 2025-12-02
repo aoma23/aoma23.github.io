@@ -27,11 +27,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 12px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #math-sprint-game .header {
+    font-size: 0.82rem;
+  }
 }
 #math-sprint-game .best {
   font-size: 1rem;
@@ -116,9 +122,9 @@ tags:
 
 <div id="math-sprint-game">
   <div class="header">
-    <span class="timer">残り 30.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="timer">残り30.0秒</span>
+    <span class="score">得点:0</span>
+    <span class="best">最高:0</span>
   </div>
   <div class="question">0 + 0 = ?</div>
   <form autocomplete="off">
@@ -203,16 +209,16 @@ tags:
   const formatTime = (value) => value.toFixed(1).padStart(4, ' ');
 
   const updateTimerDisplay = () => {
-    timerEl.textContent = `残り ${formatTime(timeLeft)} 秒`;
+    timerEl.textContent = `残り${formatTime(timeLeft)}秒`;
   };
 
   const updateScore = () => {
-    scoreEl.textContent = `スコア: ${score}`;
+    scoreEl.textContent = `得点:${score}`;
   };
 
   const updateBestDisplay = () => {
     if (bestEl) {
-      bestEl.textContent = `ベスト: ${bestScore}`;
+      bestEl.textContent = `最高:${bestScore}`;
     }
     if (shareButton) {
       shareButton.disabled = bestScore <= 0;

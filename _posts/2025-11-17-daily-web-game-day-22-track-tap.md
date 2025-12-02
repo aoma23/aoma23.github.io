@@ -122,8 +122,8 @@ tags:
 <div id="track-tap-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="streak">コンボ: 0</span>
   </div>
   <div class="track">
@@ -336,8 +336,8 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${score}`;
-    bestEl.textContent = `ベスト: ${bestScore}`;
+    scoreEl.textContent = `スコア:${score}`;
+    bestEl.textContent = `ベスト:${bestScore}`;
     streakEl.textContent = `コンボ: ${streak}`;
     shareButton.disabled = bestScore <= 0;
     timeEl.textContent = `残り: ${remaining.toFixed(1)} 秒`;

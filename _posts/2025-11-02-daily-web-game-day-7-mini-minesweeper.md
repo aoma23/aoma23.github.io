@@ -26,10 +26,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 12px;
   font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #mini-minesweeper-game .stats {
+    font-size: 0.82rem;
+  }
 }
 #mini-minesweeper-game .wins {
   font-weight: 700;
@@ -127,9 +134,9 @@ tags:
 
 <div id="mini-minesweeper-game">
   <div class="stats">
-    <span class="safe">残り安全マス: 20</span>
-    <span class="flags">旗: 0 / 5</span>
-    <span class="wins">勝利数: 0</span>
+    <span class="safe">残り安全マス:20</span>
+    <span class="flags">旗:0/5</span>
+    <span class="wins">勝利数:0</span>
   </div>
   <div class="board"></div>
   <p class="log">地雷を避けてすべての安全マスを開こう！</p>
@@ -210,10 +217,10 @@ tags:
 
   const updateStats = () => {
     const remaining = totalCells - mineCount - revealedSafe;
-    safeEl.textContent = `残り安全マス: ${remaining}`;
-    flagsEl.textContent = `旗: ${flaggedCount} / ${mineCount}`;
+    safeEl.textContent = `残り安全マス:${remaining}`;
+    flagsEl.textContent = `旗:${flaggedCount}/${mineCount}`;
     if (winsEl) {
-      winsEl.textContent = `勝利数: ${totalWins}`;
+      winsEl.textContent = `勝利数:${totalWins}`;
     }
     if (shareButton) {
       shareButton.disabled = totalWins <= 0;

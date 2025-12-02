@@ -27,10 +27,17 @@ tags:
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #beat-bar-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #beat-bar-game .arena {
   position: relative;
@@ -128,9 +135,9 @@ tags:
 
 <div id="beat-bar-game">
   <div class="hud">
-    <span class="streak">連続成功: 0</span>
-    <span class="best">ベスト: 0</span>
-    <span class="speed">スピード: 1.6s</span>
+    <span class="streak">連続成功:0</span>
+    <span class="best">最高:0</span>
+    <span class="speed">スピード:1.6s</span>
   </div>
   <div class="arena">
     <div class="zone"></div>
@@ -240,7 +247,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value > 0) {
       best = value;
-      bestEl.textContent = `ベスト: ${best}`;
+      bestEl.textContent = `最高:${best}`;
       shareButton.disabled = false;
     }
   };
@@ -253,9 +260,9 @@ tags:
   };
 
   const updateHud = () => {
-    streakEl.textContent = `連続成功: ${streak}`;
-    bestEl.textContent = `ベスト: ${best}`;
-    speedEl.textContent = `スピード: ${speed.toFixed(1)}s`;
+    streakEl.textContent = `連続成功:${streak}`;
+    bestEl.textContent = `最高:${best}`;
+    speedEl.textContent = `スピード:${speed.toFixed(1)}s`;
     shareButton.disabled = best <= 0;
   };
 

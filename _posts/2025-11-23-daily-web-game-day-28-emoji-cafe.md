@@ -27,9 +27,16 @@ tags:
 #emoji-cafe-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #emoji-cafe-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #emoji-cafe-game .order-card {
   padding: 22px;
@@ -143,9 +150,9 @@ tags:
 <div id="emoji-cafe-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
-    <span class="streak">連続成功: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
+    <span class="streak">連続成功:0</span>
     <span class="combo">スピードボーナス: x1.0</span>
   </div>
   <div class="start-controls">
@@ -297,7 +304,7 @@ tags:
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
       enableShare();
     }
   };
@@ -351,9 +358,9 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
-    streakEl.textContent = `連続成功: ${state.streak}`;
+    scoreEl.textContent = `スコア:${state.score}`;
+    bestEl.textContent = `ベスト:${state.best}`;
+    streakEl.textContent = `連続成功:${state.streak}`;
     comboEl.textContent = `スピードボーナス: x${state.comboLevel.toFixed(1)}`;
   };
 

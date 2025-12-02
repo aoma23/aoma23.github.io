@@ -27,9 +27,16 @@ Day 23は形の識別と素早い直感操作を組み合わせた「シェイ�
 #shape-sorter-game .hud {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
   font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #shape-sorter-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #shape-sorter-game .shape-display {
   margin: 0 auto 18px;
@@ -192,8 +199,8 @@ Day 23は形の識別と素早い直感操作を組み合わせた「シェイ�
 <div id="shape-sorter-game">
   <div class="hud">
     <span class="time">残り: 60.0 秒</span>
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="combo">コンボ: 0</span>
     <span class="accuracy">正答率: 100%</span>
   </div>
@@ -327,7 +334,7 @@ Day 23は形の識別と素早い直感操作を組み合わせた「シェイ�
     const value = Number.parseInt(stored, 10);
     if (!Number.isNaN(value) && value >= 0) {
       state.best = value;
-      bestEl.textContent = `ベスト: ${state.best}`;
+      bestEl.textContent = `ベスト:${state.best}`;
     }
   };
 
@@ -409,9 +416,9 @@ Day 23は形の識別と素早い直感操作を組み合わせた「シェイ�
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${state.score}`;
+    scoreEl.textContent = `スコア:${state.score}`;
     comboEl.textContent = `コンボ: ${state.combo}`;
-    bestEl.textContent = `ベスト: ${state.best}`;
+    bestEl.textContent = `ベスト:${state.best}`;
     const accuracy =
       state.attempts === 0 ? 100 : Math.round((state.correct / state.attempts) * 100);
     accuracyEl.textContent = `正答率: ${accuracy}%`;

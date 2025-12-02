@@ -27,10 +27,17 @@ tags:
 #maze-dash-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #maze-dash-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #maze-dash-game .maze-wrapper {
   display: flex;
@@ -144,9 +151,9 @@ tags:
 
 <div id="maze-dash-game">
   <div class="hud">
-    <span class="timer">タイム: 0.00 秒</span>
-    <span class="best">ベスト: -- 秒</span>
-    <span class="moves">移動数: 0</span>
+    <span class="timer">タイム:0.00 秒</span>
+    <span class="best">ベスト:-- 秒</span>
+    <span class="moves">移動数:0</span>
   </div>
   <div class="maze-wrapper">
     <div class="maze"></div>
@@ -271,7 +278,7 @@ tags:
     const value = Number.parseFloat(stored);
     if (!Number.isNaN(value) && value > 0) {
       bestTime = value;
-      bestEl.textContent = `ベスト: ${bestTime.toFixed(2)} 秒`;
+      bestEl.textContent = `ベスト:${bestTime.toFixed(2)} 秒`;
       shareButton.disabled = false;
     }
   };
@@ -284,9 +291,9 @@ tags:
   };
 
   const updateHud = () => {
-    timerEl.textContent = `タイム: ${elapsed.toFixed(2)} 秒`;
-    movesEl.textContent = `移動数: ${moves}`;
-    bestEl.textContent = `ベスト: ${bestTime === null ? '--' : bestTime.toFixed(2)} 秒`;
+    timerEl.textContent = `タイム:${elapsed.toFixed(2)} 秒`;
+    movesEl.textContent = `移動数:${moves}`;
+    bestEl.textContent = `ベスト:${bestTime === null ? '--' : bestTime.toFixed(2)} 秒`;
     shareButton.disabled = bestTime === null;
   };
 

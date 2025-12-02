@@ -108,8 +108,14 @@ tags:
 #color-match-game .streak {
   margin-top: 6px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  line-height: 1.3;
   color: #475569;
+}
+@media (min-width: 400px) {
+  #color-match-game .streak {
+    font-size: 0.82rem;
+  }
 }
 #color-match-game .actions {
   margin-top: 16px;

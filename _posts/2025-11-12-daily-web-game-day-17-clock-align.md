@@ -27,10 +27,17 @@ tags:
 #clock-align-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #clock-align-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #clock-align-game .dial {
   position: relative;
@@ -129,8 +136,8 @@ tags:
 
 <div id="clock-align-game">
   <div class="hud">
-    <span class="angle">目標角度: 0°</span>
-    <span class="score">ベスト精度: --°</span>
+    <span class="angle">目標角度:0°</span>
+    <span class="score">ベスト精度:--°</span>
     <span class="count"></span>
   </div>
   <div class="dial">
@@ -262,8 +269,8 @@ tags:
   };
 
   const updateHud = () => {
-    angleEl.textContent = `目標角度: ${targetAngle}°`;
-    scoreEl.textContent = `ベスト精度: ${bestAccuracy === null ? '--' : bestAccuracy.toFixed(1)}°`;
+    angleEl.textContent = `目標角度:${targetAngle}°`;
+    scoreEl.textContent = `ベスト精度:${bestAccuracy === null ? '--' : bestAccuracy.toFixed(1)}°`;
     countEl.textContent = `: ${attempts}`;
     shareButton.disabled = bestAccuracy === null;
   };

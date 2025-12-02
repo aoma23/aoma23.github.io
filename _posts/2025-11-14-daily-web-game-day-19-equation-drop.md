@@ -33,10 +33,17 @@ tags:
 #equation-drop-game .hud {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 6px;
   flex-wrap: wrap;
   font-weight: 700;
   margin-bottom: 12px;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+@media (min-width: 400px) {
+  #equation-drop-game .hud {
+    font-size: 0.82rem;
+  }
 }
 #equation-drop-game .arena {
   position: relative;
@@ -151,8 +158,8 @@ tags:
 
 <div id="equation-drop-game">
   <div class="hud">
-    <span class="score">スコア: 0</span>
-    <span class="best">ベスト: 0</span>
+    <span class="score">スコア:0</span>
+    <span class="best">ベスト:0</span>
     <span class="lives">残りライフ: 3</span>
   </div>
   <div class="arena"></div>
@@ -309,8 +316,8 @@ tags:
   };
 
   const updateHud = () => {
-    scoreEl.textContent = `スコア: ${score}`;
-    bestEl.textContent = `ベスト: ${bestScore}`;
+    scoreEl.textContent = `スコア:${score}`;
+    bestEl.textContent = `ベスト:${bestScore}`;
     livesEl.textContent = `残りライフ: ${lives}`;
     shareButton.disabled = bestScore <= 0;
   };

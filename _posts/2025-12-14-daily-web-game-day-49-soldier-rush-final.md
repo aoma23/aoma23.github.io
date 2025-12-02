@@ -20,8 +20,8 @@ tags:
   <div class="hud">
     <span class="soldiers">兵士: 10</span>
     <span class="attack">攻撃力: 1</span>
-            <span class="time">タイム: 0.0秒</span>
-    <span class="best">ベスト: --</span>
+            <span class="time">タイム:0.0秒</span>
+    <span class="best">ベスト:--</span>
   </div>
   <div class="game-area">
     <div class="player"></div>
