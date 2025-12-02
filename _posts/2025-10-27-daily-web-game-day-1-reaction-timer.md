@@ -31,17 +31,23 @@ tags:
   margin-bottom: 12px;
   font-weight: bold;
   color: #1e293b;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #reaction-timer-game .game-button {
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   border: none;
   border-radius: 9999px;
-  padding: 12px 32px;
+  padding: 18px 32px;
   font-size: 1rem;
   cursor: pointer;
   transition: opacity 0.2s ease, transform 0.2s ease;
   touch-action: manipulation;
+  min-width: 180px;
+  display: inline-block;
 }
 #reaction-timer-game .game-button:hover {
   opacity: 0.9;
@@ -224,7 +230,7 @@ tags:
 
   const startRound = () => {
     state = 'armed';
-    setStatus('ランプが緑になるまで待ってください…');
+    setStatus('緑になるまで待って…');
     resultEl.textContent = '';
     button.textContent = '待機中…';
     root.classList.remove('go');
@@ -233,7 +239,7 @@ tags:
       state = 'go';
       startTime = performance.now();
       root.classList.add('go');
-      setStatus('今だ！ 緑に光っている間にクリック');
+      setStatus('今だ！クリック！');
       button.textContent = '今すぐクリック！';
     }, delay);
   };

@@ -65,7 +65,7 @@ tags:
 }
 #sum-snap-game .target-card {
   margin-bottom: 18px;
-  padding: 20px;
+  padding: 16px;
   border-radius: 18px;
   background: rgba(30, 41, 59, 0.6);
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
@@ -73,11 +73,7 @@ tags:
 #sum-snap-game .target {
   font-size: 2.6rem;
   font-weight: 800;
-}
-#sum-snap-game .pool {
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
+  margin: 0;
 }
 #sum-snap-game .choices {
   display: grid;
@@ -146,7 +142,6 @@ tags:
   </div>
   <div class="target-card">
     <p class="target">--</p>
-    <p class="pool">候補: --</p>
   </div>
   <div class="choices">
     <button type="button" data-pair="0">0 + 0</button>
@@ -173,7 +168,6 @@ tags:
   const accuracyEl = root.querySelector('.accuracy');
   const startButton = root.querySelector('.start');
   const targetEl = root.querySelector('.target');
-  const poolEl = root.querySelector('.pool');
   const choiceButtons = Array.from(root.querySelectorAll('.choices button'));
   const logEl = root.querySelector('.log');
   const shareButton = root.querySelector('.share-button');
@@ -351,7 +345,6 @@ tags:
     const options = [correctPair, ...Array.from(distractors)];
     options.sort(() => Math.random() - 0.5);
     targetEl.textContent = `合計 ${state.target}`;
-    poolEl.textContent = `候補: ${pool.join(', ')}`;
     choiceButtons.forEach((button, index) => {
       const pair = options[index];
       button.dataset.pair = pair.join(',');
@@ -486,7 +479,6 @@ tags:
   updateHud();
   enableShare();
   targetEl.textContent = '--';
-  poolEl.textContent = '候補: --';
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
   } else {
