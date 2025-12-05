@@ -61,7 +61,7 @@ jobs:
           # 例)
           # tags:\n#   - foo\n#   - "baz qux"
           TAGS=$(awk '
-            found && /^[[:space:]]*-/ {
+            found && /^[[:space:]]*-[[:space:]]/ {
               sub(/^[[:space:]]*-[[:space:]]*/,"",$0);
               gsub(/[\r\n]+/,"",$0);
               print; next
