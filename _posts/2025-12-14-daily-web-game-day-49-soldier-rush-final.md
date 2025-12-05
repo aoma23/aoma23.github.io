@@ -4,10 +4,10 @@ categories:
   - game
 tags:
   - aomagame
-  - 100日間毎日ゲームを公開する男
+  - 100日間毎日ゲーム作る人
 ---
 
-おはこんばんちは！100日間毎日ゲームを公開する男、aomaです！
+おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
 昨日のゲーム：<a href="{{ '/daily-web-game-day-48-soldier-rush-6/' | relative_url }}">ソルジャーラッシュ6</a>
 
 49日目は兵士を集めて敵を倒す「ソルジャーラッシュFINAL」。

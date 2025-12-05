@@ -4,7 +4,7 @@ categories:
   - game
 tags:
   - aomagame
-  - 100日間毎日ゲームを公開する男
+  - 100日間毎日ゲーム作る人
 ---
 
 おはこんばんちは！aomaです！  
