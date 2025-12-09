@@ -25,16 +25,13 @@ tags:
   </div>
   <div class="game-area">
     <div class="player"></div>
+    <div class="start-overlay">
+      <div class="mode-selection">
+        <button type="button" class="mode-fresh">スタート</button>
+        <button type="button" class="mode-continue">引き継いでスタート</button>
+      </div>
+    </div>
   </div>
-  <div class="arrow-controls">
-    <button type="button" class="arrow-left" disabled>← 左</button>
-    <button type="button" class="arrow-right" disabled>→ 右</button>
-  </div>
-  <div class="mode-selection">
-    <button type="button" class="mode-fresh">スタート</button>
-    <button type="button" class="mode-continue">引き継いでスタート</button>
-  </div>
-  
   <p class="log">ボタンを押してスタート！</p>
   <div class="progress-info">
     <div>シリーズ進行: Day 7/7 - 最終章</div>
@@ -85,7 +82,7 @@ initSoldierRushGame({
 
 ## 遊び方
 1. 「スタート」または「引き継いでスタート」でゲーム開始。
-2. 左右ボタン/←→/スワイプで移動。
+2. ←→キーまたはスワイプで移動。
 3. オート射撃でゲートとボスを狙おう。
 4. +ゲートで増加、-ゲートで減少。0になるとゲームオーバー。
 5. ボス出現後は攻撃を避けつつ撃破を目指す。

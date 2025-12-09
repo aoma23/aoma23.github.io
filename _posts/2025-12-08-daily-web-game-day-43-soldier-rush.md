@@ -24,13 +24,9 @@ tags:
   </div>
   <div class="game-area">
     <div class="player"></div>
-  </div>
-  <div class="arrow-controls">
-    <button type="button" class="arrow-left" disabled>← 左</button>
-    <button type="button" class="arrow-right" disabled>→ 右</button>
-  </div>
-  <div class="controls">
-    <button type="button" class="start">スタート</button>
+    <div class="start-overlay">
+      <button type="button" class="start">スタート</button>
+    </div>
   </div>
   <p class="log">左右移動でゲートを通過！兵士を増やしてボスを倒そう（オート射撃）</p>
   <div class="progress-info">
@@ -71,7 +67,7 @@ initSoldierRushGame({
 
 ## 遊び方
 1. 「スタート」でゲーム開始。
-2. 左右ボタン/←→/スワイプで移動。
+2. ←→キーまたはスワイプで移動。
 3. オート射撃でゲートとボスを狙おう。
 4. +ゲートで増加、-ゲートで減少。0になるとゲームオーバー。
 5. ボス出現後は攻撃を避けつつ撃破を目指す。

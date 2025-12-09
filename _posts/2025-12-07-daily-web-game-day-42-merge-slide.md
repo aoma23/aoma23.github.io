@@ -65,18 +65,25 @@ tags:
 }
 #merge-slide-game .grid-container {
   margin: 18px auto 16px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(30, 41, 59, 0.6);
   padding: 10px;
   border-radius: 12px;
   box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.2);
+  max-width: calc(100vw - 60px);
+  touch-action: none;
 }
 #merge-slide-game .grid {
   display: grid;
-  grid-template-columns: repeat(4, 72px);
-  grid-template-rows: repeat(4, 72px);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 8px;
   position: relative;
+  width: min(320px, calc(100vw - 80px));
+  height: min(320px, calc(100vw - 80px));
+  aspect-ratio: 1;
 }
 #merge-slide-game .cell.cell-slide-left {
   animation: slide-from-right 0.15s ease-out;
@@ -92,7 +99,7 @@ tags:
 }
 @keyframes slide-from-right {
   0% {
-    transform: translateX(80px);
+    transform: translateX(25%);
     opacity: 0.5;
   }
   100% {
@@ -102,7 +109,7 @@ tags:
 }
 @keyframes slide-from-left {
   0% {
-    transform: translateX(-80px);
+    transform: translateX(-25%);
     opacity: 0.5;
   }
   100% {
@@ -112,7 +119,7 @@ tags:
 }
 @keyframes slide-from-bottom {
   0% {
-    transform: translateY(80px);
+    transform: translateY(25%);
     opacity: 0.5;
   }
   100% {
@@ -122,7 +129,7 @@ tags:
 }
 @keyframes slide-from-top {
   0% {
-    transform: translateY(-80px);
+    transform: translateY(-25%);
     opacity: 0.5;
   }
   100% {
@@ -136,7 +143,7 @@ tags:
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 4vw, 1.5rem);
   font-weight: 700;
   transition: all 0.15s ease;
 }
@@ -214,54 +221,6 @@ tags:
   background: linear-gradient(135deg, #818cf8, #6366f1);
   color: #fff;
 }
-#merge-slide-game .controls-hint {
-  margin: 12px 0;
-  font-size: 0.9rem;
-  color: #94a3b8;
-}
-#merge-slide-game .arrow-controls {
-  display: grid;
-  grid-template-columns: repeat(3, 60px);
-  grid-template-rows: repeat(2, 50px);
-  gap: 8px;
-  justify-content: center;
-  margin: 16px auto;
-}
-#merge-slide-game .arrow-controls button {
-  border: none;
-  border-radius: 10px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  background: rgba(56, 189, 248, 0.18);
-  color: #f8fafc;
-  cursor: pointer;
-  transition: transform 0.1s ease, background 0.1s ease;
-  touch-action: manipulation;
-}
-#merge-slide-game .arrow-controls button:disabled {
-  opacity: 0.35;
-  cursor: not-allowed;
-}
-#merge-slide-game .arrow-controls button:active:not(:disabled) {
-  transform: scale(0.95);
-  background: rgba(56, 189, 248, 0.3);
-}
-#merge-slide-game .arrow-controls .arrow-up {
-  grid-column: 2;
-  grid-row: 1;
-}
-#merge-slide-game .arrow-controls .arrow-left {
-  grid-column: 1;
-  grid-row: 2;
-}
-#merge-slide-game .arrow-controls .arrow-down {
-  grid-column: 2;
-  grid-row: 2;
-}
-#merge-slide-game .arrow-controls .arrow-right {
-  grid-column: 3;
-  grid-row: 2;
-}
 #merge-slide-game .log {
   min-height: 24px;
   color: #f8fafc;
@@ -299,13 +258,6 @@ tags:
   <div class="grid-container">
     <div class="grid"></div>
   </div>
-  <p class="controls-hint">矢印ボタン、キーボード、またはスワイプで操作</p>
-  <div class="arrow-controls">
-    <button type="button" class="arrow-up" data-dir="up" disabled>↑</button>
-    <button type="button" class="arrow-left" data-dir="left" disabled>←</button>
-    <button type="button" class="arrow-down" data-dir="down" disabled>↓</button>
-    <button type="button" class="arrow-right" data-dir="right" disabled>→</button>
-  </div>
   <p class="log">スタートでゲーム開始。同じ数字を合体させてスコアを伸ばそう！</p>
   <div class="share">
     <button type="button" class="share-button" disabled>ベストをXで共有</button>
@@ -325,7 +277,6 @@ tags:
   const movesEl = root.querySelector('.moves');
   const startButton = root.querySelector('.start');
   const gridEl = root.querySelector('.grid');
-  const arrowButtons = Array.from(root.querySelectorAll('.arrow-controls button'));
   const logEl = root.querySelector('.log');
   const shareButton = root.querySelector('.share-button');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
@@ -750,7 +701,6 @@ tags:
   const endGame = () => {
     state.running = false;
     startButton.disabled = false;
-    arrowButtons.forEach((button) => (button.disabled = true));
     if (state.timerId !== null) {
       cancelAnimationFrame(state.timerId);
       state.timerId = null;
@@ -772,15 +722,6 @@ tags:
     }
     state.timerId = requestAnimationFrame(tick);
   };
-
-  arrowButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const direction = button.dataset.dir;
-      if (direction) {
-        handleMove(direction);
-      }
-    });
-  });
 
   document.addEventListener('keydown', (event) => {
     if (!state.running) {
@@ -809,15 +750,24 @@ tags:
     if (!state.running) {
       return;
     }
+    event.preventDefault();
     const touch = event.touches[0];
     touchStartX = touch.clientX;
     touchStartY = touch.clientY;
-  }, { passive: true });
+  }, { passive: false });
+
+  gridContainer.addEventListener('touchmove', (event) => {
+    if (!state.running) {
+      return;
+    }
+    event.preventDefault();
+  }, { passive: false });
 
   gridContainer.addEventListener('touchend', (event) => {
     if (!state.running) {
       return;
     }
+    event.preventDefault();
     const touch = event.changedTouches[0];
     const touchEndX = touch.clientX;
     const touchEndY = touch.clientY;
@@ -842,7 +792,7 @@ tags:
         handleMove('up');
       }
     }
-  }, { passive: true });
+  }, { passive: false });
 
   startButton.addEventListener('click', () => {
     if (state.running) {
@@ -856,7 +806,6 @@ tags:
     state.moves = 0;
     updateHud();
     startButton.disabled = true;
-    arrowButtons.forEach((button) => (button.disabled = false));
     initGrid();
     renderGrid();
     setLog('同じ数字を合体させてスコアを伸ばそう！');
@@ -895,12 +844,12 @@ tags:
 
 ## 遊び方
 1. スタートで60秒のチャレンジ開始。4x4のグリッドに2と4のタイルが配置されます。
-2. 矢印ボタン、キーボードの矢印キー、またはスワイプで上下左右に移動。同じ数字が隣接すると合体して2倍になります。
+2. キーボードの矢印キーまたはスワイプで上下左右に移動。同じ数字が隣接すると合体して2倍になります。
 3. 合体するとその数値がスコアに加算。60秒間でできるだけ高いスコアを目指しましょう！
 
 ## 実装メモ
 - 2048の基本ルールを踏襲し、60秒の時間制限を追加してスピード感を演出。
-- 各方向への移動とマージ処理を実装し、キーボード、ボタン、スワイプの3つの操作方法に対応。
+- 各方向への移動とマージ処理を実装し、キーボードとスワイプの操作方法に対応。
 - タイルの値に応じて色が変わるグラデーション配色で、視覚的にも楽しめるようにしました。
 - 新しいタイルの出現とマージ時のアニメーションで、操作の手触りを向上させています。
 

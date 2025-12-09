@@ -112,8 +112,6 @@
     const gameArea = root.querySelector('.game-area');
     const playerEl = root.querySelector('.player');
     const startButton = root.querySelector('.start');
-    const arrowLeft = root.querySelector('.arrow-left');
-    const arrowRight = root.querySelector('.arrow-right');
     const logEl = root.querySelector('.log');
     const shareButton = root.querySelector('.share-button');
     const totalPlaysEl = root.querySelector('.total-plays');
@@ -121,7 +119,7 @@
     const modeContinueButton = root.querySelector('.mode-continue');
     const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
 
-    if (!gameArea || !playerEl || !arrowLeft || !arrowRight || !logEl) {
+    if (!gameArea || !playerEl || !logEl) {
       return;
     }
 
@@ -804,10 +802,35 @@
       clearInterval(state.bossShootTimer);
       clearBossAttackTimers();
       clearInterval(state.bossMoveTimer);
-      arrowLeft.disabled = true;
-      arrowRight.disabled = true;
-      if (startButton) startButton.disabled = false;
+
       setLog(message);
+
+      // 1秒後にボタンを再表示し、ボタンテキストを更新
+      setTimeout(() => {
+        if (startButton) {
+          startButton.disabled = false;
+          startButton.textContent = 'リトライ';
+        }
+        if (modeFreshButton) {
+          modeFreshButton.disabled = false;
+          modeFreshButton.textContent = 'リトライ';
+        }
+        if (modeContinueButton) {
+          if (config.allowContinue && config.prevStageKey) {
+            const prevSoldiers = localStorage.getItem(config.prevStageKey);
+            const value = Number.parseInt(prevSoldiers ?? '0', 10);
+            if (value > 0) {
+              modeContinueButton.disabled = false;
+              modeContinueButton.textContent = `リトライ (${value}人)`;
+            } else {
+              modeContinueButton.disabled = true;
+            }
+          } else {
+            modeContinueButton.disabled = false;
+            modeContinueButton.textContent = 'リトライ';
+          }
+        }
+      }, 1000);
 
       if (message.includes('勝利')) {
         if (state.best === 0 || state.elapsedTime < state.best) {
@@ -872,8 +895,8 @@
       setLog('オート射撃開始！左右移動でゲートを選択しよう');
 
       if (startButton) startButton.disabled = true;
-      arrowLeft.disabled = false;
-      arrowRight.disabled = false;
+      if (modeFreshButton) modeFreshButton.disabled = true;
+      if (modeContinueButton) modeContinueButton.disabled = true;
 
       state.spawnTimer = setInterval(spawnGate, config.gateSpawnInterval);
       state.gameTimer = setInterval(gameLoop, 16);
@@ -895,45 +918,27 @@
       });
     }
 
-    arrowLeft.addEventListener('mousedown', () => {
-      state.keys.ArrowLeft = true;
-    });
-    arrowLeft.addEventListener('mouseup', () => {
-      state.keys.ArrowLeft = false;
-    });
-    arrowLeft.addEventListener('mouseleave', () => {
-      state.keys.ArrowLeft = false;
-    });
-
-    arrowRight.addEventListener('mousedown', () => {
-      state.keys.ArrowRight = true;
-    });
-    arrowRight.addEventListener('mouseup', () => {
-      state.keys.ArrowRight = false;
-    });
-    arrowRight.addEventListener('mouseleave', () => {
-      state.keys.ArrowRight = false;
-    });
-
     let touchStartX = 0;
     gameArea.addEventListener(
       'touchstart',
       (event) => {
         if (!state.running) return;
+        event.preventDefault();
         touchStartX = event.touches[0].clientX;
       },
-      { passive: true }
+      { passive: false }
     );
 
     gameArea.addEventListener(
       'touchmove',
       (event) => {
         if (!state.running) return;
+        event.preventDefault();
         const rect = gameArea.getBoundingClientRect();
         const touchX = event.touches[0].clientX - rect.left;
         state.playerX = clamp(touchX, 55, 265);
       },
-      { passive: true }
+      { passive: false }
     );
 
     document.addEventListener('keydown', (event) => {
