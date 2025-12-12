@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-67-golden-sunrise/' | relative_url }}">初日の出クライマー</a>
 
 68日目は「ネオン・ドリフト」。
 シンセウェーブなサイバー空間を駆け抜けろ！

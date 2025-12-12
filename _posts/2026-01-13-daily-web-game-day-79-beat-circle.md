@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-78-paper-plane/' | relative_url }}">ペーパー・プレーン</a>
 
 79日目は「ビート・サークル」。
 360度から迫りくるビート。

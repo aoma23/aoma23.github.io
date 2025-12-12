@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-79-beat-circle/' | relative_url }}">ビート・サークル</a>
 
 80日目は「ザ・コロッサス」。
 巨大な幾何学生命体との決戦。

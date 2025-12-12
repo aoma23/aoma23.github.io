@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-69-prism-breaker/' | relative_url }}">プリズム・ブレイカー</a>
 
 70日目は「ヴォイド・ラッシュ」。
 迫りくる虚無（Void）から逃げ続けろ。

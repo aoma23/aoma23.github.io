@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-71-shadow-runner/' | relative_url }}">シャドウ・ランナー</a>
 
 72日目は「サイバー・プロトコル」。
 貴方は凄腕ハッカー。

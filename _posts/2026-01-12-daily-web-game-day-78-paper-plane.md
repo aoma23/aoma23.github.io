@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-77-magnet-core/' | relative_url }}">マグネット・コア</a>
 
 78日目は「ペーパー・プレーン」。
 紙飛行機になって風に乗ろう。

@@ -8,7 +8,6 @@ tags:
 ---
 
 おはこんばんちは！100日間毎日ゲーム作る人、aomaです！
-昨日のゲーム：<a href="{{ '/daily-web-game-day-72-cyber-protocol/' | relative_url }}">サイバー・プロトコル</a>
 
 73日目は「グラビティ・ゴルフ」。
 宇宙空間でゴルフ。
