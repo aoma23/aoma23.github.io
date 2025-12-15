@@ -115,6 +115,7 @@ tags:
   const overlay = root.querySelector('.start-overlay');
   const startBtn = document.getElementById('ed-start-btn');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
+  const PLAYED_KEY = 'aomagame:played:echo-dungeon';
 
   let audioCtx = null;
   const ensureAudio = () => {
@@ -498,7 +499,6 @@ tags:
   }, {passive:false});
 
   function init() {
-    updatePlayCount();
     startBtn.addEventListener('click', startGame);
     window.addEventListener('mousedown', ensureAudio);
     window.addEventListener('touchstart', ensureAudio);
@@ -530,10 +530,36 @@ tags:
       startBtn.textContent = "RECHARGE & RETRY";
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -549,3 +575,7 @@ tags:
 - 「視覚」を制限し「聴覚（エコー）」を視覚化するという実験的なデザイン。
 - 衝突判定はタイルグリッドベースで簡易化。
 - 描画時に全タイルと全波紋の距離計算を行っているが、マップサイズ(20x20)が小さいため高フレームレートを維持可能。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

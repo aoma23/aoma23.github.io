@@ -113,6 +113,7 @@ N極(赤)とS極(青)を切り替え、金属片を操れ。
   const overlay = root.querySelector('.start-overlay');
   const startBtn = document.getElementById('mc-start-btn');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
+  const PLAYED_KEY = 'aomagame:played:magnet-core';
 
   let audioCtx = null;
   const ensureAudio = () => {
@@ -451,11 +452,10 @@ N極(赤)とS極(青)を切り替え、金属片を操れ。
   }, {passive:false});
 
   function init() {
-    updatePlayCount();
     startBtn.addEventListener('click', startGame);
     window.addEventListener('mousedown', ensureAudio);
     window.addEventListener('touchstart', ensureAudio);
-    
+
     // Initial Render
     state.inputX = 300; state.inputY = 300;
   }
@@ -480,10 +480,36 @@ N極(赤)とS極(青)を切り替え、金属片を操れ。
     startBtn.textContent = "REBOOT";
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -499,3 +525,7 @@ N極(赤)とS極(青)を切り替え、金属片を操れ。
 - クーロン力（$F = k q_1 q_2 / r^2$）を模した物理挙動を実装。
 - タップするだけで「吸い寄せ」「発射」を直感的に行えるワンボタン操作のアクション。
 - デブリの勢い（速度の2乗）が一定以上でないと敵を倒せないようにし、ただ当てるだけでなく「強く弾き飛ばす」ことを要求するバランス調整。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

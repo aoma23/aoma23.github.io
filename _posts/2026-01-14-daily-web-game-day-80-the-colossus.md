@@ -145,6 +145,7 @@ Experimental シリーズ最終作にふさわしい、派手なボスバトル�
   const overlay = root.querySelector('.start-overlay');
   const startBtn = document.getElementById('bg-start-btn');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
+  const PLAYED_KEY = 'aomagame:played:the-colossus';
 
   let audioCtx = null;
   const ensureAudio = () => {
@@ -619,14 +620,13 @@ Experimental シリーズ最終作にふさわしい、派手なボスバトル�
         let ratio = window.innerHeight / window.innerWidth;
         // Cap ratio to prevent game becoming too easy on very tall screens
         if (ratio > 1.6) ratio = 1.6;
-        
+
         canvas.height = Math.floor(600 * ratio);
-        if (canvas.height < 600) canvas.height = 600; 
+        if (canvas.height < 600) canvas.height = 600;
     } else {
         canvas.height = 450; // Standard 4:3 for PC
     }
-    
-    updatePlayCount();
+
     startBtn.addEventListener('click', startGame);
   }
 
@@ -681,10 +681,36 @@ Experimental シリーズ最終作にふさわしい、派手なボスバトル�
       startBtn.textContent = "RETRY";
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -701,3 +727,7 @@ Experimental シリーズ最終作にふさわしい、派手なボスバトル�
 - オブジェクトプーリング技法は簡易実装ですが、配列操作で数百個の弾を制御。
 - `Phase` 変数によるボスのステートマシン管理（行動パターンの切り替え）。
 - 画面シェイク（Shake）演出で、被弾や爆発の衝撃を表現。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

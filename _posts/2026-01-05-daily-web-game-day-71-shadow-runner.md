@@ -213,6 +213,7 @@ tags:
   };
   
   const STORAGE_KEY_BEST = 'aomagame:best:shadowrunner';
+  const PLAYED_KEY = 'aomagame:played:shadow-runner';
 
   class Platform {
     constructor(x, y, w) {
@@ -495,19 +496,17 @@ tags:
 
   // Init
   function init() {
-    updatePlayCount();
-    
     // Load Best
     const saved = localStorage.getItem(STORAGE_KEY_BEST);
     if (saved) {
         state.bestTime = parseFloat(saved);
         bestEl.textContent = `BEST: ${state.bestTime.toFixed(2)}`;
     }
-    
+
     startBtn.addEventListener('click', startGame);
     window.addEventListener('mousedown', ensureAudio);
     window.addEventListener('touchstart', ensureAudio);
-    
+
     // Initial Render
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -544,10 +543,36 @@ tags:
     // 
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -562,3 +587,7 @@ tags:
 - 太陽の位置とオブジェクトの頂点から、地面への射影変換を計算して影を描画。
 - 光源が移動することで影が伸び縮みし、ダイナミックに安全地帯が変化する。
 - プレイヤー追従は線形補間（Lerp）で滑らかに。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

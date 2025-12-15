@@ -141,6 +141,7 @@ tags:
   const overlay = root.querySelector('.start-overlay');
   const startBtn = document.getElementById('bc-start-btn');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
+  const PLAYED_KEY = 'aomagame:played:beat-circle';
 
   // Audio Engine
   let audioCtx = null;
@@ -510,7 +511,6 @@ tags:
   });
 
   function init() {
-    updatePlayCount();
     startBtn.addEventListener('click', startGame);
     // Load HS
     try {
@@ -560,10 +560,36 @@ tags:
       if (timerID) clearTimeout(timerID);
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -580,3 +606,7 @@ tags:
 - Web Audio APIの `currentTime` を基準にした高精度スケジューリングシステムを実装。
 - シンセサイザー（Oscillator）でリアルタイムにドラム音（Kick, Snare, Hihat）を合成・演奏しています。
 - 描画は `time` ベースで補間しているため、ラグがあっても音楽とノーツの位置ズレが最小限になるように設計されています。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>

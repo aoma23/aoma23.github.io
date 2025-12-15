@@ -154,6 +154,7 @@ tags:
   const startBtn = document.getElementById('cs-start-btn');
   const cBtns = root.querySelectorAll('.c-btn');
   const getPlayCountEl = () => document.querySelector('[data-aomagame-play-count]');
+  const PLAYED_KEY = 'aomagame:played:chroma-shift';
 
   let audioCtx = null;
   const ensureAudio = () => {
@@ -391,7 +392,6 @@ tags:
   });
 
   function init() {
-    updatePlayCount();
     startBtn.addEventListener('click', startGame);
     window.addEventListener('mousedown', ensureAudio);
     window.addEventListener('touchstart', ensureAudio);
@@ -417,10 +417,36 @@ tags:
     startBtn.textContent = "AGAIN";
   }
 
-  function updatePlayCount() { /* 省略 */ }
-  function markPlayed() { /* 省略 */ }
+  function updatePlayCount() {
+    const counterEl = getPlayCountEl();
+    if (!counterEl) return;
+    try {
+      let total = 0;
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (typeof key !== 'string' || !key.startsWith('aomagame:played:')) continue;
+        const value = parseInt(localStorage.getItem(key) || '0', 10);
+        if (!isNaN(value) && value > 0) total++;
+      }
+      counterEl.textContent = total;
+    } catch (e) { counterEl.textContent = '0'; }
+  }
+
+  function markPlayed() {
+    try {
+      const current = parseInt(localStorage.getItem(PLAYED_KEY) || '0', 10);
+      localStorage.setItem(PLAYED_KEY, String(current + 1));
+    } catch(e) {}
+    updatePlayCount();
+  }
 
   init();
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updatePlayCount, { once: true });
+  } else {
+    updatePlayCount();
+  }
 
 })();
 </script>
@@ -435,3 +461,7 @@ tags:
 - 背景色と障害物の色を比較するシンプルな判定ロジック。
 - 衝突判定時に `color === bg` なら透過（`globalAlpha`）させて、通り抜ける演出を実装。
 - 速度が徐々に上がり、判断の瞬発力が試されるように調整。
+
+
+<p class="game-progress">これまでに遊んだゲーム数: <span data-aomagame-play-count>0</span></p>
+<p class="game-link"><a href="{{ "/tags/#aomagame" | relative_url }}">ゲーム一覧へ</a></p>
