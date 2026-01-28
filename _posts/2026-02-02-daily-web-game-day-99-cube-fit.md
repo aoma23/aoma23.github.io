@@ -11,7 +11,7 @@ tags:
 
 99日目は「Cube Fit」。
 3x3x3の立方体を作り上げる3Dパズルゲームです。
-指定された7つのピースを組み合わせて、完全な立方体を完成させましょう！
+指定された6つのピースを組み合わせて、完全な立方体を完成させましょう！簡単そうに見えて意外と難しいはず！
 
 <!--more-->
 
@@ -128,19 +128,15 @@ tags:
   <canvas id="game-canvas"></canvas>
   
   <div class="status-msg" id="status-text">Drag pieces to the Grid</div>
-  <div class="layer-indicator" id="layer-text">Layer: Bottom</div>
   
   <div class="ui-overlay">
     <div class="ui-panel" style="flex-wrap: nowrap; overflow-x: auto; max-width: 95vw;">
-      <button class="btn" onclick="CubeFit.setLayer(0)">Bot</button>
-      <button class="btn" onclick="CubeFit.setLayer(1)">Mid</button>
-      <button class="btn" onclick="CubeFit.setLayer(2)">Top</button>
+      <button class="btn" onclick="CubeFit.moveHeight(1)">Up</button>
+      <button class="btn" onclick="CubeFit.moveHeight(-1)">Down</button>
       <div style="width:1px; height:20px; background:#666; margin:0 5px;"></div>
       <button class="btn" onclick="CubeFit.rotate(90, 0, 0)">Rot X</button>
       <button class="btn" onclick="CubeFit.rotate(0, 90, 0)">Rot Y</button>
       <button class="btn" onclick="CubeFit.rotate(0, 0, 90)">Rot Z</button>
-      <div style="width:1px; height:20px; background:#666; margin:0 5px;"></div>
-      <button class="btn" onclick="CubeFit.resetPiece()">Reset</button>
     </div>
   </div>
 
@@ -322,7 +318,12 @@ const CubeFit = (() => {
         // Position scattered outside
         const angle = (offset / 6) * Math.PI * 2;
         const radius = 6;
-        piece.position.set(Math.cos(angle) * radius, 0.5, Math.sin(angle) * radius);
+        
+        let initialY = 0.5;
+        // Lift shape 1 (Red) as requested
+        if (typeIdx === 0) initialY = 1.5;
+        
+        piece.position.set(Math.cos(angle) * radius, initialY, Math.sin(angle) * radius);
         
         // Store logic info
         piece.userData = {
@@ -387,6 +388,11 @@ const CubeFit = (() => {
         selectedPiece = obj;
         isDragging = true;
         
+        // Update Drag Plane to match current piece height
+        // Piece Y is usually 0.5, 1.5, 2.5...
+        // Plane needs to be at Y-0.5 so that (PlaneY + 0.5) equals PieceY
+        dragPlane.position.y = selectedPiece.position.y - 0.5;
+        
         // Lift slightly
         if(!selectedPiece.userData.placed) {
             // selectedPiece.position.y += 1; // already handled by drag visual?
@@ -443,52 +449,185 @@ const CubeFit = (() => {
     }
   }
   
-  // Rotate function (for buttons)
+
+  
   function rotate(x, y, z) {
     if(!selectedPiece || selectedPiece.userData.placed) return;
     
-    // Rotate the Group
-    selectedPiece.rotation.x += THREE.MathUtils.degToRad(x);
-    selectedPiece.rotation.y += THREE.MathUtils.degToRad(y);
-    selectedPiece.rotation.z += THREE.MathUtils.degToRad(z);
+    // Use World Axis Rotation to avoid confusion
+    const axis = new THREE.Vector3(x ? 1:0, y ? 1:0, z ? 1:0);
+    const angle = Math.PI / 2;
     
-    snapRotation(selectedPiece);
+    selectedPiece.rotateOnWorldAxis(axis, angle);
+    selectedPiece.updateMatrixWorld();
+    
+    // Strict Snap to Grid Orientation to prevent Gimbal Lock confusion / drift
+    snapToGrid(selectedPiece);
+    
+    // Snap Position Y
+    const p = selectedPiece.position;
+    selectedPiece.position.y = Math.round(p.y - 0.5) + 0.5;
+    
+    // Check bounds
+    validateBoundsAfterRotate(selectedPiece);
+    
+    playSound('snap');
   }
   
-  function snapRotation(obj) {
-      const q = new THREE.Quaternion();
-      q.setFromEuler(obj.rotation);
+  function snapToGrid(object) {
+      // Extract basis vectors from current rotation
+      const mat = new THREE.Matrix4().extractRotation(object.matrix);
+      const right = new THREE.Vector3();
+      const up = new THREE.Vector3();
+      const fwd = new THREE.Vector3();
+      mat.extractBasis(right, up, fwd);
       
-      obj.rotation.x = Math.round(obj.rotation.x / (Math.PI/2)) * (Math.PI/2);
-      obj.rotation.y = Math.round(obj.rotation.y / (Math.PI/2)) * (Math.PI/2);
-      obj.rotation.z = Math.round(obj.rotation.z / (Math.PI/2)) * (Math.PI/2);
+      // Helper to snap a vector to nearest world axis
+      const snapVec = (v) => {
+          const ax = Math.abs(v.x);
+          const ay = Math.abs(v.y);
+          const az = Math.abs(v.z);
+          const max = Math.max(ax, ay, az);
+          if (ax === max) return new THREE.Vector3(Math.sign(v.x), 0, 0);
+          if (ay === max) return new THREE.Vector3(0, Math.sign(v.y), 0);
+          return new THREE.Vector3(0, 0, Math.sign(v.z));
+      };
+      
+      const sRight = snapVec(right);
+      // Determine 'up' carefully. If sRight is vertical, we need to handle it.
+      // But simpler: Snap Up, then force orthogonality.
+      let sUp = snapVec(up);
+      
+      // If Up and Right are parallel (bad snap?), fallback
+      if (sUp.distanceToSquared(sRight) < 0.1 || sUp.distanceToSquared(sRight.clone().negate()) < 0.1) {
+          // Recalculate Up from Forward
+          const sFwd = snapVec(fwd);
+          sUp.crossVectors(sFwd, sRight);
+      }
+      
+      // Ensure strict orthogonality
+      const sFwd = new THREE.Vector3().crossVectors(sRight, sUp);
+      // Re-cross Up to ensure it's perpendicular to sRight and sFwd
+      sUp.crossVectors(sFwd, sRight);
+      
+      const newMat = new THREE.Matrix4().makeBasis(sRight, sUp, sFwd);
+      object.quaternion.setFromRotationMatrix(newMat);
+      object.updateMatrixWorld();
   }
   
-  function setLayer(layerIndex) {
-      currentLayer = layerIndex;
-      dragPlane.position.y = layerIndex * CELL_SIZE;
+  function snapTransform(obj) {
+      // Just snap Position Y for external calls if needed
+      const p = obj.position;
+      obj.position.y = Math.round(p.y - 0.5) + 0.5;
+  }
+  
+  function validateBoundsAfterRotate(piece) {
+      // Check if any block is below floor or above top
+      // Need to re-update world matrix after snap
+      piece.updateMatrixWorld();
       
-      // Update UI Text
-      const text = ['Layer: Bottom', 'Layer: Middle', 'Layer: Top'];
-      document.getElementById('layer-text').textContent = text[layerIndex];
+      const blocks = getPieceWorldBlocks(piece);
+      let minY = 999, maxY = -999;
+      blocks.forEach(b => {
+          if(b.y < minY) minY = b.y;
+          if(b.y > maxY) maxY = b.y;
+      });
       
-      // updateGridVisuals(); // Removed highlighting
+      // If below -3.5, lift up
+      if (minY < -3.5) {
+          const lift = Math.ceil(-3.5 - minY);
+          piece.position.y += lift;
+      }
+      // If above 3.5, push down
+      if (maxY > 3.5) {
+          const drop = Math.ceil(maxY - 3.5);
+          piece.position.y -= drop;
+      }
       
-      // Move piece immediately if selected
-      if(selectedPiece) {
-          if (isDragging) {
-              // Re-evaluate mouse projection on new plane
-              raycaster.setFromCamera(mouse, camera);
-              const intersects = raycaster.intersectObject(dragPlane);
-              if(intersects.length > 0) {
-                  const point = intersects[0].point;
-                  selectedPiece.position.set(point.x, point.y + 0.5, point.z);
+      // Also Snap Y again just in case
+      piece.position.y = Math.round(piece.position.y - 0.5) + 0.5;
+  }
+  
+  function moveHeight(delta) {
+    if(!selectedPiece) return;
+    
+    const currentY = selectedPiece.position.y;
+    // Target is next grid step
+    const nextY = Math.round((currentY + delta * CELL_SIZE) * 2) / 2; // snap to .5 steps
+    
+    // Validate bounds
+    let canMove = true;
+    
+    // Check if new position keeps piece fully within grid Y bounds (0 to 3)
+    const blocks = selectedPiece.userData.blocks;
+    
+    selectedPiece.updateMatrixWorld(); // Ensure current state is fresh
+    
+    // Temporarily apply position to check
+    const originalY = selectedPiece.position.y;
+    selectedPiece.position.y = nextY;
+    selectedPiece.updateMatrixWorld();
+    
+    for(let b of blocks) {
+        const vec = new THREE.Vector3(b.x * CELL_SIZE, b.y * CELL_SIZE, b.z * CELL_SIZE);
+        vec.applyMatrix4(selectedPiece.matrixWorld);
+        
+        // World Y should be around 0.5, 1.5, 2.5
+        // Allow buffer.
+        // Use -5.6 / 5.6 to allow slight float errors when exactly at -5.5 / 5.5
+        if(vec.y < -3.6 || vec.y > 3.6) {
+            canMove = false;
+            break;
+        }
+        
+        // Check collision with other placed pieces?
+        // Let's allow overlap during movement for better UX, or check strict?
+        // Strict is better to avoid stuck pieces.
+        if (checkCollisionAt(selectedPiece)) {
+            canMove = false;
+            break;
+        }
+    }
+    
+    // Restore or Keep
+    if(!canMove) {
+        selectedPiece.position.y = originalY;
+        // Visual feedback?
+    } else {
+        dragPlane.position.y = selectedPiece.position.y - 0.5;
+        playSound('snap');
+    }
+  }
+  
+  function checkCollisionAt(pieceToTest) {
+      // Very naive collision check with placed pieces
+      const myBlocks = getPieceWorldBlocks(pieceToTest);
+      
+      for(let other of pieces) {
+          if (other === pieceToTest || !other.userData.placed) continue;
+          
+          const otherWorldBlocks = getPieceWorldBlocks(other);
+          for(let mb of myBlocks) {
+              for(let ob of otherWorldBlocks) {
+                  // Round to nearest int/grid index to compare
+                  const dx = Math.abs(mb.x - ob.x);
+                  const dy = Math.abs(mb.y - ob.y);
+                  const dz = Math.abs(mb.z - ob.z);
+                  if (dx < 0.5 && dy < 0.5 && dz < 0.5) return true;
               }
-          } else if (!selectedPiece.userData.placed) {
-              // Just lift/lower it
-              selectedPiece.position.y = (layerIndex * CELL_SIZE) + 0.5;
           }
       }
+      return false;
+  }
+  
+  function getPieceWorldBlocks(piece) {
+      const res = [];
+      piece.updateMatrixWorld();
+      for(let b of piece.userData.blocks) {
+         const v = new THREE.Vector3(b.x, b.y, b.z).applyMatrix4(piece.matrixWorld);
+         res.push(v);
+      }
+      return res;
   }
   
   function updateGridVisuals() {
@@ -698,8 +837,7 @@ const CubeFit = (() => {
   // Expose
   return {
     rotate,
-    setLayer,
-    resetPiece,
+    moveHeight,
     restart,
     init
   };
@@ -711,12 +849,12 @@ window.addEventListener('load', CubeFit.init);
 
 ## 遊び方
 1. **ピースを選択**: 周りにあるピースをクリック（タップ）して掴みます。
-2. **高さ変更**: 画面下部の「Bot / Mid / Top」ボタンで、ピースを配置する高さを切り替えます。
+2. **高さ変更**: 画面下部の「Up / Down」ボタンで、ピースを持ち上げたり下げたりします。
 3. **移動と回転**:
    - マウス/タッチでドラッグして移動。
    - 画面の「Rot X/Y/Z」ボタンでピースを回転させます。
 4. **配置**: 3x3x3のフレームの中にピースをはめ込みます。
-5. **クリア**: 7つのピースですべての空間を埋め尽くせばクリア！
+5. **クリア**: 6つのピースですべての空間を埋め尽くせばクリア！
 
 ## 実装のポイント
 - **3D Interaction**: Three.jsを使用して3D空間でのドラッグ＆ドロップを実装。Raycasterによるマウス位置の検出と、グリッドへのスナップ判定を行っています。
