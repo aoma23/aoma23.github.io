@@ -998,6 +998,26 @@ const TTGame = (() => {
   /* ----------------------------------------------------------------
      Render Helpers
   ---------------------------------------------------------------- */
+  function drawRoundedBlock(ctx, x, y, size, color){
+      const r = Math.min(size * 0.35, size/2 - 1);
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + size - r, y);
+      ctx.quadraticCurveTo(x + size, y, x + size, y + r);
+      ctx.lineTo(x + size, y + size - r);
+      ctx.quadraticCurveTo(x + size, y + size, x + size - r, y + size);
+      ctx.lineTo(x + r, y + size);
+      ctx.quadraticCurveTo(x, y + size, x, y + size - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+      ctx.fill();
+      // subtle top highlight
+      ctx.fillStyle = 'rgba(255,255,255,0.2)';
+      ctx.fillRect(x + 2, y + 2, size - 4, Math.max(3, size * 0.14));
+  }
+
   function drawMatrix(ctx, matrix, offset) {
       matrix.forEach((row, y) => {
           row.forEach((value, x) => {
@@ -1005,14 +1025,17 @@ const TTGame = (() => {
                   const cx = (x + offset.x) * BLOCK;
                   const cy = (y + offset.y) * BLOCK;
                   const color = COLORS[value % COLORS.length] || '#fff';
-                  
-                  ctx.fillStyle = color;
-                  ctx.fillRect(cx, cy, BLOCK-1, BLOCK-1);
-                  
-                  // Bevel
-                  ctx.fillStyle = 'rgba(255,255,255,0.3)';
-                  ctx.fillRect(cx, cy, BLOCK-1, 4);
-                  ctx.fillRect(cx, cy, 4, BLOCK-1);
+                  const useRounded = (gameType === 'sand' && value !== BOMB_VALUE);
+                  if(useRounded){
+                      drawRoundedBlock(ctx, cx+0.5, cy+0.5, BLOCK-1, color);
+                  } else {
+                      ctx.fillStyle = color;
+                      ctx.fillRect(cx, cy, BLOCK-1, BLOCK-1);
+                      // Bevel
+                      ctx.fillStyle = 'rgba(255,255,255,0.3)';
+                      ctx.fillRect(cx, cy, BLOCK-1, 4);
+                      ctx.fillRect(cx, cy, 4, BLOCK-1);
+                  }
               }
           });
       });
