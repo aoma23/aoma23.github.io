@@ -42,8 +42,10 @@ tags:
 }
 
 #lm-canvas {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   background: #151515;
   display: block;
   cursor: pointer;
