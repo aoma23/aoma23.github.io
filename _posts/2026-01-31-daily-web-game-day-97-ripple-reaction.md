@@ -172,7 +172,7 @@ const RippleR = (() => {
     };
     
     function init() {
-        canvas.addEventListener('click', onClick);
+        canvas.addEventListener('pointerdown', onPointer);
         loop();
     }
     
@@ -208,13 +208,17 @@ const RippleR = (() => {
         }
     }
     
-    function onClick(e) {
+    function onPointer(e) {
         if(state !== 'playing' || hasClicked) return;
         
         Audio.init();
         const rect = canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const clientX = e.clientX ?? (e.touches && e.touches[0]?.clientX) ?? 0;
+        const clientY = e.clientY ?? (e.touches && e.touches[0]?.clientY) ?? 0;
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const x = (clientX - rect.left) * scaleX;
+        const y = (clientY - rect.top) * scaleY;
         
         createRipple(x, y);
         hasClicked = true;
