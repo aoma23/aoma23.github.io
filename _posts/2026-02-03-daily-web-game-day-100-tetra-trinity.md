@@ -1220,10 +1220,10 @@ const TTGame = (() => {
   }
   
   // Mappings
-  // D-pad maps to arrows (Pento/Sand) and A/D/S for Gravity movement compatibility
-  setupTouch('btn-l', ['ArrowLeft','KeyA']);
-  setupTouch('btn-r', ['ArrowRight','KeyD']);
-  setupTouch('btn-d', ['ArrowDown','KeyS']);
+  // D-pad maps to single logical keys to防止ダブル入力 on mobile
+  setupTouch('btn-l', ['ArrowLeft']);
+  setupTouch('btn-r', ['ArrowRight']);
+  setupTouch('btn-d', ['ArrowDown']);
   setupTouch('btn-a', ['rotate']); // rotate only
   
   // Move mobile controls below the canvas to avoid overlap
