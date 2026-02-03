@@ -227,8 +227,8 @@ canvas {
   <div id="mobile-controls">
      <div class="ctrl-row">
         <div class="c-btn" id="btn-l">←</div>
-        <div class="c-btn" id="btn-d">↓</div>
         <div class="c-btn" id="btn-r">→</div>
+        <div class="c-btn" id="btn-d">↓</div>
         <div class="c-btn" id="btn-a" style="border-radius:12px 12px 12px 12px;">⟳</div>
      </div>
   </div>
