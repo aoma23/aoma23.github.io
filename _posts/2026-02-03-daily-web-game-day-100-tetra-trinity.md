@@ -638,13 +638,13 @@ const TTGame = (() => {
 
           this.dropCounter += dt;
           
-          // Soft Drop (Accelerate if holding gravity direction)
+          // Soft Drop (加速は重力が上下のときのみ有効)
+          // 横重力中は左右移動で誤加速しないようにする
           let currentInterval = this.dropInterval;
           const g = this.gravity;
-          if ((g.y > 0 && keys.ArrowDown) ||
-              (g.y < 0 && keys.ArrowUp) ||
-              (g.x > 0 && keys.ArrowRight) ||
-              (g.x < 0 && keys.ArrowLeft)) {
+          if (g.y !== 0 && (
+              (g.y > 0 && keys.ArrowDown) ||
+              (g.y < 0 && keys.ArrowUp))) {
              currentInterval = 50; 
           }
           
@@ -672,16 +672,12 @@ const TTGame = (() => {
           // If arrows change gravity, then piece falls that way.
           // But we need to position the piece to fill holes.
           // Let's assume piece follows gravity, and we can nudge it perpendicular.
-          // If Gravity Y != 0: Left/Right works.
-          // If Gravity X != 0: Up/Down works.
-          
-          if (action === 'move_ortho_1') { // e.g. Left / Up
-              if(g.y !== 0) dx = -1; 
-              else dy = -1;
+          // 画面基準で左右に動かす（重力方向に依存しない）
+          if (action === 'move_ortho_1') { // Left
+              dx = -1;
           }
-          if (action === 'move_ortho_2') { // e.g. Right / Down
-              if(g.y !== 0) dx = 1; 
-              else dy = 1;
+          if (action === 'move_ortho_2') { // Right
+              dx = 1;
           }
           
           if(dx!==0 || dy!==0) {
@@ -1228,8 +1224,9 @@ const TTGame = (() => {
         
         // Mode specific mapping
         if(gameType === 'gravity') {
-            if(e.code === 'KeyA') { currentLogic.input('move_ortho_1'); consumed = true; }
-            if(e.code === 'KeyD') { currentLogic.input('move_ortho_2'); consumed = true; }
+            // 左右キーでも一歩移動できるようにする（Gravity変更と同居させる）
+            if(e.code === 'KeyA' || e.code === 'ArrowLeft') { currentLogic.input('move_ortho_1'); consumed = true; }
+            if(e.code === 'KeyD' || e.code === 'ArrowRight') { currentLogic.input('move_ortho_2'); consumed = true; }
         } else {
             if(e.code === 'ArrowLeft' || e.code === 'KeyA') { currentLogic.input('move_left'); consumed = true; }
             if(e.code === 'ArrowRight' || e.code === 'KeyD') { currentLogic.input('move_right'); consumed = true; }
@@ -1265,13 +1262,15 @@ const TTGame = (() => {
             if(code === 'rotate') {
               if(currentLogic) currentLogic.input('rotate');
             } else {
-              keys[code] = true;
               if(currentLogic) {
                 if(gameType === 'gravity') {
+                  // Gravityモード: 重力変更も許可しつつ、横移動を即時実行
+                  keys[code] = true; // 重力方向の更新に利用
                   if(code === 'ArrowLeft' || code === 'KeyA') currentLogic.input('move_ortho_1');
                   if(code === 'ArrowRight' || code === 'KeyD') currentLogic.input('move_ortho_2');
                   if(code === 'ArrowDown' || code === 'KeyS') currentLogic.input('drop');
                 } else {
+                  keys[code] = true;
                   if(code === 'ArrowLeft' || code === 'KeyA') currentLogic.input('move_left');
                   if(code === 'ArrowRight' || code === 'KeyD') currentLogic.input('move_right');
                   if(code === 'ArrowDown' || code === 'KeyS') currentLogic.input('drop');
