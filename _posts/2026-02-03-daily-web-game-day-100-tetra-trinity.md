@@ -1196,14 +1196,13 @@ const TTGame = (() => {
             if(code === 'rotate') {
               if(currentLogic) currentLogic.input('rotate');
             } else {
+              keys[code] = true;
               if(currentLogic) {
                 if(gameType === 'gravity') {
-                  // 重力モードはタップ毎に1回だけ移動/ドロップを実行し、重力方向のキー状態は変えない
                   if(code === 'ArrowLeft' || code === 'KeyA') currentLogic.input('move_ortho_1');
                   if(code === 'ArrowRight' || code === 'KeyD') currentLogic.input('move_ortho_2');
                   if(code === 'ArrowDown' || code === 'KeyS') currentLogic.input('drop');
                 } else {
-                  keys[code] = true;
                   if(code === 'ArrowLeft' || code === 'KeyA') currentLogic.input('move_left');
                   if(code === 'ArrowRight' || code === 'KeyD') currentLogic.input('move_right');
                   if(code === 'ArrowDown' || code === 'KeyS') currentLogic.input('drop');
