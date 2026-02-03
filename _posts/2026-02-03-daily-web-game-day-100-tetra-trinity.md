@@ -148,7 +148,7 @@ canvas {
 #mobile-controls {
   display: none; /* Shown via JS on touch devices */
   width: 100%;
-  padding: 12px 10px 10px;
+  padding: 12px 10px 12px;
   box-sizing: border-box;
   pointer-events: auto;
   position: relative;
@@ -156,12 +156,47 @@ canvas {
   backdrop-filter: blur(4px);
   z-index: 5;
 }
-.ctrl-row {
-  display: flex;
-  justify-content: center;
+.ctrl-grid {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 0;
   width: 100%;
-  gap: 14px;
-  margin-bottom: 10px;
+}
+
+/* Layout A: 1行 L D R A */
+#mobile-controls.layout-a .ctrl-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px;
+}
+#mobile-controls.layout-a #btn-l { grid-column:1; grid-row:1; }
+#mobile-controls.layout-a #btn-d { grid-column:2; grid-row:1; }
+#mobile-controls.layout-a #btn-r { grid-column:3; grid-row:1; }
+#mobile-controls.layout-a #btn-a { grid-column:4; grid-row:1; }
+
+/* Layout B: 1行 L R D A */
+#mobile-controls.layout-b .ctrl-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px;
+}
+#mobile-controls.layout-b #btn-l { grid-column:1; grid-row:1; }
+#mobile-controls.layout-b #btn-r { grid-column:2; grid-row:1; }
+#mobile-controls.layout-b #btn-d { grid-column:3; grid-row:1; }
+#mobile-controls.layout-b #btn-a { grid-column:4; grid-row:1; }
+
+/* Layout C: 2行 L R _ A / D(span2) _ A(span2) */
+#mobile-controls.layout-c .ctrl-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 56px);
+}
+#mobile-controls.layout-c #btn-l { grid-column:1; grid-row:1; }
+#mobile-controls.layout-c #btn-r { grid-column:2; grid-row:1; }
+#mobile-controls.layout-c #btn-d { grid-column:1 / span 2; grid-row:2; }
+#mobile-controls.layout-c #btn-a { 
+  grid-column:4; 
+  grid-row:1 / span 2; 
+  height: 100%; 
+  min-height: 0;
+  align-self: stretch;
 }
 .c-btn {
   min-width: 52px; height: 52px;
@@ -179,10 +214,42 @@ canvas {
   user-select: none;
   cursor: pointer;
   transition: transform 0.08s, box-shadow 0.08s;
+  position: relative;
 }
 .c-btn:active {
   transform: translateY(1px) scale(0.98);
   box-shadow: 0 2px 6px rgba(90,175,255,0.25);
+}
+.c-btn#btn-l { grid-area: l; }
+.c-btn#btn-r { grid-area: r; }
+.c-btn#btn-d { grid-area: d; }
+.c-btn#btn-a { grid-area: a; min-height: 52px; }
+
+.rotate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#layout-switch {
+  position: absolute;
+  top: -22px;
+  right: -12px;
+  left: auto;
+  transform: translate(0, 0);
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #222;
+  border: 2px solid #7af;
+  color: #7af;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.35);
+  pointer-events: auto;
 }
 
 .hidden { display: none !important; }
@@ -224,12 +291,14 @@ canvas {
     <div class="mode-btn" onclick="TTGame.menu()">MENU</div>
   </div>
   
-  <div id="mobile-controls">
-     <div class="ctrl-row">
+  <div id="mobile-controls" class="layout-a">
+     <div class="ctrl-grid">
         <div class="c-btn" id="btn-l">←</div>
         <div class="c-btn" id="btn-r">→</div>
         <div class="c-btn" id="btn-d">↓</div>
-        <div class="c-btn" id="btn-a" style="border-radius:12px 12px 12px 12px;">⟳</div>
+        <div class="c-btn rotate-btn" id="btn-a">⟳
+          <div id="layout-switch">⇆</div>
+        </div>
      </div>
   </div>
 </div>
@@ -1231,6 +1300,25 @@ const TTGame = (() => {
   if(mobileControls && canvas.parentElement) {
     canvas.parentElement.insertAdjacentElement('afterend', mobileControls);
   }
+
+  // Layout switcher for mobile controls (3 patterns)
+  const layouts = ['layout-a','layout-b','layout-c'];
+  let layoutIndex = 0; // default layout-a (L D R A)
+  const layoutSwitch = document.getElementById('layout-switch');
+  function applyLayout(idx){
+      layoutIndex = (idx + layouts.length) % layouts.length;
+      mobileControls.classList.remove(...layouts);
+      mobileControls.classList.add(layouts[layoutIndex]);
+  }
+  if(layoutSwitch){
+      const handleToggle = (e) => { 
+          if(e) { e.preventDefault(); e.stopPropagation(); }
+          applyLayout(layoutIndex+1); 
+      };
+      layoutSwitch.addEventListener('click', handleToggle);
+      layoutSwitch.addEventListener('touchstart', handleToggle);
+  }
+  applyLayout(layoutIndex);
   
   // Resize handling for responsive canvas & crisp rendering
   function resizeCanvas() {
