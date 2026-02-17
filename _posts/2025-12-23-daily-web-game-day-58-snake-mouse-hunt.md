@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 58: ヘビのマウスハント"
+og_image: "/assets/images/games/day58_og.png"
 categories:
   - game
 tags:

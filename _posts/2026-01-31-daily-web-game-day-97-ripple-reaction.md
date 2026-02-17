@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 97: Ripple Reaction (リップル・リアクション)"
+og_image: "/assets/images/games/day97_og.png"
 categories:
   - game
 tags:

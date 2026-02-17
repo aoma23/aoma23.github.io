@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 92: Cyber Drift (サイバードリフト)"
+og_image: "/assets/images/games/day92_og.png"
 categories:
   - game
 tags:

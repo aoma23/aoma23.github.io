@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 77: マグネット・コア (Magnet Core)"
+og_image: "/assets/images/games/day77_og.png"
 categories:
   - game
 tags:

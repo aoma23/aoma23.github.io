@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 90: ザ・ラスト・ボス (The Last Boss)"
+og_image: "/assets/images/games/day90_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 96: Drill Down (ドリル・ダウン)"
+og_image: "/assets/images/games/day96_og.png"
 categories:
   - game
 tags:

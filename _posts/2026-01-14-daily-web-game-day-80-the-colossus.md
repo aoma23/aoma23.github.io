@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 80: ザ・コロッサス (The Colossus)"
+og_image: "/assets/images/games/day80_og.png"
 categories:
   - game
 tags:

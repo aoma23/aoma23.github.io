@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 26: クイックスタック"
+og_image: "/assets/images/games/day26_og.png"
 categories:
   - game
 tags:

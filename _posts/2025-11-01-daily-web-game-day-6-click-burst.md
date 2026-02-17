@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 6: クリックバースト"
+og_image: "/assets/images/games/day6_og.png"
 categories:
   - game
 tags:

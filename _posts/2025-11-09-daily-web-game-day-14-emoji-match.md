@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 14: エモジーマッチ"
+og_image: "/assets/images/games/day14_og.png"
 categories:
   - game
 tags:

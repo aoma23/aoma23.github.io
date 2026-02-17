@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 3: 30秒暗算スプリント"
+og_image: "/assets/images/games/day3_og.png"
 categories:
   - game
 tags:

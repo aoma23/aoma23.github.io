@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 10: ライトロジック"
+og_image: "/assets/images/games/day10_og.png"
 categories:
   - game
 tags:

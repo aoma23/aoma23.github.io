@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 24: オービットディフェンダー"
+og_image: "/assets/images/games/day24_og.png"
 categories:
   - game
 tags:

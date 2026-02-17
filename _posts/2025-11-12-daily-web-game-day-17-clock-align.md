@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 17: クロックアライン"
+og_image: "/assets/images/games/day17_og.png"
 categories:
   - game
 tags:

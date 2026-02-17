@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 37: コンパスタップ"
+og_image: "/assets/images/games/day37_og.png"
 categories:
   - game
 tags:

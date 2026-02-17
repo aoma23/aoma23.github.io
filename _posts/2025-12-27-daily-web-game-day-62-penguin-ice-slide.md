@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 62: ペンギンのアイススライド"
+og_image: "/assets/images/games/day62_og.png"
 categories:
   - game
 tags:

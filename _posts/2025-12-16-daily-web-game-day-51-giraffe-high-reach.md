@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 51: キリンのハイリーチ"
+og_image: "/assets/images/games/day51_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 74: クロマ・シフト (Chroma Shift)"
+og_image: "/assets/images/games/day74_og.png"
 categories:
   - game
 tags:

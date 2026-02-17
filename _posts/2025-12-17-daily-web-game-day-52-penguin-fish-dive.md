@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 52: ペンギンのフィッシュダイブ"
+og_image: "/assets/images/games/day52_og.png"
 categories:
   - game
 tags:

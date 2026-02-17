@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 35: ナンバーラダー"
+og_image: "/assets/images/games/day35_og.png"
 categories:
   - game
 tags:

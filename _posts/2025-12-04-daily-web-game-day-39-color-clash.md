@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 39: カラークラッシュ"
+og_image: "/assets/images/games/day39_og.png"
 categories:
   - game
 tags:

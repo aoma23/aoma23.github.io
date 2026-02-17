@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 83: クリティカル・タイミング (Critical Timing)"
+og_image: "/assets/images/games/day83_og.png"
 categories:
   - game
 tags:

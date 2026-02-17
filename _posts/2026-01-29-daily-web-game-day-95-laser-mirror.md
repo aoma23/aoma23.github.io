@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 95: Laser Mirror (レーザー・ミラー)"
+og_image: "/assets/images/games/day95_og.png"
 categories:
   - game
 tags:

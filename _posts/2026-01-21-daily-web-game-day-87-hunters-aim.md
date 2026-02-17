@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 87: ハンターズ・エイム (Hunter's Aim)"
+og_image: "/assets/images/games/day87_og.png"
 categories:
   - game
 tags:

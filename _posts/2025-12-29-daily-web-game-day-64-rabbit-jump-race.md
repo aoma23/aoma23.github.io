@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 64: ウサギのジャンプレース"
+og_image: "/assets/images/games/day64_og.png"
 categories:
   - game
 tags:

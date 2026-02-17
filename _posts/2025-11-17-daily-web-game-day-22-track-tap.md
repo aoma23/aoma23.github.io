@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 22: トラックタップ"
+og_image: "/assets/images/games/day22_og.png"
 categories:
   - game
 tags:

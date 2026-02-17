@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 75: エコー・ダンジョン (Echo Dungeon)"
+og_image: "/assets/images/games/day75_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 82: インベントリ・ヒーロー (Inventory Hero)"
+og_image: "/assets/images/games/day82_og.png"
 categories:
   - game
 tags:

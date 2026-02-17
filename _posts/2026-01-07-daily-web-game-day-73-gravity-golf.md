@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 73: グラビティ・ゴルフ (Gravity Golf)"
+og_image: "/assets/images/games/day73_og.png"
 categories:
   - game
 tags:

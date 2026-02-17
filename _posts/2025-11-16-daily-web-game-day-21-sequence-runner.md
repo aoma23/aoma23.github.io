@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 21: シーケンスランナー"
+og_image: "/assets/images/games/day21_og.png"
 categories:
   - game
 tags:

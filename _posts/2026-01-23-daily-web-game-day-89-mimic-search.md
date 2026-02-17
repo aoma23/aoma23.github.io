@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 89: ミミック・サーチ (Mimic Search)"
+og_image: "/assets/images/games/day89_og.png"
 categories:
   - game
 tags:

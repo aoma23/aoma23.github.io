@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 19: エクエーションドロップ"
+og_image: "/assets/images/games/day19_og.png"
 categories:
   - game
 tags:

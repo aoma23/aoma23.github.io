@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 53: カンガルーのホップレース"
+og_image: "/assets/images/games/day53_og.png"
 categories:
   - game
 tags:

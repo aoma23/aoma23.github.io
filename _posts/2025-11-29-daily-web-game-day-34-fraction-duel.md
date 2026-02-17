@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 34: フラクションデュエル"
+og_image: "/assets/images/games/day34_og.png"
 categories:
   - game
 tags:

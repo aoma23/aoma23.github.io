@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 93: Star Link (スターリンク)"
+og_image: "/assets/images/games/day93_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 33: オペレーターダッシュ"
+og_image: "/assets/images/games/day33_og.png"
 categories:
   - game
 tags:

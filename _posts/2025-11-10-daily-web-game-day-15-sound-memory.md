@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 15: サウンドメモリー"
+og_image: "/assets/images/games/day15_og.png"
 categories:
   - game
 tags:

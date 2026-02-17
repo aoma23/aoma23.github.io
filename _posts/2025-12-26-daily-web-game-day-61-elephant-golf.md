@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 61: ゾウのゴルフ"
+og_image: "/assets/images/games/day61_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 81: ダンジョン・ステップ (Dungeon Step)"
+og_image: "/assets/images/games/day81_og.png"
 categories:
   - game
 tags:

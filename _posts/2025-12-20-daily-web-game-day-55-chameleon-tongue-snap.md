@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 55: カメレオンのタンスナップ"
+og_image: "/assets/images/games/day55_og.png"
 categories:
   - game
 tags:

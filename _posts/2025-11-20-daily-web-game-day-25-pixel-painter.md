@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 25: ピクセルペインター"
+og_image: "/assets/images/games/day25_og.png"
 categories:
   - game
 tags:

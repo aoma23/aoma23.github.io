@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 2: カラーツインマッチ"
+og_image: "/assets/images/games/day2_og.png"
 categories:
   - game
 tags:

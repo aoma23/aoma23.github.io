@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 50: ゴールデンブレイク"
+og_image: "/assets/images/games/day50_og.png"
 categories:
   - game
 tags:

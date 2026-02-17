@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 32: レタースイープ"
+og_image: "/assets/images/games/day32_og.png"
 categories:
   - game
 tags:

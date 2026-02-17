@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 54: リスのナッツキャッチ"
+og_image: "/assets/images/games/day54_og.png"
 categories:
   - game
 tags:

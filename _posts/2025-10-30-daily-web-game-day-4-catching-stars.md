@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 4: 星キャッチ・ラン"
+og_image: "/assets/images/games/day4_og.png"
 categories:
   - game
 tags:

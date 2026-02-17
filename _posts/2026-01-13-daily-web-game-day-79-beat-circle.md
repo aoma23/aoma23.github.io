@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 79: ビート・サークル (Beat Circle)"
+og_image: "/assets/images/games/day79_og.png"
 categories:
   - game
 tags:

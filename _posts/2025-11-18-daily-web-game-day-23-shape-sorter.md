@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 23: シェイプソート"
+og_image: "/assets/images/games/day23_og.png"
 categories:
   - game
 tags:

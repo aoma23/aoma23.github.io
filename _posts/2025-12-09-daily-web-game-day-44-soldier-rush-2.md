@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 44: ソルジャーラッシュ2"
+og_image: "/assets/images/games/day44_og.png"
 categories:
   - game
 tags:

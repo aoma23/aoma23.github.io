@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 76: タイム・ループ (Time Loop)"
+og_image: "/assets/images/games/day76_og.png"
 categories:
   - game
 tags:

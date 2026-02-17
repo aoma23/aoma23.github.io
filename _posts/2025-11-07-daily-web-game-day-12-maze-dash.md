@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 12: ミニメイズダッシュ"
+og_image: "/assets/images/games/day12_og.png"
 categories:
   - game
 tags:

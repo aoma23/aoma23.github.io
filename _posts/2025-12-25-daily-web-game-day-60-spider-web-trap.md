@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 60: クモのウェブトラップ"
+og_image: "/assets/images/games/day60_og.png"
 categories:
   - game
 tags:

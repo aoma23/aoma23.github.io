@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 30: プライムダッシュ"
+og_image: "/assets/images/games/day30_og.png"
 categories:
   - game
 tags:

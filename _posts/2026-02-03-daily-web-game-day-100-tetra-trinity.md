@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 100: Tetra Trinity (テトラ・トリニティ)"
+og_image: "/assets/images/games/day100_og.png"
 categories:
   - game
 tags:

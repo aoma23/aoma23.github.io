@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 28: エモジカフェ"
+og_image: "/assets/images/games/day28_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 88: ダンジョン・カード (Dungeon Cards)"
+og_image: "/assets/images/games/day88_og.png"
 categories:
   - game
 tags:

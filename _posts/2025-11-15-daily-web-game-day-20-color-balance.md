@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 20: カラーバランス"
+og_image: "/assets/images/games/day20_og.png"
 categories:
   - game
 tags:

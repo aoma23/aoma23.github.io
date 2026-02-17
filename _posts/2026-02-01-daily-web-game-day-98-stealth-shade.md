@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 98: Stealth Shade (ステルス・シェイド)"
+og_image: "/assets/images/games/day98_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 99: Cube Fit (キューブ・フィット)"
+og_image: "/assets/images/games/day99_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 65: キリンのフルーツタワー"
+og_image: "/assets/images/games/day65_og.png"
 categories:
   - game
 tags:

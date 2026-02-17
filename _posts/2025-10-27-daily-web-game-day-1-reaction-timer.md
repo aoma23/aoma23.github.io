@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 1: リアクションタイマー"
+og_image: "/assets/images/games/day1_og.png"
 categories:
   - game
 tags:

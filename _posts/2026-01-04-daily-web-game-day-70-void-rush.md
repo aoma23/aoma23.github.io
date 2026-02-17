@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 70: ヴォイド・ラッシュ (Void Rush)"
+og_image: "/assets/images/games/day70_og.png"
 categories:
   - game
 tags:

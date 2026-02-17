@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 9: ワードスプリント"
+og_image: "/assets/images/games/day9_og.png"
 categories:
   - game
 tags:

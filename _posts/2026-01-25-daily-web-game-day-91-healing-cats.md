@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 91: 癒しの猫広場 (Healing Cat Square)"
+og_image: "/assets/images/games/day91_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 13: ストループスプリント"
+og_image: "/assets/images/games/day13_og.png"
 categories:
   - game
 tags:

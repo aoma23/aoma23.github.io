@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 7: 5×5ミニマインスイーパー"
+og_image: "/assets/images/games/day7_og.png"
 categories:
   - game
 tags:

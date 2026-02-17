@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 47: ソルジャーラッシュ5"
+og_image: "/assets/images/games/day47_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 11: ビートバー・チャレンジ"
+og_image: "/assets/images/games/day11_og.png"
 categories:
   - game
 tags:

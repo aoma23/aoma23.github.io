@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 36: マルチプルマッチ"
+og_image: "/assets/images/games/day36_og.png"
 categories:
   - game
 tags:

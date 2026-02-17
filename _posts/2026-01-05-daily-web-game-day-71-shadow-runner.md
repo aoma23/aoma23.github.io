@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 71: シャドウ・ランナー (Shadow Runner)"
+og_image: "/assets/images/games/day71_og.png"
 categories:
   - game
 tags:

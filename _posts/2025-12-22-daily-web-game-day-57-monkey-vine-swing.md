@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 57: サルのツルスイング"
+og_image: "/assets/images/games/day57_og.png"
 categories:
   - game
 tags:

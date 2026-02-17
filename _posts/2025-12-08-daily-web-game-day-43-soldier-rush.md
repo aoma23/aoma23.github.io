@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 43: ソルジャーラッシュ"
+og_image: "/assets/images/games/day43_og.png"
 categories:
   - game
 tags:

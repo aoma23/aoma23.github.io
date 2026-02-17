@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 63: サルのココナッツキャッチ"
+og_image: "/assets/images/games/day63_og.png"
 categories:
   - game
 tags:

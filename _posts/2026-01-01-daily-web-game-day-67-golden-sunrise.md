@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 67: 初日の出クライマー (Golden Sunrise)"
+og_image: "/assets/images/games/day67_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 27: ウェイトバランサー"
+og_image: "/assets/images/games/day27_og.png"
 categories:
   - game
 tags:

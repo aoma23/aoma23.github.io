@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 18: パターングリッド"
+og_image: "/assets/images/games/day18_og.png"
 categories:
   - game
 tags:

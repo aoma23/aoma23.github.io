@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 5: メモリービーツ"
+og_image: "/assets/images/games/day5_og.png"
 categories:
   - game
 tags:

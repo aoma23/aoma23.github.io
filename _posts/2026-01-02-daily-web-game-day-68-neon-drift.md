@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 68: ネオン・ドリフト (Neon Drift)"
+og_image: "/assets/images/games/day68_og.png"
 categories:
   - game
 tags:

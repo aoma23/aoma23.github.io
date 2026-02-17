@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 41: ワンムーブパズル"
+og_image: "/assets/images/games/day41_og.png"
 categories:
   - game
 tags:

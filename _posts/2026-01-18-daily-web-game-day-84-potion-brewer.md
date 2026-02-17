@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 84: ポーション・ブリュワー (Potion Brewer)"
+og_image: "/assets/images/games/day84_og.png"
 categories:
   - game
 tags:

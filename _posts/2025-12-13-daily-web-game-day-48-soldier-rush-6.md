@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 48: ソルジャーラッシュ6"
+og_image: "/assets/images/games/day48_og.png"
 categories:
   - game
 tags:

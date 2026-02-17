@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 78: ペーパー・プレーン (Paper Plane)"
+og_image: "/assets/images/games/day78_og.png"
 categories:
   - game
 tags:

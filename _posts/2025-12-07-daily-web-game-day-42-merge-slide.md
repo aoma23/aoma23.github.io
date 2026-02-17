@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 42: マージスライド"
+og_image: "/assets/images/games/day42_og.png"
 categories:
   - game
 tags:

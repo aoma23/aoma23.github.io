@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 40: サムスナップ"
+og_image: "/assets/images/games/day40_og.png"
 categories:
   - game
 tags:

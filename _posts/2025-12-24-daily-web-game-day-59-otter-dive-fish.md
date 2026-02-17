@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 59: カワウソのダイブフィッシュ"
+og_image: "/assets/images/games/day59_og.png"
 categories:
   - game
 tags:

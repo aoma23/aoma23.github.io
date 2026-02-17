@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 86: ゴーレム・ディフェンス (Golem Defense)"
+og_image: "/assets/images/games/day86_og.png"
 categories:
   - game
 tags:

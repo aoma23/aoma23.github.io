@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 29: スワップソーター"
+og_image: "/assets/images/games/day29_og.png"
 categories:
   - game
 tags:

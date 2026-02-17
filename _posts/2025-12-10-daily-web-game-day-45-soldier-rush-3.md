@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 45: ソルジャーラッシュ3"
+og_image: "/assets/images/games/day45_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 31: ヒューハーモニー"
+og_image: "/assets/images/games/day31_og.png"
 categories:
   - game
 tags:

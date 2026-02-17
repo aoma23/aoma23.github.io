@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 72: サイバー・プロトコル (Cyber Protocol)"
+og_image: "/assets/images/games/day72_og.png"
 categories:
   - game
 tags:

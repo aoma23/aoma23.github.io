@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 46: ソルジャーラッシュ4"
+og_image: "/assets/images/games/day46_og.png"
 categories:
   - game
 tags:

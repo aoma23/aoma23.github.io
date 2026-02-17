@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 16: ネビュラ・シューター"
+og_image: "/assets/images/games/day16_og.png"
 categories:
   - game
 tags:

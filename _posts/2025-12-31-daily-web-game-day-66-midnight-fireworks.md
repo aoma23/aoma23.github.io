@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 66: 真夜中の花火 (Midnight Fireworks)"
+og_image: "/assets/images/games/day66_og.png"
 categories:
   - game
 tags:

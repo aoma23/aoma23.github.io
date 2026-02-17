@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 94: Liquid Flow (リキッド・フロー)"
+og_image: "/assets/images/games/day94_og.png"
 categories:
   - game
 tags:

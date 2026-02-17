@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 69: プリズム・ブレイカー (Prism Breaker)"
+og_image: "/assets/images/games/day69_og.png"
 categories:
   - game
 tags:

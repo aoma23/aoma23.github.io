@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 38: スカイストライカー"
+og_image: "/assets/images/games/day38_og.png"
 categories:
   - game
 tags:

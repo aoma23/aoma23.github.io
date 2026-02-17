@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 85: ブラックスミス・リズム (Blacksmith Rhythm)"
+og_image: "/assets/images/games/day85_og.png"
 categories:
   - game
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 56: ハチのフラワーダッシュ"
+og_image: "/assets/images/games/day56_og.png"
 categories:
   - game
 tags:

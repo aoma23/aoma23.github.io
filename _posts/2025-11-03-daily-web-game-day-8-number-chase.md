@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 8: ナンバーチェイス"
+og_image: "/assets/images/games/day8_og.png"
 categories:
   - game
 tags:

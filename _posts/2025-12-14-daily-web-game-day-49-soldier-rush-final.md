@@ -1,5 +1,6 @@
 ---
 title: "毎日ゲームチャレンジ Day 49: ソルジャーラッシュFINAL"
+og_image: "/assets/images/games/day49_og.png"
 categories:
   - game
 tags:
