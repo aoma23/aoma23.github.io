@@ -1,6 +1,7 @@
 ---
 layout: single
-title: "aomagame100"
+title: "aoma game 100"
+description: "100日で100本のゲームを作るチャレンジのまとめ。各カードからいつでもすぐに遊べます。"
 permalink: /games100/
 author_profile: false
 ---
@@ -97,9 +98,8 @@ author_profile: false
 }
 </style>
 
-100日間で100個のゲームを作りました！ぜひ遊んでみてください！🎮
-
-created 2025/10/27〜2026/02/03
+100日で100本のゲームを作りました。ぜひ遊んでください！🎮  
+Created: 2025/10/27–2026/02/03
 
 <div class="games-grid">
   <!-- Day 1 -->
