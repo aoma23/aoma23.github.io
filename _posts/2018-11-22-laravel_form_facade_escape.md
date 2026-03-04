@@ -7,19 +7,19 @@ tags: [IT,Laravel,セキュリティ]
 ---
 <h2>ふとレビューしてて気づきました。</h2>
 
-<pre class="code" data-lang="" data-unlink>{{ Form::text(&#39;test&#39;, &#39;&#39;) }}</pre>
+<pre class="code" data-lang="" data-unlink>{% raw %}{{ Form::text(&#39;test&#39;, &#39;&#39;) }}{% endraw %}</pre>
 
 
 <p>んん！？昔は<code>{!! !!}</code>で囲まないといけなかったはず！</p>
 
-<p>疑問に思ったのは{{ }}はタグをエスケープするのに、Formファサードは無視するんだなーということ。</p>
+<p>疑問に思ったのは<code>{% raw %}{{ }}{% endraw %}</code>はタグをエスケープするのに、Formファサードは無視するんだなーということ。</p>
 
 <h2>で、検証してみました。</h2>
 
-<pre class="code" data-lang="" data-unlink>{{ Form::text(&#39;test&#39;, &#39;&#39;) }}
+<pre class="code" data-lang="" data-unlink>{% raw %}{{ Form::text(&#39;test&#39;, &#39;&#39;) }}
 {!! Form::text(&#39;test&#39;, &#39;&#39;) !!}
 {{ &#39;&lt;b&gt;text&lt;/b&gt;&#39; }}
-{!! &#39;&lt;b&gt;text&lt;/b&gt;&#39; !!}</pre>
+{!! &#39;&lt;b&gt;text&lt;/b&gt;&#39; !!}{% endraw %}</pre>
 
 
 <p>↓　結果はこうなる。なぜだ。。。</p>
@@ -32,8 +32,8 @@ tags: [IT,Laravel,セキュリティ]
 
 <p>もしかしてvalue値をエスケープするようになった？なんて妄想してみたが違った。</p>
 
-<pre class="code" data-lang="" data-unlink>{{ Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) }}
-{!! Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) !!}</pre>
+<pre class="code" data-lang="" data-unlink>{% raw %}{{ Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) }}
+{!! Form::text(&#39;test&#39;, &#39;&lt;b&gt;test&lt;/b&gt;&#39;) !!}{% endraw %}</pre>
 
 
 <p>↓</p>
@@ -57,6 +57,5 @@ tags: [IT,Laravel,セキュリティ]
 }</pre>
 
 
-<p>ということで今後Formファサードは<code>{{ }}</code>で囲もうと思います。<br/>
+<p>ということで今後Formファサードは<code>{% raw %}{{ }}{% endraw %}</code>で囲もうと思います。<br/>
 （<code>{!! !!}</code> の出現頻度が減るのでgrepが捗りますね！）</p>
-

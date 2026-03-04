@@ -90,6 +90,7 @@ npm run dev
 
 お好みでトップページを少し編集してみる（`app/page.tsx`）
 
+{% raw %}
 ```tsx
 export default function Home() {
   return (
@@ -100,6 +101,7 @@ export default function Home() {
   );
 }
 ```
+{% endraw %}
 
 ## 4. GitHub に初回プッシュ
 

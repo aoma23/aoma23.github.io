@@ -7,8 +7,8 @@ tags: [PHP,Laravel]
 ---
 <h2>勘違いしてました。</h2>
 
-<p>LaravelのBladeの<code>{{ }}</code>ってhtmlentitiesだったんですね。<br/>
-HTMLのサニタイズはhtmlspecialcharsで十分なので、<code>{{ }}</code>もそうだろうと思い込んでました。</p>
+<p>LaravelのBladeの<code>{% raw %}{{ }}{% endraw %}</code>ってhtmlentitiesだったんですね。<br/>
+HTMLのサニタイズはhtmlspecialcharsで十分なので、<code>{% raw %}{{ }}{% endraw %}</code>もそうだろうと思い込んでました。</p>
 
 <h2>htmlspecialcharsとhtmlentitiesはどう違うの？</h2>
 
@@ -51,4 +51,4 @@ print htmlentities('÷');
 
 <p>勘違いしてたのは私だけかもしれませんが、自分への戒めを込めてもう一度。</p>
 
-<p><span style="font-size: 150%">Laravelの<code>{{ }}</code>はhtmlspecialcharsじゃなくてhtmlentitiesでした！！(> &lt;)</span></p>
+<p><span style="font-size: 150%">Laravelの<code>{% raw %}{{ }}{% endraw %}</code>はhtmlspecialcharsじゃなくてhtmlentitiesでした！！(> &lt;)</span></p>
