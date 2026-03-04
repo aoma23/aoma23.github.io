@@ -33,14 +33,14 @@ classes: wide
   <article class="archive__item">
     <div class="archive__item-teaser">
       <a href="https://kinenbi.app/" target="_blank" rel="noopener">
-        <img src="https://kinenbi.app/img/icon_x512.png" alt="記念日アプリ Kinenbi">
+        <img src="https://kinenbi.app/img/icon_x512.png" alt="KINENBI">
       </a>
     </div>
     <h2 class="archive__item-title">
-      <a href="https://kinenbi.app/" target="_blank" rel="noopener">記念日アプリ Kinenbi</a>
+      <a href="https://kinenbi.app/" target="_blank" rel="noopener">KINENBI</a>
     </h2>
     <p class="archive__item-excerpt">
-      大事な日を忘れないためのシンプル管理ツール。今日から何日目？次の記念日まで何日？がすぐわかります。
+      大切な日を管理するシンプルな記念日アプリ。今日から何日目？次の記念日まで何日？がすぐわかります。
     </p>
     <p><a class="btn btn--primary" href="https://kinenbi.app/" target="_blank" rel="noopener">使ってみる</a></p>
   </article>
@@ -48,31 +48,31 @@ classes: wide
   <article class="archive__item">
     <div class="archive__item-teaser">
       <a href="/app/image_stripe_merge/" target="_blank" rel="noopener">
-        <img src="/app/image_stripe_merge/sample_a.webp" alt="画像ストライプ合成ツール">
+        <img src="/app/image_stripe_merge/sample_a.webp" alt="Image Stripe Merge">
       </a>
     </div>
     <h2 class="archive__item-title">
-      <a href="/app/image_stripe_merge/" target="_blank" rel="noopener">画像ストライプ合成ツール</a>
+      <a href="/app/image_stripe_merge/" target="_blank" rel="noopener">Image Stripe Merge</a>
     </h2>
     <p class="archive__item-excerpt">
-      複数の画像を“しましま”に合成。SNSの比較やネタ画像づくりに便利。
+      画像ストライプ合成ツール。簡単操作で複数の画像を並べて合成できます。
     </p>
     <p><a class="btn btn--primary" href="/app/image_stripe_merge/" target="_blank" rel="noopener">使ってみる</a></p>
   </article>
 
   <article class="archive__item">
     <div class="archive__item-teaser">
-      <a href="/app/quickboard/" target="_blank" rel="noopener">
-        <img src="/app/quickboard/images/quickboard.png" alt="QuickBoard（サッカー戦術ボード）">
+      <a href="https://quickboard.aoma23.com/" target="_blank" rel="noopener">
+        <img src="https://quickboard.aoma23.com/images/quickboard-og.png" alt="QuickBoard">
       </a>
     </div>
     <h2 class="archive__item-title">
-      <a href="/app/quickboard/" target="_blank" rel="noopener">QuickBoard（サッカー戦術ボード）</a>
+      <a href="https://quickboard.aoma23.com/" target="_blank" rel="noopener">QuickBoard</a>
     </h2>
     <p class="archive__item-excerpt">
       ブラウザで使えるサッカー戦術ボード。フォーメーション作成・共有に最適。
     </p>
-    <p><a class="btn btn--primary" href="/app/quickboard/" target="_blank" rel="noopener">使ってみる</a></p>
+    <p><a class="btn btn--primary" href="https://quickboard.aoma23.com/" target="_blank" rel="noopener">使ってみる</a></p>
   </article>
 
 </div>
