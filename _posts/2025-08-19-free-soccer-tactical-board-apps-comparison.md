@@ -231,3 +231,5 @@ tags:
 - **Coach Tactic Board**: App Store / Google Playで検索
 - **Tactical Board Online**: [https://tactical-board.com/](https://tactical-board.com/)
 - **戦術作戦タクティクスボード（サッカーの箱）**: [https://footballbox.club/tactics-board.html](https://footballbox.club/tactics-board.html)
+
+{% include quickboard-cta.html campaign="free-apps-comparison" %}

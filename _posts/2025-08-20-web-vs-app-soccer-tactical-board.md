@@ -307,3 +307,5 @@ Web版でありながら、アプリ版の機能を持つハイブリッド技�
 **おすすめWeb版戦術ボード：**
 - **QuickBoard**: [https://aoma23.com/app/quickboard/](https://aoma23.com/app/quickboard/?utm_source=blog&utm_medium=article&utm_campaign=web-vs-app-cta)
 - **TACTICALista**: [https://tacticalista.com/](https://tacticalista.com/)
+
+{% include quickboard-cta.html campaign="web-vs-app-soccer-tactical-board" %}

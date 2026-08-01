@@ -274,3 +274,5 @@ Netlify Functionsも125,000リクエスト/月の無料枠があるので、こ�
 画像処理が必要な場合は、素直にVercelかNetlifyの方が良さそう、というのが今回の結論です。Cloudflareは別の用途で使ってみたい。
 
 それではまた！
+
+{% include quickboard-cta.html campaign="cloudflare-og-image-challenge" %}

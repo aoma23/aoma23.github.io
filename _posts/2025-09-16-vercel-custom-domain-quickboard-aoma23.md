@@ -95,3 +95,4 @@ Vercel はプロジェクトごとに `xxxx.vercel.app` を自動で割り当て
 
 これで `quickboard.aoma23.com` での公開は完了です。以降は GitHub のメインブランチに push するだけで、自動で本番に反映されます。`*.vercel.app` は保険として残しておくのがおすすめです。運用に合わせて、環境変数やカスタムヘッダー/リダイレクト（`next.config.js`）も整えていきましょう。
 
+{% include quickboard-cta.html campaign="vercel-custom-domain-quickboard" %}

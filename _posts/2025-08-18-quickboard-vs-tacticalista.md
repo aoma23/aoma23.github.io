@@ -158,3 +158,5 @@ TACTICAListaは**高機能さ**が売りです。
 **QuickBoardを試してみる：** [https://aoma23.com/app/quickboard/](https://aoma23.com/app/quickboard/?utm_source=blog&utm_medium=comparison&utm_campaign=vs-tacticalista-cta)
 
 **TACTICAListaを試してみる：** [https://tacticalista.com/](https://tacticalista.com/)
+
+{% include quickboard-cta.html campaign="vs-tacticalista" %}
