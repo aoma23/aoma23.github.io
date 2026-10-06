@@ -13,6 +13,11 @@ Jリーグ全60チームのメインカラーのカラーコードを調査し�
 
 キティちゃん可愛い。
 
+<section aria-label="QuickBoardでスタメン図を作る" style="margin: 2rem 0; padding: 1.25rem; border: 1px solid #d9e7df; border-radius: 8px; background: #f6fbf8;">
+  <p style="margin: 0 0 1rem;">クラブカラーを設定済みのボードで、スタメン図を作ってみませんか？ 開発しているQuickBoardでは、クラブカラーと選手を設定したボードから、配置を編集できます。まずはログインなしで開いて試せます。</p>
+  <p style="margin: 0;"><a href="https://quickboard.aoma23.com/football/ja/jleague/2026/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=jleague-team-colors&amp;utm_content=top" style="font-weight: 700;">好きなクラブでスタメンを作る</a></p>
+</section>
+
 ## J1リーグ (20チーム)
 
 <div style="overflow-x: auto;">
