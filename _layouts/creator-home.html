@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% if paginator.page > 1 %}
+  <div id="main" role="main">
+    {% include sidebar.html %}
+    <div class="archive">
+      <h1 id="page-title" class="page__title">記事一覧</h1>
+      <h2 class="archive__subtitle">{{ paginator.page }} / {{ paginator.total_pages }} ページ</h2>
+      <div class="entries-list">
+        {% for post in paginator.posts %}
+          {% include archive-single.html type="list" %}
+        {% endfor %}
+      </div>
+      {% include paginator.html %}
+    </div>
+  </div>
+{% else %}
+  {% include creator-home.html %}
+{% endif %}
