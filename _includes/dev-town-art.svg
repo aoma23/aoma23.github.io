@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 416" fill="none" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+<defs>
+ <pattern id="town-grass" width="48" height="40" patternUnits="userSpaceOnUse"><rect width="48" height="40" fill="#9cbd79"/><path d="M8 9h3v3H8zM34 30h3v3h-3zM20 23h6v2h-6z" fill="#8eb26e"/><path d="M35 7h4v2h-4zM12 33h3v2h-3z" fill="#accb87"/></pattern>
+ <pattern id="town-water" width="56" height="40" patternUnits="userSpaceOnUse"><rect width="56" height="40" fill="#75afb4"/><path d="M8 10h12v2H8zM31 27h17v2H31z" fill="#a6d0c9"/><path d="M0 37h10v2H0zM41 7h9v2h-9z" fill="#629aab"/></pattern>
+ <pattern id="town-stone" width="32" height="24" patternUnits="userSpaceOnUse"><rect width="32" height="24" fill="#e0cc9d"/><path d="M3 0h1v11H3zM0 11h32v1H0zM19 12h1v12h-1zM0 23h32v1H0z" fill="#cfb889"/></pattern>
+ <g id="town-tree"><path d="M4 49h32v8H4z" fill="#7b9d62"/><path d="M17 34h9v22h-9z" fill="#755a42"/><path d="M17 36h4v18h-4z" fill="#a17d4b"/><path d="M13 0h16v7h7v9h7v23h-7v8H7v-8H0V16h7V7h6z" fill="#3f6c50"/><path d="M13 0h16v7h7v9h-6v16H7V15h6z" fill="#56815a"/><path d="M13 7h13v5H13zM7 17h7v11H7z" fill="#71965f"/><path d="M28 35h8v5h-8z" fill="#315943"/></g>
+ <g id="town-bush"><path d="M4 3h8V0h11v5h7v14H0V7h4z" fill="#5e8855"/><path d="M5 4h7v4H5zM18 6h6v4h-6z" fill="#7fa665"/><path d="M3 16h26v4H3z" fill="#4d764e"/></g>
+ <g id="town-flower"><path d="M4 5h2v8H4zM1 10h3v2H1z" fill="#4c7952"/><path d="M3 0h4v3h3v3H7v3H3V6H0V3h3z" fill="#f0c77a"/><path d="M3 3h4v3H3z" fill="#bf7c58"/></g>
+ <g id="town-lamp"><path d="M6 14h3v27H6zM2 41h11v3H2zM1 3h13v12H1zM4 0h7v3H4z" fill="#3f5550"/><path d="M4 5h7v7H4z" fill="#efd79b"/></g>
+ <g id="town-crate"><path d="M0 0h18v18H0z" fill="#806449"/><path d="M2 2h14v14H2z" fill="#c3a174"/><path d="M3 3h3v3H3zM6 6h3v3H6zM9 9h3v3H9zM12 12h3v3h-3z" fill="#987a54"/></g>
+ <g id="town-fence"><path d="M0 5h48v4H0zM0 16h48v4H0zM3 0h5v26H3zM23 0h5v26h-5zM43 0h5v26h-5z" fill="#866b4a"/><path d="M3 0h3v24H3zM23 0h3v24h-3zM43 0h3v24h-3z" fill="#c5aa7c"/></g>
+</defs>
+<rect x="0" y="0" width="960" height="416" fill="url(#town-grass)" />
+<path d="M0 0H154V48H138V98H160V154H137V204H164V257H144V316H112V370H132V416H0Z" fill="#729c65" />
+<path d="M0 0H142V48H126V98H148V154H125V204H152V257H132V316H100V370H120V416H0Z" fill="#b8cd92" />
+<path d="M0 0H132V46H116V101H138V151H115V207H142V254H122V310H90V373H110V416H0Z" fill="url(#town-water)" />
+<path d="M129 204H884V240H626V278H590V240H300V278H264V240H129Z" fill="#b9a67c" />
+<path d="M130 208H884V236H622V279H594V236H296V278H268V236H130Z" fill="#e5d2a6" />
+<path d="M268 165H296V211H268Z M600 170H628V211H600Z M462 0H498V416H462Z" fill="#b9a67c" />
+<path d="M272 165H292V215H272Z M604 170H624V215H604Z M466 0H494V416H466Z" fill="#e5d2a6" />
+<rect x="416" y="187" width="128" height="70" fill="#b8a77e" />
+<rect x="420" y="191" width="120" height="62" fill="url(#town-stone)" />
+<rect x="178" y="216" width="8" height="3" fill="#ccb88d" />
+<rect x="338" y="228" width="8" height="3" fill="#ccb88d" />
+<rect x="645" y="218" width="8" height="3" fill="#ccb88d" />
+<rect x="740" y="212" width="8" height="3" fill="#ccb88d" />
+<rect x="479" y="90" width="8" height="3" fill="#ccb88d" />
+<rect x="472" y="332" width="8" height="3" fill="#ccb88d" />
+<rect x="477" y="380" width="8" height="3" fill="#ccb88d" />
+<rect x="66" y="198" width="102" height="48" fill="#745b42" />
+<rect x="68" y="202" width="98" height="40" fill="#b39265" />
+<rect x="72" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="82" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="92" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="102" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="112" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="122" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="132" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="142" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="152" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="162" y="202" width="2" height="40" fill="#8c714e" />
+<rect x="64" y="196" width="106" height="5" fill="#e1bc83" />
+<rect x="64" y="241" width="106" height="5" fill="#694f3c" />
+<rect x="65" y="191" width="7" height="14" fill="#785e43" />
+<rect x="65" y="233" width="7" height="18" fill="#785e43" />
+<rect x="160" y="191" width="7" height="14" fill="#785e43" />
+<rect x="160" y="233" width="7" height="18" fill="#785e43" />
+<use href="#town-tree" x="160" y="-20" />
+<use href="#town-tree" x="204" y="-14" />
+<use href="#town-tree" x="250" y="-24" />
+<use href="#town-tree" x="296" y="-18" />
+<use href="#town-tree" x="340" y="-28" />
+<use href="#town-tree" x="382" y="-15" />
+<use href="#town-tree" x="530" y="-22" />
+<use href="#town-tree" x="572" y="-16" />
+<use href="#town-tree" x="620" y="-28" />
+<use href="#town-tree" x="665" y="-20" />
+<use href="#town-tree" x="708" y="-16" />
+<use href="#town-tree" x="755" y="-25" />
+<use href="#town-tree" x="802" y="-16" />
+<use href="#town-tree" x="848" y="-20" />
+<use href="#town-tree" x="900" y="-12" />
+<use href="#town-tree" x="930" y="34" />
+<use href="#town-tree" x="881" y="38" />
+<use href="#town-tree" x="821" y="31" />
+<use href="#town-tree" x="172" y="42" />
+<use href="#town-tree" x="156" y="92" />
+<use href="#town-tree" x="169" y="142" />
+<use href="#town-tree" x="857" y="284" />
+<use href="#town-tree" x="900" y="268" />
+<use href="#town-tree" x="939" y="307" />
+<use href="#town-tree" x="882" y="334" />
+<use href="#town-tree" x="929" y="367" />
+<use href="#town-tree" x="818" y="366" />
+<use href="#town-tree" x="756" y="380" />
+<use href="#town-tree" x="172" y="350" />
+<use href="#town-tree" x="213" y="375" />
+<use href="#town-tree" x="344" y="375" />
+<use href="#town-tree" x="388" y="365" />
+<use href="#town-tree" x="153" y="286" />
+<use href="#town-bush" x="197" y="105" />
+<use href="#town-bush" x="202" y="158" />
+<use href="#town-bush" x="350" y="68" />
+<use href="#town-bush" x="362" y="130" />
+<use href="#town-bush" x="666" y="125" />
+<use href="#town-bush" x="735" y="193" />
+<use href="#town-bush" x="808" y="194" />
+<use href="#town-bush" x="352" y="295" />
+<use href="#town-bush" x="361" y="352" />
+<use href="#town-bush" x="730" y="318" />
+<use href="#town-bush" x="211" y="308" />
+<use href="#town-flower" x="206" y="124" />
+<use href="#town-flower" x="218" y="131" />
+<use href="#town-flower" x="357" y="160" />
+<use href="#town-flower" x="370" y="164" />
+<use href="#town-flower" x="661" y="157" />
+<use href="#town-flower" x="675" y="163" />
+<use href="#town-flower" x="745" y="243" />
+<use href="#town-flower" x="759" y="247" />
+<use href="#town-flower" x="724" y="365" />
+<use href="#town-flower" x="737" y="366" />
+<use href="#town-flower" x="361" y="276" />
+<use href="#town-flower" x="373" y="281" />
+<use href="#town-flower" x="220" y="336" />
+<rect x="742" y="285" width="18" height="50" fill="#957953" />
+<rect x="745" y="288" width="12" height="45" fill="#a98a5e" />
+<path d="M745 295h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="749" y="294" width="4" height="4" fill="#cc8a5b" />
+<path d="M745 308h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="749" y="307" width="4" height="4" fill="#cc8a5b" />
+<path d="M745 321h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="749" y="320" width="4" height="4" fill="#cc8a5b" />
+<rect x="770" y="285" width="18" height="50" fill="#957953" />
+<rect x="773" y="288" width="12" height="45" fill="#a98a5e" />
+<path d="M773 295h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="777" y="294" width="4" height="4" fill="#cc8a5b" />
+<path d="M773 308h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="777" y="307" width="4" height="4" fill="#cc8a5b" />
+<path d="M773 321h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="777" y="320" width="4" height="4" fill="#cc8a5b" />
+<rect x="798" y="285" width="18" height="50" fill="#957953" />
+<rect x="801" y="288" width="12" height="45" fill="#a98a5e" />
+<path d="M801 295h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="805" y="294" width="4" height="4" fill="#cc8a5b" />
+<path d="M801 308h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="805" y="307" width="4" height="4" fill="#cc8a5b" />
+<path d="M801 321h4v-4h4v4h4v4h-12z" fill="#547c4e" />
+<rect x="805" y="320" width="4" height="4" fill="#cc8a5b" />
+<use href="#town-fence" x="214" y="261" />
+<use href="#town-fence" x="694" y="277" />
+<use href="#town-fence" x="740" y="352" />
+<use href="#town-fence" x="788" y="352" />
+<use href="#town-lamp" x="376" y="201" />
+<use href="#town-lamp" x="686" y="201" />
+<use href="#town-lamp" x="384" y="316" />
+<use href="#town-lamp" x="543" y="73" />
+<rect x="228" y="179" width="152" height="10" fill="#7b9d62" />
+<rect x="238" y="95" width="132" height="88" fill="#685843" />
+<rect x="242" y="99" width="124" height="80" fill="#edd8a7" />
+<rect x="242" y="152" width="124" height="27" fill="#d4bc8c" />
+<rect x="234" y="87" width="140" height="12" fill="#345d55" />
+<path d="M251 43H352V51H361V59H370V70H379V87H226V70H234V60H243V51H251Z" fill="#3b6b64" />
+<path d="M253 47H350V54H359V62H368V73H375V80H231V72H239V62H247V54H253Z" fill="#609388" />
+<rect x="249" y="59" width="109" height="3" fill="#47796f" />
+<rect x="239" y="70" width="130" height="3" fill="#47796f" />
+<rect x="333" y="31" width="15" height="31" fill="#806653" />
+<rect x="331" y="29" width="19" height="6" fill="#a18a70" />
+<g class="town-animated town-smoke">
+<rect x="337" y="15" width="10" height="8" fill="#f4efd9" />
+<rect x="341" y="5" width="14" height="8" fill="#e8edd4" />
+</g>
+<rect x="256" y="103" width="45" height="32" fill="#48645b" />
+<rect x="259" y="106" width="39" height="25" fill="#254a44" />
+<path d="M273 112h-4v4h-4v4h4v4h4v-4h-4v-4h4zM283 112h4v4h4v4h-4v4h-4v-4h4v-4h-4z" fill="#c3db9e" />
+<rect x="313" y="112" width="31" height="31" fill="#8c7451" />
+<rect x="316" y="115" width="25" height="25" fill="#b4d5bd" />
+<rect x="327" y="115" width="3" height="25" fill="#688f7a" />
+<rect x="316" y="126" width="25" height="3" fill="#688f7a" />
+<rect x="273" y="147" width="25" height="33" fill="#68533e" />
+<rect x="277" y="150" width="17" height="30" fill="#967451" />
+<rect x="288" y="162" width="3" height="3" fill="#ead39c" />
+<rect x="267" y="179" width="37" height="5" fill="#bba07a" />
+<use href="#town-crate" x="351" y="158" />
+<use href="#town-crate" x="363" y="147" />
+<rect x="218" y="135" width="20" height="5" fill="#725c44" />
+<rect x="220" y="140" width="3" height="23" fill="#725c44" />
+<rect x="234" y="140" width="3" height="23" fill="#725c44" />
+<rect x="549" y="181" width="176" height="10" fill="#7b9d62" />
+<rect x="560" y="99" width="150" height="85" fill="#655050" />
+<rect x="564" y="103" width="142" height="76" fill="#e4c7a1" />
+<path d="M575 48H696V56H707V65H718V89H551V65H563V56H575Z" fill="#7e565a" />
+<path d="M577 52H694V60H705V69H713V82H556V69H567V60H577Z" fill="#b47775" />
+<rect x="581" y="55" width="3" height="26" fill="#9a6266" />
+<rect x="605" y="55" width="3" height="26" fill="#9a6266" />
+<rect x="629" y="55" width="3" height="26" fill="#9a6266" />
+<rect x="653" y="55" width="3" height="26" fill="#9a6266" />
+<rect x="677" y="55" width="3" height="26" fill="#9a6266" />
+<rect x="551" y="85" width="167" height="10" fill="#634f54" />
+<rect x="583" y="94" width="93" height="29" fill="#44545a" />
+<rect x="587" y="98" width="85" height="21" fill="#263e46" />
+<path d="M612 102h33v3h5v10h-10v-3h-23v3h-10v-10h5z" fill="#ddd9bc" />
+<rect x="614" y="103" width="3" height="9" fill="#4a6b67" />
+<rect x="611" y="106" width="9" height="3" fill="#4a6b67" />
+<rect x="639" y="104" width="3" height="3" fill="#d78a76" />
+<rect x="644" y="108" width="3" height="3" fill="#92b892" />
+<rect x="573" y="133" width="33" height="33" fill="#72605b" />
+<rect x="577" y="137" width="25" height="24" fill="#538a8d" />
+<rect x="579" y="139" width="21" height="11" fill="#9ec6af" />
+<rect x="585" y="152" width="8" height="7" fill="#bace9c" />
+<rect x="663" y="133" width="33" height="33" fill="#72605b" />
+<rect x="667" y="137" width="25" height="24" fill="#538a8d" />
+<rect x="669" y="139" width="21" height="11" fill="#9ec6af" />
+<rect x="675" y="152" width="8" height="7" fill="#bace9c" />
+<rect x="619" y="132" width="31" height="48" fill="#425552" />
+<rect x="623" y="136" width="23" height="44" fill="#78a29a" />
+<rect x="626" y="140" width="17" height="21" fill="#b7d2b0" />
+<rect x="640" y="166" width="3" height="4" fill="#eed19d" />
+<rect x="612" y="179" width="45" height="6" fill="#bd9679" />
+<rect x="690" y="112" width="10" height="9" fill="#dbb875" class="town-animated town-light"/>
+<rect x="231" y="373" width="151" height="10" fill="#7b9d62" />
+<rect x="242" y="293" width="130" height="82" fill="#625a4e" />
+<rect x="246" y="297" width="122" height="73" fill="#ead6ad" />
+<path d="M259 254H354V262H363V270H374V292H232V270H244V262H259Z" fill="#4d6174" />
+<path d="M261 258H352V266H361V275H369V285H237V275H249V266H261Z" fill="#7b91a1" />
+<rect x="245" y="274" width="116" height="3" fill="#637d91" />
+<rect x="232" y="288" width="142" height="8" fill="#455e6e" />
+<rect x="281" y="280" width="46" height="30" fill="#3f5863" />
+<path d="M286 285h14v3h5v-3h16v18h-16v3h-5v-3h-14z" fill="#f0e1b9" />
+<rect x="302" y="289" width="2" height="14" fill="#a09b80" />
+<rect x="253" y="316" width="29" height="31" fill="#8c7354" />
+<rect x="256" y="319" width="23" height="25" fill="#546f70" />
+<rect x="258" y="322" width="4" height="18" fill="#c49b76" />
+<rect x="264" y="324" width="5" height="16" fill="#9bae86" />
+<rect x="271" y="321" width="4" height="19" fill="#deb976" />
+<rect x="256" y="338" width="23" height="3" fill="#8c7354" />
+<rect x="327" y="316" width="29" height="31" fill="#8c7354" />
+<rect x="330" y="319" width="23" height="25" fill="#546f70" />
+<rect x="332" y="322" width="4" height="18" fill="#c49b76" />
+<rect x="338" y="324" width="5" height="16" fill="#9bae86" />
+<rect x="345" y="321" width="4" height="19" fill="#deb976" />
+<rect x="330" y="338" width="23" height="3" fill="#8c7354" />
+<rect x="292" y="322" width="25" height="48" fill="#6c5d48" />
+<rect x="296" y="326" width="17" height="44" fill="#aa895c" />
+<rect x="308" y="346" width="3" height="3" fill="#ecdaab" />
+<rect x="286" y="370" width="38" height="6" fill="#c1a67c" />
+<use href="#town-crate" x="359" y="352" />
+<rect x="576" y="371" width="146" height="10" fill="#7b9d62" />
+<rect x="588" y="299" width="118" height="72" fill="#7e674e" />
+<rect x="592" y="303" width="110" height="63" fill="#eddbb1" />
+<path d="M602 266H686V273H696V282H708V300H578V282H590V273H602Z" fill="#9c6a4f" />
+<path d="M604 270H684V277H694V286H703V293H583V286H595V277H604Z" fill="#cd9263" />
+<rect x="594" y="284" width="99" height="3" fill="#b67d55" />
+<rect x="578" y="296" width="130" height="8" fill="#8a5e47" />
+<rect x="666" y="257" width="13" height="23" fill="#936e55" />
+<rect x="664" y="255" width="17" height="5" fill="#b5916a" />
+<rect x="605" y="316" width="31" height="26" fill="#98754d" />
+<rect x="609" y="320" width="23" height="18" fill="#f2ce80" />
+<rect x="619" y="320" width="3" height="18" fill="#a78b5d" />
+<rect x="609" y="328" width="23" height="3" fill="#a78b5d" />
+<rect x="603" y="342" width="35" height="6" fill="#9b7152" />
+<rect x="606" y="339" width="6" height="5" fill="#63865b" />
+<rect x="619" y="338" width="7" height="6" fill="#63865b" />
+<rect x="652" y="321" width="25" height="45" fill="#785b46" />
+<rect x="656" y="325" width="17" height="41" fill="#b38b5e" />
+<rect x="668" y="342" width="3" height="3" fill="#e9d29f" />
+<rect x="647" y="366" width="35" height="6" fill="#c5ab7f" />
+<rect x="712" y="346" width="4" height="24" fill="#806348" />
+<rect x="706" y="337" width="17" height="13" fill="#718b7f" />
+<rect x="709" y="340" width="11" height="2" fill="#d4dcc0" />
+<rect x="536" y="264" width="5" height="25" fill="#806747" />
+<rect x="562" y="264" width="5" height="25" fill="#806747" />
+<rect x="533" y="250" width="37" height="27" fill="#94774f" />
+<rect x="537" y="254" width="29" height="19" fill="#e5d6af" />
+<rect x="542" y="259" width="10" height="3" fill="#a09d77" />
+<rect x="542" y="265" width="18" height="2" fill="#b5a883" />
+<rect x="345" y="219" width="32" height="6" fill="#ae8b59" />
+<rect x="345" y="210" width="32" height="6" fill="#c2a070" />
+<rect x="348" y="225" width="4" height="10" fill="#705b43" />
+<rect x="370" y="225" width="4" height="10" fill="#705b43" />
+<path d="M737 119h5v-5h4v5h7v-5h4v15h-4v5h-16z" fill="#d8b077" />
+<rect x="746" y="125" width="2" height="2" fill="#705640" />
+<rect x="752" y="125" width="2" height="2" fill="#705640" />
+<g class="town-animated town-water-glint">
+<rect x="34" y="87" width="23" height="2" fill="#d6e4d1" />
+<rect x="42" y="92" width="14" height="2" fill="#c4dfce" />
+<rect x="53" y="310" width="20" height="2" fill="#c4dfce" />
+</g>
+<rect x="411" y="329" width="6" height="4" fill="#bbbd95" />
+<rect x="413" y="329" width="3" height="2" fill="#d4cfaa" />
+<rect x="432" y="348" width="6" height="4" fill="#bbbd95" />
+<rect x="434" y="348" width="3" height="2" fill="#d4cfaa" />
+<rect x="815" y="120" width="6" height="4" fill="#bbbd95" />
+<rect x="817" y="120" width="3" height="2" fill="#d4cfaa" />
+<rect x="837" y="147" width="6" height="4" fill="#bbbd95" />
+<rect x="839" y="147" width="3" height="2" fill="#d4cfaa" />
+<rect x="199" y="244" width="6" height="4" fill="#bbbd95" />
+<rect x="201" y="244" width="3" height="2" fill="#d4cfaa" />
+<rect x="169" y="270" width="6" height="4" fill="#bbbd95" />
+<rect x="171" y="270" width="3" height="2" fill="#d4cfaa" />
+</svg>

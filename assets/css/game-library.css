@@ -1,0 +1,82 @@
+/* Scoped to the arcade; individual games and the blog retain their own styles. */
+body.layout--game-library { background: #f7f5eb; color: #283e3b; }
+.layout--game-library .masthead { background: #fcfaf2; border-bottom-color: #dcded0; }
+.layout--game-library .masthead__inner-wrap { max-width: 1200px; padding: 18px 28px; font-size: 16px; }
+.layout--game-library .greedy-nav { background: transparent; }
+.layout--game-library .greedy-nav a, .layout--game-library .greedy-nav .site-title { color: #283e3b; }
+.layout--game-library .greedy-nav .site-title { font-size: 18px; letter-spacing: -.04em; }
+.layout--game-library .page__footer { margin-top: 0; background: #e9eddf; border-top-color: #d2daca; color: #566650; }
+.layout--game-library .page__footer footer { max-width: 1200px; padding: 30px 28px; font-size: 13px; }
+#main.game-library { max-width: 1200px; margin: 0 auto; padding: 0 28px; font-size: 16px; line-height: 1.7; }
+.game-library * { box-sizing: border-box; }
+.game-library [hidden] { display: none !important; }
+.game-library h1, .game-library h2, .game-library h3, .game-library h4, .game-library p { margin: 0; padding: 0; border: 0; }
+.game-library a { color: inherit; text-decoration: none; }
+.game-library a:focus-visible, .game-library select:focus-visible { outline: 3px solid #b95a32; outline-offset: 4px; }
+.game-library img { display: block; max-width: 100%; }
+.arcade-intro { padding: 30px 0 32px; }
+.arcade-back { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 12px; margin-bottom: 20px; color: #526d5c !important; }
+.arcade-back:hover { text-decoration: underline; }
+.arcade-eyebrow { font: 11px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .13em; color: #516c4e; margin-bottom: 9px !important; }
+.game-library h1 { font-size: clamp(25px, 3vw, 38px); letter-spacing: -.055em; line-height: 1.55; text-wrap: balance; }
+.arcade-lead { font-size: 13px; color: #5e6b5b; margin-top: 13px !important; line-height: 1.9; }
+.arcade-collection { padding: 10px 0 48px; }
+.collection-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 24px; }
+.game-library .collection-heading h2 { font-size: 25px; line-height: 1.5; letter-spacing: -.04em; }
+.collection-tools { display: flex; align-items: center; gap: 20px; }
+.collection-count { font-size: 12px; color: #536b53; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.arcade-sort { display: flex; align-items: center; gap: 10px; }
+.arcade-sort label { color: #455d48; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.arcade-sort select { margin: 0; min-height: 44px; border: 1px solid #8d9f84; border-radius: 2px; color: #2d4739; background: #fffef7; box-shadow: none; font-size: 13px; padding: 9px 30px 9px 10px; line-height: 1.5; }
+.daily-game { grid-column: span 2; display: flex; flex-direction: column; border: 2px solid #334c44; background: #fffbee; box-shadow: 3px 3px 0 #d4dbc6; }
+.game-library .arcade-window-bar { padding: 8px 14px; background: #2e4841; color: #faf4d9; font-size: 12px; line-height: 1.5; }
+.arcade-window-bar::before { content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 10px; background: #d3db8d; box-shadow: 2px 2px #9bac68; }
+.daily-card { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 18px; flex: 1; padding: 15px; }
+.daily-card:hover { background: #f2efd6; }
+.daily-game__visual { background: #182321; border: 3px solid #43584b; }
+.daily-game__visual img { width: 100%; aspect-ratio: 1200 / 630; object-fit: contain; height: auto; }
+.daily-number { color: #61734d; font: 10px/1.5 ui-monospace, monospace; letter-spacing: .06em; margin-bottom: 7px !important; }
+.game-library .daily-game__copy h4 { font-size: 18px; letter-spacing: -.04em; line-height: 1.5; overflow-wrap: anywhere; }
+.daily-arrow { display: block; margin-top: 10px; font-size: 18px; color: #526a4c; }
+.game-library .arcade-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px 18px; list-style: none; padding: 0; margin: 0; }
+.game-library .arcade-grid > li { min-width: 0; margin: 0; padding: 0; }
+.arcade-card { display: flex; flex-direction: column; height: 100%; border: 1px solid #bfcbb4; background: #fffdf5; box-shadow: 3px 3px 0 #e0e5d3; transition: transform .15s, border-color .15s; }
+.arcade-card:hover { border-color: #536f4f; transform: translateY(-3px); }
+.arcade-card__image { position: relative; background: #182321; border-bottom: 1px solid #c8d0bc; }
+.arcade-card__image img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: contain; }
+.arcade-card__number { position: absolute; top: 7px; left: 7px; padding: 3px 6px; background: #fff9df; color: #465d3c; border: 1px solid #9da884; font: 9px/1.4 ui-monospace, monospace; }
+.arcade-card__body { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 14px 13px 16px; flex: 1; }
+.game-library .arcade-card h3 { font-size: 13px; font-weight: 650; line-height: 1.6; overflow-wrap: anywhere; }
+.arcade-card__body > span { font-size: 16px; color: #526a4c; flex-shrink: 0; }
+.arcade-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #cbd4bd; margin-top: 40px; padding-top: 18px; font-size: 12px; }
+.arcade-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 900px) {
+  .game-library .arcade-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .collection-tools { gap: 13px; }
+}
+@media (max-width: 600px) {
+  #main.game-library { padding: 0 18px; }
+  .layout--game-library .masthead__inner-wrap { padding: 14px 18px; font-size: 13px; }
+  .layout--game-library .greedy-nav .site-title { font-size: 16px; }
+  .layout--game-library .greedy-nav .visible-links a { margin: 0 10px; }
+  .arcade-intro { padding: 16px 0 25px; }
+  .arcade-back { margin-bottom: 15px; font-size: 11px; }
+  .game-library h1 { font-size: 26px; }
+  .arcade-lead { font-size: 12px; }
+  .collection-heading { align-items: flex-start; flex-direction: column; gap: 16px; margin-bottom: 18px; }
+  .game-library .collection-heading h2 { font-size: 23px; }
+  .collection-tools { width: 100%; justify-content: space-between; }
+  .collection-count { font-size: 11px; }
+  .arcade-sort select { font-size: 16px; }
+  .daily-card { gap: 13px; padding: 13px; grid-template-columns: 1.15fr 1fr; }
+  .game-library .daily-game__copy h4 { font-size: 15px; }
+  .daily-number { font-size: 9px; margin-bottom: 5px !important; }
+  .daily-arrow { margin-top: 7px; font-size: 16px; }
+  .game-library .arcade-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px 12px; }
+  .arcade-card__body { padding: 11px 9px 13px; gap: 5px; }
+  .game-library .arcade-card h3 { font-size: 12px; }
+  .arcade-card__body > span { font-size: 13px; }
+  .arcade-card__number { top: 5px; left: 5px; font-size: 8px; padding: 2px 5px; }
+  .arcade-bottom { gap: 12px; font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .arcade-card { transition: none; } }

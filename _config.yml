@@ -17,7 +17,7 @@ title: aomaのページ
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   aomaです。
-twitter_username: aoma23
+twitter_username: aoma_dev
 github_username: aoma23
 minimal_mistakes_skin: air
 search: true
@@ -26,7 +26,7 @@ lang: ja
 locale: ja_JP
 og_image: "/assets/images/aoma-og-1200x630.png"
 twitter:
-  username: aoma23
+  username: aoma_dev
 
 # Build settings
 markdown: kramdown
@@ -77,9 +77,9 @@ author:
     - label: "記事一覧"
       icon: "fas fa-fw fa-link"
       url: "/posts/"
-    - label: "Twitter"
+    - label: "X"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/aoma23"
+      url: "https://x.com/aoma_dev"
     # - label: "GitHub"
     #   icon: "fab fa-fw fa-github"
     #   url: "https://github.com/"

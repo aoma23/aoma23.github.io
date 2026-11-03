@@ -3,7 +3,11 @@
 {% if page.layout == 'creator-home' %}
   {% unless paginator.page > 1 %}
     <link rel="stylesheet" href="{{ '/assets/css/creator-home.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/dev-town.css' | relative_url }}">
   {% endunless %}
+{% endif %}
+{% if page.layout == 'game-library' %}
+  <link rel="stylesheet" href="{{ '/assets/css/game-library.css' | relative_url }}">
 {% endif %}
 
 <!-- insert favicons. -->

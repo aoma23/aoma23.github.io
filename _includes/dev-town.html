@@ -1,0 +1,49 @@
+<section class="town-intro" aria-labelledby="home-title">
+  <div>
+    <p class="eyebrow">AOMA'S PERSONAL WEBSITE</p>
+    <h1 id="home-title">つくる、あそぶ、<span>またつくる。</span></h1>
+    <p class="town-intro__copy">アプリとゲーム、ときどき開発日記。<br class="mobile-break">aomaの小さな開発の街へようこそ。</p>
+  </div>
+  <a class="town-jump" href="#apps"><span aria-hidden="true">↓</span> 作品一覧へ</a>
+</section>
+
+<section class="dev-town" aria-labelledby="town-title" data-paused="false">
+  <header class="town-toolbar">
+    <h2 id="town-title"><span class="town-window-dot" aria-hidden="true"></span>aoma's DEV TOWN</h2>
+    <span class="town-world" aria-hidden="true">WORLD 01</span>
+    <button class="town-motion" type="button" aria-pressed="false" hidden>動きを止める</button>
+  </header>
+  <div class="town-map" role="group" aria-label="街の地図。建物やaomaキャラクターを選ぶと各ページへ進みます">
+    <div class="town-scene">
+      {% include dev-town-art.svg %}
+      <a class="town-stop town-stop--apps" href="{{ '/apps/' | relative_url }}" data-town-link="apps" aria-label="工房：アプリ一覧へ">
+        <span class="town-pin"><span aria-hidden="true">01</span> 工房 <small>APPS</small></span>
+      </a>
+      <a class="town-stop town-stop--games" href="{{ '/games100/' | relative_url }}" data-town-link="games" aria-label="ゲームセンター：ゲーム一覧へ">
+        <span class="town-pin"><span aria-hidden="true">02</span> ゲームセンター <small>GAMES</small></span>
+      </a>
+      <a class="town-stop town-stop--blog" href="{{ '/posts/' | relative_url }}" data-town-link="blog" aria-label="図書館：ブログ記事一覧へ">
+        <span class="town-pin"><span aria-hidden="true">03</span> 図書館 <small>BLOG</small></span>
+      </a>
+      <a class="town-player" href="#about" data-town-link="about" aria-label="aomaキャラクター：プロフィールへ">
+        <span class="town-player__hello">プロフィール</span>
+        <img src="{{ '/assets/images/aoma.png' | relative_url }}" width="350" height="350" alt="" fetchpriority="high">
+        <span class="town-player__name">aoma</span>
+      </a>
+      <span class="town-coordinate" aria-hidden="true">APPS / GAMES / NOTES</span>
+    </div>
+  </div>
+  <nav class="town-menu" aria-label="街のメニュー">
+    <a href="{{ '/apps/' | relative_url }}" data-town-link="apps"><span class="town-menu__number" aria-hidden="true">01</span><span>工房<small>アプリを使う</small></span><span class="town-menu__arrow" aria-hidden="true">↗</span></a>
+    <a href="{{ '/games100/' | relative_url }}" data-town-link="games"><span class="town-menu__number" aria-hidden="true">02</span><span>ゲームセンター<small>ゲームで遊ぶ</small></span><span class="town-menu__arrow" aria-hidden="true">↗</span></a>
+    <a href="{{ '/posts/' | relative_url }}" data-town-link="blog"><span class="town-menu__number" aria-hidden="true">03</span><span>図書館<small>ブログを読む</small></span><span class="town-menu__arrow" aria-hidden="true">↗</span></a>
+    <a href="#about" data-town-link="about"><img class="town-menu__avatar" src="{{ '/assets/images/aoma.png' | relative_url }}" width="28" height="28" alt=""><span>aoma<small>プロフィール</small></span><span class="town-menu__arrow" aria-hidden="true">↓</span></a>
+  </nav>
+  <div class="town-dialog">
+    <img src="{{ '/assets/images/aoma.png' | relative_url }}" width="48" height="48" alt="aomaのドット絵アイコン">
+    <div><span class="town-dialog__name">aoma</span><p class="town-dialog__text">ようこそ！ 建物やぼくを選んで、のぞいていってください。</p></div>
+    <span class="town-dialog__cursor" aria-hidden="true">▼</span>
+  </div>
+</section>
+<p class="town-help">建物やaomaをタップ・クリックして移動。<span>キーボードは Tab と Enter。メニューでは矢印キーも使えます。</span></p>
+<script src="{{ '/assets/js/dev-town.js' | relative_url }}" defer></script>
