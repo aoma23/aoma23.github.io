@@ -1,6 +1,6 @@
 ---
 title: "AIに自分の考え方を伝えたい。15の質問で開発・UI/UXの判断基準をまとめるスクリプト"
-date: 2026-11-09
+date: 2026-11-10
 description: "ChatGPTやClaudeと開発するときに、自分の価値観やUI・UXの判断基準を共有したい。15問への回答をMarkdownにまとめるPythonスクリプトと、その使い方を紹介します。"
 categories: [AI, 個人開発]
 tags: [ChatGPT, Claude, Python, AI活用, UI, UX]

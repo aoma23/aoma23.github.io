@@ -125,6 +125,10 @@ ChatGPTとClaudeを使う私にとっても、自分の考え方や判断の理�
 
 保存先とあわせて、いつ読み、何を残し、誰が確認するかまで決める。自分で読んで直せる形で、少しずつ育てていきたいです。
 
-この考えをもとに、[15の質問で自分の価値観やUI・UXの判断基準をまとめるスクリプト]({% post_url 2026-11-09-personal-ai-context-setup %})を用意しました。質問に答えながら共通の知識置き場を作りたい方は、こちらもどうぞ。
+{% assign context_release = '2026-11-10 00:00:00 +0900' | date: '%s' | plus: 0 %}
+{% assign current_time = site.time | date: '%s' | plus: 0 %}
+{% if current_time >= context_release %}
+この考えをもとに、[15の質問で自分の価値観やUI・UXの判断基準をまとめるスクリプト]({{ '/personal-ai-context-setup/' | relative_url }})を用意しました。質問に答えながら共通の知識置き場を作りたい方は、こちらもどうぞ。
+{% endif %}
 
 AIに作業を頼む例は、[dotsでブログ運営・個人開発を進める依頼例]({% post_url 2026-11-08-dots-blog-development-prompts %})にもまとめています。[Claude Duetの解説]({% post_url 2026-11-08-claude-duet-japan-guide %})では、継続して仕事を進めるAIの提供状況を整理しました。
