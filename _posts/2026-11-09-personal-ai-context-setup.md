@@ -43,15 +43,20 @@ AIに「使いやすいUIにして」と頼むとき、自分の中にもまだ�
 
 スクリプトは回答をAIで分析しません。本人が書いた言葉を項目ごとに配置し、未回答は未決定として残します。回答から性格や価値観を勝手に推測する処理も入れていません。
 
-## ダウンロードと実行方法
+## GitHubから取得して実行する
 
 必要なのはPython 3.10以上です。追加のライブラリやAPIキーは使いません。
 
-- [スクリプト一式をダウンロード（ZIP）]({{ '/assets/downloads/ai-context-setup.zip' | relative_url }})
-- [Pythonスクリプトを見る]({{ '/assets/downloads/ai-context-setup/setup_context.py' | relative_url }})
-- [使い方のREADMEを見る]({{ '/assets/downloads/ai-context-setup/README.md' | relative_url }})
+- [GitHubでPythonスクリプトを見る](https://github.com/aoma23/aoma23.github.io/blob/main/assets/downloads/ai-context-setup/setup_context.py)
+- [GitHubで使い方のREADMEを見る](https://github.com/aoma23/aoma23.github.io/blob/main/assets/downloads/ai-context-setup/README.md)
 
-ZIPを展開し、ターミナルで展開先のフォルダへ移動して、次のコマンドを実行します。
+このブログと同じリポジトリで管理しています。更新内容はGitHubの履歴から確認できます。
+
+スクリプトのページを開き、ファイル上部の「Download raw file」ボタンから`setup_context.py`を保存してください。ボタンが見つからない場合は、次のリンク先をブラウザの「名前を付けて保存」で保存できます。
+
+[setup_context.pyの内容を直接開く（Raw）](https://raw.githubusercontent.com/aoma23/aoma23.github.io/main/assets/downloads/ai-context-setup/setup_context.py)
+
+ターミナルで保存先のフォルダへ移動し、次のコマンドを実行します。
 
 ```sh
 python3 setup_context.py --output my-ai-context
