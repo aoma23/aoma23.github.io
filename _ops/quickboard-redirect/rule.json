@@ -1,0 +1,16 @@
+{
+  "ref": "quickboard_legacy_url",
+  "description": "Move the legacy QuickBoard entry point to its Japanese app URL",
+  "expression": "(http.host eq \"aoma23.com\" and http.request.uri.path in {\"/app/quickboard\" \"/app/quickboard/\" \"/app/quickboard/index.html\"})",
+  "action": "redirect",
+  "action_parameters": {
+    "from_value": {
+      "target_url": {
+        "value": "https://quickboard.aoma23.com/ja/"
+      },
+      "status_code": 301,
+      "preserve_query_string": true
+    }
+  },
+  "enabled": true
+}
