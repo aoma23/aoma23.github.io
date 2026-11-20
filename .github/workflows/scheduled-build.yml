@@ -1,0 +1,111 @@
+name: Daily Site Rebuild
+
+on:
+  schedule:
+    # 毎日午前7時30分（JST）にサイト更新（UTCでは前日22:30）
+    - cron: '30 22 * * *'
+  workflow_dispatch:
+    # 手動実行も可能
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Tokyo
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # 全履歴を取得
+        
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v4
+      
+    - name: Build Jekyll site
+      run: |
+        # Jekyllサイトをビルド
+        bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      env:
+        JEKYLL_ENV: production
+        
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+      
+    # 自動ツイートは停止中。サイトの定期更新のみ実行します。
+    # - name: Check and tweet today's posts
+    #   if: steps.deployment.outcome == 'success'
+    #   run: |
+    #     echo "🔍 今日公開される記事をチェックします..."
+    #     CURRENT_DATE=$(date '+%Y-%m-%d')
+    #     echo "現在の日付 (JST): $CURRENT_DATE"
+
+    #     # 今日の日付の記事をチェック（未来日付は除外）
+    #     for post_file in _posts/*.md; do
+    #       if [ -f "$post_file" ]; then
+    #         POST_DATE=$(grep '^date:' "$post_file" | sed 's/date: *//' | head -1)
+    #         if [ -z "$POST_DATE" ]; then
+    #           POST_DATE=$(basename "$post_file" | cut -d'-' -f1-3)
+    #         fi
+    #         echo "記事: $post_file, 日付: $POST_DATE"
+
+    #         # 日付比較：記事の日付が今日の場合のみツイート
+    #         if [ "$POST_DATE" = "$CURRENT_DATE" ]; then
+    #           echo "📝 今日公開される記事を発見: $post_file"
+
+    #           # Auto Tweetワークフローを呼び出し
+    #           gh workflow run auto-tweet.yml \
+    #             --field post_file="$post_file" \
+    #             --repo ${{ github.repository }}
+
+    #           echo "✅ 自動ツイートをトリガーしました: $post_file"
+    #         else
+    #           echo "📅 今日の記事ではないためスキップ: $post_file (記事日付: $POST_DATE)"
+    #         fi
+    #       fi
+    #     done
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 📅 定期ビルド結果" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ビルド時刻" >> $GITHUB_STEP_SUMMARY
+        echo "$(date '+%Y-%m-%d %H:%M:%S %Z')" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ job.status }}" = "success" ]; then
+          echo "### ✅ ビルド成功" >> $GITHUB_STEP_SUMMARY
+          echo "サイトが正常に更新されました。新しいコンテンツがある場合は公開されます。" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### ❌ ビルド失敗" >> $GITHUB_STEP_SUMMARY
+          echo "ビルドに失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
+        fi
+
+# GitHub Pagesへのデプロイ権限設定
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  # actions: write  # 自動ツイートの呼び出しを停止中
+
+# 並行実行の制御
+concurrency:
+  group: "pages"
+  cancel-in-progress: false

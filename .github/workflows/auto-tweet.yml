@@ -1,0 +1,283 @@
+name: Auto Tweet New Blog Posts
+
+on:
+  # 自動投稿は停止中。手動実行のみ可能です。
+  # push:
+  #   branches: [ main ]
+  #   paths:
+  #     - '_posts/*.md'
+  workflow_dispatch:
+    inputs:
+      post_file:
+        description: 'Post file path (e.g., _posts/2025-08-14-example.md)'
+        required: true
+        type: string
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 2  # 前のコミットと比較するため
+
+    - name: Get changed files
+      id: changed-files
+      run: |
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          echo "files=${{ github.event.inputs.post_file }}" >> "$GITHUB_OUTPUT"
+        else
+          FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD | grep '^_posts/.*\.md$' | head -1 || true)
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+        fi
+
+    - name: Extract post metadata
+      id: metadata
+      if: steps.changed-files.outputs.files != ''
+      run: |
+        POST_FILE="${{ steps.changed-files.outputs.files }}"
+        echo "記事ファイル: $POST_FILE"
+        
+        # タイトルを抽出
+        TITLE=$(grep '^title:' "$POST_FILE" | sed 's/title: *["'"'"']*\(.*\)["'"'"']*$/\1/' | sed 's/^"//;s/"$//')
+        echo "タイトル: $TITLE"
+        
+        # 日付を抽出
+        DATE=$(grep '^date:' "$POST_FILE" | sed 's/date: *//')
+        echo "日付: $DATE"
+        
+        # タグを抽出（インライン配列/複数行配列 両対応）
+        TAGS=""
+        if grep -qE '^tags:[[:space:]]*\[' "$POST_FILE"; then
+          # 例) tags: [foo, bar, "baz qux"]
+          TAGS=$(grep -m1 '^tags:' "$POST_FILE" \
+            | sed -E 's/^tags:[[:space:]]*\[(.*)\][[:space:]]*$/\1/' \
+            | tr ',' '\n' \
+            | sed -E 's/^ *| *$//g' \
+            | tr -d '"' \
+            | tr '\n' ' ')
+        elif grep -qE '^tags:[[:space:]]*$' "$POST_FILE"; then
+          # 例)
+          # tags:\n#   - foo\n#   - "baz qux"
+          TAGS=$(awk '
+            found && /^[[:space:]]*-[[:space:]]/ {
+              sub(/^[[:space:]]*-[[:space:]]*/,"",$0);
+              gsub(/[\r\n]+/,"",$0);
+              print; next
+            }
+            found && NF==0 { next }
+            found && !/^[[:space:]]*-/ { exit }
+            /^tags:[[:space:]]*$/ { found=1 }
+          ' "$POST_FILE" \
+          | sed -E 's/^ *| *$//g' \
+          | tr -d '"' \
+          | tr '\n' ' ')
+        fi
+        TAGS=$(echo "$TAGS" | xargs || true)
+        echo "タグ: $TAGS"
+        
+        # カテゴリを抽出
+        CATEGORIES=$(awk '/^categories:/{flag=1;next}/^[[:alpha:]]/&&flag{flag=0}flag&&/- /{gsub(/^[[:space:]]*-[[:space:]]*/, ""); print}' "$POST_FILE" | tr '\n' ' ')
+        echo "カテゴリ: $CATEGORIES"
+        
+        # ファイル名からURLを生成
+        FILENAME=$(basename "$POST_FILE" .md)
+        URL_SLUG=$(echo "$FILENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+        BLOG_URL="https://aoma23.com/${URL_SLUG}/"
+        echo "URL: $BLOG_URL"
+        
+        # 出力設定
+        echo "title=$TITLE" >> $GITHUB_OUTPUT
+        echo "date=$DATE" >> $GITHUB_OUTPUT
+        echo "tags=$TAGS" >> $GITHUB_OUTPUT
+        echo "categories=$CATEGORIES" >> $GITHUB_OUTPUT
+        echo "url=$BLOG_URL" >> $GITHUB_OUTPUT
+        echo "filename=$FILENAME" >> $GITHUB_OUTPUT
+
+    - name: Check post date
+      id: date-check
+      if: steps.metadata.outputs.title != ''
+      run: |
+        POST_DATE="${{ steps.metadata.outputs.date }}"
+        CURRENT_DATE=$(date '+%Y-%m-%d')
+        
+        echo "記事の日付: $POST_DATE"
+        echo "現在の日付: $CURRENT_DATE"
+        
+        # 記事の日付が今日以降かチェック
+        if [[ "$POST_DATE" > "$CURRENT_DATE" ]]; then
+          echo "⏰ 未来日付の記事です。ツイートを延期します。"
+          echo "should_tweet=false" >> $GITHUB_OUTPUT
+          echo "reason=future_date" >> $GITHUB_OUTPUT
+        else
+          echo "✅ 公開可能な日付です。ツイートを実行します。"
+          echo "should_tweet=true" >> $GITHUB_OUTPUT
+          echo "reason=ready_to_tweet" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Generate tweet content
+      id: tweet-content
+      if: steps.date-check.outputs.should_tweet == 'true'
+      run: |
+        # ツイート文を生成
+        TITLE="${{ steps.metadata.outputs.title }}"
+        URL="${{ steps.metadata.outputs.url }}"
+        TAGS="${{ steps.metadata.outputs.tags }}"
+        CATEGORIES="${{ steps.metadata.outputs.categories }}"
+        
+        # ツイート文の基本要素を定義
+        INTRO="新しいブログ記事を公開しました📝"
+        TITLE_PART="「${TITLE}」"
+        
+        # ハッシュタグを配列に収集（優先順位付き）
+        PRIORITY_TAGS=""
+        NORMAL_TAGS=""
+        
+        for tag in $TAGS $CATEGORIES; do
+          # 日本語タグはスキップ（Twitterで検索されにくいため）
+          if echo "$tag" | grep -q '[ぁ-ゟ]'; then
+            continue
+          else
+            tag_formatted="#$(echo "$tag" | sed 's/ //g')"
+            # 重要なタグを優先
+            case "$tag" in
+              "QuickBoard"|"TACTICALista"|"戦術ボード"|"サッカー")
+                PRIORITY_TAGS="$PRIORITY_TAGS $tag_formatted"
+                ;;
+              *)
+                NORMAL_TAGS="$NORMAL_TAGS $tag_formatted"
+                ;;
+            esac
+          fi
+        done
+        
+        # 基本ツイート文（ハッシュタグなし）
+        BASE_TWEET="${INTRO}"$'\n\n'"${TITLE_PART}"$'\n\n'
+        BASE_LENGTH=$(echo -n "${BASE_TWEET}${URL}" | wc -c)
+        
+        echo "基本文字数（タイトル+URL）: $BASE_LENGTH"
+        
+        # 使用可能なハッシュタグ領域を計算
+        AVAILABLE_SPACE=$((280 - BASE_LENGTH - 1))  # 改行分で-1
+        
+        # ハッシュタグを段階的に追加
+        HASHTAGS=""
+        
+        # 1. 優先タグを追加
+        for tag in $PRIORITY_TAGS; do
+          test_hashtags="$HASHTAGS $tag"
+          if [ $(echo -n "$test_hashtags" | wc -c) -le $AVAILABLE_SPACE ]; then
+            HASHTAGS="$test_hashtags"
+          else
+            break
+          fi
+        done
+        
+        # 2. 通常タグを追加（スペースが許す限り）
+        for tag in $NORMAL_TAGS; do
+          test_hashtags="$HASHTAGS $tag"
+          if [ $(echo -n "$test_hashtags" | wc -c) -le $AVAILABLE_SPACE ]; then
+            HASHTAGS="$test_hashtags"
+          else
+            break
+          fi
+        done
+        
+        # 最終ツイート文を構築
+        TWEET_TEXT="${BASE_TWEET}${HASHTAGS}"$'\n'"${URL}"
+        
+        # 最終文字数チェック
+        FINAL_CHAR_COUNT=$(echo -n "$TWEET_TEXT" | wc -c)
+        echo "最終文字数: $FINAL_CHAR_COUNT"
+        echo "使用ハッシュタグ:$HASHTAGS"
+        
+        echo "ツイート内容:"
+        echo "$TWEET_TEXT"
+        
+        # URL encode for safe transmission
+        ENCODED_TWEET=$(echo "$TWEET_TEXT" | python3 -c "import sys,urllib.parse;print(urllib.parse.quote(sys.stdin.read()))")
+        echo "content=$ENCODED_TWEET" >> $GITHUB_OUTPUT
+
+    - name: Post to Twitter (OAuth 1.0a)
+      if: steps.tweet-content.outputs.content != ''
+      env:
+        TWEET_CONTENT: ${{ steps.tweet-content.outputs.content }}
+        TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
+        TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
+        TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+        TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+      run: |
+        pip install --quiet requests requests-oauthlib
+        python3 <<EOF
+        import os
+        import urllib.parse
+        import requests
+        from requests_oauthlib import OAuth1
+        import time
+        import sys
+
+        tc = urllib.parse.unquote(os.environ['TWEET_CONTENT'])
+        auth = OAuth1(
+            os.environ['TWITTER_API_KEY'],
+            os.environ['TWITTER_API_SECRET'],
+            os.environ['TWITTER_ACCESS_TOKEN'],
+            os.environ['TWITTER_ACCESS_TOKEN_SECRET']
+        )
+        
+        # User-Agentを設定してCloudflareの遮断を回避
+        headers = {
+            "User-Agent": "aoma-blog-auto-tweet/1.0",
+            "Content-Type": "application/json"
+        }
+        
+        print("Tweeting to API...")
+        try:
+            r = requests.post(
+                'https://api.twitter.com/2/tweets',
+                json={'text': tc},
+                headers=headers,
+                auth=auth,
+                timeout=30
+            )
+            print('Status:', r.status_code)
+            print('Response:', r.text)
+            r.raise_for_status()
+        except Exception as e:
+            print(f"Error posting tweet: {e}")
+            sys.exit(1)
+        EOF
+
+    - name: Create summary
+      if: always()
+      run: |
+        echo "## 🐦 自動ツイート結果" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.changed-files.outputs.files }}" != "" ]; then
+          echo "### 📝 対象記事" >> $GITHUB_STEP_SUMMARY
+          echo "- **タイトル**: ${{ steps.metadata.outputs.title }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **URL**: ${{ steps.metadata.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **ファイル**: ${{ steps.changed-files.outputs.files }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **記事の日付**: ${{ steps.metadata.outputs.date }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          # 日付チェック結果に基づいてメッセージを変更
+          if [ "${{ steps.date-check.outputs.reason }}" = "future_date" ]; then
+            echo "### ⏰ ツイート延期" >> $GITHUB_STEP_SUMMARY
+            echo "未来日付の記事のため、ツイートを延期しました。Daily Site Rebuildで公開時に自動ツイートされます。" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.date-check.outputs.should_tweet }}" = "true" ] && [ "${{ job.status }}" = "success" ]; then
+            echo "### ✅ ツイート成功" >> $GITHUB_STEP_SUMMARY
+            echo "記事が正常にTwitterに投稿されました。" >> $GITHUB_STEP_SUMMARY
+          elif [ "${{ steps.date-check.outputs.should_tweet }}" = "true" ]; then
+            echo "### ❌ ツイート失敗" >> $GITHUB_STEP_SUMMARY
+            echo "ツイートの投稿に失敗しました。ログを確認してください。" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ℹ️ 処理完了" >> $GITHUB_STEP_SUMMARY
+            echo "記事を検出しましたが、ツイート条件を満たしていません。" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "### ℹ️ 新しい記事なし" >> $GITHUB_STEP_SUMMARY
+          echo "今回のコミットには新しいブログ記事が含まれていませんでした。" >> $GITHUB_STEP_SUMMARY
+        fi
