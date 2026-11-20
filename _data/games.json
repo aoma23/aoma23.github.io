@@ -1,0 +1,702 @@
+[
+  {
+    "day": 1,
+    "title": "Reaction Timer",
+    "url": "/daily-web-game-day-1-reaction-timer/",
+    "image": "/assets/images/games/day1_og.png",
+    "alt": "Reaction Timer"
+  },
+  {
+    "day": 2,
+    "title": "Color Match",
+    "url": "/daily-web-game-day-2-rgb-quiz/",
+    "image": "/assets/images/games/day2_og.png",
+    "alt": "Color Match"
+  },
+  {
+    "day": 3,
+    "title": "Math Sprint",
+    "url": "/daily-web-game-day-3-mental-math-sprint/",
+    "image": "/assets/images/games/day3_og.png",
+    "alt": "Math Sprint"
+  },
+  {
+    "day": 4,
+    "title": "Catching Stars",
+    "url": "/daily-web-game-day-4-catching-stars/",
+    "image": "/assets/images/games/day4_og.png",
+    "alt": "Catching Stars"
+  },
+  {
+    "day": 5,
+    "title": "Memory Beats",
+    "url": "/daily-web-game-day-5-memory-beats/",
+    "image": "/assets/images/games/day5_og.png",
+    "alt": "Memory Beats"
+  },
+  {
+    "day": 6,
+    "title": "Click Burst",
+    "url": "/daily-web-game-day-6-click-burst/",
+    "image": "/assets/images/games/day6_og.png",
+    "alt": "Click Burst"
+  },
+  {
+    "day": 7,
+    "title": "Mini Minesweeper",
+    "url": "/daily-web-game-day-7-mini-minesweeper/",
+    "image": "/assets/images/games/day7_og.png",
+    "alt": "Mini Minesweeper"
+  },
+  {
+    "day": 8,
+    "title": "Number Chase",
+    "url": "/daily-web-game-day-8-number-chase/",
+    "image": "/assets/images/games/day8_og.png",
+    "alt": "Number Chase"
+  },
+  {
+    "day": 9,
+    "title": "Word Sprint",
+    "url": "/daily-web-game-day-9-word-sprint/",
+    "image": "/assets/images/games/day9_og.png",
+    "alt": "Word Sprint"
+  },
+  {
+    "day": 10,
+    "title": "Light Logic",
+    "url": "/daily-web-game-day-10-light-logic/",
+    "image": "/assets/images/games/day10_og.png",
+    "alt": "Light Logic"
+  },
+  {
+    "day": 11,
+    "title": "Beat Bar",
+    "url": "/daily-web-game-day-11-beat-bar/",
+    "image": "/assets/images/games/day11_og.png",
+    "alt": "Beat Bar"
+  },
+  {
+    "day": 12,
+    "title": "Maze Dash",
+    "url": "/daily-web-game-day-12-maze-dash/",
+    "image": "/assets/images/games/day12_og.png",
+    "alt": "Maze Dash"
+  },
+  {
+    "day": 13,
+    "title": "Stroop Sprint",
+    "url": "/daily-web-game-day-13-stroop-sprint/",
+    "image": "/assets/images/games/day13_og.png",
+    "alt": "Stroop Sprint"
+  },
+  {
+    "day": 14,
+    "title": "Emoji Match",
+    "url": "/daily-web-game-day-14-emoji-match/",
+    "image": "/assets/images/games/day14_og.png",
+    "alt": "Emoji Match"
+  },
+  {
+    "day": 15,
+    "title": "Sound Memory",
+    "url": "/daily-web-game-day-15-sound-memory/",
+    "image": "/assets/images/games/day15_og.png",
+    "alt": "Sound Memory"
+  },
+  {
+    "day": 16,
+    "title": "Vector Escape",
+    "url": "/daily-web-game-day-16-vector-escape/",
+    "image": "/assets/images/games/day16_og.png",
+    "alt": "Vector Escape"
+  },
+  {
+    "day": 17,
+    "title": "Clock Align",
+    "url": "/daily-web-game-day-17-clock-align/",
+    "image": "/assets/images/games/day17_og.png",
+    "alt": "Clock Align"
+  },
+  {
+    "day": 18,
+    "title": "Pattern Grid",
+    "url": "/daily-web-game-day-18-pattern-grid/",
+    "image": "/assets/images/games/day18_og.png",
+    "alt": "Pattern Grid"
+  },
+  {
+    "day": 19,
+    "title": "Equation Drop",
+    "url": "/daily-web-game-day-19-equation-drop/",
+    "image": "/assets/images/games/day19_og.png",
+    "alt": "Equation Drop"
+  },
+  {
+    "day": 20,
+    "title": "Color Balance",
+    "url": "/daily-web-game-day-20-color-balance/",
+    "image": "/assets/images/games/day20_og.png",
+    "alt": "Color Balance"
+  },
+  {
+    "day": 21,
+    "title": "Sequence Runner",
+    "url": "/daily-web-game-day-21-sequence-runner/",
+    "image": "/assets/images/games/day21_og.png",
+    "alt": "Sequence Runner"
+  },
+  {
+    "day": 22,
+    "title": "Track Tap",
+    "url": "/daily-web-game-day-22-track-tap/",
+    "image": "/assets/images/games/day22_og.png",
+    "alt": "Track Tap"
+  },
+  {
+    "day": 23,
+    "title": "Shape Sorter",
+    "url": "/daily-web-game-day-23-shape-sorter/",
+    "image": "/assets/images/games/day23_og.png",
+    "alt": "Shape Sorter"
+  },
+  {
+    "day": 24,
+    "title": "Orbit Defender",
+    "url": "/daily-web-game-day-24-orbit-defender/",
+    "image": "/assets/images/games/day24_og.png",
+    "alt": "Orbit Defender"
+  },
+  {
+    "day": 25,
+    "title": "Pixel Painter",
+    "url": "/daily-web-game-day-25-pixel-painter/",
+    "image": "/assets/images/games/day25_og.png",
+    "alt": "Pixel Painter"
+  },
+  {
+    "day": 26,
+    "title": "Quick Stack",
+    "url": "/daily-web-game-day-26-quick-stack/",
+    "image": "/assets/images/games/day26_og.png",
+    "alt": "Quick Stack"
+  },
+  {
+    "day": 27,
+    "title": "Weight Balancer",
+    "url": "/daily-web-game-day-27-weight-balancer/",
+    "image": "/assets/images/games/day27_og.png",
+    "alt": "Weight Balancer"
+  },
+  {
+    "day": 28,
+    "title": "Emoji Cafe",
+    "url": "/daily-web-game-day-28-emoji-cafe/",
+    "image": "/assets/images/games/day28_og.png",
+    "alt": "Emoji Cafe"
+  },
+  {
+    "day": 29,
+    "title": "Swap Sorter",
+    "url": "/daily-web-game-day-29-swap-sorter/",
+    "image": "/assets/images/games/day29_og.png",
+    "alt": "Swap Sorter"
+  },
+  {
+    "day": 30,
+    "title": "Prime Dash",
+    "url": "/daily-web-game-day-30-prime-dash/",
+    "image": "/assets/images/games/day30_og.png",
+    "alt": "Prime Dash"
+  },
+  {
+    "day": 31,
+    "title": "ヒューハーモニー",
+    "url": "/daily-web-game-day-31-hue-harmony/",
+    "image": "/assets/images/games/day31_og.png",
+    "alt": "ヒューハーモニー"
+  },
+  {
+    "day": 32,
+    "title": "レタースイープ",
+    "url": "/daily-web-game-day-32-letter-sweep/",
+    "image": "/assets/images/games/day32_og.png",
+    "alt": "レタースイープ"
+  },
+  {
+    "day": 33,
+    "title": "オペレーターダッシュ",
+    "url": "/daily-web-game-day-33-operator-rush/",
+    "image": "/assets/images/games/day33_og.png",
+    "alt": "オペレーターダッシュ"
+  },
+  {
+    "day": 34,
+    "title": "フラクションデュエル",
+    "url": "/daily-web-game-day-34-fraction-duel/",
+    "image": "/assets/images/games/day34_og.png",
+    "alt": "フラクションデュエル"
+  },
+  {
+    "day": 35,
+    "title": "ナンバーラダー",
+    "url": "/daily-web-game-day-35-number-ladder/",
+    "image": "/assets/images/games/day35_og.png",
+    "alt": "ナンバーラダー"
+  },
+  {
+    "day": 36,
+    "title": "マルチプルマッチ",
+    "url": "/daily-web-game-day-36-multiple-match/",
+    "image": "/assets/images/games/day36_og.png",
+    "alt": "マルチプルマッチ"
+  },
+  {
+    "day": 37,
+    "title": "コンパスタップ",
+    "url": "/daily-web-game-day-37-compass-tap/",
+    "image": "/assets/images/games/day37_og.png",
+    "alt": "コンパスタップ"
+  },
+  {
+    "day": 38,
+    "title": "スカイストライカー",
+    "url": "/daily-web-game-day-38-ascend-grid/",
+    "image": "/assets/images/games/day38_og.png",
+    "alt": "スカイストライカー"
+  },
+  {
+    "day": 39,
+    "title": "カラークラッシュ",
+    "url": "/daily-web-game-day-39-color-clash/",
+    "image": "/assets/images/games/day39_og.png",
+    "alt": "カラークラッシュ"
+  },
+  {
+    "day": 40,
+    "title": "サムスナップ",
+    "url": "/daily-web-game-day-40-sum-snap/",
+    "image": "/assets/images/games/day40_og.png",
+    "alt": "サムスナップ"
+  },
+  {
+    "day": 41,
+    "title": "ワンムーブパズル",
+    "url": "/daily-web-game-day-41-one-move-puzzle/",
+    "image": "/assets/images/games/day41_og.png",
+    "alt": "ワンムーブパズル"
+  },
+  {
+    "day": 42,
+    "title": "マージスライド",
+    "url": "/daily-web-game-day-42-merge-slide/",
+    "image": "/assets/images/games/day42_og.png",
+    "alt": "マージスライド"
+  },
+  {
+    "day": 43,
+    "title": "ソルジャーラッシュ",
+    "url": "/daily-web-game-day-43-soldier-rush/",
+    "image": "/assets/images/games/day43_og.png",
+    "alt": "ソルジャーラッシュ"
+  },
+  {
+    "day": 44,
+    "title": "ソルジャーラッシュ2",
+    "url": "/daily-web-game-day-44-soldier-rush-2/",
+    "image": "/assets/images/games/day44_og.png",
+    "alt": "ソルジャーラッシュ2"
+  },
+  {
+    "day": 45,
+    "title": "ソルジャーラッシュ3",
+    "url": "/daily-web-game-day-45-soldier-rush-3/",
+    "image": "/assets/images/games/day45_og.png",
+    "alt": "ソルジャーラッシュ3"
+  },
+  {
+    "day": 46,
+    "title": "ソルジャーラッシュ4",
+    "url": "/daily-web-game-day-46-soldier-rush-4/",
+    "image": "/assets/images/games/day46_og.png",
+    "alt": "ソルジャーラッシュ4"
+  },
+  {
+    "day": 47,
+    "title": "ソルジャーラッシュ5",
+    "url": "/daily-web-game-day-47-soldier-rush-5/",
+    "image": "/assets/images/games/day47_og.png",
+    "alt": "ソルジャーラッシュ5"
+  },
+  {
+    "day": 48,
+    "title": "ソルジャーラッシュ6",
+    "url": "/daily-web-game-day-48-soldier-rush-6/",
+    "image": "/assets/images/games/day48_og.png",
+    "alt": "ソルジャーラッシュ6"
+  },
+  {
+    "day": 49,
+    "title": "ソルジャーラッシュFINAL",
+    "url": "/daily-web-game-day-49-soldier-rush-final/",
+    "image": "/assets/images/games/day49_og.png",
+    "alt": "ソルジャーラッシュFINAL"
+  },
+  {
+    "day": 50,
+    "title": "ゴールデンブレイク",
+    "url": "/daily-web-game-day-50-golden-break/",
+    "image": "/assets/images/games/day50_og.png",
+    "alt": "ゴールデンブレイク"
+  },
+  {
+    "day": 51,
+    "title": "キリンのハイリーチ",
+    "url": "/daily-web-game-day-51-giraffe-high-reach/",
+    "image": "/assets/images/games/day51_og.png",
+    "alt": "キリンのハイリーチ"
+  },
+  {
+    "day": 52,
+    "title": "ペンギンのフィッシュダイブ",
+    "url": "/daily-web-game-day-52-penguin-fish-dive/",
+    "image": "/assets/images/games/day52_og.png",
+    "alt": "ペンギンのフィッシュダイブ"
+  },
+  {
+    "day": 53,
+    "title": "カンガルーのホップレース",
+    "url": "/daily-web-game-day-53-kangaroo-hop-race/",
+    "image": "/assets/images/games/day53_og.png",
+    "alt": "カンガルーのホップレース"
+  },
+  {
+    "day": 54,
+    "title": "リスのナッツキャッチ",
+    "url": "/daily-web-game-day-54-squirrel-nut-catch/",
+    "image": "/assets/images/games/day54_og.png",
+    "alt": "リスのナッツキャッチ"
+  },
+  {
+    "day": 55,
+    "title": "カメレオンのタンスナップ",
+    "url": "/daily-web-game-day-55-chameleon-tongue-snap/",
+    "image": "/assets/images/games/day55_og.png",
+    "alt": "カメレオンのタンスナップ"
+  },
+  {
+    "day": 56,
+    "title": "ハチのフラワーダッシュ",
+    "url": "/daily-web-game-day-56-bee-flower-dash/",
+    "image": "/assets/images/games/day56_og.png",
+    "alt": "ハチのフラワーダッシュ"
+  },
+  {
+    "day": 57,
+    "title": "サルのツルスイング",
+    "url": "/daily-web-game-day-57-monkey-vine-swing/",
+    "image": "/assets/images/games/day57_og.png",
+    "alt": "サルのツルスイング"
+  },
+  {
+    "day": 58,
+    "title": "ヘビのマウスハント",
+    "url": "/daily-web-game-day-58-snake-mouse-hunt/",
+    "image": "/assets/images/games/day58_og.png",
+    "alt": "ヘビのマウスハント"
+  },
+  {
+    "day": 59,
+    "title": "カワウソのダイブフィッシュ",
+    "url": "/daily-web-game-day-59-otter-dive-fish/",
+    "image": "/assets/images/games/day59_og.png",
+    "alt": "カワウソのダイブフィッシュ"
+  },
+  {
+    "day": 60,
+    "title": "クモのウェブトラップ",
+    "url": "/daily-web-game-day-60-spider-web-trap/",
+    "image": "/assets/images/games/day60_og.png",
+    "alt": "クモのウェブトラップ"
+  },
+  {
+    "day": 61,
+    "title": "ゾウのゴルフ",
+    "url": "/daily-web-game-day-61-elephant-golf/",
+    "image": "/assets/images/games/day61_og.png",
+    "alt": "ゾウのゴルフ"
+  },
+  {
+    "day": 62,
+    "title": "ペンギンのアイススライド",
+    "url": "/daily-web-game-day-62-penguin-ice-slide/",
+    "image": "/assets/images/games/day62_og.png",
+    "alt": "ペンギンのアイススライド"
+  },
+  {
+    "day": 63,
+    "title": "サルのココナッツキャッチ",
+    "url": "/daily-web-game-day-63-monkey-coconut-catch/",
+    "image": "/assets/images/games/day63_og.png",
+    "alt": "サルのココナッツキャッチ"
+  },
+  {
+    "day": 64,
+    "title": "ウサギのジャンプレース",
+    "url": "/daily-web-game-day-64-rabbit-jump-race/",
+    "image": "/assets/images/games/day64_og.png",
+    "alt": "ウサギのジャンプレース"
+  },
+  {
+    "day": 65,
+    "title": "キリンのフルーツタワー",
+    "url": "/daily-web-game-day-65-giraffe-fruit-tower/",
+    "image": "/assets/images/games/day65_og.png",
+    "alt": "キリンのフルーツタワー"
+  },
+  {
+    "day": 66,
+    "title": "真夜中の花火 (Midnight Fireworks)",
+    "url": "/daily-web-game-day-66-midnight-fireworks/",
+    "image": "/assets/images/games/day66_og.png",
+    "alt": "真夜中の花火 (Midnight Fireworks)"
+  },
+  {
+    "day": 67,
+    "title": "初日の出クライマー (Golden Sunrise)",
+    "url": "/daily-web-game-day-67-golden-sunrise/",
+    "image": "/assets/images/games/day67_og.png",
+    "alt": "初日の出クライマー (Golden Sunrise)"
+  },
+  {
+    "day": 68,
+    "title": "ネオン・ドリフト (Neon Drift)",
+    "url": "/daily-web-game-day-68-neon-drift/",
+    "image": "/assets/images/games/day68_og.png",
+    "alt": "ネオン・ドリフト (Neon Drift)"
+  },
+  {
+    "day": 69,
+    "title": "プリズム・ブレイカー (Prism Breaker)",
+    "url": "/daily-web-game-day-69-prism-breaker/",
+    "image": "/assets/images/games/day69_og.png",
+    "alt": "プリズム・ブレイカー (Prism Breaker)"
+  },
+  {
+    "day": 70,
+    "title": "ヴォイド・ラッシュ (Void Rush)",
+    "url": "/daily-web-game-day-70-void-rush/",
+    "image": "/assets/images/games/day70_og.png",
+    "alt": "ヴォイド・ラッシュ (Void Rush)"
+  },
+  {
+    "day": 71,
+    "title": "シャドウ・ランナー (Shadow Runner)",
+    "url": "/daily-web-game-day-71-shadow-runner/",
+    "image": "/assets/images/games/day71_og.png",
+    "alt": "シャドウ・ランナー (Shadow Runner)"
+  },
+  {
+    "day": 72,
+    "title": "サイバー・プロトコル (Cyber Protocol)",
+    "url": "/daily-web-game-day-72-cyber-protocol/",
+    "image": "/assets/images/games/day72_og.png",
+    "alt": "サイバー・プロトコル (Cyber Protocol)"
+  },
+  {
+    "day": 73,
+    "title": "グラビティ・ゴルフ (Gravity Golf)",
+    "url": "/daily-web-game-day-73-gravity-golf/",
+    "image": "/assets/images/games/day73_og.png",
+    "alt": "グラビティ・ゴルフ (Gravity Golf)"
+  },
+  {
+    "day": 74,
+    "title": "クロマ・シフト (Chroma Shift)",
+    "url": "/daily-web-game-day-74-chroma-shift/",
+    "image": "/assets/images/games/day74_og.png",
+    "alt": "クロマ・シフト (Chroma Shift)"
+  },
+  {
+    "day": 75,
+    "title": "エコー・ダンジョン (Echo Dungeon)",
+    "url": "/daily-web-game-day-75-echo-dungeon/",
+    "image": "/assets/images/games/day75_og.png",
+    "alt": "エコー・ダンジョン (Echo Dungeon)"
+  },
+  {
+    "day": 76,
+    "title": "タイム・ループ (Time Loop)",
+    "url": "/daily-web-game-day-76-time-loop/",
+    "image": "/assets/images/games/day76_og.png",
+    "alt": "タイム・ループ (Time Loop)"
+  },
+  {
+    "day": 77,
+    "title": "マグネット・コア (Magnet Core)",
+    "url": "/daily-web-game-day-77-magnet-core/",
+    "image": "/assets/images/games/day77_og.png",
+    "alt": "マグネット・コア (Magnet Core)"
+  },
+  {
+    "day": 78,
+    "title": "ペーパー・プレーン (Paper Plane)",
+    "url": "/daily-web-game-day-78-paper-plane/",
+    "image": "/assets/images/games/day78_og.png",
+    "alt": "ペーパー・プレーン (Paper Plane)"
+  },
+  {
+    "day": 79,
+    "title": "ビート・サークル (Beat Circle)",
+    "url": "/daily-web-game-day-79-beat-circle/",
+    "image": "/assets/images/games/day79_og.png",
+    "alt": "ビート・サークル (Beat Circle)"
+  },
+  {
+    "day": 80,
+    "title": "ザ・コロッサス (The Colossus)",
+    "url": "/daily-web-game-day-80-the-colossus/",
+    "image": "/assets/images/games/day80_og.png",
+    "alt": "ザ・コロッサス (The Colossus)"
+  },
+  {
+    "day": 81,
+    "title": "ダンジョン・ステップ (Dungeon Step)",
+    "url": "/daily-web-game-day-81-dungeon-step/",
+    "image": "/assets/images/games/day81_og.png",
+    "alt": "ダンジョン・ステップ (Dungeon Step)"
+  },
+  {
+    "day": 82,
+    "title": "インベントリ・ヒーロー (Inventory Hero)",
+    "url": "/daily-web-game-day-82-inventory-hero/",
+    "image": "/assets/images/games/day82_og.png",
+    "alt": "インベントリ・ヒーロー (Inventory Hero)"
+  },
+  {
+    "day": 83,
+    "title": "クリティカル・タイミング (Critical Timing)",
+    "url": "/daily-web-game-day-83-critical-timing/",
+    "image": "/assets/images/games/day83_og.png",
+    "alt": "クリティカル・タイミング (Critical Timing)"
+  },
+  {
+    "day": 84,
+    "title": "ポーション・ブリュワー (Potion Brewer)",
+    "url": "/daily-web-game-day-84-potion-brewer/",
+    "image": "/assets/images/games/day84_og.png",
+    "alt": "ポーション・ブリュワー (Potion Brewer)"
+  },
+  {
+    "day": 85,
+    "title": "ブラックスミス・リズム (Blacksmith Rhythm)",
+    "url": "/daily-web-game-day-85-blacksmith-rhythm/",
+    "image": "/assets/images/games/day85_og.png",
+    "alt": "ブラックスミス・リズム (Blacksmith Rhythm)"
+  },
+  {
+    "day": 86,
+    "title": "ゴーレム・ディフェンス (Golem Defense)",
+    "url": "/daily-web-game-day-86-golem-defense/",
+    "image": "/assets/images/games/day86_og.png",
+    "alt": "ゴーレム・ディフェンス (Golem Defense)"
+  },
+  {
+    "day": 87,
+    "title": "ハンターズ・エイム (Hunter's Aim)",
+    "url": "/daily-web-game-day-87-hunters-aim/",
+    "image": "/assets/images/games/day87_og.png",
+    "alt": "ハンターズ・エイム (Hunter's Aim)"
+  },
+  {
+    "day": 88,
+    "title": "ダンジョン・カード (Dungeon Cards)",
+    "url": "/daily-web-game-day-88-guild-master/",
+    "image": "/assets/images/games/day88_og.png",
+    "alt": "ダンジョン・カード (Dungeon Cards)"
+  },
+  {
+    "day": 89,
+    "title": "ミミック・サーチ (Mimic Search)",
+    "url": "/daily-web-game-day-89-mimic-search/",
+    "image": "/assets/images/games/day89_og.png",
+    "alt": "ミミック・サーチ (Mimic Search)"
+  },
+  {
+    "day": 90,
+    "title": "ザ・ラスト・ボス (The Last Boss)",
+    "url": "/daily-web-game-day-90-the-last-boss/",
+    "image": "/assets/images/games/day90_og.png",
+    "alt": "ザ・ラスト・ボス (The Last Boss)"
+  },
+  {
+    "day": 91,
+    "title": "癒しの猫広場 (Healing Cat Square)",
+    "url": "/daily-web-game-day-91-healing-cats/",
+    "image": "/assets/images/games/day91_og.png",
+    "alt": "癒しの猫広場 (Healing Cat Square)"
+  },
+  {
+    "day": 92,
+    "title": "Cyber Drift (サイバードリフト)",
+    "url": "/daily-web-game-day-92-cyber-drift/",
+    "image": "/assets/images/games/day92_og.png",
+    "alt": "Cyber Drift (サイバードリフト)"
+  },
+  {
+    "day": 93,
+    "title": "Star Link (スターリンク)",
+    "url": "/daily-web-game-day-93-star-link/",
+    "image": "/assets/images/games/day93_og.png",
+    "alt": "Star Link (スターリンク)"
+  },
+  {
+    "day": 94,
+    "title": "Liquid Flow (リキッド・フロー)",
+    "url": "/daily-web-game-day-94-liquid-flow/",
+    "image": "/assets/images/games/day94_og.png",
+    "alt": "Liquid Flow (リキッド・フロー)"
+  },
+  {
+    "day": 95,
+    "title": "Laser Mirror (レーザー・ミラー)",
+    "url": "/daily-web-game-day-95-laser-mirror/",
+    "image": "/assets/images/games/day95_og.png",
+    "alt": "Laser Mirror (レーザー・ミラー)"
+  },
+  {
+    "day": 96,
+    "title": "Drill Down (ドリル・ダウン)",
+    "url": "/daily-web-game-day-96-drill-down/",
+    "image": "/assets/images/games/day96_og.png",
+    "alt": "Drill Down (ドリル・ダウン)"
+  },
+  {
+    "day": 97,
+    "title": "Ripple Reaction (リップル・リアクション)",
+    "url": "/daily-web-game-day-97-ripple-reaction/",
+    "image": "/assets/images/games/day97_og.png",
+    "alt": "Ripple Reaction (リップル・リアクション)"
+  },
+  {
+    "day": 98,
+    "title": "Stealth Shade (ステルス・シェイド)",
+    "url": "/daily-web-game-day-98-stealth-shade/",
+    "image": "/assets/images/games/day98_og.png",
+    "alt": "Stealth Shade (ステルス・シェイド)"
+  },
+  {
+    "day": 99,
+    "title": "Cube Fit (キューブ・フィット)",
+    "url": "/daily-web-game-day-99-cube-fit/",
+    "image": "/assets/images/games/day99_og.png",
+    "alt": "Cube Fit (キューブ・フィット)"
+  },
+  {
+    "day": 100,
+    "title": "Tetra Trinity (テトラ・トリニティ)",
+    "url": "/daily-web-game-day-100-tetra-trinity/",
+    "image": "/assets/images/games/day100_og.png",
+    "alt": "Tetra Trinity (テトラ・トリニティ)"
+  }
+]

@@ -1,0 +1,21 @@
+- title: Tetra Trinity
+  day: 100
+  kind: パズル
+  description: 3つのモードで遊ぶ、落ち物パズル。
+  url: /daily-web-game-day-100-tetra-trinity/
+  image: /assets/images/games/day100_og.png
+  alt: Tetra Trinityのブロックが落下するゲーム画面
+- title: ソルジャーラッシュFINAL
+  day: 49
+  kind: アクション
+  description: 兵士を集めて、敵の攻撃を突破。
+  url: /daily-web-game-day-49-soldier-rush-final/
+  image: /assets/images/games/day49_og.png
+  alt: ソルジャーラッシュFINALの兵士とコース
+- title: 癒しの猫広場
+  day: 91
+  kind: のんびり
+  description: 猫をなでて、ハートを集めよう。
+  url: /daily-web-game-day-91-healing-cats/
+  image: /assets/images/games/day91_og.png
+  alt: 癒しの猫広場の猫をなでるゲーム画面

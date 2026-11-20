@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<main id="main" class="game-library">
+  <header class="arcade-intro">
+    <a class="arcade-back" href="{{ '/' | relative_url }}"><span aria-hidden="true">←</span> aomaの街へ</a>
+    <p class="arcade-eyebrow">AOMA'S GAME ARCADE</p>
+    <h1 id="page-title">{{ page.title }}</h1>
+    <p class="arcade-lead">パズル、アクション、ときどき、のんびり。<br>気になるゲームを選んで、遊んでいってください。</p>
+  </header>
+
+  <section class="arcade-collection" aria-labelledby="collection-title">
+    <div class="collection-heading">
+      <div><p class="arcade-eyebrow">GAME COLLECTION</p><h2 id="collection-title">どれで遊ぶ？</h2></div>
+      <div class="collection-tools"><p class="collection-count">{{ site.data.games | size }}本のゲーム</p><div class="arcade-sort" data-game-controls hidden><label for="game-sort">並び順</label><select id="game-sort" aria-controls="game-list"><option value="newest">新しい順</option><option value="oldest">古い順</option><option value="name">名前順</option></select></div></div>
+    </div>
+    <ul class="arcade-grid" id="game-list">
+      {% assign fallback_game = site.data.games | last %}
+      <li class="daily-game" aria-labelledby="daily-heading" data-daily-game>
+        <h3 id="daily-heading" class="arcade-window-bar">おすすめの1本</h3>
+        <a class="daily-card" data-daily-link href="{{ fallback_game.url | relative_url }}">
+          <div class="daily-game__visual"><img data-daily-image src="{{ fallback_game.image | relative_url }}" alt="" width="1200" height="630" fetchpriority="high"></div>
+          <div class="daily-game__copy"><p class="daily-number" data-daily-number>No. {{ fallback_game.day }}</p><h4 data-daily-title>{{ fallback_game.title | escape }}</h4><span class="daily-arrow" aria-hidden="true">↗</span></div>
+        </a>
+      </li>
+      {% assign games = site.data.games | reverse %}
+      {% for game in games %}
+      <li data-game-card data-day="{{ game.day }}" data-title="{{ game.title | escape }}">
+        <a class="arcade-card" href="{{ game.url | relative_url }}">
+          <div class="arcade-card__image"><img src="{{ game.image | relative_url }}" alt="" width="1200" height="630" loading="lazy" decoding="async"><span class="arcade-card__number">No. {{ game.day }}</span></div>
+          <div class="arcade-card__body"><h3>{{ game.title | escape }}</h3><span aria-hidden="true">↗</span></div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="arcade-bottom"><a href="#page-title">ページの先頭へ ↑</a><a href="{{ '/' | relative_url }}">aomaの街へ戻る →</a></div>
+  </section>
+</main>
+<script src="{{ '/assets/js/game-library.js' | relative_url }}" defer></script>
