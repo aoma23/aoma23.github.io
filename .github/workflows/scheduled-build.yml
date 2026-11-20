@@ -1,6 +1,8 @@
 name: Daily Site Rebuild
 
 on:
+  push:
+    branches: [main]
   schedule:
     # 毎日午前7時30分（JST）にサイト更新（UTCでは前日22:30）
     - cron: '30 22 * * *'
