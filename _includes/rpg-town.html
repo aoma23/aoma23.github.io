@@ -1,0 +1,64 @@
+<section class="rpg-town" data-rpg aria-labelledby="rpg-title">
+  <header class="rpg-head">
+    <div>
+      <p class="rpg-eyebrow">AOMA'S PERSONAL WEBSITE</p>
+      <h1 id="rpg-title">aomaの街を、歩いてみる。</h1>
+      <p class="rpg-lead">アプリの工房、100本のゲームセンター、日記の図書館。<br class="rpg-break">歩いて、調べて、見つけてください。</p>
+    </div>
+    <a class="rpg-skip" href="#apps">一覧で見る <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <div class="rpg-frame">
+    <div class="rpg-stage" tabindex="0" role="application" aria-roledescription="RPGマップ" aria-label="aomaの街。矢印キーで移動、スペースキーで目の前のものを調べます" aria-describedby="rpg-help">
+      <canvas aria-hidden="true"></canvas>
+      <div class="rpg-hud" aria-hidden="true">
+        <span class="rpg-area">中央広場</span>
+        <span class="rpg-found" title="見つけた見どころの数">発見 <b>0</b>/<i>25</i></span>
+      </div>
+      <p class="rpg-hint" aria-hidden="true"></p>
+      <div class="rpg-pad" aria-hidden="true">
+        <div class="rpg-pad__cross">
+          <button type="button" tabindex="-1" data-dir="up" class="rpg-pad__up">▲</button>
+          <button type="button" tabindex="-1" data-dir="left" class="rpg-pad__left">◀</button>
+          <button type="button" tabindex="-1" data-dir="right" class="rpg-pad__right">▶</button>
+          <button type="button" tabindex="-1" data-dir="down" class="rpg-pad__down">▼</button>
+        </div>
+        <button type="button" tabindex="-1" class="rpg-pad__a">A</button>
+      </div>
+      <div class="rpg-dialog" role="dialog" aria-labelledby="rpg-dialog-name" hidden>
+        <img class="rpg-dialog__portrait" src="{{ '/assets/images/aoma.png' | relative_url }}" width="56" height="56" alt="" hidden>
+        <div class="rpg-dialog__body">
+          <p class="rpg-dialog__name" id="rpg-dialog-name"></p>
+          <p class="rpg-dialog__text" aria-hidden="true"></p>
+          <ul class="rpg-choices"></ul>
+        </div>
+        <span class="rpg-dialog__next" aria-hidden="true">▼</span>
+      </div>
+      <p class="rpg-live" aria-live="polite"></p>
+      <noscript><p class="rpg-noscript">JavaScriptを有効にすると、街を歩けます。<br>下のワープや一覧からも各ページへ進めます。</p></noscript>
+    </div>
+  </div>
+
+  <nav class="rpg-warp" aria-label="ワープ">
+    <span class="rpg-warp__label" aria-hidden="true">WARP</span>
+    <a href="{{ '/apps/' | relative_url }}" data-goto="apps"><span class="rpg-warp__dot rpg-warp__dot--apps" aria-hidden="true"></span>工房<small>APPS</small></a>
+    <a href="{{ '/games100/' | relative_url }}" data-goto="games"><span class="rpg-warp__dot rpg-warp__dot--games" aria-hidden="true"></span>ゲームセンター<small>GAMES</small></a>
+    <a href="{{ '/posts/' | relative_url }}" data-goto="library"><span class="rpg-warp__dot rpg-warp__dot--library" aria-hidden="true"></span>図書館<small>BLOG</small></a>
+    <a href="{{ '/about/' | relative_url }}" data-goto="house"><span class="rpg-warp__dot rpg-warp__dot--house" aria-hidden="true"></span>aomaの家<small>ABOUT</small></a>
+  </nav>
+  <p class="rpg-help" id="rpg-help">PC：矢印キー / WASD で移動、Space・Enter・Z で調べる、Esc でとじる。スマホ：行きたい場所をタップ、または十字キーとⒶボタン。</p>
+</section>
+
+<script type="application/json" id="rpg-data">
+{
+  "avatar": {{ '/assets/images/aoma.png' | relative_url | jsonify }},
+  "apps": [
+    { "name": "QuickBoard", "desc": "サッカーの戦術を、ブラウザで。", "url": "https://quickboard.aoma23.com/", "img": {{ '/assets/images/home/quickboard-latest.webp' | relative_url | jsonify }} },
+    { "name": "KINENBI", "desc": "大切な日を、シンプルに管理。", "url": "https://kinenbi.app/", "img": {{ '/assets/images/home/kinenbi.jpg' | relative_url | jsonify }} },
+    { "name": "Image Stripe Merge", "desc": "画像を、しま模様に合成。", "url": {{ '/app/image_stripe_merge/' | relative_url | jsonify }}, "img": {{ '/assets/images/home/image-stripe-merge.jpg' | relative_url | jsonify }} }
+  ],
+  "games": {{ site.data.games | jsonify }},
+  "posts": [{% for post in site.posts %}{"t":{{ post.title | jsonify }},"u":{{ post.url | relative_url | jsonify }},"d":"{{ post.date | date: '%Y.%m.%d' }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>
+<script src="{{ '/assets/js/rpg-town.js' | relative_url }}" defer></script>
