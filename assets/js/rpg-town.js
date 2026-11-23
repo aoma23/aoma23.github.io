@@ -184,7 +184,14 @@
       const [item, note] = pick(JUNK);
       return { name: '宝箱', discover: 'chest', pages: [head, `${item}を手に入れた！`, note] };
     },
-    cat: () => ({ name: 'ねこ', discover: 'cat', pages: pick(CAT) }),
+    cat: () => {
+      const g = findGame(91);
+      return {
+        name: 'ねこ', discover: 'cat',
+        pages: ['にゃーん。', '（なでてほしそうに、こちらを見ている）'],
+        choices: g ? [gameChoice(g, 'ねこの広場へ行く')] : []
+      };
+    },
     robot: () => {
       const ai = posts.filter(p => /AI|Claude|ChatGPT|Gemini|Codex|LLM|Copilot|Cursor|Notion/i.test(p.t)).slice(0, 4);
       return {
@@ -252,13 +259,6 @@
     ['使いかけの消しゴム', 'かどは、もう残っていない。'],
     ['セミのぬけがら', '夏の思い出だ。'],
     ['書きかけのメモ', '「TODO: あとでやる」と書いてある。']
-  ];
-  const CAT = [
-    ['にゃーん。'],
-    ['（あくびをしている）'],
-    ['ゴロゴロ……。', '（なでさせてくれた）'],
-    ['（しっぽで、ぺしっとたたかれた）'],
-    ['……。', '（こちらを見ているが、何も言わない）']
   ];
   const FISHER = [
     ['今日はつれないなあ。'],
